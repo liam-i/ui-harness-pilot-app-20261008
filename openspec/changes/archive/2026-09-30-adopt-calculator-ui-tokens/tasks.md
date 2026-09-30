@@ -3,7 +3,7 @@
 - [x] 1.1 在获批规划和Apply授权下重读UI权威与决定历史，核对Design中的A/D、独立expected及完整闭包；保存命令、实际ref、摘要和结论，未知或撤回时停止消费。
 - [x] 1.2 在独立导出副本中演练缺失tokens：确认缺件时不能继续，再从同一D恢复；以失败记录、恢复后摘要一致及原批准包未改为完成证据。
 
-证据：[当前权威与固定闭包](../../../harness/evidence/ui-before-apply-app.json)、[缺件与同D恢复](../../../harness/evidence/ui-missing-token-recovery.json)。
+证据：[当前权威与固定闭包](../../../../harness/evidence/ui-before-apply-app.json)、[缺件与同D恢复](../../../../harness/evidence/ui-missing-token-recovery.json)。
 
 ## 2. 原生验证入口
 
@@ -29,10 +29,10 @@
 - [x] 4.1 在SE3、17 Pro逐条运行固定A01–A15，保存actual与用例ID映射、原始日志/xcresult、退出码和设备清理结果；所有必需行为通过后才勾选，不改expected或用零匹配充通过。
 - [x] 4.2 核对默认、输入、结果、异常与长数字画面，保存两尺寸原生截图；逐项核64pt键、32pt边距、20pt行距及允许差异，确认tokens≤16KiB、bundle字节一致，运行不依赖design目录。
 
-4.1/4.2证据：[两尺寸运行与工程视觉自查](../../../harness/evidence/final-runtime-review.json)。SE 145.795秒、17 Pro 158.836秒均退出0，各10项单元＋1项UI内A01–A15通过，20键布局断言通过。30张截图及两个完整xcresult受控保存；Codex实际回看两尺寸默认/输入/结果/长数字/异常画面，对比固定D原运行参考，未见越界或重叠。601字节tokens低于预算，产品仅从Bundle读取。两设备均Shutdown。真人运行验收仍归5.1，不由本工程自查代签。
+4.1/4.2证据：[两尺寸运行与工程视觉自查](../../../../harness/evidence/final-runtime-review.json)。SE 145.795秒、17 Pro 158.836秒均退出0，各10项单元＋1项UI内A01–A15通过，20键布局断言通过。30张截图及两个完整xcresult受控保存；Codex实际回看两尺寸默认/输入/结果/长数字/异常画面，对比固定D原运行参考，未见越界或重叠。601字节tokens低于预算，产品仅从Bundle读取。两设备均Shutdown。真人运行验收仍归5.1，不由本工程自查代签。
 
 ## 5. 交付证据
 
 - [x] 5.1 对照Proposal/Design、固定包与原始结果完成工程自审，整理可恢复的实现差异、唯一Tasks证据、失败与未验范围；将实际界面及行为验收提交当前用户，取得真实结论后保存原文。后续Archive仍按实际授权及原流程执行，本任务不授权正式合并或发布。
 
-5.1：[真实运行验收及本地收尾授权](../../../harness/evidence/runtime-acceptance.json)。当前用户已对固定运行E `271b94809334b28d28a3b82fe2780b0648ed83187f49ed636d3a913ffdce5bc5`答复“运行验收通过，允许本地提交和归档”；产品字节与两尺寸受测版本一致。归档前已[重读UI实际权威及决定历史](../../../harness/evidence/ui-before-archive.json)，A/D及全部固定引用未变，无撤回。原始自审／运行记录保留当时的待审状态；本条记录后续真人结论。接续本地提交与Archive，主线合并、外部推送和发布未授权。
+5.1：[真实运行验收及本地收尾授权](../../../../harness/evidence/runtime-acceptance.json)。当前用户已对固定运行E `271b94809334b28d28a3b82fe2780b0648ed83187f49ed636d3a913ffdce5bc5`答复“运行验收通过，允许本地提交和归档”；产品字节与两尺寸受测版本一致。归档前已[重读UI实际权威及决定历史](../../../../harness/evidence/ui-before-archive.json)，A/D及全部固定引用未变，无撤回。原始自审／运行记录保留当时的待审状态；本条记录后续真人结论。接续本地提交与Archive，主线合并、外部推送和发布未授权。
