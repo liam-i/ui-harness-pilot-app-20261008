@@ -1,0 +1,801 @@
+{
+  "at": "2026-09-30T17:24:59.501474+08:00",
+  "mode": "manual current observation before authorized Apply",
+  "actual_authority_sha": "db1d8d36482883a46f6624c02cde4241547f3d18",
+  "policy_ref": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+    "path": "inputs/authority.md",
+    "sha256": "8c84263dc8ad1db635d66336b2b08d7a76d2f673396e3d670dbb1c21b950b5ef"
+  },
+  "checked_refs": [
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/manifest.yaml",
+      "sha256": "2f1ec315db7bf890fde151b6c8ad8ca6075759f6ab7daf6ee976d0a121306630"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/LICENSE-upstream.txt",
+      "sha256": "68e6220ac2a1aba3fbfb1f8397165ea4f84a0e29ae2793df29b51b8b85560bb0"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/brief.md",
+      "sha256": "163383123e717516aeec51850175ec2521f4d4f8e75e49b0f1477c7353cca897"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/expected-copy.json",
+      "sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/handoff.md",
+      "sha256": "a74db5cfc93c7d44cbe9f503a754c3bfb20f7561e1ecc399635ccfa9fc8fe119"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/references/original-runtime-pro.png",
+      "sha256": "99f1c4aeb3ed0e8b783d5eb4f327125844ad6007db7c35864be0e29b2aea28e0"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/references/original-runtime-se.png",
+      "sha256": "5dfce1b101d2f85f0bc48bdd680968e0db1cbd3ff16f0bf010f97b496447b4f4"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/references/source-images.json",
+      "sha256": "a1d383afbe7bd888aae0ed52f0c60ed0389868b8f57cc85414a03d9219c9f546"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/references/upstream-1.png",
+      "sha256": "d43f471e56fb9b7b63f367eb1eb86bedca0f4c1244861b667ce163b85f947ace"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/references/upstream-2.png",
+      "sha256": "db0674fb9a750faea86bdc65495e502b0e1da752d876cd68d39debc91c521882"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/sources.md",
+      "sha256": "6be5a33e88cb5e66200581749c545ac13f5e5274084fe1d7056a5beb47c3b8dc"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/tokens.json",
+      "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/app-scope.md",
+      "sha256": "ed8725c10f6a64a4371c174f7848ab0fc01122c4ca4c802cfbb0a43ce3603b1e"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/app-expected.json",
+      "sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/archives/app-a1f33650f3adcf7f89e8d403dd469dff7d57c6b1.zip",
+      "sha256": "1c4bce626a13b99f4ab42fde9456eefcf66e766d068a29b4cf706e136d5419b9"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/sources.json",
+      "sha256": "7e65dd352f55ba50acf5bfa575f36f3a25ef7468eca0db05851546686bb5adfe"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/manifest.yaml",
+      "sha256": "062a4887d998100c3bcda978f3b6630087b35b51206a5777ef1ccabaad9a18b2"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/LICENSE-kenney.txt",
+      "sha256": "69f7eaa5e05913b4d09cf5848f75390b5c3c9a409ef8555777803d9ca0c171fb"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/LICENSE-upstream.txt",
+      "sha256": "5bc53ddeab53cc054f70be136768cd16fbb1b065739e7fa26b930786e2243afa"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/assets/menu-primary.png",
+      "sha256": "0c43a01a95270167be8c05a68c45a2709e60177d9dfa59bedb56fd0802659e52"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/assets/menu-secondary.png",
+      "sha256": "f0f3d52f110768bf93a10b44f4ec3c727924c25734ce85e1275464c9b02cfe18"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/brief.md",
+      "sha256": "10b4975b1b66411b7ad7b6e3fa5e461795b26a9b7ef7ce5e9e5c5f9342204b09"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/expected-copy.json",
+      "sha256": "fb78734b0fba34e22c476e11340ba65a13458bc2c1a041c8bce4f48bc1a7e0c0"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/handoff.md",
+      "sha256": "4a10e6f9f77e8a3128e89096d9198b9ad0fbd1e68af1e0c6dde04dba7ca9319d"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/iteration.md",
+      "sha256": "1dedd1652156eb9da374b537e6ebc529bdf2bbf78354af8092327704d08fd21b"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/references/confirm-se.png",
+      "sha256": "74b311f78fbb5b2cc05bbf0396672c505ef0ff6ca30db964774d1ba1da541496"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/references/confirm-se.svg",
+      "sha256": "2b455e974fbd96042fba20cd8675451bb3444753b538689c73bfbc47dd4fded7"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/references/menu-pro.png",
+      "sha256": "33734f1d5705d6a815878db65e672beeb01441cdbe25348f23e44ac1e53050ff"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/references/menu-pro.svg",
+      "sha256": "c29050b9a73bb4db29ef01dc42dcefe925a0a58a8b9f28a515b5833acae739bb"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/references/menu-se.png",
+      "sha256": "40608b865213c1e808ff1a8847a06dc7c3a333788ce2cdc624cf7d1bc322de3e"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/references/menu-se.svg",
+      "sha256": "96957bbbdada541e1e72f6c8149376a521cfc5dc44b7444c69965adb591812fa"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/references/original-runtime-pro.png",
+      "sha256": "45703047e80d7c0e75bd63a0070d0b089389c62721206e7e10c4ba62ab30de26"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/references/original-runtime-se.png",
+      "sha256": "ca10595650b327dfc8bff5af2c1a0caf9ea0f00a99384665f157e0c33d48bf9b"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/references/preview.html",
+      "sha256": "563a2150827646a6eefa81bbd105f21654b157dec2392b38fdb4cd423594bf77"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/sources.md",
+      "sha256": "b13bb600733437ae559b4557fa2051c225cf03d9c5e8dd6a9600e36b95c943a5"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/tokens.json",
+      "sha256": "3184b8ee1b57ce2bcba7cdf9940fbae83cecba7b5792bfd24bedea8564c902fc"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/game-scope.md",
+      "sha256": "d875543693192222bdf1cc867e1141999e90954ff70069d875e176ce95ed3ec2"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/game-expected.json",
+      "sha256": "fb78734b0fba34e22c476e11340ba65a13458bc2c1a041c8bce4f48bc1a7e0c0"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/archives/game-aba3d8522bc1e615cd5dd73801150ae54d25e78b.zip",
+      "sha256": "2b5515de435124b21932e37948296f2407d9fed280414ae1feda2a0677e04e9a"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/archives/kenney_ui-pack.zip",
+      "sha256": "a8a14a234911eb648c062622915c93e79e94e97cb7f9f375a70f6617f1174318"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/authority.md",
+      "sha256": "8c84263dc8ad1db635d66336b2b08d7a76d2f673396e3d670dbb1c21b950b5ef"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+      "path": "design/units/UI-CALCULATOR/decisions/approve-U001.yaml",
+      "sha256": "78d7f4acab4fbb74a2098bfe26560f67ddb3d6538017fff53e2011c740236682"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+      "path": "design/units/UI-2048-MENU/decisions/approve-U001.yaml",
+      "sha256": "b634b272ddbd1712f605ec436835338a4a32b2c58b1779cc44c4bc54905fb171"
+    }
+  ],
+  "decision_history": "db1d8d36482883a46f6624c02cde4241547f3d18\n\nA\tdesign/units/UI-2048-MENU/decisions/approve-U001.yaml\nA\tdesign/units/UI-2048-MENU/decisions/user-approval-U001.json\nA\tdesign/units/UI-CALCULATOR/decisions/approve-U001.yaml\nA\tdesign/units/UI-CALCULATOR/decisions/user-approval-U001.json\n",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+        "refs/heads/main"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stdout": "db1d8d36482883a46f6624c02cde4241547f3d18\trefs/heads/main\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52",
+        "db1d8d36482883a46f6624c02cde4241547f3d18"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "log",
+        "--format=%H",
+        "--name-status",
+        "--full-history",
+        "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52..db1d8d36482883a46f6624c02cde4241547f3d18",
+        "--",
+        "design/units/UI-CALCULATOR/decisions",
+        "design/units/UI-2048-MENU/decisions"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stdout": "db1d8d36482883a46f6624c02cde4241547f3d18\n\nA\tdesign/units/UI-2048-MENU/decisions/approve-U001.yaml\nA\tdesign/units/UI-2048-MENU/decisions/user-approval-U001.json\nA\tdesign/units/UI-CALCULATOR/decisions/approve-U001.yaml\nA\tdesign/units/UI-CALCULATOR/decisions/user-approval-U001.json\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/manifest.yaml"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/LICENSE-upstream.txt"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/brief.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/expected-copy.json"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/handoff.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/references/original-runtime-pro.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/references/original-runtime-se.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/references/source-images.json"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/references/upstream-1.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/references/upstream-2.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/sources.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/tokens.json"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/app-scope.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/app-expected.json"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/archives/app-a1f33650f3adcf7f89e8d403dd469dff7d57c6b1.zip"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/sources.json"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/manifest.yaml"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/LICENSE-kenney.txt"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/LICENSE-upstream.txt"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/assets/menu-primary.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/assets/menu-secondary.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/brief.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/expected-copy.json"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/handoff.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/iteration.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/references/confirm-se.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/references/confirm-se.svg"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/references/menu-pro.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/references/menu-pro.svg"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/references/menu-se.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/references/menu-se.svg"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/references/original-runtime-pro.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/references/original-runtime-se.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/references/preview.html"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/sources.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/tokens.json"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/game-scope.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/game-expected.json"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/archives/game-aba3d8522bc1e615cd5dd73801150ae54d25e78b.zip"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/archives/kenney_ui-pack.zip"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/authority.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "db1d8d36482883a46f6624c02cde4241547f3d18:design/units/UI-CALCULATOR/decisions/approve-U001.yaml"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "db1d8d36482883a46f6624c02cde4241547f3d18:design/units/UI-2048-MENU/decisions/approve-U001.yaml"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery",
+      "exit": 0,
+      "stdout": "<bytes checked below>",
+      "stderr": ""
+    }
+  ],
+  "result": "fixed bytes, current approval and complete decision history confirmed; no withdrawal; not automatic UI Gate"
+}

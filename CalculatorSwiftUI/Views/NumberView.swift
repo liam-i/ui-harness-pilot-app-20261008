@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct NumberView: View {
+    let tokens = CalculatorTokens.current
     
     // define some variables
     let number: Double
@@ -25,13 +26,14 @@ struct NumberView: View {
     
     var body: some View {
         Text(numberString)
-            .font(.title)
-            .fontWeight(.bold)
-            .foregroundColor(.white)
-            .frame(width: 64, height: 64)
-            .background(Color.blue)
-            .cornerRadius(20)
-            .shadow(color: Color.blue.opacity(0.3), radius: 10, x: 0, y: 10)
+            .font(tokens.keyFont.value)
+            .foregroundColor(tokens.numberText.value)
+            .frame(width: tokens.keySize, height: tokens.keySize)
+            .background(tokens.numberColor.value)
+            .cornerRadius(tokens.keyCornerRadius)
+            .shadow(color: tokens.numberColor.value.opacity(tokens.numberShadowOpacity),
+                    radius: tokens.keyShadowRadius, x: 0, y: tokens.keyShadowY)
+            .accessibilityIdentifier("key-\(numberString)")
             .onTapGesture {
                 self.state.appendNumber(self.number)
         }

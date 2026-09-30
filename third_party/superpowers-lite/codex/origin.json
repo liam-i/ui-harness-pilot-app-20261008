@@ -1,0 +1,22 @@
+{
+  "repository": "https://github.com/obra/superpowers.git",
+  "version": "6.3.0",
+  "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+  "skills": [
+    "systematic-debugging",
+    "test-driven-development",
+    "receiving-code-review",
+    "verification-before-completion"
+  ],
+  "host": "codex",
+  "adaptations": [
+    "export ordinary files from pinned Git objects (replace objects disabled)",
+    "omit debugging creation/pressure fixtures and find-polluter.sh",
+    "replace polluter helper reference with project runner guidance",
+    "scope uninstalled writing-skills reference to maintenance",
+    "host invocation policy",
+    "local dependency namespace",
+    "host-scoped applicability guidance with TDD and debugging boundaries",
+    "TDD Apply-scoped description"
+  ]
+}

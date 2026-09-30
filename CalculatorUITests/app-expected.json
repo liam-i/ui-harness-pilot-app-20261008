@@ -1,0 +1,178 @@
+{
+  "basis": "app-scope.md and unchanged fixed upstream source; prepared before implementation",
+  "cases": [
+    {
+      "id": "A01",
+      "state": "initial",
+      "steps": [
+        "launch-clean"
+      ],
+      "expected_display": "0.00"
+    },
+    {
+      "id": "A02",
+      "state": "input",
+      "steps": [
+        "2",
+        "3"
+      ],
+      "expected_display": "23.00"
+    },
+    {
+      "id": "A03",
+      "state": "result-add",
+      "steps": [
+        "C",
+        "2",
+        "+",
+        "3",
+        "="
+      ],
+      "expected_display": "5.00"
+    },
+    {
+      "id": "A04",
+      "state": "result-subtract",
+      "steps": [
+        "C",
+        "2",
+        "−",
+        "3",
+        "="
+      ],
+      "expected_display": "-1.00"
+    },
+    {
+      "id": "A05",
+      "state": "result-multiply",
+      "steps": [
+        "C",
+        "2",
+        "×",
+        "3",
+        "="
+      ],
+      "expected_display": "6.00"
+    },
+    {
+      "id": "A06",
+      "state": "result-divide",
+      "steps": [
+        "C",
+        "8",
+        "÷",
+        "2",
+        "="
+      ],
+      "expected_display": "4.00"
+    },
+    {
+      "id": "A07",
+      "state": "clear",
+      "steps": [
+        "C"
+      ],
+      "expected_display": "0.00"
+    },
+    {
+      "id": "A08",
+      "state": "long",
+      "steps": [
+        "C",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "0"
+      ],
+      "expected_display": "1234567890.00"
+    },
+    {
+      "id": "A09",
+      "state": "nonfinite",
+      "steps": [
+        "C",
+        "1",
+        "÷",
+        "0",
+        "="
+      ],
+      "expected_display": "inf"
+    },
+    {
+      "id": "A10",
+      "state": "nonfinite",
+      "steps": [
+        "C",
+        "0",
+        "÷",
+        "0",
+        "="
+      ],
+      "expected_display": "nan"
+    },
+    {
+      "id": "A11",
+      "state": "trig",
+      "steps": [
+        "C",
+        "sin"
+      ],
+      "expected_display": "0.00"
+    },
+    {
+      "id": "A12",
+      "state": "trig",
+      "steps": [
+        "C",
+        "cos"
+      ],
+      "expected_display": "1.00"
+    },
+    {
+      "id": "A13",
+      "state": "trig",
+      "steps": [
+        "C",
+        "tan"
+      ],
+      "expected_display": "0.00"
+    },
+    {
+      "id": "A14",
+      "state": "pi",
+      "steps": [
+        "C",
+        "π"
+      ],
+      "expected_display": "3.14"
+    },
+    {
+      "id": "A15",
+      "state": "foreground",
+      "steps": [
+        "C",
+        "2",
+        "3",
+        "background",
+        "foreground"
+      ],
+      "expected_display": "23.00"
+    }
+  ],
+  "devices": [
+    "iPhone SE (3rd generation)",
+    "iPhone 17 Pro"
+  ],
+  "visual": [
+    "4 columns / 5 rows, complete labels, no overlap",
+    "all approved state values visible within safe area",
+    "tokens resource actually loaded from application bundle"
+  ],
+  "human_approval": "pending"
+}

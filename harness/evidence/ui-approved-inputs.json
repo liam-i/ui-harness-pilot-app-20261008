@@ -1,0 +1,34 @@
+{
+  "A": "db1d8d36482883a46f6624c02cde4241547f3d18",
+  "D": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+  "approval_refs": [
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+      "path": "design/units/UI-CALCULATOR/decisions/approve-U001.yaml",
+      "sha256": "78d7f4acab4fbb74a2098bfe26560f67ddb3d6538017fff53e2011c740236682"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+      "path": "design/units/UI-2048-MENU/decisions/approve-U001.yaml",
+      "sha256": "b634b272ddbd1712f605ec436835338a4a32b2c58b1779cc44c4bc54905fb171"
+    }
+  ],
+  "raw_reply": {
+    "questionItemId": "[\"request_user_input_async\",\"call_ke0y4hfKvw0LjjobI9UvJMtM\",0]",
+    "question": "请看[两份设计审核页](/Users/liam/Developer/workflow.md/ai-native-sdlc/engineering-harness/plans/2026-09-30-ui-design-workflow/execution/evidence/goal01-design-review/README.md)：A 沿用计算器现有设计，B 使用新的 2048 菜单设计。是否确认这两份设计及页内范围？本次对应固定内容 D=c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60。",
+    "answer": "两个设计通过",
+    "recorded_at": "2026-09-30T16:59:19.787590+08:00",
+    "time_basis": "Local capture after receiving the actual user reply; platform did not expose exact message send time",
+    "actor": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+    "roles": [
+      "product",
+      "ui"
+    ],
+    "scope": "Both fixed design packages and scope displayed in the review page; not implementation acceptance or next-stage release"
+  },
+  "exit": 0,
+  "stdout": "[main db1d8d3] Record actual user approval for fixed calculator and menu design packages\n 4 files changed, 182 insertions(+)\n create mode 100644 design/units/UI-2048-MENU/decisions/approve-U001.yaml\n create mode 100644 design/units/UI-2048-MENU/decisions/user-approval-U001.json\n create mode 100644 design/units/UI-CALCULATOR/decisions/approve-U001.yaml\n create mode 100644 design/units/UI-CALCULATOR/decisions/user-approval-U001.json\n",
+  "stderr": ""
+}

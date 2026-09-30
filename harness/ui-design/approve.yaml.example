@@ -1,0 +1,35 @@
+# 只在真实人确认最终D后填写；本模板不是批准。
+schema_version: ui-decision/1
+decision_id: <唯一决定ID>
+kind: approve
+unit: UI-001
+release: U001
+package_ref:
+  repository: <UI权威仓库身份>
+  commit: <已经产生的内容提交D>
+  path: design/units/UI-001/releases/U001/manifest.yaml
+  sha256: <D中清单的实际SHA-256>
+closure_ref:
+  repository: <闭包审阅证据仓库身份>
+  commit: <已经存在的闭包报告提交>
+  path: <逐文件、递归依赖及外部媒体的完整摘要清单>
+  sha256: <实际摘要>
+scope:
+  platforms: [<明确的平台与尺寸>]
+  screen_states: [<screen/state>]
+reviewers:
+  - actor: <经项目核对的真人身份>
+    roles: [product, ui]
+    decision: accepted
+    decided_at: <真实决定时间和时区>
+    # 平台未提供发送时间时可记接收后留存时间，并显式time_basis，不伪造精确消息时间。
+    evidence_path: <本次A内原审批证据相对路径>
+    evidence_sha256: <原审批证据摘要>
+engineering_review_ref:
+  repository: <工程可行性证据仓库身份>
+  commit: <已经存在的提交>
+  path: <实际工程可行性核对记录>
+  sha256: <实际摘要>
+limitations: []
+# 此记录不能填自身未来A的SHA。A提交产生后，消费者才固定该记录的commit/path/sha256。
+# 原批准不可覆盖；撤回/替代另存具名决定，引用原批准及包，说明旧消费者是否禁止继续。

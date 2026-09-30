@@ -1,0 +1,35 @@
+# 复制到业务项目的 openspec/config.yaml；已有配置请合并，不直接覆盖。
+# 选择 Artifact 的结构与依赖；仍需用 schema which 确认实际来源为内置 package。
+schema: spec-driven
+# 项目背景会提供给生成 Artifact 的 Agent；接入自己的项目时先替换技术栈。
+context: |
+  项目长期规则见 AGENTS.md；读取与当前 Change 有关的源码和测试。
+  技术栈：Swift 5、SwiftUI、Xcode 27、XCTest；业务构建与资源路径见 AGENTS.md。
+  本轮使用固定获批UI包和人工检查单；未采用需求层。运行资源进入工程，不依赖设计源。
+  Artifact 正文使用简体中文，保留结构标题、SHALL/MUST、WHEN/THEN。
+# 按 Artifact 类型补充写作约束；这些是 Agent 指导，不是自动执行的质量检查。
+rules:
+  proposal:
+    - 明确目标、非目标和真实受影响的 Capabilities
+  specs:
+    - 描述可观察行为，覆盖成功、边界和失败路径
+  design:
+    - 只解释必要技术决策、替代方案和风险；不复制 Spec
+    - 验证涉及外部资源时说明真实或替代依赖、隔离范围及失败清理；首次副作用前保存必要原状态并注册恢复，不可恢复状态用专用可重建环境
+  tasks:
+    - 每项描述写明验证方式；实施后在原条目记录证据，tasks.md 是 Feature 任务完成状态的唯一长期记录
+# Apply / Archive 阶段的操作建议；适用于项目安装，Codex CLI 与 App 本地任务共用。
+# 只自动接入 TDD；其他技巧由用户按需选择，验证义务始终遵循 AGENTS.md。
+# 与项目生成入口的 Harness 适配共同使用；不覆盖 CLI blocked 或实际 Schema 指令。
+# 裁剪可用工作流请编辑 harness/openspec-profile.json，不在这里配置 Profile。
+# CLI 来源与入口按 AGENTS.md 选择：A 为 npm + 项目级安装，B 为 Bash + 全局安装。
+operations:
+  apply:
+    guidance:
+      - 以下实施 guidance 仅适用于已授权进入 Apply；Verify 等读取 instructions apply 仅获取上下文，不执行 Task、勾选状态或加载 TDD
+      - 遵循当前 Change，默认不重新调用 Feature Planning；Explore／Verify 的显式方法选择遵循 AGENTS.md，不因查询、普通排错或核验请求自动调用
+      - 按 AGENTS.md 的“实施、失败与证据”，行为任务自动读取当前宿主项目的 test-driven-development/SKILL.md，在同一 Task 内执行 TDD；无需用户另调 TDD，方法不可用时报告，不静默跳过
+      - 保留可核查的 RED/GREEN；普通执行错误按 AGENTS.md 的局部恢复边界修正和复验，不计 RED；同一故障两轮仍失败或需要新决定／权限时停止，不绕过 blocked、放宽验收或重复已有授权
+  archive:
+    guidance:
+      - 在功能分支内归档并单独提交归档变更；随后验证与审查。原 Feature 在合并前需要行为返修时，按 AGENTS.md 恢复活动 Change 后回到 Apply

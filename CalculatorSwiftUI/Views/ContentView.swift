@@ -26,6 +26,7 @@ struct CalculationState {
 }
 
 struct ContentView: View {
+    let tokens = CalculatorTokens.current
     
     // define some variables
     @State var state = CalculationState()
@@ -34,13 +35,13 @@ struct ContentView: View {
     }
     
     var body: some View {
-        VStack(alignment: .trailing, spacing: 20) {
+        VStack(alignment: .trailing, spacing: tokens.rowSpacing) {
             Spacer()
             Text(displayString)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .lineLimit(3)
-                .padding(.bottom, 64)
+                .font(tokens.displayFont.value)
+                .accessibilityIdentifier("display")
+                .lineLimit(tokens.displayLineLimit)
+                .padding(.bottom, tokens.displayBottomPadding)
             
             HStack {
                 FunctionView(function: .cosinus, state: $state)
@@ -92,7 +93,7 @@ struct ContentView: View {
                 ActionView(action: .equal, state: $state)
             }
             
-        }.padding(32)
+        }.padding(tokens.screenInset)
     }
 }
 

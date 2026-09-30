@@ -1,0 +1,13 @@
+{
+  "recorded_at": "2026-09-30T17:24:59.501474+08:00",
+  "time_basis": "local capture after actual user message; not exact platform send time",
+  "actor": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+  "message": "规划通过，开始 Apply",
+  "plan_digest": "fb2c62b649beb6ec85aed3fbc28338635bb30c5c8ef6c1d836111636d9def590",
+  "scope": [
+    "adopt-calculator-ui-tokens",
+    "adopt-approved-menu-ui"
+  ],
+  "status": "planning approved; Apply authorized",
+  "limits": "This answer did not explicitly grant the separately offered local commits or Archive; no push, formal merge or release."
+}

@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct FunctionView: View {
+    let tokens = CalculatorTokens.current
     
     // define some variables
     enum MathFunctions {
@@ -42,13 +43,14 @@ struct FunctionView: View {
     
     var body: some View {
         return Text(function.string())
-            .font(.title)
-            .fontWeight(.bold)
-            .foregroundColor(.black)
-            .frame(width: 64, height: 64)
-            .background(Color.gray.opacity(0.2))
-            .cornerRadius(20)
-            .shadow(color: Color.gray.opacity(0.9), radius: 10, x: 0, y: 10)
+            .font(tokens.keyFont.value)
+            .foregroundColor(tokens.functionText.value)
+            .frame(width: tokens.keySize, height: tokens.keySize)
+            .background(tokens.functionColor.value.opacity(tokens.functionFillOpacity))
+            .cornerRadius(tokens.keyCornerRadius)
+            .shadow(color: tokens.functionColor.value.opacity(tokens.functionShadowOpacity),
+                    radius: tokens.keyShadowRadius, x: 0, y: tokens.keyShadowY)
+            .accessibilityIdentifier("key-\(function.string())")
             .onTapGesture {
                 self.state.currentNumber = self.function.operation(self.state.currentNumber)
         }

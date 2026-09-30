@@ -1,0 +1,896 @@
+{
+  "at": "2026-09-30T10:21:44.132753+00:00",
+  "mode": "manual current observation before authorized local commits and Archive",
+  "actual_authority_sha": "db1d8d36482883a46f6624c02cde4241547f3d18",
+  "history_root": "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52",
+  "policy_ref": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+    "path": "inputs/authority.md",
+    "sha256": "8c84263dc8ad1db635d66336b2b08d7a76d2f673396e3d670dbb1c21b950b5ef"
+  },
+  "checked_refs": [
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/manifest.yaml",
+      "sha256": "2f1ec315db7bf890fde151b6c8ad8ca6075759f6ab7daf6ee976d0a121306630"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/LICENSE-upstream.txt",
+      "sha256": "68e6220ac2a1aba3fbfb1f8397165ea4f84a0e29ae2793df29b51b8b85560bb0"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/brief.md",
+      "sha256": "163383123e717516aeec51850175ec2521f4d4f8e75e49b0f1477c7353cca897"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/expected-copy.json",
+      "sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/handoff.md",
+      "sha256": "a74db5cfc93c7d44cbe9f503a754c3bfb20f7561e1ecc399635ccfa9fc8fe119"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/references/original-runtime-pro.png",
+      "sha256": "99f1c4aeb3ed0e8b783d5eb4f327125844ad6007db7c35864be0e29b2aea28e0"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/references/original-runtime-se.png",
+      "sha256": "5dfce1b101d2f85f0bc48bdd680968e0db1cbd3ff16f0bf010f97b496447b4f4"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/references/source-images.json",
+      "sha256": "a1d383afbe7bd888aae0ed52f0c60ed0389868b8f57cc85414a03d9219c9f546"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/references/upstream-1.png",
+      "sha256": "d43f471e56fb9b7b63f367eb1eb86bedca0f4c1244861b667ce163b85f947ace"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/references/upstream-2.png",
+      "sha256": "db0674fb9a750faea86bdc65495e502b0e1da752d876cd68d39debc91c521882"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/sources.md",
+      "sha256": "6be5a33e88cb5e66200581749c545ac13f5e5274084fe1d7056a5beb47c3b8dc"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-CALCULATOR/releases/U001/tokens.json",
+      "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/app-scope.md",
+      "sha256": "ed8725c10f6a64a4371c174f7848ab0fc01122c4ca4c802cfbb0a43ce3603b1e"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/app-expected.json",
+      "sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/archives/app-a1f33650f3adcf7f89e8d403dd469dff7d57c6b1.zip",
+      "sha256": "1c4bce626a13b99f4ab42fde9456eefcf66e766d068a29b4cf706e136d5419b9"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/sources.json",
+      "sha256": "7e65dd352f55ba50acf5bfa575f36f3a25ef7468eca0db05851546686bb5adfe"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/manifest.yaml",
+      "sha256": "062a4887d998100c3bcda978f3b6630087b35b51206a5777ef1ccabaad9a18b2"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/LICENSE-kenney.txt",
+      "sha256": "69f7eaa5e05913b4d09cf5848f75390b5c3c9a409ef8555777803d9ca0c171fb"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/LICENSE-upstream.txt",
+      "sha256": "5bc53ddeab53cc054f70be136768cd16fbb1b065739e7fa26b930786e2243afa"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/assets/menu-primary.png",
+      "sha256": "0c43a01a95270167be8c05a68c45a2709e60177d9dfa59bedb56fd0802659e52"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/assets/menu-secondary.png",
+      "sha256": "f0f3d52f110768bf93a10b44f4ec3c727924c25734ce85e1275464c9b02cfe18"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/brief.md",
+      "sha256": "10b4975b1b66411b7ad7b6e3fa5e461795b26a9b7ef7ce5e9e5c5f9342204b09"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/expected-copy.json",
+      "sha256": "fb78734b0fba34e22c476e11340ba65a13458bc2c1a041c8bce4f48bc1a7e0c0"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/handoff.md",
+      "sha256": "4a10e6f9f77e8a3128e89096d9198b9ad0fbd1e68af1e0c6dde04dba7ca9319d"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/iteration.md",
+      "sha256": "1dedd1652156eb9da374b537e6ebc529bdf2bbf78354af8092327704d08fd21b"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/references/confirm-se.png",
+      "sha256": "74b311f78fbb5b2cc05bbf0396672c505ef0ff6ca30db964774d1ba1da541496"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/references/confirm-se.svg",
+      "sha256": "2b455e974fbd96042fba20cd8675451bb3444753b538689c73bfbc47dd4fded7"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/references/menu-pro.png",
+      "sha256": "33734f1d5705d6a815878db65e672beeb01441cdbe25348f23e44ac1e53050ff"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/references/menu-pro.svg",
+      "sha256": "c29050b9a73bb4db29ef01dc42dcefe925a0a58a8b9f28a515b5833acae739bb"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/references/menu-se.png",
+      "sha256": "40608b865213c1e808ff1a8847a06dc7c3a333788ce2cdc624cf7d1bc322de3e"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/references/menu-se.svg",
+      "sha256": "96957bbbdada541e1e72f6c8149376a521cfc5dc44b7444c69965adb591812fa"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/references/original-runtime-pro.png",
+      "sha256": "45703047e80d7c0e75bd63a0070d0b089389c62721206e7e10c4ba62ab30de26"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/references/original-runtime-se.png",
+      "sha256": "ca10595650b327dfc8bff5af2c1a0caf9ea0f00a99384665f157e0c33d48bf9b"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/references/preview.html",
+      "sha256": "563a2150827646a6eefa81bbd105f21654b157dec2392b38fdb4cd423594bf77"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/sources.md",
+      "sha256": "b13bb600733437ae559b4557fa2051c225cf03d9c5e8dd6a9600e36b95c943a5"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+      "path": "design/units/UI-2048-MENU/releases/U001/tokens.json",
+      "sha256": "3184b8ee1b57ce2bcba7cdf9940fbae83cecba7b5792bfd24bedea8564c902fc"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/game-scope.md",
+      "sha256": "d875543693192222bdf1cc867e1141999e90954ff70069d875e176ce95ed3ec2"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/game-expected.json",
+      "sha256": "fb78734b0fba34e22c476e11340ba65a13458bc2c1a041c8bce4f48bc1a7e0c0"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/archives/game-aba3d8522bc1e615cd5dd73801150ae54d25e78b.zip",
+      "sha256": "2b5515de435124b21932e37948296f2407d9fed280414ae1feda2a0677e04e9a"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/archives/kenney_ui-pack.zip",
+      "sha256": "a8a14a234911eb648c062622915c93e79e94e97cb7f9f375a70f6617f1174318"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/authority.md",
+      "sha256": "8c84263dc8ad1db635d66336b2b08d7a76d2f673396e3d670dbb1c21b950b5ef"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+      "path": "design/units/UI-CALCULATOR/decisions/approve-U001.yaml",
+      "sha256": "78d7f4acab4fbb74a2098bfe26560f67ddb3d6538017fff53e2011c740236682"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+      "path": "design/units/UI-2048-MENU/decisions/approve-U001.yaml",
+      "sha256": "b634b272ddbd1712f605ec436835338a4a32b2c58b1779cc44c4bc54905fb171"
+    }
+  ],
+  "decision_history": "db1d8d36482883a46f6624c02cde4241547f3d18\n\nA\tdesign/units/UI-2048-MENU/decisions/approve-U001.yaml\nA\tdesign/units/UI-2048-MENU/decisions/user-approval-U001.json\nA\tdesign/units/UI-CALCULATOR/decisions/approve-U001.yaml\nA\tdesign/units/UI-CALCULATOR/decisions/user-approval-U001.json\n",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+        "refs/heads/main"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 57,
+      "stdout_sha256": "ef079c1115313b61f4aa608f048a16a262e28b83cb423ae4779304261cd9f293",
+      "stdout": "db1d8d36482883a46f6624c02cde4241547f3d18\trefs/heads/main\n"
+    },
+    {
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52",
+        "db1d8d36482883a46f6624c02cde4241547f3d18"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "git",
+        "log",
+        "--format=%H",
+        "--name-status",
+        "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52..db1d8d36482883a46f6624c02cde4241547f3d18",
+        "--",
+        "design/units/UI-CALCULATOR/decisions",
+        "design/units/UI-2048-MENU/decisions"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 280,
+      "stdout_sha256": "38acdcaf64507cb1f3b68f98f6846ba7bac10d68e4e6b17d1691eeef2faf0747",
+      "stdout": "db1d8d36482883a46f6624c02cde4241547f3d18\n\nA\tdesign/units/UI-2048-MENU/decisions/approve-U001.yaml\nA\tdesign/units/UI-2048-MENU/decisions/user-approval-U001.json\nA\tdesign/units/UI-CALCULATOR/decisions/approve-U001.yaml\nA\tdesign/units/UI-CALCULATOR/decisions/user-approval-U001.json\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/manifest.yaml"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 10832,
+      "stdout_sha256": "2f1ec315db7bf890fde151b6c8ad8ca6075759f6ab7daf6ee976d0a121306630",
+      "stdout": "{\n  \"schema_version\": \"ui-design/1\",\n  \"unit\": \"UI-CALCULATOR\",\n  \"release\": \"U001\",\n  \"producer\": {\n    \"mode\": \"mixed\",\n    \"tool_observation_ref\": \"sources.md\"\n  },\n  \"brief_ref\": \"brief.md\",\n  \"requirement_refs\": [\n    {\n      \"repository\": \"/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority\",\n      \"commit\": \"99526d0a38689138bd81fcd8f09e9693502d7d41\",\n      \"path\": \"inputs/app-scope.md\",\n      \"sha256\": \"ed8725c10f6a64a4371c174f7848ab0fc01122c4ca4c802cfbb0a43ce3603b1e\"\n    }\n  ],\n  \"platforms\": [\n    {\n      \"target\": \"iOS 27.0 Simulator / SwiftUI\",\n      \"units\": \"pt; SE3 2x, iPhone17 Pro 3x\",\n      \"orientation\": \"portrait\",\n      \"reference_sizes\": [\n        {\n          \"device\": \"iPhone SE (3rd generation)\",\n          \"pt\": [\n            375,\n            667\n          ]\n        },\n        {\n          \"device\": \"iPhone 17 Pro\",\n          \"pt\": [\n            402,\n            874\n          ]\n        }\n      ],\n      \"locale\": \"English; OS chrome may follow simulator locale\",\n      \"constraints\": \"light appearance, default content size\"\n    }\n  ],\n  \"screens\": [\n    {\n      \"id\": \"calc\",\n      \"states\": [\n        \"initial\",\n        \"input\",\n        \"result\",\n        \"clear\",\n        \"long\",\n        \"nonfinite\",\n        \"trig\",\n        \"pi\",\n        \"foreground\"\n      ],\n      \"handoff_path\": \"handoff.md\"\n    }\n  ],\n  \"states\": [\n    {\n      \"id\": \"calc/initial\",\n      \"reference\": \"references/original-runtime-se.png\",\n      \"parameters\": \"0.00；Pro布局参考original-runtime-pro.png\"\n    },\n    {\n      \"id\": \"calc/input\",\n      \"reference\": \"references/original-runtime-se.png\",\n      \"parameters\": \"23.00；原作者输入参考upstream-2.png\"\n    },\n    {\n      \"id\": \"calc/result\",\n      \"reference\": \"references/original-runtime-se.png\",\n      \"parameters\": \"expected A03–A06的显示值，布局不变\"\n    },\n    {\n      \"id\": \"calc/clear\",\n      \"reference\": \"references/original-runtime-se.png\",\n      \"parameters\": \"0.00且暂存为空\"\n    },\n    {\n      \"id\": \"calc/long\",\n      \"reference\": \"references/original-runtime-se.png\",\n      \"parameters\": \"1234567890.00，最多3行且完整\"\n    },\n    {\n      \"id\": \"calc/nonfinite\",\n      \"reference\": \"references/original-runtime-se.png\",\n      \"parameters\": \"inf或nan，清除恢复0.00\"\n    },\n    {\n      \"id\": \"calc/trig\",\n      \"reference\": \"references/original-runtime-se.png\",\n      \"parameters\": \"A11–A13：sin0=0、cos0=1、tan0=0\"\n    },\n    {\n      \"id\": \"calc/pi\",\n      \"reference\": \"references/original-runtime-se.png\",\n      \"parameters\": \"3.14\"\n    },\n    {\n      \"id\": \"calc/foreground\",\n      \"reference\": \"references/original-runtime-se.png\",\n      \"parameters\": \"同进程前后台保留23.00\"\n    }\n  ],\n  \"flows\": [\n    {\n      \"id\": \"calc-entry\",\n      \"from\": \"calc/initial\",\n      \"trigger\": \"数字或π\",\n      \"to\": \"calc/input\",\n      \"behavior_ref\": \"A02/A14\"\n    },\n    {\n      \"id\": \"calc-operation\",\n      \"from\": \"calc/input\",\n      \"trigger\": \"运算符→第二操作数→=\",\n      \"to\": \"calc/result\",\n      \"behavior_ref\": \"A03–A06\"\n    },\n    {\n      \"id\": \"calc-nonfinite\",\n      \"from\": \"calc/initial\",\n      \"trigger\": \"1或0÷0=\",\n      \"to\": \"calc/nonfinite\",\n      \"behavior_ref\": \"A09/A10\"\n    },\n    {\n      \"id\": \"calc-clear\",\n      \"from\": \"calc/nonfinite\",\n      \"trigger\": \"清除；其他状态同样可清除\",\n      \"to\": \"calc/clear\",\n      \"behavior_ref\": \"A07\"\n    },\n    {\n      \"id\": \"calc-trig\",\n      \"from\": \"calc/initial\",\n      \"trigger\": \"sin/cos/tan\",\n      \"to\": \"calc/trig\",\n      \"behavior_ref\": \"A11–A13\"\n    }\n  ],\n  \"coverage\": [\n    {\n      \"behavior_ref\": \"A01\",\n      \"screen_states\": [\n        \"calc/initial\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"A02\",\n      \"screen_states\": [\n        \"calc/input\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"A03\",\n      \"screen_states\": [\n        \"calc/result\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"A04\",\n      \"screen_states\": [\n        \"calc/result\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"A05\",\n      \"screen_states\": [\n        \"calc/result\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"A06\",\n      \"screen_states\": [\n        \"calc/result\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"A07\",\n      \"screen_states\": [\n        \"calc/clear\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"A08\",\n      \"screen_states\": [\n        \"calc/long\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"A09\",\n      \"screen_states\": [\n        \"calc/nonfinite\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"A10\",\n      \"screen_states\": [\n        \"calc/nonfinite\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"A11\",\n      \"screen_states\": [\n        \"calc/trig\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"A12\",\n      \"screen_states\": [\n        \"calc/trig\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"A13\",\n      \"screen_states\": [\n        \"calc/trig\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"A14\",\n      \"screen_states\": [\n        \"calc/pi\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"A15\",\n      \"screen_states\": [\n        \"calc/foreground\"\n      ]\n    }\n  ],\n  \"dependencies\": [],\n  \"files\": [\n    {\n      \"path\": \"LICENSE-upstream.txt\",\n      \"media_type\": \"text/plain\",\n      \"sha256\": \"68e6220ac2a1aba3fbfb1f8397165ea4f84a0e29ae2793df29b51b8b85560bb0\",\n      \"bytes\": 1073,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true\n    },\n    {\n      \"path\": \"brief.md\",\n      \"media_type\": \"text/markdown\",\n      \"sha256\": \"163383123e717516aeec51850175ec2521f4d4f8e75e49b0f1477c7353cca897\",\n      \"bytes\": 1000,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true\n    },\n    {\n      \"path\": \"expected-copy.json\",\n      \"media_type\": \"application/json\",\n      \"sha256\": \"8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c\",\n      \"bytes\": 2971,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true\n    },\n    {\n      \"path\": \"handoff.md\",\n      \"media_type\": \"text/markdown\",\n      \"sha256\": \"a74db5cfc93c7d44cbe9f503a754c3bfb20f7561e1ecc399635ccfa9fc8fe119\",\n      \"bytes\": 1845,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true\n    },\n    {\n      \"path\": \"references/original-runtime-pro.png\",\n      \"media_type\": \"image/png\",\n      \"sha256\": \"99f1c4aeb3ed0e8b783d5eb4f327125844ad6007db7c35864be0e29b2aea28e0\",\n      \"bytes\": 651340,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true,\n      \"dimensions_px\": [\n        1206,\n        2622\n      ]\n    },\n    {\n      \"path\": \"references/original-runtime-se.png\",\n      \"media_type\": \"image/png\",\n      \"sha256\": \"5dfce1b101d2f85f0bc48bdd680968e0db1cbd3ff16f0bf010f97b496447b4f4\",\n      \"bytes\": 317761,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true,\n      \"dimensions_px\": [\n        750,\n        1334\n      ]\n    },\n    {\n      \"path\": \"references/source-images.json\",\n      \"media_type\": \"application/json\",\n      \"sha256\": \"a1d383afbe7bd888aae0ed52f0c60ed0389868b8f57cc85414a03d9219c9f546\",\n      \"bytes\": 651,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true\n    },\n    {\n      \"path\": \"references/upstream-1.png\",\n      \"media_type\": \"image/png\",\n      \"sha256\": \"d43f471e56fb9b7b63f367eb1eb86bedca0f4c1244861b667ce163b85f947ace\",\n      \"bytes\": 603348,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true,\n      \"dimensions_px\": [\n        1125,\n        2436\n      ]\n    },\n    {\n      \"path\": \"references/upstream-2.png\",\n      \"media_type\": \"image/png\",\n      \"sha256\": \"db0674fb9a750faea86bdc65495e502b0e1da752d876cd68d39debc91c521882\",\n      \"bytes\": 605937,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true,\n      \"dimensions_px\": [\n        1125,\n        2436\n      ]\n    },\n    {\n      \"path\": \"sources.md\",\n      \"media_type\": \"text/markdown\",\n      \"sha256\": \"6be5a33e88cb5e66200581749c545ac13f5e5274084fe1d7056a5beb47c3b8dc\",\n      \"bytes\": 1431,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true\n    },\n    {\n      \"path\": \"tokens.json\",\n      \"media_type\": \"application/json\",\n      \"sha256\": \"08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d\",\n      \"bytes\": 601,\n      \"purpose\": \"runtime-asset\",\n      \"required_for_engineering\": true\n    }\n  ],\n  \"asset_inputs\": [\n    {\n      \"source_ref\": {\n        \"repository\": \"/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority\",\n        \"commit\": \"99526d0a38689138bd81fcd8f09e9693502d7d41\",\n        \"path\": \"inputs/archives/app-a1f33650f3adcf7f89e8d403dd469dff7d57c6b1.zip\",\n        \"sha256\": \"1c4bce626a13b99f4ab42fde9456eefcf66e766d068a29b4cf706e136d5419b9\"\n      },\n      \"license\": \"MIT; LICENSE-upstream.txt\",\n      \"transform\": \"从固定SwiftUI源码提取视觉常量；源图保持原字节；当前截图为本次原工程启动观察\",\n      \"outputs\": [\n        \"tokens.json\",\n        \"handoff.md\",\n        \"references/upstream-1.png\",\n        \"references/upstream-2.png\",\n        \"references/original-runtime-se.png\",\n        \"references/original-runtime-pro.png\"\n      ]\n    },\n    {\n      \"source_ref\": {\n        \"repository\": \"/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority\",\n        \"commit\": \"99526d0a38689138bd81fcd8f09e9693502d7d41\",\n        \"path\": \"inputs/sources.json\",\n        \"sha256\": \"7e65dd352f55ba50acf5bfa575f36f3a25ef7468eca0db05851546686bb5adfe\"\n      },\n      \"license\": \"provenance metadata; per-source licenses retained\",\n      \"transform\": \"保留来源/归档表，供scope与sources.md回读\",\n      \"outputs\": [\n        \"sources.md\"\n      ]\n    }\n  ],\n  \"external_objects\": [],\n  \"acceptance\": {\n    \"handoff_path\": \"handoff.md\",\n    \"expected_ref\": {\n      \"repository\": \"/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority\",\n      \"commit\": \"99526d0a38689138bd81fcd8f09e9693502d7d41\",\n      \"path\": \"inputs/app-expected.json\",\n      \"sha256\": \"8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c\"\n    },\n    \"required_states\": [\n      \"calc/initial\",\n      \"calc/input\",\n      \"calc/result\",\n      \"calc/clear\",\n      \"calc/long\",\n      \"calc/nonfinite\",\n      \"calc/trig\",\n      \"calc/pi\",\n      \"calc/foreground\"\n    ],\n    \"allowed_differences\": [\n      {\n        \"id\": \"OS-RENDERING\",\n        \"basis\": \"原生系统栏/字体/符号/语义色、sheet/alert绘制以iOS27实际为准；不改变应用tokens、文案、布局约束和行为\",\n        \"review_path\": \"handoff.md\"\n      }\n    ]\n  },\n  \"limitations\": [\n    \"仅本轮iOS两尺寸、竖屏、浅色、默认字号；未验证其他平台或真机性能\",\n    \"原工程启动截图不是本包实现验收\",\n    \"没有企业设计团队审批；当前用户必须对本次D确认\"\n  ],\n  \"open_questions\": []\n}\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/LICENSE-upstream.txt"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 1073,
+      "stdout_sha256": "68e6220ac2a1aba3fbfb1f8397165ea4f84a0e29ae2793df29b51b8b85560bb0",
+      "stdout": "MIT License\n\nCopyright (c) 2020 Tarokh Mohammadi\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/brief.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 1000,
+      "stdout_sha256": "163383123e717516aeec51850175ec2521f4d4f8e75e49b0f1477c7353cca897",
+      "stdout": "# UI-CALCULATOR / U001 — 待人工确认\n\n制作来源：A：导入开源作者的成品图与原有视觉规范，由Codex整理交付；不声称存在设计团队对本试点的批准。\n\n需求来源与验收分母固定在输入提交 `99526d0a38689138bd81fcd8f09e9693502d7d41` 的 `inputs/app-scope.md` 和 `inputs/app-expected.json`，完整引用见manifest。需求由用户委托AI为开源试点整理，最终适用性待本次人工确认；本包没有产品批准或实施授权。\n\n本轮原生SwiftUI、iOS27.0 Simulator，iPhone SE3与17 Pro、竖屏／英文／默认字号／浅色。以pt布局，像素随设备scale；系统组件遵从当次OS。完整纳入/排除、生命周期、无障碍及预算边界以固定scope为准。\n\n当前用户负责产品/UI确认和最终验收；Codex负责制作、工程检查及限定验证。设计与工程角色由同一AI执行，不能自签批准。当前无业务规则待决；本包批准与后续真实运行仍待完成。\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/expected-copy.json"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 2971,
+      "stdout_sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c",
+      "stdout": "{\n  \"basis\": \"app-scope.md and unchanged fixed upstream source; prepared before implementation\",\n  \"cases\": [\n    {\n      \"id\": \"A01\",\n      \"state\": \"initial\",\n      \"steps\": [\n        \"launch-clean\"\n      ],\n      \"expected_display\": \"0.00\"\n    },\n    {\n      \"id\": \"A02\",\n      \"state\": \"input\",\n      \"steps\": [\n        \"2\",\n        \"3\"\n      ],\n      \"expected_display\": \"23.00\"\n    },\n    {\n      \"id\": \"A03\",\n      \"state\": \"result-add\",\n      \"steps\": [\n        \"C\",\n        \"2\",\n        \"+\",\n        \"3\",\n        \"=\"\n      ],\n      \"expected_display\": \"5.00\"\n    },\n    {\n      \"id\": \"A04\",\n      \"state\": \"result-subtract\",\n      \"steps\": [\n        \"C\",\n        \"2\",\n        \"−\",\n        \"3\",\n        \"=\"\n      ],\n      \"expected_display\": \"-1.00\"\n    },\n    {\n      \"id\": \"A05\",\n      \"state\": \"result-multiply\",\n      \"steps\": [\n        \"C\",\n        \"2\",\n        \"×\",\n        \"3\",\n        \"=\"\n      ],\n      \"expected_display\": \"6.00\"\n    },\n    {\n      \"id\": \"A06\",\n      \"state\": \"result-divide\",\n      \"steps\": [\n        \"C\",\n        \"8\",\n        \"÷\",\n        \"2\",\n        \"=\"\n      ],\n      \"expected_display\": \"4.00\"\n    },\n    {\n      \"id\": \"A07\",\n      \"state\": \"clear\",\n      \"steps\": [\n        \"C\"\n      ],\n      \"expected_display\": \"0.00\"\n    },\n    {\n      \"id\": \"A08\",\n      \"state\": \"long\",\n      \"steps\": [\n        \"C\",\n        \"1\",\n        \"2\",\n        \"3\",\n        \"4\",\n        \"5\",\n        \"6\",\n        \"7\",\n        \"8\",\n        \"9\",\n        \"0\"\n      ],\n      \"expected_display\": \"1234567890.00\"\n    },\n    {\n      \"id\": \"A09\",\n      \"state\": \"nonfinite\",\n      \"steps\": [\n        \"C\",\n        \"1\",\n        \"÷\",\n        \"0\",\n        \"=\"\n      ],\n      \"expected_display\": \"inf\"\n    },\n    {\n      \"id\": \"A10\",\n      \"state\": \"nonfinite\",\n      \"steps\": [\n        \"C\",\n        \"0\",\n        \"÷\",\n        \"0\",\n        \"=\"\n      ],\n      \"expected_display\": \"nan\"\n    },\n    {\n      \"id\": \"A11\",\n      \"state\": \"trig\",\n      \"steps\": [\n        \"C\",\n        \"sin\"\n      ],\n      \"expected_display\": \"0.00\"\n    },\n    {\n      \"id\": \"A12\",\n      \"state\": \"trig\",\n      \"steps\": [\n        \"C\",\n        \"cos\"\n      ],\n      \"expected_display\": \"1.00\"\n    },\n    {\n      \"id\": \"A13\",\n      \"state\": \"trig\",\n      \"steps\": [\n        \"C\",\n        \"tan\"\n      ],\n      \"expected_display\": \"0.00\"\n    },\n    {\n      \"id\": \"A14\",\n      \"state\": \"pi\",\n      \"steps\": [\n        \"C\",\n        \"π\"\n      ],\n      \"expected_display\": \"3.14\"\n    },\n    {\n      \"id\": \"A15\",\n      \"state\": \"foreground\",\n      \"steps\": [\n        \"C\",\n        \"2\",\n        \"3\",\n        \"background\",\n        \"foreground\"\n      ],\n      \"expected_display\": \"23.00\"\n    }\n  ],\n  \"devices\": [\n    \"iPhone SE (3rd generation)\",\n    \"iPhone 17 Pro\"\n  ],\n  \"visual\": [\n    \"4 columns / 5 rows, complete labels, no overlap\",\n    \"all approved state values visible within safe area\",\n    \"tokens resource actually loaded from application bundle\"\n  ],\n  \"human_approval\": \"pending\"\n}\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/handoff.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 1845,
+      "stdout_sha256": "a74db5cfc93c7d44cbe9f503a754c3bfb20f7561e1ecc399635ccfa9fc8fe119",
+      "stdout": "# 计算器交接\n\n## 画面与状态\n\n主屏为4列5行：cos/sin/tan/×；7/8/9/÷；4/5/6/+；1/2/3/−；清除/0/π/=。初始0.00、输入23.00见references两张原图；其他状态共享同布局，以独立expected的操作与显示值为准。\n\ncalc/initial、calc/input、calc/result、calc/clear、calc/long、calc/nonfinite、calc/trig、calc/pi、calc/foreground均保持同一键盘。result包括四则结果，nonfinite包括inf和nan；不新增错误态按钮或提示。清除重置两个暂存字段；等号用完后清空暂存；三角函数为弧度。无loading/disabled/网络错误，因为本轮为同步本地运算。\n\n## 布局与组件\n\nContentView对应显示区及行列；NumberView、ActionView、FunctionView分别对应数字、运算与函数键。tokens沿用现有语义色与字体、64pt键、20pt角、32pt外边距、20pt行间距和64pt显示下间距。HStack余宽由Spacer分配，不把上游截图的像素转换成固定坐标。\n\n保留系统safe area，不添加状态栏绘制代码。默认浅色/字号。长数字1234567890.00最多3行且值完整可见；小屏不得裁键。系统颜色、字体光栅化、SF Symbols与系统栏随iOS27绘制，可与旧原图差异；不允许改按钮顺序、内容、交互或tokens尺寸。\n\n## 资源与验收\n\ntokens.json是必需运行输入：导入工程bundle并由实际组件读取，固定输入/输出摘要与资源构建证据写入当前Design/Tasks/E。参考PNG及许可仅作设计资料，不进入产品运行包；系统字体与符号不另导出。\n\n逐项完成manifest所指expected在两设备上的布局与交互核对。原模型数学/保存规则保留；异常Double值只要求原表达及清除恢复，不在本轮改成新业务。构建成功、模板、原图均不能替代实际运行与真人结论。\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/references/original-runtime-pro.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 651340,
+      "stdout_sha256": "99f1c4aeb3ed0e8b783d5eb4f327125844ad6007db7c35864be0e29b2aea28e0",
+      "stdout_format": "binary; exact content identified by immutable Git ref and SHA-256"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/references/original-runtime-se.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 317761,
+      "stdout_sha256": "5dfce1b101d2f85f0bc48bdd680968e0db1cbd3ff16f0bf010f97b496447b4f4",
+      "stdout_format": "binary; exact content identified by immutable Git ref and SHA-256"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/references/source-images.json"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 651,
+      "stdout_sha256": "a1d383afbe7bd888aae0ed52f0c60ed0389868b8f57cc85414a03d9219c9f546",
+      "stdout": "[\n  {\n    \"url\": \"https://user-images.githubusercontent.com/72879576/96428215-5af75c00-120c-11eb-82ce-74440436adae.png\",\n    \"path\": \"/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/sources/app-reference/upstream-1.png\",\n    \"bytes\": 603348,\n    \"sha256\": \"d43f471e56fb9b7b63f367eb1eb86bedca0f4c1244861b667ce163b85f947ace\"\n  },\n  {\n    \"url\": \"https://user-images.githubusercontent.com/72879576/96428221-5d59b600-120c-11eb-9773-b72e64435102.png\",\n    \"path\": \"/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/sources/app-reference/upstream-2.png\",\n    \"bytes\": 605937,\n    \"sha256\": \"db0674fb9a750faea86bdc65495e502b0e1da752d876cd68d39debc91c521882\"\n  }\n]\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/references/upstream-1.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 603348,
+      "stdout_sha256": "d43f471e56fb9b7b63f367eb1eb86bedca0f4c1244861b667ce163b85f947ace",
+      "stdout_format": "binary; exact content identified by immutable Git ref and SHA-256"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/references/upstream-2.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 605937,
+      "stdout_sha256": "db0674fb9a750faea86bdc65495e502b0e1da752d876cd68d39debc91c521882",
+      "stdout_format": "binary; exact content identified by immutable Git ref and SHA-256"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/sources.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 1431,
+      "stdout_sha256": "6be5a33e88cb5e66200581749c545ac13f5e5274084fe1d7056a5beb47c3b8dc",
+      "stdout": "# 来源与制作观察\n\n固定源码：https://github.com/TarokhDev2020/Calculator-for-SwiftUI/tree/a1f33650f3adcf7f89e8d403dd469dff7d57c6b1，MIT。源码归档已保存在输入提交`99526d0a38689138bd81fcd8f09e9693502d7d41`的`inputs/archives/app-a1f33650f3adcf7f89e8d403dd469dff7d57c6b1.zip`，SHA-256 `1c4bce626a13b99f4ab42fde9456eefcf66e766d068a29b4cf706e136d5419b9`；源归档只是资料，未执行README中的操作指令。\n\n制作环境：当前Codex会话，使用本地文件、Python标准库生成JSON/SVG和文件清单。未调用Figma、open-design或MCP历史设计读取；不声称已有团队人审。Xcode27.0的两个原工程构建在P0已通过iOS15+参数，不能推断新UI运行通过。\n\n最终包会以D固定，人工决定另存A。本文件记录制作过程，不产生批准。参考输出及tokens由本UI单元拥有；原代码不改owner，未采用AST/DAS，无需伪造身份。\n\n参考图取自固定README中的原始user-images链接（来源记录见references/source-images.json），保持原字节；原作者示例是旧系统渲染，系统栏和系统颜色精确RGB不作为iOS27的像素基准。\n\n本轮专用模拟器实际启动两工程后取得original-runtime-se/pro.png，分别为750×1334和1206×2622px；只证明原工程初始画面可运行，不证明本包实现或行为验收。渲染器为运行时随附sharp（本地SVG光栅化，不执行HTML）。\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-CALCULATOR/releases/U001/tokens.json"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 601,
+      "stdout_sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d",
+      "stdout": "{\n  \"units\": \"pt\",\n  \"screenInset\": 32,\n  \"rowSpacing\": 20,\n  \"keySize\": 64,\n  \"keyCornerRadius\": 20,\n  \"displayBottomPadding\": 64,\n  \"displayLineLimit\": 3,\n  \"keyShadowRadius\": 10,\n  \"keyShadowY\": 10,\n  \"numberShadowOpacity\": 0.3,\n  \"functionShadowOpacity\": 0.9,\n  \"functionFillOpacity\": 0.2,\n  \"displayFont\": \"largeTitle.bold\",\n  \"keyFont\": \"title.bold\",\n  \"numberColor\": \"SwiftUI.Color.blue\",\n  \"operatorColor\": \"SwiftUI.Color.green\",\n  \"functionColor\": \"SwiftUI.Color.gray\",\n  \"numberText\": \"SwiftUI.Color.white\",\n  \"operatorText\": \"SwiftUI.Color.white\",\n  \"functionText\": \"SwiftUI.Color.black\"\n}\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/app-scope.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 1978,
+      "stdout_sha256": "ed8725c10f6a64a4371c174f7848ab0fc01122c4ca4c802cfbb0a43ce3603b1e",
+      "stdout": "# App试点需求输入\n\n来源：用户授权使用开源工程进行限定试点；原始工程来自sources.json中app固定提交。制作模式A接收公开制作成品；来源并非本试点专业团队批准，当前用户负责最终确认。\n\n纳入计算器主屏。保留原四列五行、蓝数字/绿运算/灰三角函数、圆角、显示区和按键位置；将现有视觉常量与组件关系整理为固定tokens供真实工程消费。当前Behavior入口为ContentView、NumberView、ActionView、FunctionView。不新增数学操作、历史、网络、持久化或错误弹窗。\n\niOS原生SwiftUI，Xcode27.0，构建命令指定iOS15+，验收iOS27.0 Simulator的iPhone SE3（375×667pt）和iPhone17 Pro（402×874pt），竖屏、默认字号、浅色、英文。iOS系统颜色/字体/符号与上游旧截图可存在平台绘制差异，布局常量保持固定。默认安全区，外边距32pt、键64pt、角20pt、行距20pt。\n\n本轮独立expected见app-expected.json。长数字限定1234567890.00、显示最多3行，不能裁掉本测试值；不承诺任意长度。原Double语义除0显示inf或nan，原三角函数使用弧度；不将其改成错误提示或度数。清除可从该状态返回0.00。已有行为的回归补测不伪造RED。\n\n键盘、网络loading、远程错误、横屏、非默认Dynamic Type、VoiceOver完整可达性、Android和真机性能不在本限定设计批准范围，不把未验当通过。保留现有辅助技术语义，不在本轮添加全产品承诺。前后台同进程返回保留当前输入；冷启动沿原0.00，不新增存储。\n\n验收原生构建、两尺寸截图及实际输入/计算/清除操作；运行时实际消费tokens，不能只是重新截图原工程。新增素材预算：仅小型tokens资源≤16KiB；无新图片/字体/动画，无帧率/内存产品指标新增。人工核对默认/输入/结果/异常/长数字，按原工程规划审阅后实施。\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/app-expected.json"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 2971,
+      "stdout_sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c",
+      "stdout": "{\n  \"basis\": \"app-scope.md and unchanged fixed upstream source; prepared before implementation\",\n  \"cases\": [\n    {\n      \"id\": \"A01\",\n      \"state\": \"initial\",\n      \"steps\": [\n        \"launch-clean\"\n      ],\n      \"expected_display\": \"0.00\"\n    },\n    {\n      \"id\": \"A02\",\n      \"state\": \"input\",\n      \"steps\": [\n        \"2\",\n        \"3\"\n      ],\n      \"expected_display\": \"23.00\"\n    },\n    {\n      \"id\": \"A03\",\n      \"state\": \"result-add\",\n      \"steps\": [\n        \"C\",\n        \"2\",\n        \"+\",\n        \"3\",\n        \"=\"\n      ],\n      \"expected_display\": \"5.00\"\n    },\n    {\n      \"id\": \"A04\",\n      \"state\": \"result-subtract\",\n      \"steps\": [\n        \"C\",\n        \"2\",\n        \"−\",\n        \"3\",\n        \"=\"\n      ],\n      \"expected_display\": \"-1.00\"\n    },\n    {\n      \"id\": \"A05\",\n      \"state\": \"result-multiply\",\n      \"steps\": [\n        \"C\",\n        \"2\",\n        \"×\",\n        \"3\",\n        \"=\"\n      ],\n      \"expected_display\": \"6.00\"\n    },\n    {\n      \"id\": \"A06\",\n      \"state\": \"result-divide\",\n      \"steps\": [\n        \"C\",\n        \"8\",\n        \"÷\",\n        \"2\",\n        \"=\"\n      ],\n      \"expected_display\": \"4.00\"\n    },\n    {\n      \"id\": \"A07\",\n      \"state\": \"clear\",\n      \"steps\": [\n        \"C\"\n      ],\n      \"expected_display\": \"0.00\"\n    },\n    {\n      \"id\": \"A08\",\n      \"state\": \"long\",\n      \"steps\": [\n        \"C\",\n        \"1\",\n        \"2\",\n        \"3\",\n        \"4\",\n        \"5\",\n        \"6\",\n        \"7\",\n        \"8\",\n        \"9\",\n        \"0\"\n      ],\n      \"expected_display\": \"1234567890.00\"\n    },\n    {\n      \"id\": \"A09\",\n      \"state\": \"nonfinite\",\n      \"steps\": [\n        \"C\",\n        \"1\",\n        \"÷\",\n        \"0\",\n        \"=\"\n      ],\n      \"expected_display\": \"inf\"\n    },\n    {\n      \"id\": \"A10\",\n      \"state\": \"nonfinite\",\n      \"steps\": [\n        \"C\",\n        \"0\",\n        \"÷\",\n        \"0\",\n        \"=\"\n      ],\n      \"expected_display\": \"nan\"\n    },\n    {\n      \"id\": \"A11\",\n      \"state\": \"trig\",\n      \"steps\": [\n        \"C\",\n        \"sin\"\n      ],\n      \"expected_display\": \"0.00\"\n    },\n    {\n      \"id\": \"A12\",\n      \"state\": \"trig\",\n      \"steps\": [\n        \"C\",\n        \"cos\"\n      ],\n      \"expected_display\": \"1.00\"\n    },\n    {\n      \"id\": \"A13\",\n      \"state\": \"trig\",\n      \"steps\": [\n        \"C\",\n        \"tan\"\n      ],\n      \"expected_display\": \"0.00\"\n    },\n    {\n      \"id\": \"A14\",\n      \"state\": \"pi\",\n      \"steps\": [\n        \"C\",\n        \"π\"\n      ],\n      \"expected_display\": \"3.14\"\n    },\n    {\n      \"id\": \"A15\",\n      \"state\": \"foreground\",\n      \"steps\": [\n        \"C\",\n        \"2\",\n        \"3\",\n        \"background\",\n        \"foreground\"\n      ],\n      \"expected_display\": \"23.00\"\n    }\n  ],\n  \"devices\": [\n    \"iPhone SE (3rd generation)\",\n    \"iPhone 17 Pro\"\n  ],\n  \"visual\": [\n    \"4 columns / 5 rows, complete labels, no overlap\",\n    \"all approved state values visible within safe area\",\n    \"tokens resource actually loaded from application bundle\"\n  ],\n  \"human_approval\": \"pending\"\n}\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/archives/app-a1f33650f3adcf7f89e8d403dd469dff7d57c6b1.zip"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 36669,
+      "stdout_sha256": "1c4bce626a13b99f4ab42fde9456eefcf66e766d068a29b4cf706e136d5419b9",
+      "stdout_format": "binary; exact content identified by immutable Git ref and SHA-256"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/sources.json"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 2127,
+      "stdout_sha256": "7e65dd352f55ba50acf5bfa575f36f3a25ef7468eca0db05851546686bb5adfe",
+      "stdout": "{\n  \"checked_at\": \"2026-09-30T16:32:03+08:00\",\n  \"root\": \"/private/tmp/ui-workflow-p0-20260930-u8jw1kyx\",\n  \"sources\": [\n    {\n      \"name\": \"app\",\n      \"repository\": \"https://github.com/TarokhDev2020/Calculator-for-SwiftUI\",\n      \"ref\": \"master\",\n      \"commit\": \"a1f33650f3adcf7f89e8d403dd469dff7d57c6b1\",\n      \"commit_date\": \"2020-10-29T07:23:05Z\",\n      \"url\": \"https://codeload.github.com/TarokhDev2020/Calculator-for-SwiftUI/zip/a1f33650f3adcf7f89e8d403dd469dff7d57c6b1\",\n      \"bytes\": 36669,\n      \"sha256\": \"1c4bce626a13b99f4ab42fde9456eefcf66e766d068a29b4cf706e136d5419b9\",\n      \"files\": 19,\n      \"license_api\": {\n        \"key\": \"mit\",\n        \"name\": \"MIT License\",\n        \"spdx_id\": \"MIT\",\n        \"url\": \"https://api.github.com/licenses/mit\",\n        \"node_id\": \"MDc6TGljZW5zZTEz\"\n      },\n      \"retained_archive\": \"inputs/archives/app-a1f33650f3adcf7f89e8d403dd469dff7d57c6b1.zip\"\n    },\n    {\n      \"name\": \"game\",\n      \"repository\": \"https://github.com/caiobzen/2048-swiftui\",\n      \"ref\": \"master\",\n      \"commit\": \"aba3d8522bc1e615cd5dd73801150ae54d25e78b\",\n      \"commit_date\": \"2020-03-19T13:41:30Z\",\n      \"url\": \"https://codeload.github.com/caiobzen/2048-swiftui/zip/aba3d8522bc1e615cd5dd73801150ae54d25e78b\",\n      \"bytes\": 1106929,\n      \"sha256\": \"2b5515de435124b21932e37948296f2407d9fed280414ae1feda2a0677e04e9a\",\n      \"files\": 76,\n      \"license_api\": {\n        \"key\": \"mit\",\n        \"name\": \"MIT License\",\n        \"spdx_id\": \"MIT\",\n        \"url\": \"https://api.github.com/licenses/mit\",\n        \"node_id\": \"MDc6TGljZW5zZTEz\"\n      },\n      \"retained_archive\": \"inputs/archives/game-aba3d8522bc1e615cd5dd73801150ae54d25e78b.zip\"\n    },\n    {\n      \"name\": \"kenney-ui-pack\",\n      \"source_page\": \"https://kenney.nl/assets/ui-pack\",\n      \"url\": \"https://kenney.nl/media/pages/assets/ui-pack/f651646eab-1718203990/kenney_ui-pack.zip\",\n      \"bytes\": 1229750,\n      \"sha256\": \"a8a14a234911eb648c062622915c93e79e94e97cb7f9f375a70f6617f1174318\",\n      \"files\": 1315,\n      \"retained_archive\": \"inputs/archives/kenney_ui-pack.zip\"\n    }\n  ],\n  \"download_only\": true,\n  \"built_or_executed\": false\n}\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/manifest.yaml"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 12478,
+      "stdout_sha256": "062a4887d998100c3bcda978f3b6630087b35b51206a5777ef1ccabaad9a18b2",
+      "stdout": "{\n  \"schema_version\": \"ui-design/1\",\n  \"unit\": \"UI-2048-MENU\",\n  \"release\": \"U001\",\n  \"producer\": {\n    \"mode\": \"ai\",\n    \"tool_observation_ref\": \"sources.md\"\n  },\n  \"brief_ref\": \"brief.md\",\n  \"requirement_refs\": [\n    {\n      \"repository\": \"/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority\",\n      \"commit\": \"99526d0a38689138bd81fcd8f09e9693502d7d41\",\n      \"path\": \"inputs/game-scope.md\",\n      \"sha256\": \"d875543693192222bdf1cc867e1141999e90954ff70069d875e176ce95ed3ec2\"\n    }\n  ],\n  \"platforms\": [\n    {\n      \"target\": \"iOS 27.0 Simulator / SwiftUI\",\n      \"units\": \"pt; SE3 2x, iPhone17 Pro 3x\",\n      \"orientation\": \"portrait\",\n      \"reference_sizes\": [\n        {\n          \"device\": \"iPhone SE (3rd generation)\",\n          \"pt\": [\n            375,\n            667\n          ]\n        },\n        {\n          \"device\": \"iPhone 17 Pro\",\n          \"pt\": [\n            402,\n            874\n          ]\n        }\n      ],\n      \"locale\": \"English; OS chrome may follow simulator locale\",\n      \"constraints\": \"light appearance, default content size\"\n    }\n  ],\n  \"screens\": [\n    {\n      \"id\": \"menu\",\n      \"states\": [\n        \"default\",\n        \"confirm-reset\"\n      ],\n      \"handoff_path\": \"handoff.md\"\n    },\n    {\n      \"id\": \"game\",\n      \"states\": [\n        \"board\"\n      ],\n      \"handoff_path\": \"handoff.md\"\n    }\n  ],\n  \"states\": [\n    {\n      \"id\": \"menu/default\",\n      \"reference\": \"references/menu-se.png\",\n      \"parameters\": \"Pro版本menu-pro.png；SVG为可编辑原稿；系统sheet布局按handoff适配\"\n    },\n    {\n      \"id\": \"menu/confirm-reset\",\n      \"reference\": \"references/confirm-se.png\",\n      \"parameters\": \"系统Alert示意；Cancel/Yeah, whatever保持原回调\"\n    },\n    {\n      \"id\": \"game/board\",\n      \"reference\": \"references/original-runtime-se.png\",\n      \"parameters\": \"原棋盘上下文，非新设计；确定性数据按expected，Pro参考original-runtime-pro.png\"\n    }\n  ],\n  \"flows\": [\n    {\n      \"id\": \"open-menu\",\n      \"from\": \"game/board\",\n      \"trigger\": \"menuButton\",\n      \"to\": \"menu/default\",\n      \"behavior_ref\": \"B02\"\n    },\n    {\n      \"id\": \"close-menu\",\n      \"from\": \"menu/default\",\n      \"trigger\": \"向下滑动\",\n      \"to\": \"game/board\",\n      \"behavior_ref\": \"B03\"\n    },\n    {\n      \"id\": \"request-reset\",\n      \"from\": \"menu/default\",\n      \"trigger\": \"RESET BEST SCORE\",\n      \"to\": \"menu/confirm-reset\",\n      \"behavior_ref\": \"B04\"\n    },\n    {\n      \"id\": \"cancel-reset\",\n      \"from\": \"menu/confirm-reset\",\n      \"trigger\": \"Cancel\",\n      \"to\": \"menu/default\",\n      \"behavior_ref\": \"B05\"\n    },\n    {\n      \"id\": \"confirm-reset\",\n      \"from\": \"menu/confirm-reset\",\n      \"trigger\": \"Yeah, whatever\",\n      \"to\": \"game/board\",\n      \"behavior_ref\": \"B06\"\n    },\n    {\n      \"id\": \"new-game\",\n      \"from\": \"menu/default\",\n      \"trigger\": \"NEW GAME\",\n      \"to\": \"game/board\",\n      \"behavior_ref\": \"B07\"\n    }\n  ],\n  \"coverage\": [\n    {\n      \"behavior_ref\": \"B01\",\n      \"screen_states\": [\n        \"game/board\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"B02\",\n      \"screen_states\": [\n        \"menu/default\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"B03\",\n      \"screen_states\": [\n        \"game/board\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"B04\",\n      \"screen_states\": [\n        \"menu/confirm-reset\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"B05\",\n      \"screen_states\": [\n        \"menu/default\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"B06\",\n      \"screen_states\": [\n        \"game/board\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"B07\",\n      \"screen_states\": [\n        \"game/board\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"B08\",\n      \"screen_states\": [\n        \"menu/default\"\n      ]\n    },\n    {\n      \"behavior_ref\": \"B09\",\n      \"screen_states\": [\n        \"game/board\"\n      ]\n    }\n  ],\n  \"dependencies\": [],\n  \"files\": [\n    {\n      \"path\": \"LICENSE-kenney.txt\",\n      \"media_type\": \"text/plain\",\n      \"sha256\": \"69f7eaa5e05913b4d09cf5848f75390b5c3c9a409ef8555777803d9ca0c171fb\",\n      \"bytes\": 565,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true\n    },\n    {\n      \"path\": \"LICENSE-upstream.txt\",\n      \"media_type\": \"text/plain\",\n      \"sha256\": \"5bc53ddeab53cc054f70be136768cd16fbb1b065739e7fa26b930786e2243afa\",\n      \"bytes\": 1080,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true\n    },\n    {\n      \"path\": \"assets/menu-primary.png\",\n      \"media_type\": \"image/png\",\n      \"sha256\": \"0c43a01a95270167be8c05a68c45a2709e60177d9dfa59bedb56fd0802659e52\",\n      \"bytes\": 784,\n      \"purpose\": \"runtime-asset\",\n      \"required_for_engineering\": true,\n      \"dimensions_px\": [\n        384,\n        128\n      ]\n    },\n    {\n      \"path\": \"assets/menu-secondary.png\",\n      \"media_type\": \"image/png\",\n      \"sha256\": \"f0f3d52f110768bf93a10b44f4ec3c727924c25734ce85e1275464c9b02cfe18\",\n      \"bytes\": 786,\n      \"purpose\": \"runtime-asset\",\n      \"required_for_engineering\": true,\n      \"dimensions_px\": [\n        384,\n        128\n      ]\n    },\n    {\n      \"path\": \"brief.md\",\n      \"media_type\": \"text/markdown\",\n      \"sha256\": \"10b4975b1b66411b7ad7b6e3fa5e461795b26a9b7ef7ce5e9e5c5f9342204b09\",\n      \"bytes\": 951,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true\n    },\n    {\n      \"path\": \"expected-copy.json\",\n      \"media_type\": \"application/json\",\n      \"sha256\": \"fb78734b0fba34e22c476e11340ba65a13458bc2c1a041c8bce4f48bc1a7e0c0\",\n      \"bytes\": 2079,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true\n    },\n    {\n      \"path\": \"handoff.md\",\n      \"media_type\": \"text/markdown\",\n      \"sha256\": \"4a10e6f9f77e8a3128e89096d9198b9ad0fbd1e68af1e0c6dde04dba7ca9319d\",\n      \"bytes\": 2435,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true\n    },\n    {\n      \"path\": \"iteration.md\",\n      \"media_type\": \"text/markdown\",\n      \"sha256\": \"1dedd1652156eb9da374b537e6ebc529bdf2bbf78354af8092327704d08fd21b\",\n      \"bytes\": 1438,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true\n    },\n    {\n      \"path\": \"references/confirm-se.png\",\n      \"media_type\": \"image/png\",\n      \"sha256\": \"74b311f78fbb5b2cc05bbf0396672c505ef0ff6ca30db964774d1ba1da541496\",\n      \"bytes\": 54231,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true,\n      \"dimensions_px\": [\n        750,\n        1246\n      ]\n    },\n    {\n      \"path\": \"references/confirm-se.svg\",\n      \"media_type\": \"image/svg+xml\",\n      \"sha256\": \"2b455e974fbd96042fba20cd8675451bb3444753b538689c73bfbc47dd4fded7\",\n      \"bytes\": 23261,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true\n    },\n    {\n      \"path\": \"references/menu-pro.png\",\n      \"media_type\": \"image/png\",\n      \"sha256\": \"33734f1d5705d6a815878db65e672beeb01441cdbe25348f23e44ac1e53050ff\",\n      \"bytes\": 53525,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true,\n      \"dimensions_px\": [\n        804,\n        1576\n      ]\n    },\n    {\n      \"path\": \"references/menu-pro.svg\",\n      \"media_type\": \"image/svg+xml\",\n      \"sha256\": \"c29050b9a73bb4db29ef01dc42dcefe925a0a58a8b9f28a515b5833acae739bb\",\n      \"bytes\": 22634,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true\n    },\n    {\n      \"path\": \"references/menu-se.png\",\n      \"media_type\": \"image/png\",\n      \"sha256\": \"40608b865213c1e808ff1a8847a06dc7c3a333788ce2cdc624cf7d1bc322de3e\",\n      \"bytes\": 44307,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true,\n      \"dimensions_px\": [\n        750,\n        1246\n      ]\n    },\n    {\n      \"path\": \"references/menu-se.svg\",\n      \"media_type\": \"image/svg+xml\",\n      \"sha256\": \"96957bbbdada541e1e72f6c8149376a521cfc5dc44b7444c69965adb591812fa\",\n      \"bytes\": 22634,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true\n    },\n    {\n      \"path\": \"references/original-runtime-pro.png\",\n      \"media_type\": \"image/png\",\n      \"sha256\": \"45703047e80d7c0e75bd63a0070d0b089389c62721206e7e10c4ba62ab30de26\",\n      \"bytes\": 139076,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true,\n      \"dimensions_px\": [\n        1206,\n        2622\n      ]\n    },\n    {\n      \"path\": \"references/original-runtime-se.png\",\n      \"media_type\": \"image/png\",\n      \"sha256\": \"ca10595650b327dfc8bff5af2c1a0caf9ea0f00a99384665f157e0c33d48bf9b\",\n      \"bytes\": 70613,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true,\n      \"dimensions_px\": [\n        750,\n        1334\n      ]\n    },\n    {\n      \"path\": \"references/preview.html\",\n      \"media_type\": \"text/html\",\n      \"sha256\": \"563a2150827646a6eefa81bbd105f21654b157dec2392b38fdb4cd423594bf77\",\n      \"bytes\": 1194,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": false\n    },\n    {\n      \"path\": \"sources.md\",\n      \"media_type\": \"text/markdown\",\n      \"sha256\": \"b13bb600733437ae559b4557fa2051c225cf03d9c5e8dd6a9600e36b95c943a5\",\n      \"bytes\": 1583,\n      \"purpose\": \"reference-and-handoff\",\n      \"required_for_engineering\": true\n    },\n    {\n      \"path\": \"tokens.json\",\n      \"media_type\": \"application/json\",\n      \"sha256\": \"3184b8ee1b57ce2bcba7cdf9940fbae83cecba7b5792bfd24bedea8564c902fc\",\n      \"bytes\": 538,\n      \"purpose\": \"runtime-asset\",\n      \"required_for_engineering\": true\n    }\n  ],\n  \"asset_inputs\": [\n    {\n      \"source_ref\": {\n        \"repository\": \"/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority\",\n        \"commit\": \"99526d0a38689138bd81fcd8f09e9693502d7d41\",\n        \"path\": \"inputs/archives/game-aba3d8522bc1e615cd5dd73801150ae54d25e78b.zip\",\n        \"sha256\": \"2b5515de435124b21932e37948296f2407d9fed280414ae1feda2a0677e04e9a\"\n      },\n      \"license\": \"MIT; LICENSE-upstream.txt\",\n      \"transform\": \"读取既有状态/回调，截图仅观察原棋盘\",\n      \"outputs\": [\n        \"handoff.md\",\n        \"references/original-runtime-se.png\",\n        \"references/original-runtime-pro.png\"\n      ]\n    },\n    {\n      \"source_ref\": {\n        \"repository\": \"/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority\",\n        \"commit\": \"99526d0a38689138bd81fcd8f09e9693502d7d41\",\n        \"path\": \"inputs/archives/kenney_ui-pack.zip\",\n        \"sha256\": \"a8a14a234911eb648c062622915c93e79e94e97cb7f9f375a70f6617f1174318\"\n      },\n      \"license\": \"CC0; LICENSE-kenney.txt\",\n      \"transform\": \"Yellow/Double与Grey/Double/button_rectangle_depth_flat.png原字节复制；SVG派生为9-slice示意，PNG由该SVG离线渲染\",\n      \"outputs\": [\n        \"assets/menu-primary.png\",\n        \"assets/menu-secondary.png\",\n        \"references/menu-se.svg\",\n        \"references/menu-pro.svg\",\n        \"references/confirm-se.svg\",\n        \"references/menu-se.png\",\n        \"references/menu-pro.png\",\n        \"references/confirm-se.png\"\n      ]\n    },\n    {\n      \"source_ref\": {\n        \"repository\": \"/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority\",\n        \"commit\": \"99526d0a38689138bd81fcd8f09e9693502d7d41\",\n        \"path\": \"inputs/sources.json\",\n        \"sha256\": \"7e65dd352f55ba50acf5bfa575f36f3a25ef7468eca0db05851546686bb5adfe\"\n      },\n      \"license\": \"provenance metadata; per-source licenses retained\",\n      \"transform\": \"保留来源/归档表，供scope与sources.md回读\",\n      \"outputs\": [\n        \"sources.md\"\n      ]\n    }\n  ],\n  \"external_objects\": [],\n  \"acceptance\": {\n    \"handoff_path\": \"handoff.md\",\n    \"expected_ref\": {\n      \"repository\": \"/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority\",\n      \"commit\": \"99526d0a38689138bd81fcd8f09e9693502d7d41\",\n      \"path\": \"inputs/game-expected.json\",\n      \"sha256\": \"fb78734b0fba34e22c476e11340ba65a13458bc2c1a041c8bce4f48bc1a7e0c0\"\n    },\n    \"required_states\": [\n      \"menu/default\",\n      \"menu/confirm-reset\",\n      \"game/board\"\n    ],\n    \"allowed_differences\": [\n      {\n        \"id\": \"OS-RENDERING\",\n        \"basis\": \"原生系统栏/字体/符号/语义色、sheet/alert绘制以iOS27实际为准；不改变应用tokens、文案、布局约束和行为\",\n        \"review_path\": \"handoff.md\"\n      }\n    ]\n  },\n  \"limitations\": [\n    \"仅本轮iOS两尺寸、竖屏、浅色、默认字号；未验证其他平台或真机性能\",\n    \"原工程启动截图不是本包实现验收\",\n    \"没有企业设计团队审批；当前用户必须对本次D确认\"\n  ],\n  \"open_questions\": []\n}\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/LICENSE-kenney.txt"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 565,
+      "stdout_sha256": "69f7eaa5e05913b4d09cf5848f75390b5c3c9a409ef8555777803d9ca0c171fb",
+      "stdout": "\t\r\n\r\n\tUI Pack (2.0)\r\n\r\n\tCreated/distributed by Kenney (www.kenney.nl)\r\n\tCreation date: 12-06-2024\r\n\r\n\t\t\t------------------------------\r\n\r\n\tLicense: (Creative Commons Zero, CC0)\r\n\thttp://creativecommons.org/publicdomain/zero/1.0/\r\n\r\n\tThis content is free to use in personal, educational and commercial projects.\r\r\n\tSupport us by crediting Kenney or www.kenney.nl (this is not mandatory)\r\n\r\n\t\t\t------------------------------\r\n\r\n\tDonate:   http://support.kenney.nl\r\n\tPatreon:  http://patreon.com/kenney/\r\n\r\n\tFollow on Twitter for updates:\r\n\thttp://twitter.com/KenneyNL"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/LICENSE-upstream.txt"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 1080,
+      "stdout_sha256": "5bc53ddeab53cc054f70be136768cd16fbb1b065739e7fa26b930786e2243afa",
+      "stdout": "MIT License\n\nCopyright (c) 2019 Carlos Corrêa da Silva\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/assets/menu-primary.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 784,
+      "stdout_sha256": "0c43a01a95270167be8c05a68c45a2709e60177d9dfa59bedb56fd0802659e52",
+      "stdout_format": "binary; exact content identified by immutable Git ref and SHA-256"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/assets/menu-secondary.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 786,
+      "stdout_sha256": "f0f3d52f110768bf93a10b44f4ec3c727924c25734ce85e1275464c9b02cfe18",
+      "stdout_format": "binary; exact content identified by immutable Git ref and SHA-256"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/brief.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 951,
+      "stdout_sha256": "10b4975b1b66411b7ad7b6e3fa5e461795b26a9b7ef7ce5e9e5c5f9342204b09",
+      "stdout": "# UI-2048-MENU / U001 — 待人工确认\n\n制作来源：B：Codex使用Kenney CC0素材制作本地SVG画稿；本地预览仅供审阅。\n\n需求来源与验收分母固定在输入提交 `99526d0a38689138bd81fcd8f09e9693502d7d41` 的 `inputs/game-scope.md` 和 `inputs/game-expected.json`，完整引用见manifest。需求由用户委托AI为开源试点整理，最终适用性待本次人工确认；本包没有产品批准或实施授权。\n\n本轮原生SwiftUI、iOS27.0 Simulator，iPhone SE3与17 Pro、竖屏／英文／默认字号／浅色。以pt布局，像素随设备scale；系统组件遵从当次OS。完整纳入/排除、生命周期、无障碍及预算边界以固定scope为准。\n\n当前用户负责产品/UI确认和最终验收；Codex负责制作、工程检查及限定验证。设计与工程角色由同一AI执行，不能自签批准。当前无业务规则待决；本包批准与后续真实运行仍待完成。\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/expected-copy.json"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 2079,
+      "stdout_sha256": "fb78734b0fba34e22c476e11340ba65a13458bc2c1a041c8bce4f48bc1a7e0c0",
+      "stdout": "{\n  \"basis\": \"game-scope.md and fixed upstream GameViewModel/MenuView, not generated from implementation\",\n  \"cases\": [\n    {\n      \"id\": \"B01\",\n      \"state\": \"board\",\n      \"action\": \"launch deterministic board, score 16 / best 64\",\n      \"expected\": \"board shown, score 16, best 64\"\n    },\n    {\n      \"id\": \"B02\",\n      \"state\": \"menu\",\n      \"action\": \"tap existing menu button\",\n      \"expected\": \"MENU, NEW GAME, RESET BEST SCORE visible; board/score unchanged\"\n    },\n    {\n      \"id\": \"B03\",\n      \"state\": \"board\",\n      \"action\": \"swipe sheet down\",\n      \"expected\": \"same board, score 16 and best 64; input returns to board\"\n    },\n    {\n      \"id\": \"B04\",\n      \"state\": \"confirm-reset\",\n      \"action\": \"menu → RESET BEST SCORE\",\n      \"expected\": \"native alert with original question, Cancel and Yeah, whatever; no score mutation\"\n    },\n    {\n      \"id\": \"B05\",\n      \"state\": \"menu\",\n      \"action\": \"tap Cancel\",\n      \"expected\": \"menu remains, best 64; board/score unchanged\"\n    },\n    {\n      \"id\": \"B06\",\n      \"state\": \"board\",\n      \"action\": \"RESET BEST SCORE → Yeah, whatever\",\n      \"expected\": \"menu closes; best 0 immediately, board and score16 unchanged\"\n    },\n    {\n      \"id\": \"B07\",\n      \"state\": \"board\",\n      \"action\": \"fresh seeded score16/best64 → menu → NEW GAME\",\n      \"expected\": \"menu closes; score0, one tile2 or4, best64; undo history reset\"\n    },\n    {\n      \"id\": \"B08\",\n      \"state\": \"menu\",\n      \"action\": \"open menu, background/foreground same process\",\n      \"expected\": \"menu remains, no automatic game/reset action\"\n    },\n    {\n      \"id\": \"B09\",\n      \"state\": \"board\",\n      \"action\": \"existing deterministic engine/state/storage regressions\",\n      \"expected\": \"original merge,score,undo,storage rules unchanged\"\n    }\n  ],\n  \"devices\": [\n    \"iPhone SE (3rd generation)\",\n    \"iPhone 17 Pro\"\n  ],\n  \"required_design_states\": [\n    \"board\",\n    \"menu\",\n    \"confirm-reset\"\n  ],\n  \"limits\": \"Board reference is context only; unchanged board behavior must regress separately. OS alert may differ visually.\"\n}\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/handoff.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 2435,
+      "stdout_sha256": "4a10e6f9f77e8a3128e89096d9198b9ad0fbd1e68af1e0c6dde04dba7ca9319d",
+      "stdout": "# 2048菜单交接\n\n## 状态和行为\n\nmenu/default显示2048、MENU、NEW GAME、RESET BEST SCORE及Swipe down to return。通过原棋盘menuButton打开；向下滑动关闭，不添加新的关闭规则。原棋盘是上下文，不在本包重画。\n\nmenu/confirm-reset在同一菜单上呈现原生SwiftUI Alert，原文Are you sure you want to erase your best score?；Cancel回菜单，Yeah, whatever沿原回调清最高分并关闭菜单。不得提前清分。NEW GAME调用原reset并关闭菜单。game/board表示关闭后的原棋盘，具体状态由独立expected判定。\n\n图中的确认框仅说明层级、文案和操作位置；实际系统Alert的宽度、换行、字体、颜色及按钮排列由iOS27处理，不用位图替换原生组件。它不是棋盘或原生运行截图。\n\n## 布局、资源与预算\n\n菜单背景#F8F5EB，深绿字#243A34，次级字#657168。sheet可用区域内：顶栏为2048与MENU；中间两个按钮竖排、间隔16pt；底部13pt关闭提示。用上下弹性空间适应高度，内容位于系统safe area内。标题52pt rounded black，按钮19pt rounded bold。横向24pt边距；按钮宽min(312,可用宽-48)pt、高64pt。两尺寸都不能裁切文字或触点。按钮有效区域等于整个64pt矩形。\n\nassets/menu-primary.png与menu-secondary.png各384×128px、@2x；按tokens的16pt capInsets九宫格伸缩，只拉中段，保留边缘。运行时导入Assets.xcassets的独立imageset，menu组件实际引用；tokens.json导入Bundle。原ActionButton供其他画面继续使用，避免菜单视觉外溢到GameOver。\n\nruntime两PNG合计≤64KiB，解码RGBA合计≤1MiB，tokens≤16KiB。无新字体/循环动画；沿系统sheet/alert转场。不将参考SVG/HTML加入应用；运行资源脱离design目录仍可运行。\n\n## 适用限制与验收\n\n浅色、英文、默认字号、SE3与17 Pro竖屏。系统sheet的位置、圆角、安全区、状态栏、Alert和字体渲染与示意不同属于平台允许差异；菜单本体tokens、按钮顺序、文案和回调不得擅改。无横屏/其他字号/VoiceOver全覆盖/真机性能承诺。\n\n按manifest固定的expected逐条运行，尤其取消不清分、确认只清最高分、New Game保留最高分与重置棋盘。原eraseBestScore后未来更新/重启按当前分数重建best的规则保留。每条期望写在实施之前，不能根据运行结果改答案。\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/iteration.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 1438,
+      "stdout_sha256": "1dedd1652156eb9da374b537e6ebc529bdf2bbf78354af8092327704d08fd21b",
+      "stdout": "# 制作与回读\n\n初稿v1：使用已有英文行为与Kenney黄/灰按钮，比较SE3和17 Pro两种纵向可用区域；原生Alert单独画为状态示意。颜色、资源、排版与尺寸写入tokens/handoff；未改变原回调。\n\n本轮AI结构自检：按钮64pt、宽度不超过312pt、间距16pt；小屏重置文本在19pt字号下预留24pt横向空间；大屏用弹性空白。SVG当前为静态完整画面，交互由flows/expected说明，非可运行原生界面。\n\nv1已用本地SVG栅格渲染回看：文字与间距完整，但预览采用整图拉伸，与handoff九宫格约定不一致。v2改为9个SVG裁切窗口，对应@2x资源的16pt capInsets，只拉中段；正文和行为未变。重新渲染核对边缘后提交D。\n\nHTML本地file URL被浏览器策略拒绝，未绕过浏览器限制；改用离线SVG栅格渲染（sharp），不执行HTML/JS或访问网络。Quick Look沙箱渲染也失败并保留诊断；该替代只承担静态画面审阅，不声称浏览器或交互原型已验证。当前尚无人类反馈；不生成虚假的迭代/批准历史。后续反馈保留对象、原因和实际修订；语义不符返回原需求决定。\n\n已回看v2的SE3、17 Pro与确认态PNG：文字完整、边框保持厚度、状态层级明确；PNG与SVG同时交付。四张原始工程启动截图已取得，说明当前构建可运行；不将它们计为新菜单实现验收。\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/references/confirm-se.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 54231,
+      "stdout_sha256": "74b311f78fbb5b2cc05bbf0396672c505ef0ff6ca30db964774d1ba1da541496",
+      "stdout_format": "binary; exact content identified by immutable Git ref and SHA-256"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/references/confirm-se.svg"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 23261,
+      "stdout_sha256": "2b455e974fbd96042fba20cd8675451bb3444753b538689c73bfbc47dd4fded7",
+      "stdout": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"375\" height=\"623\" viewBox=\"0 0 375 623\"><rect width=\"375\" height=\"623\" rx=\"30\" fill=\"#f8f5eb\"/><g font-family=\"-apple-system,BlinkMacSystemFont,Arial,sans-serif\" text-anchor=\"middle\" fill=\"#243a34\"><rect x=\"169.5\" y=\"12\" width=\"36\" height=\"5\" rx=\"2.5\" fill=\"#b3b6ad\"/><text x=\"187.5\" y=\"82\" font-size=\"15\" font-weight=\"700\" letter-spacing=\"3\">2048</text><text x=\"187.5\" y=\"144\" font-size=\"52\" font-weight=\"900\">MENU</text><svg x=\"31.5\" y=\"247.5\" width=\"16.0\" height=\"16.0\" viewBox=\"0 0 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"31.5\" y=\"263.5\" width=\"16.0\" height=\"32.0\" viewBox=\"0 32 32 64\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"31.5\" y=\"295.5\" width=\"16.0\" height=\"16.0\" viewBox=\"0 96 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"47.5\" y=\"247.5\" width=\"280.0\" height=\"16.0\" viewBox=\"32 0 320 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"47.5\" y=\"263.5\" width=\"280.0\" height=\"32.0\" viewBox=\"32 32 320 64\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"47.5\" y=\"295.5\" width=\"280.0\" height=\"16.0\" viewBox=\"32 96 320 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"327.5\" y=\"247.5\" width=\"16.0\" height=\"16.0\" viewBox=\"352 0 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"327.5\" y=\"263.5\" width=\"16.0\" height=\"32.0\" viewBox=\"352 32 32 64\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"327.5\" y=\"295.5\" width=\"16.0\" height=\"16.0\" viewBox=\"352 96 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><text x=\"187.5\" y=\"286.5\" font-size=\"19\" font-weight=\"800\">NEW GAME</text><svg x=\"31.5\" y=\"327.5\" width=\"16.0\" height=\"16.0\" viewBox=\"0 0 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"31.5\" y=\"343.5\" width=\"16.0\" height=\"32.0\" viewBox=\"0 32 32 64\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"31.5\" y=\"375.5\" width=\"16.0\" height=\"16.0\" viewBox=\"0 96 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"47.5\" y=\"327.5\" width=\"280.0\" height=\"16.0\" viewBox=\"32 0 320 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"47.5\" y=\"343.5\" width=\"280.0\" height=\"32.0\" viewBox=\"32 32 320 64\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"47.5\" y=\"375.5\" width=\"280.0\" height=\"16.0\" viewBox=\"32 96 320 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"327.5\" y=\"327.5\" width=\"16.0\" height=\"16.0\" viewBox=\"352 0 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"327.5\" y=\"343.5\" width=\"16.0\" height=\"32.0\" viewBox=\"352 32 32 64\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"327.5\" y=\"375.5\" width=\"16.0\" height=\"16.0\" viewBox=\"352 96 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><text x=\"187.5\" y=\"366.5\" font-size=\"19\" font-weight=\"800\">RESET BEST SCORE</text><text x=\"187.5\" y=\"581\" font-size=\"13\" fill=\"#657168\">Swipe down to return</text></g><rect width=\"375\" height=\"623\" rx=\"30\" fill=\"#000\" opacity=\"0.3\"/><g font-family=\"-apple-system,Arial,sans-serif\" text-anchor=\"middle\"><rect x=\"47.5\" y=\"232.5\" width=\"280\" height=\"160\" rx=\"18\" fill=\"#f5f5f5\"/><text x=\"187.5\" y=\"264.5\" font-size=\"16\" font-weight=\"600\"><tspan x=\"187.5\">Are you sure you want to</tspan><tspan x=\"187.5\" dy=\"22\">erase your best score?</tspan></text><path d=\"M 47.5 338.5 h280 M 187.5 338.5 v54\" stroke=\"#bbb\" stroke-width=\"0.5\"/><text x=\"117.5\" y=\"371.5\" fill=\"#007aff\" font-size=\"16\" font-weight=\"600\">Cancel</text><text x=\"257.5\" y=\"371.5\" fill=\"#007aff\" font-size=\"15\">Yeah, whatever</text></g></svg>"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/references/menu-pro.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 53525,
+      "stdout_sha256": "33734f1d5705d6a815878db65e672beeb01441cdbe25348f23e44ac1e53050ff",
+      "stdout_format": "binary; exact content identified by immutable Git ref and SHA-256"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/references/menu-pro.svg"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 22634,
+      "stdout_sha256": "c29050b9a73bb4db29ef01dc42dcefe925a0a58a8b9f28a515b5833acae739bb",
+      "stdout": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"402\" height=\"788\" viewBox=\"0 0 402 788\"><rect width=\"402\" height=\"788\" rx=\"30\" fill=\"#f8f5eb\"/><g font-family=\"-apple-system,BlinkMacSystemFont,Arial,sans-serif\" text-anchor=\"middle\" fill=\"#243a34\"><rect x=\"183.0\" y=\"12\" width=\"36\" height=\"5\" rx=\"2.5\" fill=\"#b3b6ad\"/><text x=\"201.0\" y=\"82\" font-size=\"15\" font-weight=\"700\" letter-spacing=\"3\">2048</text><text x=\"201.0\" y=\"144\" font-size=\"52\" font-weight=\"900\">MENU</text><svg x=\"45.0\" y=\"330.0\" width=\"16.0\" height=\"16.0\" viewBox=\"0 0 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"45.0\" y=\"346.0\" width=\"16.0\" height=\"32.0\" viewBox=\"0 32 32 64\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"45.0\" y=\"378.0\" width=\"16.0\" height=\"16.0\" viewBox=\"0 96 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"61.0\" y=\"330.0\" width=\"280.0\" height=\"16.0\" viewBox=\"32 0 320 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"61.0\" y=\"346.0\" width=\"280.0\" height=\"32.0\" viewBox=\"32 32 320 64\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"61.0\" y=\"378.0\" width=\"280.0\" height=\"16.0\" viewBox=\"32 96 320 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"341.0\" y=\"330.0\" width=\"16.0\" height=\"16.0\" viewBox=\"352 0 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"341.0\" y=\"346.0\" width=\"16.0\" height=\"32.0\" viewBox=\"352 32 32 64\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"341.0\" y=\"378.0\" width=\"16.0\" height=\"16.0\" viewBox=\"352 96 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><text x=\"201.0\" y=\"369.0\" font-size=\"19\" font-weight=\"800\">NEW GAME</text><svg x=\"45.0\" y=\"410.0\" width=\"16.0\" height=\"16.0\" viewBox=\"0 0 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"45.0\" y=\"426.0\" width=\"16.0\" height=\"32.0\" viewBox=\"0 32 32 64\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"45.0\" y=\"458.0\" width=\"16.0\" height=\"16.0\" viewBox=\"0 96 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"61.0\" y=\"410.0\" width=\"280.0\" height=\"16.0\" viewBox=\"32 0 320 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"61.0\" y=\"426.0\" width=\"280.0\" height=\"32.0\" viewBox=\"32 32 320 64\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"61.0\" y=\"458.0\" width=\"280.0\" height=\"16.0\" viewBox=\"32 96 320 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"341.0\" y=\"410.0\" width=\"16.0\" height=\"16.0\" viewBox=\"352 0 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"341.0\" y=\"426.0\" width=\"16.0\" height=\"32.0\" viewBox=\"352 32 32 64\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"341.0\" y=\"458.0\" width=\"16.0\" height=\"16.0\" viewBox=\"352 96 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><text x=\"201.0\" y=\"449.0\" font-size=\"19\" font-weight=\"800\">RESET BEST SCORE</text><text x=\"201.0\" y=\"746\" font-size=\"13\" fill=\"#657168\">Swipe down to return</text></g></svg>"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/references/menu-se.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 44307,
+      "stdout_sha256": "40608b865213c1e808ff1a8847a06dc7c3a333788ce2cdc624cf7d1bc322de3e",
+      "stdout_format": "binary; exact content identified by immutable Git ref and SHA-256"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/references/menu-se.svg"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 22634,
+      "stdout_sha256": "96957bbbdada541e1e72f6c8149376a521cfc5dc44b7444c69965adb591812fa",
+      "stdout": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"375\" height=\"623\" viewBox=\"0 0 375 623\"><rect width=\"375\" height=\"623\" rx=\"30\" fill=\"#f8f5eb\"/><g font-family=\"-apple-system,BlinkMacSystemFont,Arial,sans-serif\" text-anchor=\"middle\" fill=\"#243a34\"><rect x=\"169.5\" y=\"12\" width=\"36\" height=\"5\" rx=\"2.5\" fill=\"#b3b6ad\"/><text x=\"187.5\" y=\"82\" font-size=\"15\" font-weight=\"700\" letter-spacing=\"3\">2048</text><text x=\"187.5\" y=\"144\" font-size=\"52\" font-weight=\"900\">MENU</text><svg x=\"31.5\" y=\"247.5\" width=\"16.0\" height=\"16.0\" viewBox=\"0 0 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"31.5\" y=\"263.5\" width=\"16.0\" height=\"32.0\" viewBox=\"0 32 32 64\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"31.5\" y=\"295.5\" width=\"16.0\" height=\"16.0\" viewBox=\"0 96 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"47.5\" y=\"247.5\" width=\"280.0\" height=\"16.0\" viewBox=\"32 0 320 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"47.5\" y=\"263.5\" width=\"280.0\" height=\"32.0\" viewBox=\"32 32 320 64\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"47.5\" y=\"295.5\" width=\"280.0\" height=\"16.0\" viewBox=\"32 96 320 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"327.5\" y=\"247.5\" width=\"16.0\" height=\"16.0\" viewBox=\"352 0 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"327.5\" y=\"263.5\" width=\"16.0\" height=\"32.0\" viewBox=\"352 32 32 64\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><svg x=\"327.5\" y=\"295.5\" width=\"16.0\" height=\"16.0\" viewBox=\"352 96 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFtYEA36IQtIAA3aISs4IA36MQtIAAtYEAtIEA3qMRtIAA3qIRtoIA3qUQs4AA36EQtIAAs4AA3aIS3qMRAAAA/9xX/9Uw+NyC/9MnwYoF/+Br05oN5rQ0yZEJ/9lEw40Gxo8H7MJO7sZX+uGKtoIB0JgM/80Ju4YD9NNw/9tO/88T9th52J4PzpUL8s9o26AQ8Mpf4qsjtIAA/+qc3qMS/8wA8poDqQAAABV0Uk5TTz+fjy9v339fz4/fPx+vT7/vn78AfFJSmQAAAfhJREFUeNrt1ddu2zAAhlFm79iR2Wbv5RXHVtT3f7WSMlKgL0ACwfkuCOn2P6AUYt/JTjMajToVKU3d7Jyslw/52DB9DYaNb4AtY9Rpaw3QWKJWTQYY9I+rp9n5lwo1Gz+u+tkHCeAoPyyNUrrHvPtRDAP7V+qpvwIh/wFW1qhR/go14SCdi/x6dfFHZXr7fZUXX6TpD0K+B8/pbWKXkv1Kkz/n7XuAzPFmlJJN8+b/AdikbAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAADAJAAACAEAAAAgAAAEAIAAABACAAAAQAAACAEAAAAjAzwOY2qRk038A83TM0svEKCWbpMlnafp5uE7nMnPcWaVcd3nxZZr+Otymc/WlCq3S9Lfhvfu+AipbvgDde2jzT6Bb2KN0i7z7vA3tZX7obsYmKdn4pp/9MgG0H50q9dFmAAIV92/DbjoePo1Rvs+HNP1uGKazfbl/ZVB2/df7l7z8MOy1qthe2DZCzbZDHFqhXsMY4rEZ6nWcAOKhHWp1GDNA3LREnTbjGiCGM2OU72y9fezbP2VQdv3T/fXyfwHC81vy3DnIiQAAAABJRU5ErkJggg==\" width=\"384\" height=\"128\"/></svg><text x=\"187.5\" y=\"286.5\" font-size=\"19\" font-weight=\"800\">NEW GAME</text><svg x=\"31.5\" y=\"327.5\" width=\"16.0\" height=\"16.0\" viewBox=\"0 0 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"31.5\" y=\"343.5\" width=\"16.0\" height=\"32.0\" viewBox=\"0 32 32 64\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"31.5\" y=\"375.5\" width=\"16.0\" height=\"16.0\" viewBox=\"0 96 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"47.5\" y=\"327.5\" width=\"280.0\" height=\"16.0\" viewBox=\"32 0 320 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"47.5\" y=\"343.5\" width=\"280.0\" height=\"32.0\" viewBox=\"32 32 320 64\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"47.5\" y=\"375.5\" width=\"280.0\" height=\"16.0\" viewBox=\"32 96 320 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"327.5\" y=\"327.5\" width=\"16.0\" height=\"16.0\" viewBox=\"352 0 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"327.5\" y=\"343.5\" width=\"16.0\" height=\"32.0\" viewBox=\"352 32 32 64\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><svg x=\"327.5\" y=\"375.5\" width=\"16.0\" height=\"16.0\" viewBox=\"352 96 32 32\" preserveAspectRatio=\"none\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAACACAMAAAA1bk45AAAABGdBTUEAALGPC/xhBQAAAKJQTFRFZmiBZ2eCZmeAmJqvmpqumJqvZmiAZGeBmJmvnJytZmmBmJmvZWmCZmeAZWiAZWiAZWeAmJuumJqvmJqvAAAA4+Tt6+zw7u/05ebu8vL1aWuC3N7of4GXb3GIy8zXiIqgxcbSdXeOi42j8/T3eHqRsbPD6uvxe32U7O3z3uDq3t/mkZOp2NnhhYed5eXrlJas0dLcpKa5ZmiA////mJqv2tznYsPX4gAAABV0Uk5Tfy+Pzz9v30+PH1/fP6+fv+9Pn78AsYwrOAAAAfpJREFUeNrt1Vdu4zAARVGm9ziWOSW9J25xbEWz/60NKcMDzAZIIDj3g5B+3wGlEPuO9prRaNSpSGnqZu9ovXzIx67pazDsbgAOjVGnwzVAY4laNRlg2D+u7hY/v1SoxfRh1c8+TAAn+WFplNI95N1PYhjav1J3/RUI+Q+wskaN8leoCTvpnOfX5x9/VKbr38958Xmafifke3CZ3sZ2KdmvNPll3r4HyBzXRinZJG/+H4BNygYAAAAAAAAAAAAAAAAAAAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAIAAABACAAAAQAgAAAEAAAAgBAAAAAAAAAAAAAAAAAAAAAAACTAAAgAAAEAIAAABAAAAIAQAAACAAAAQAgAAAEAIAAfD+AiU1KNvkHMEvHIr2MjVKycZp8kaafhad0LjPHm1XK9ZYXX6bpn8JNOldfqtAqTX8TbrvNFVDZ8gXobkObfwLd3B6lm+fdZ21oH/ND9zo1Scmmr/3sjwmg/ehUqY82AxCouH8b9tPx/mmM8n2+p+n3wyCd7dXLPYOy69+/XOXlByF/g1StELaMULOtEAdWqNcghnhqhnqdJoC4bYdabccMEM8tUafzuAaIBxfGKN/FQdwAxHh8xqDs+mfH6+X/As30W/JQ2/F7AAAAAElFTkSuQmCC\" width=\"384\" height=\"128\"/></svg><text x=\"187.5\" y=\"366.5\" font-size=\"19\" font-weight=\"800\">RESET BEST SCORE</text><text x=\"187.5\" y=\"581\" font-size=\"13\" fill=\"#657168\">Swipe down to return</text></g></svg>"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/references/original-runtime-pro.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 139076,
+      "stdout_sha256": "45703047e80d7c0e75bd63a0070d0b089389c62721206e7e10c4ba62ab30de26",
+      "stdout_format": "binary; exact content identified by immutable Git ref and SHA-256"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/references/original-runtime-se.png"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 70613,
+      "stdout_sha256": "ca10595650b327dfc8bff5af2c1a0caf9ea0f00a99384665f157e0c33d48bf9b",
+      "stdout_format": "binary; exact content identified by immutable Git ref and SHA-256"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/references/preview.html"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 1194,
+      "stdout_sha256": "563a2150827646a6eefa81bbd105f21654b157dec2392b38fdb4cd423594bf77",
+      "stdout": "<!doctype html><html lang=\"zh-CN\"><meta charset=\"utf-8\"><title>2048 菜单设计 · 待审核</title><style>*{box-sizing:border-box}body{margin:0;background:#eceeea;color:#243a34;font-family:system-ui,sans-serif;padding:28px}h1{font-size:24px;margin:0 0 8px}p{color:#52635a;font-size:14px}main{display:flex;gap:28px;align-items:start}figure{margin:0}figcaption{margin-bottom:12px;font-size:13px}img{width:300px;box-shadow:0 8px 30px #243a3415;border-radius:24px}.note{max-width:1000px;line-height:1.6}</style><h1>2048 · 菜单设计</h1><p>本地设计稿，待人工确认；不是原生运行截图。按钮与确认行为沿用原工程。</p><main><figure><figcaption>SE3 · 菜单可用区域示意</figcaption><img src=\"menu-se.svg\"></figure><figure><figcaption>17 Pro · 菜单可用区域示意</figcaption><img src=\"menu-pro.svg\"></figure><figure><figcaption>重置确认 · 系统 Alert 示意</figcaption><img src=\"confirm-se.svg\"></figure></main><p class=\"note\">NEW GAME 重开本局并保留最高分；RESET BEST SCORE 先确认，取消返回菜单；确认后清最高分并关闭。滑动关闭仍保留原局。系统安全区和确认框样式以 iOS 27 为准。</p></html>"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/sources.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 1583,
+      "stdout_sha256": "b13bb600733437ae559b4557fa2051c225cf03d9c5e8dd6a9600e36b95c943a5",
+      "stdout": "# 来源与制作观察\n\n固定源码：https://github.com/caiobzen/2048-swiftui/tree/aba3d8522bc1e615cd5dd73801150ae54d25e78b，MIT。源码归档已保存在输入提交`99526d0a38689138bd81fcd8f09e9693502d7d41`的`inputs/archives/game-aba3d8522bc1e615cd5dd73801150ae54d25e78b.zip`，SHA-256 `2b5515de435124b21932e37948296f2407d9fed280414ae1feda2a0677e04e9a`；源归档只是资料，未执行README中的操作指令。\n\n制作环境：当前Codex会话，使用本地文件、Python标准库生成JSON/SVG和文件清单。未调用Figma、open-design或MCP历史设计读取；不声称已有团队人审。Xcode27.0的两个原工程构建在P0已通过iOS15+参数，不能推断新UI运行通过。\n\n最终包会以D固定，人工决定另存A。本文件记录制作过程，不产生批准。参考输出及tokens由本UI单元拥有；原代码不改owner，未采用AST/DAS，无需伪造身份。\n\n素材为Kenney UI Pack2.0，CC0；固定归档`inputs/archives/kenney_ui-pack.zip`，SHA-256 `a8a14a234911eb648c062622915c93e79e94e97cb7f9f375a70f6617f1174318`。两张PNG分别从PNG/Yellow/Double和PNG/Grey/Double/button_rectangle_depth_flat.png原字节复制，384×128px，导入为@2x素材；SVG预览使用同一图片的嵌入副本，属于派生预览而非另一份runtime owner。\n\n本轮专用模拟器实际启动两工程后取得original-runtime-se/pro.png，分别为750×1334和1206×2622px；只证明原工程初始画面可运行，不证明本包实现或行为验收。渲染器为运行时随附sharp（本地SVG光栅化，不执行HTML）。\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60:design/units/UI-2048-MENU/releases/U001/tokens.json"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 538,
+      "stdout_sha256": "3184b8ee1b57ce2bcba7cdf9940fbae83cecba7b5792bfd24bedea8564c902fc",
+      "stdout": "{\n  \"units\": \"pt\",\n  \"background\": \"#F8F5EB\",\n  \"text\": \"#243A34\",\n  \"muted\": \"#657168\",\n  \"sideInset\": 24,\n  \"buttonMaxWidth\": 312,\n  \"buttonHeight\": 64,\n  \"buttonGap\": 16,\n  \"buttonTextSize\": 19,\n  \"titleSize\": 52,\n  \"brandSize\": 15,\n  \"hintSize\": 13,\n  \"buttonCapInsets\": {\n    \"top\": 16,\n    \"leading\": 16,\n    \"bottom\": 16,\n    \"trailing\": 16\n  },\n  \"assetScale\": 2,\n  \"font\": \"system.rounded\",\n  \"title\": \"MENU\",\n  \"brand\": \"2048\",\n  \"hint\": \"Swipe down to return\",\n  \"newGame\": \"NEW GAME\",\n  \"resetBestScore\": \"RESET BEST SCORE\"\n}\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/game-scope.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 2090,
+      "stdout_sha256": "d875543693192222bdf1cc867e1141999e90954ff70069d875e176ce95ed3ec2",
+      "stdout": "# 手游试点需求输入\n\n来源：用户授权使用开源手游与素材进行限定试点；固定源码及Kenney归档见sources.json。模式B由Codex制作本地设计，当前用户最终确认。\n\n纳入2048的MENU sheet、NEW GAME、RESET BEST SCORE及其原生确认/取消；保留原入口、向下滑动关闭、重开游戏和确认逻辑。仅改菜单视觉及必要资源，不改棋盘、计分、合并、撤销、游戏结束、存储或后台行为。保持原英文按钮和确认文字，不新增关卡、设置或退出规则。\n\nMenuView仍为SwiftUI sheet，状态/回调接现有GameView与GameViewModel。NEW GAME重置本局、分数0、创建原规则的一块2或4、保留最高分并关闭菜单。RESET BEST SCORE只打开原生Alert；Cancel保留状态并返回菜单；Yeah, whatever执行原eraseBestScore并关闭菜单，当下最高分0、本局棋盘与分数不变。原模型下一次更新/重启可按当前分数重建最高分，本轮不改变这条已有存储语义。\n\n环境与App相同：iOS27.0 Simulator、SE3与17 Pro竖屏、英文、默认字号、浅色。菜单适应sheet可用宽高，内边距24pt、按钮宽min(312,可用宽-48)pt、高64pt、垂直间距16pt；系统sheet安全区和系统Alert随OS绘制。按钮使用Kenney2.0 CC0九宫格拉伸资源，不拉伸文字/图标；系统rounded字体，无新字体包。菜单不新增循环动画，保持系统sheet/alert动画。\n\n新增runtime PNG合计≤64KiB，解码尺寸合计≤1MiB；tokens≤16KiB。在两尺寸实际验证无缺图、无切边/文字重叠，触点与按钮一致，确认/取消返回正确。无新的帧率承诺，不把模拟器截图声称为真机性能。VoiceOver全覆盖、其他字号、横屏、Android、Unity/Cocos图集不属于本轮承诺。\n\n独立expected见game-expected.json。运行验收需固定可重现棋盘/分数数据，原单元测试核回归，实际原生点击核菜单行为；不使用随机滑动偶然成功代替确定断言。宿主测试辅助只服务隔离试点，不改变生产规则。\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/game-expected.json"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 2079,
+      "stdout_sha256": "fb78734b0fba34e22c476e11340ba65a13458bc2c1a041c8bce4f48bc1a7e0c0",
+      "stdout": "{\n  \"basis\": \"game-scope.md and fixed upstream GameViewModel/MenuView, not generated from implementation\",\n  \"cases\": [\n    {\n      \"id\": \"B01\",\n      \"state\": \"board\",\n      \"action\": \"launch deterministic board, score 16 / best 64\",\n      \"expected\": \"board shown, score 16, best 64\"\n    },\n    {\n      \"id\": \"B02\",\n      \"state\": \"menu\",\n      \"action\": \"tap existing menu button\",\n      \"expected\": \"MENU, NEW GAME, RESET BEST SCORE visible; board/score unchanged\"\n    },\n    {\n      \"id\": \"B03\",\n      \"state\": \"board\",\n      \"action\": \"swipe sheet down\",\n      \"expected\": \"same board, score 16 and best 64; input returns to board\"\n    },\n    {\n      \"id\": \"B04\",\n      \"state\": \"confirm-reset\",\n      \"action\": \"menu → RESET BEST SCORE\",\n      \"expected\": \"native alert with original question, Cancel and Yeah, whatever; no score mutation\"\n    },\n    {\n      \"id\": \"B05\",\n      \"state\": \"menu\",\n      \"action\": \"tap Cancel\",\n      \"expected\": \"menu remains, best 64; board/score unchanged\"\n    },\n    {\n      \"id\": \"B06\",\n      \"state\": \"board\",\n      \"action\": \"RESET BEST SCORE → Yeah, whatever\",\n      \"expected\": \"menu closes; best 0 immediately, board and score16 unchanged\"\n    },\n    {\n      \"id\": \"B07\",\n      \"state\": \"board\",\n      \"action\": \"fresh seeded score16/best64 → menu → NEW GAME\",\n      \"expected\": \"menu closes; score0, one tile2 or4, best64; undo history reset\"\n    },\n    {\n      \"id\": \"B08\",\n      \"state\": \"menu\",\n      \"action\": \"open menu, background/foreground same process\",\n      \"expected\": \"menu remains, no automatic game/reset action\"\n    },\n    {\n      \"id\": \"B09\",\n      \"state\": \"board\",\n      \"action\": \"existing deterministic engine/state/storage regressions\",\n      \"expected\": \"original merge,score,undo,storage rules unchanged\"\n    }\n  ],\n  \"devices\": [\n    \"iPhone SE (3rd generation)\",\n    \"iPhone 17 Pro\"\n  ],\n  \"required_design_states\": [\n    \"board\",\n    \"menu\",\n    \"confirm-reset\"\n  ],\n  \"limits\": \"Board reference is context only; unchanged board behavior must regress separately. OS alert may differ visually.\"\n}\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/archives/game-aba3d8522bc1e615cd5dd73801150ae54d25e78b.zip"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 1106929,
+      "stdout_sha256": "2b5515de435124b21932e37948296f2407d9fed280414ae1feda2a0677e04e9a",
+      "stdout_format": "binary; exact content identified by immutable Git ref and SHA-256"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/archives/kenney_ui-pack.zip"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 1229750,
+      "stdout_sha256": "a8a14a234911eb648c062622915c93e79e94e97cb7f9f375a70f6617f1174318",
+      "stdout_format": "binary; exact content identified by immutable Git ref and SHA-256"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/authority.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 1380,
+      "stdout_sha256": "8c84263dc8ad1db635d66336b2b08d7a76d2f673396e3d670dbb1c21b950b5ef",
+      "stdout": "# 本地UI权威与角色\n\n权威仓库：当前ui-authority仓库；ref：refs/heads/main；决定历史起点：a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52；决定目录design/units/*/decisions。\n\n当前聊天中的用户（本地会话身份liam）负责产品/UI批准及最终验收，Codex负责制作、工程可行性、导出与记录；仅用户可作批准和撤回。身份以本会话实际消息为依据，Git作者Codex UI trial仅表示保存人。未宣称第三方认证或独立设计团队审批。\n\n独立于app/game工程权威。每次依赖动作前读取此仓库ref和从历史起点可达的决定；观察保存到消费方证据，不反写本ref。包与决定不可覆写、删除，撤回以新决定追加并明确旧消费者是否停止。当前本地仓库没有托管保护，人工按完整历史核查。\n\nGoal阶段交付保存完整Git bundle与摘要到Harness执行证据；临时目录保留至用户决定清理，清理前必须在另一副本成功恢复。上游下载zip、许可及输入也纳入Git，避免远程消失后丢失试点。大构建缓存不进入Git。\n\n每个D待本次用户审核。批准另存A，固定D和闭包报告；审后字节改变须重审。Goal启动只授权限定试点工作，不能替代设计批准、规划Review或最后交付决定。无外部推送、正式主线合并或产品发布。\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "db1d8d36482883a46f6624c02cde4241547f3d18:design/units/UI-CALCULATOR/decisions/approve-U001.yaml"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 2681,
+      "stdout_sha256": "78d7f4acab4fbb74a2098bfe26560f67ddb3d6538017fff53e2011c740236682",
+      "stdout": "{\n  \"schema_version\": \"ui-decision/1\",\n  \"decision_id\": \"approve-UI-CALCULATOR-U001-20260930\",\n  \"kind\": \"approve\",\n  \"unit\": \"UI-CALCULATOR\",\n  \"release\": \"U001\",\n  \"package_ref\": {\n    \"repository\": \"/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority\",\n    \"commit\": \"c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60\",\n    \"path\": \"design/units/UI-CALCULATOR/releases/U001/manifest.yaml\",\n    \"sha256\": \"2f1ec315db7bf890fde151b6c8ad8ca6075759f6ab7daf6ee976d0a121306630\"\n  },\n  \"closure_ref\": {\n    \"repository\": \"/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority\",\n    \"commit\": \"e0541e083c06deb694d091872b08e3499e9d72be\",\n    \"path\": \"reviews/candidate-closure.json\",\n    \"sha256\": \"b39774c0716420f68330610410a01eada96a6d99ab22a1a5dee0ef614c29e4c9\"\n  },\n  \"scope\": {\n    \"platforms\": [\n      {\n        \"target\": \"iOS 27.0 Simulator / SwiftUI\",\n        \"units\": \"pt; SE3 2x, iPhone17 Pro 3x\",\n        \"orientation\": \"portrait\",\n        \"reference_sizes\": [\n          {\n            \"device\": \"iPhone SE (3rd generation)\",\n            \"pt\": [\n              375,\n              667\n            ]\n          },\n          {\n            \"device\": \"iPhone 17 Pro\",\n            \"pt\": [\n              402,\n              874\n            ]\n          }\n        ],\n        \"locale\": \"English; OS chrome may follow simulator locale\",\n        \"constraints\": \"light appearance, default content size\"\n      }\n    ],\n    \"screen_states\": [\n      \"calc/initial\",\n      \"calc/input\",\n      \"calc/result\",\n      \"calc/clear\",\n      \"calc/long\",\n      \"calc/nonfinite\",\n      \"calc/trig\",\n      \"calc/pi\",\n      \"calc/foreground\"\n    ]\n  },\n  \"reviewers\": [\n    {\n      \"actor\": \"current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46\",\n      \"roles\": [\n        \"product\",\n        \"ui\"\n      ],\n      \"decision\": \"accepted\",\n      \"decided_at\": \"2026-09-30T16:59:19.787590+08:00\",\n      \"time_basis\": \"Local capture after receiving the actual user reply; platform did not expose exact message send time\",\n      \"evidence_path\": \"user-approval-U001.json\",\n      \"evidence_sha256\": \"6bd21a75e160955cbdd1c8f9c7a2399fbc3a3232cca80785cae279805de34b7f\"\n    }\n  ],\n  \"engineering_review_ref\": {\n    \"repository\": \"/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority\",\n    \"commit\": \"e0541e083c06deb694d091872b08e3499e9d72be\",\n    \"path\": \"reviews/engineering-feasibility.md\",\n    \"sha256\": \"bf0ce54b873ec353b9c53271a55989353209d6c0a82e160fea8ba47d91bb7479\"\n  },\n  \"limitations\": [\n    \"仅设计批准；不是规划Review、工程运行验收或阶段放行\",\n    \"人工身份依据为当前用户对绑定确切D问题的实际回复；未作第三方平台认证\"\n  ]\n}\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "db1d8d36482883a46f6624c02cde4241547f3d18:design/units/UI-2048-MENU/decisions/approve-U001.yaml"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 2561,
+      "stdout_sha256": "b634b272ddbd1712f605ec436835338a4a32b2c58b1779cc44c4bc54905fb171",
+      "stdout": "{\n  \"schema_version\": \"ui-decision/1\",\n  \"decision_id\": \"approve-UI-2048-MENU-U001-20260930\",\n  \"kind\": \"approve\",\n  \"unit\": \"UI-2048-MENU\",\n  \"release\": \"U001\",\n  \"package_ref\": {\n    \"repository\": \"/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority\",\n    \"commit\": \"c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60\",\n    \"path\": \"design/units/UI-2048-MENU/releases/U001/manifest.yaml\",\n    \"sha256\": \"062a4887d998100c3bcda978f3b6630087b35b51206a5777ef1ccabaad9a18b2\"\n  },\n  \"closure_ref\": {\n    \"repository\": \"/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority\",\n    \"commit\": \"e0541e083c06deb694d091872b08e3499e9d72be\",\n    \"path\": \"reviews/candidate-closure.json\",\n    \"sha256\": \"b39774c0716420f68330610410a01eada96a6d99ab22a1a5dee0ef614c29e4c9\"\n  },\n  \"scope\": {\n    \"platforms\": [\n      {\n        \"target\": \"iOS 27.0 Simulator / SwiftUI\",\n        \"units\": \"pt; SE3 2x, iPhone17 Pro 3x\",\n        \"orientation\": \"portrait\",\n        \"reference_sizes\": [\n          {\n            \"device\": \"iPhone SE (3rd generation)\",\n            \"pt\": [\n              375,\n              667\n            ]\n          },\n          {\n            \"device\": \"iPhone 17 Pro\",\n            \"pt\": [\n              402,\n              874\n            ]\n          }\n        ],\n        \"locale\": \"English; OS chrome may follow simulator locale\",\n        \"constraints\": \"light appearance, default content size\"\n      }\n    ],\n    \"screen_states\": [\n      \"menu/default\",\n      \"menu/confirm-reset\",\n      \"game/board\"\n    ]\n  },\n  \"reviewers\": [\n    {\n      \"actor\": \"current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46\",\n      \"roles\": [\n        \"product\",\n        \"ui\"\n      ],\n      \"decision\": \"accepted\",\n      \"decided_at\": \"2026-09-30T16:59:19.787590+08:00\",\n      \"time_basis\": \"Local capture after receiving the actual user reply; platform did not expose exact message send time\",\n      \"evidence_path\": \"user-approval-U001.json\",\n      \"evidence_sha256\": \"6bd21a75e160955cbdd1c8f9c7a2399fbc3a3232cca80785cae279805de34b7f\"\n    }\n  ],\n  \"engineering_review_ref\": {\n    \"repository\": \"/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority\",\n    \"commit\": \"e0541e083c06deb694d091872b08e3499e9d72be\",\n    \"path\": \"reviews/engineering-feasibility.md\",\n    \"sha256\": \"bf0ce54b873ec353b9c53271a55989353209d6c0a82e160fea8ba47d91bb7479\"\n  },\n  \"limitations\": [\n    \"仅设计批准；不是规划Review、工程运行验收或阶段放行\",\n    \"人工身份依据为当前用户对绑定确切D问题的实际回复；未作第三方平台认证\"\n  ]\n}\n"
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "99526d0a38689138bd81fcd8f09e9693502d7d41:inputs/authority.md"
+      ],
+      "cwd": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "exit": 0,
+      "stderr": "",
+      "stdout_bytes": 1380,
+      "stdout_sha256": "8c84263dc8ad1db635d66336b2b08d7a76d2f673396e3d670dbb1c21b950b5ef",
+      "stdout": "# 本地UI权威与角色\n\n权威仓库：当前ui-authority仓库；ref：refs/heads/main；决定历史起点：a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52；决定目录design/units/*/decisions。\n\n当前聊天中的用户（本地会话身份liam）负责产品/UI批准及最终验收，Codex负责制作、工程可行性、导出与记录；仅用户可作批准和撤回。身份以本会话实际消息为依据，Git作者Codex UI trial仅表示保存人。未宣称第三方认证或独立设计团队审批。\n\n独立于app/game工程权威。每次依赖动作前读取此仓库ref和从历史起点可达的决定；观察保存到消费方证据，不反写本ref。包与决定不可覆写、删除，撤回以新决定追加并明确旧消费者是否停止。当前本地仓库没有托管保护，人工按完整历史核查。\n\nGoal阶段交付保存完整Git bundle与摘要到Harness执行证据；临时目录保留至用户决定清理，清理前必须在另一副本成功恢复。上游下载zip、许可及输入也纳入Git，避免远程消失后丢失试点。大构建缓存不进入Git。\n\n每个D待本次用户审核。批准另存A，固定D和闭包报告；审后字节改变须重审。Goal启动只授权限定试点工作，不能替代设计批准、规划Review或最后交付决定。无外部推送、正式主线合并或产品发布。\n"
+    }
+  ],
+  "correction_round": 1,
+  "result": "current approvals unchanged, full fixed closure and policy verified; no withdrawal; manual observation only"
+}

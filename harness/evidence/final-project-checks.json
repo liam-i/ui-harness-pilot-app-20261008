@@ -1,0 +1,38 @@
+{
+  "at": "2026-09-30T09:57:15.841424+00:00",
+  "commands": [
+    {
+      "argv": [
+        "bash",
+        "scripts/openspec.sh",
+        "validate",
+        "--all",
+        "--strict",
+        "--no-interactive"
+      ],
+      "exit": 0,
+      "stdout": "✓ change/adopt-calculator-ui-tokens\nTotals: 1 passed, 0 failed (1 items)\n",
+      "stderr": "  ℹ [INFO] file: skip_specs is set in .openspec.yaml: change declares no spec-level behavior changes, zero deltas accepted\n"
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/adapt-openspec-workflows.mjs",
+        "--check"
+      ],
+      "exit": 0,
+      "stdout": "Harness 文件合同检查通过：apply, archive, explore, propose, sync, update, verify；表面 codex；4 个受控正文。未执行 CLI 或写入配置；不证明宿主发现或模型遵从，仅覆盖 Codex / Claude 政策。\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "at": "2026-09-30T17:24:59.501474+08:00",
+  "scope": "one-off missing-file exercise in independent design export; no UI validator implemented",
+  "D": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+  "unit": "UI-CALCULATOR",
+  "removed_path": "tokens.json",
+  "actual_failure": "[Errno 2] No such file or directory: '/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/app-missing-token-recovery/tokens.json'",
+  "decision": "stop import while required input absent",
+  "recovery": "restored same D via independent approved Git clone; no latest fetch",
+  "restored_sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d",
+  "authority_worktree_unchanged": true
+}

@@ -1,0 +1,204 @@
+{
+  "at": "2026-09-30T09:51:31.989586+00:00",
+  "runs": [
+    {
+      "run": "app-final-SE",
+      "device": "4F72CD21-F071-4835-87B2-1456D125374B",
+      "seconds": 145.795,
+      "tests": {
+        "unit": 10,
+        "ui": 1,
+        "ui_cases": 15
+      },
+      "case_results": [
+        {
+          "id": "A01",
+          "display": "0.00",
+          "screenshot": "56AFA67B-B76A-43C8-AD3C-DA42B3643339.png"
+        },
+        {
+          "id": "A02",
+          "display": "23.00",
+          "screenshot": "1702AE49-8D34-47C3-83CE-C41DF9EC07EE.png"
+        },
+        {
+          "id": "A03",
+          "display": "5.00",
+          "screenshot": "A501DC72-EBA8-464B-B42C-8080E36547B8.png"
+        },
+        {
+          "id": "A04",
+          "display": "-1.00",
+          "screenshot": "07DC03EC-10BC-4E20-9107-A0AF622B75B6.png"
+        },
+        {
+          "id": "A05",
+          "display": "6.00",
+          "screenshot": "407A80A0-04E2-49FF-AE08-D633D4F110E2.png"
+        },
+        {
+          "id": "A06",
+          "display": "4.00",
+          "screenshot": "9AE0AF9B-2439-4DBE-A7BB-86B5AE107A17.png"
+        },
+        {
+          "id": "A07",
+          "display": "0.00",
+          "screenshot": "DC84532B-6D0D-48AE-955E-0BABA76DAFEA.png"
+        },
+        {
+          "id": "A08",
+          "display": "1234567890.00",
+          "screenshot": "CEA062DC-FE5E-48DC-9158-0E79043B685C.png"
+        },
+        {
+          "id": "A09",
+          "display": "inf",
+          "screenshot": "397A7FE6-A685-43E7-8BF8-49BF07944F34.png"
+        },
+        {
+          "id": "A10",
+          "display": "nan",
+          "screenshot": "A3231A89-F7B9-44C5-BA76-1D8E116027FE.png"
+        },
+        {
+          "id": "A11",
+          "display": "0.00",
+          "screenshot": "837357F1-3787-4ECD-AA7A-52E53E3370B4.png"
+        },
+        {
+          "id": "A12",
+          "display": "1.00",
+          "screenshot": "F2DDB896-AB72-4E5E-85EC-875F86724126.png"
+        },
+        {
+          "id": "A13",
+          "display": "0.00",
+          "screenshot": "40779B65-24B2-403C-A67B-9BAF648E904A.png"
+        },
+        {
+          "id": "A14",
+          "display": "3.14",
+          "screenshot": "1E1F10CC-C546-43E2-B29A-46D5E13FED02.png"
+        },
+        {
+          "id": "A15",
+          "display": "23.00",
+          "screenshot": "08343524-72F0-4AB1-AF1F-9F798A6E6FDF.png"
+        }
+      ],
+      "cleanup": "Shutdown"
+    },
+    {
+      "run": "app-final-Pro",
+      "device": "D14EBF55-3D41-419E-8F85-306D5D812CFD",
+      "seconds": 158.836,
+      "tests": {
+        "unit": 10,
+        "ui": 1,
+        "ui_cases": 15
+      },
+      "case_results": [
+        {
+          "id": "A01",
+          "display": "0.00",
+          "screenshot": "F45BB967-422D-4857-8A6B-26427A5C6F6E.png"
+        },
+        {
+          "id": "A02",
+          "display": "23.00",
+          "screenshot": "07E7CF45-DDED-4174-B4E0-D13E11353309.png"
+        },
+        {
+          "id": "A03",
+          "display": "5.00",
+          "screenshot": "812D3077-43F0-4FF1-8E44-DD4C9B0E5472.png"
+        },
+        {
+          "id": "A04",
+          "display": "-1.00",
+          "screenshot": "2F903CC0-5F58-409E-B000-98E66CFF6B1B.png"
+        },
+        {
+          "id": "A05",
+          "display": "6.00",
+          "screenshot": "EE03BC31-2219-4E0A-9A75-025DA0513277.png"
+        },
+        {
+          "id": "A06",
+          "display": "4.00",
+          "screenshot": "73ECD6F3-D58A-4336-A224-91C23A195479.png"
+        },
+        {
+          "id": "A07",
+          "display": "0.00",
+          "screenshot": "123E9454-9057-4A31-AA23-D35A24252792.png"
+        },
+        {
+          "id": "A08",
+          "display": "1234567890.00",
+          "screenshot": "DB050481-9841-4042-8090-D7F4A19C0EF1.png"
+        },
+        {
+          "id": "A09",
+          "display": "inf",
+          "screenshot": "CAA08937-302B-4175-8F0A-6C9C372B3DC0.png"
+        },
+        {
+          "id": "A10",
+          "display": "nan",
+          "screenshot": "380CD729-A64B-40B3-AD7F-AF009DBAE744.png"
+        },
+        {
+          "id": "A11",
+          "display": "0.00",
+          "screenshot": "D54B216A-A822-4B04-93BC-26A8C441F13A.png"
+        },
+        {
+          "id": "A12",
+          "display": "1.00",
+          "screenshot": "5B5BAA26-2FFC-419C-A292-19883E4F3F3D.png"
+        },
+        {
+          "id": "A13",
+          "display": "0.00",
+          "screenshot": "26F06E45-EF1A-469A-A6E3-274EB5FEFB15.png"
+        },
+        {
+          "id": "A14",
+          "display": "3.14",
+          "screenshot": "A8826655-27D7-4FD9-81D2-D3985D982A60.png"
+        },
+        {
+          "id": "A15",
+          "display": "23.00",
+          "screenshot": "87E4A57A-C153-458B-99C7-F48575959A81.png"
+        }
+      ],
+      "cleanup": "Shutdown"
+    }
+  ],
+  "resource": {
+    "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d",
+    "bytes": 601,
+    "limit": 16384,
+    "bundle_verified_by": "CalculatorTokensTests.testApplicationBundleContainsTheFixedApprovedResource"
+  },
+  "review": {
+    "reviewer": "Codex engineering self-review; not human approval",
+    "viewed_cases_each_device": [
+      "A01",
+      "A02",
+      "A03",
+      "A08",
+      "A10"
+    ],
+    "compared_to": "fixed D original-runtime-se/pro.png",
+    "result": "same original calculator appearance; default/input/result/long/nonfinite text fully visible; no clipped or overlapping keys",
+    "layout_evidence": "UI test asserts 20 hit targets,64pt sides,32pt outer inset,20pt row gap on both sizes",
+    "allowed_difference": "OS status bar time changes; original SwiftUI system drawing retained",
+    "product_logic": "five original math/state/action segments unchanged; original 3 regressions pass",
+    "runtime_dependency": "Bundle.main tokens imported via Copy Bundle Resources; no design directory read or SVG/HTML dependency"
+  },
+  "human_runtime_acceptance": "pending"
+}

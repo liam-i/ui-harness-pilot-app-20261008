@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ActionView: View {
+    let tokens = CalculatorTokens.current
     
     // define some variables
     enum Action {
@@ -52,12 +53,14 @@ struct ActionView: View {
     
     var body: some View {
         action.image()
-            .font(Font.title.weight(.bold))
-            .foregroundColor(.white)
-            .frame(width: 64, height: 64)
-            .background(Color.green)
-            .cornerRadius(20)
-            .shadow(color: Color.green.opacity(0.3), radius: 10, x: 0, y: 10)
+            .font(tokens.keyFont.value)
+            .foregroundColor(tokens.operatorText.value)
+            .frame(width: tokens.keySize, height: tokens.keySize)
+            .background(tokens.operatorColor.value)
+            .cornerRadius(tokens.keyCornerRadius)
+            .shadow(color: tokens.operatorColor.value.opacity(tokens.numberShadowOpacity),
+                    radius: tokens.keyShadowRadius, x: 0, y: tokens.keyShadowY)
+            .accessibilityIdentifier("key-\(action)")
             .onTapGesture {
                 self.tapped()
         }
@@ -87,4 +90,3 @@ struct ActionView: View {
         }
     }
 }
-

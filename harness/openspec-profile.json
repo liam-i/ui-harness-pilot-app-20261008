@@ -1,0 +1,5 @@
+{
+  "profile": "custom",
+  "delivery": "commands",
+  "workflows": ["propose", "apply", "update", "archive", "explore", "verify"]
+}

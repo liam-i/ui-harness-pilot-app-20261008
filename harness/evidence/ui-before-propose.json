@@ -1,0 +1,8 @@
+{
+  "at": "2026-09-30T17:05:41.868490+08:00",
+  "authority": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+  "ref": "refs/heads/main",
+  "actual_sha": "db1d8d36482883a46f6624c02cde4241547f3d18",
+  "stdout": "db1d8d36482883a46f6624c02cde4241547f3d18\trefs/heads/main\n",
+  "scope": "manual current observation before Propose; approval/history review in approved recovery evidence"
+}

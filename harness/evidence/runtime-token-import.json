@@ -1,0 +1,30 @@
+{
+  "D": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+  "source_path": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/approved-recovery/design/units/UI-CALCULATOR/releases/U001/tokens.json",
+  "runtime_source_path": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/app/CalculatorSwiftUI/tokens.json",
+  "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d",
+  "bytes": 601,
+  "unchanged_behavior_segments": [
+    {
+      "path": "CalculatorSwiftUI/Views/ContentView.swift",
+      "unchanged_segment": "struct CalculationState"
+    },
+    {
+      "path": "CalculatorSwiftUI/Views/ActionView.swift",
+      "unchanged_segment": "    enum Action"
+    },
+    {
+      "path": "CalculatorSwiftUI/Views/ActionView.swift",
+      "unchanged_segment": "    private func tapped()"
+    },
+    {
+      "path": "CalculatorSwiftUI/Views/FunctionView.swift",
+      "unchanged_segment": "    enum MathFunctions"
+    },
+    {
+      "path": "CalculatorSwiftUI/Views/NumberView.swift",
+      "unchanged_segment": "    var numberString"
+    }
+  ],
+  "status": "import and source wiring complete; native build/runtime check pending"
+}
