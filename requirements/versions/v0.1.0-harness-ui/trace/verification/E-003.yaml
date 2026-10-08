@@ -1,0 +1,279 @@
+{
+  "schema_version": "vr/1",
+  "id": "E-003",
+  "version": "v0.1.0-harness-ui",
+  "delivery_line": "main",
+  "kind": "manual",
+  "tested_revision": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+  "worktree_diff_ref": null,
+  "identities": {
+    "build_ref": {
+      "commit": "7eb45d32ed141d98835282a643c818997fdfb795",
+      "path": "harness/evidence/ui-trial-runtime/final-acceptance/build.json",
+      "sha256": "f8ba10877ec600ed422b7af88ba78ab1e0107b66ac6e2aefd9ae98a9ed0c6ce1"
+    },
+    "dependencies_ref": {
+      "commit": "7eb45d32ed141d98835282a643c818997fdfb795",
+      "path": "harness/evidence/ui-trial-runtime/final-acceptance/dependencies.json",
+      "sha256": "ad73d166eb2f6823a9b31b6b116b67c2b00fce8d55e565c9d7d4ecbcd1567222"
+    },
+    "configuration_ref": {
+      "commit": "7eb45d32ed141d98835282a643c818997fdfb795",
+      "path": "harness/evidence/ui-trial-runtime/final-acceptance/configuration.json",
+      "sha256": "b26581384d29937e0d42e05916d78aecff60e7877938541fe506e947dda964d7"
+    },
+    "environment_ref": {
+      "commit": "7eb45d32ed141d98835282a643c818997fdfb795",
+      "path": "harness/evidence/ui-trial-runtime/final-acceptance/environment.json",
+      "sha256": "52a22250a3f485dd7861c402551dcb65e53d9cb9738b5cd6002814dbe515f62e"
+    },
+    "data_ref": {
+      "commit": "7eb45d32ed141d98835282a643c818997fdfb795",
+      "path": "harness/evidence/ui-trial-runtime/final-acceptance/data.json",
+      "sha256": "9ddfe0168b296d04b159045d3b595a590752438d46820f9ff25c36117b6d3487"
+    }
+  },
+  "input_refs": [
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "AGENTS.md",
+      "sha256": "f0bf18d55eee14ef88e9cbbaaa468f221773c8ee7d696e43cd21ae89cc92db4d"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI.xcodeproj/project.pbxproj",
+      "sha256": "b14ffcbb73afc80288fc7b7eebe0279456f0a7b2c4d5d415ee0f7501a82e58c6"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+      "sha256": "5f1e4220053ebe6c73e2f69d43950ddbb644d4ff7ec39f69fb2e3b33d62c0f80"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+      "sha256": "dfa0f9bb85b95ccba9c6811adadf8cb407fb5d52088e89db83ebc308ec448542"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI.xcodeproj/xcshareddata/xcschemes/CalculatorSwiftUI.xcscheme",
+      "sha256": "d58e8335e415f1874f4c3a066399dd611141cc5419cdd4b20336435007649975"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Application/AppDelegate.swift",
+      "sha256": "374973f55caa3dc2b4920a70106e7c740b532483e090d16992b5138f630f4649"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Application/Info.plist",
+      "sha256": "118af696872f039fa293e1a67b34e5a7d3117d9b137eecd8ba17d6cae3425d20"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Application/SceneDelegate.swift",
+      "sha256": "a0b7ee060bfed07c63c864d0f1ab65a9b1a4b63145b1f47824ff41ea340a0654"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "sha256": "6d2789aa71ac42a5c775306b46c45609c9a627da135ec468f519544c509ffa19"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Assets.xcassets/Contents.json",
+      "sha256": "972ec1fd42325872438eb085ac29e94f51c10788ec18ec5549439950866c541d"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Base.lproj/LaunchScreen.storyboard",
+      "sha256": "1c958c5c65f324959b05c02f170004f3f5aad29e9ca0c2545767efd5b6b15616"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/CalculatorTokens.swift",
+      "sha256": "b8ba670702c1c9fc6c66ccf82be273a9105ecd3ec49edecbcfff183d26e85937"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Preview Content/Preview Assets.xcassets/Contents.json",
+      "sha256": "972ec1fd42325872438eb085ac29e94f51c10788ec18ec5549439950866c541d"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Views/ActionView.swift",
+      "sha256": "5a0701a4d272555c6fc4ba9fafae5067fd5f7ab7858eb553ad0cf86616f5b1b8"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Views/ContentView.swift",
+      "sha256": "db7d90e2c4a0d82209cde1e68fe2827911c32a70e3a72329b8bfb776e867e24a"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Views/FunctionView.swift",
+      "sha256": "4e9adb4ecbf2c8338f19746051110fcc51715e045b1ed39e887e7cb2efc72082"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Views/NumberView.swift",
+      "sha256": "289f3c7ce9573f94bf9746818ace0798f33664ef5c7a6066e1dc7e7675ecbc7c"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/tokens.json",
+      "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorTests/CalculationRegressionTests.swift",
+      "sha256": "902d403d8a38326d5ffbfb8bd9edf14bfd1f124f9c99a3972e17b2c74400f990"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorTests/CalculatorTokensTests.swift",
+      "sha256": "6ec211e396679bef9afa2cd09770c317cee90ddc042ef5ec769a5963b3add70e"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorTests/approved-tokens.json",
+      "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorUITests/CalculatorUITests.swift",
+      "sha256": "7c944906530138643bf96c907205f660de0bf9a5a670b410874fe57d6609e734"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorUITests/app-expected.json",
+      "sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "harness/tasks/calculator-token-return.md",
+      "sha256": "9ad64fde14027c9267c33f2aea1b8d3edbbe200b2f1b2e8a85f5e9d8a37ef5aa"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "openspec/specs/calculator-ui/spec.md",
+      "sha256": "a99233f4eb2cc0786fb8713e1a6a2cabec4c1913d95167115a4c93484ed48e1c"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "requirements/items/.doorstop.yml",
+      "sha256": "d5d4d8a673c0539082eb91cc688a10863f6cfa455fd4f4bf8230b21e5768c611"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "requirements/items/R-001.yml",
+      "sha256": "ee93f08f0e66f4e618032c2e5fe0d68033eac9651b1d7233020a867e120600c1"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/calculator-token-return.json",
+      "sha256": "4f5c248425fd1ac5d9adc3035f0a28c15e73f62d7dd4362a5ca65f2f54d5e3e7"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/ui-inputs-001.json",
+      "sha256": "0f8e0c674b3d594e2c629119eab1350ce73275fe575720a6045ff78a29daeb0d"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "requirements/versions/v0.1.0-harness-ui/verification-plan.yaml",
+      "sha256": "1629b09e91cc0f5fdc34af7acf170f35eeb9b12552533569bd2477e609c9f4d7"
+    }
+  ],
+  "started_at": "2026-10-08T06:33:35.891508+00:00",
+  "finished_at": "2026-10-08T07:00:05.867778+00:00",
+  "actor": "Codex inspected retained captures; actual user accepted the fixed runtime review",
+  "execution_ref": {
+    "commit": "7eb45d32ed141d98835282a643c818997fdfb795",
+    "path": "harness/evidence/ui-trial-runtime/final-acceptance/execution.json",
+    "sha256": "d46cddd8cb147cfaffe73652710b81ece8a95f30ed9da8f6355e1e8f9e93cc1b"
+  },
+  "cases": [
+    {
+      "id": "SE-initial",
+      "definition_ref": {
+        "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+        "path": "openspec/specs/calculator-ui/spec.md",
+        "sha256": "a99233f4eb2cc0786fb8713e1a6a2cabec4c1913d95167115a4c93484ed48e1c"
+      }
+    },
+    {
+      "id": "Pro-initial",
+      "definition_ref": {
+        "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+        "path": "openspec/specs/calculator-ui/spec.md",
+        "sha256": "a99233f4eb2cc0786fb8713e1a6a2cabec4c1913d95167115a4c93484ed48e1c"
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "contribution": "calculator-main/whole",
+      "requirement": "R-001",
+      "revision": 1,
+      "record_ref": {
+        "commit": "7216b6c7bc1dda461f43aa0cd5b38a270c3b48ed",
+        "path": "requirements/items/R-001.yml",
+        "sha256": "ee93f08f0e66f4e618032c2e5fe0d68033eac9651b1d7233020a867e120600c1"
+      },
+      "configuration_ref": {
+        "commit": "7216b6c7bc1dda461f43aa0cd5b38a270c3b48ed",
+        "path": "requirements/items/.doorstop.yml",
+        "sha256": "d5d4d8a673c0539082eb91cc688a10863f6cfa455fd4f4bf8230b21e5768c611"
+      },
+      "acceptance": [
+        "AC-02"
+      ],
+      "case_ids": [
+        "SE-initial",
+        "Pro-initial"
+      ]
+    }
+  ],
+  "result": "passed",
+  "manual": {
+    "steps": [
+      "Inspect the original approved U001 screenshots and the new SE A01 capture.",
+      "Inspect the new Pro A01 capture against its original approved screenshot.",
+      "Submit both comparisons and the exact runtime evidence to the actual user; retain their response without changing the submission."
+    ],
+    "observations": [
+      {
+        "case_id": "SE-initial",
+        "observed": "Codex inspected the new A01 screenshot against the original approved screenshot: initial 0.00, four columns/five rows, readable labels and unchanged layout/colors/fonts, no observed clipping or overlap. Human accepted the fixed two-device runtime review. System status time is within the original OS-RENDERING allowance.",
+        "result": "passed",
+        "evidence_ref": {
+          "commit": "74d38f781d27aab4641ade2613c18ad9ae068332",
+          "path": "harness/evidence/ui-trial-runtime/SE/attachments/865D7FB2-AEA8-4255-AE33-1A15B16E5CBC.png",
+          "sha256": "e24003ef5509867f0ad8e1f97318c1e566edc228100672ec09100f4587d42ac8"
+        }
+      },
+      {
+        "case_id": "Pro-initial",
+        "observed": "Codex inspected the new A01 screenshot against the original approved screenshot: initial 0.00, four columns/five rows, readable labels and unchanged layout/colors/fonts, no observed clipping or overlap. Human accepted the fixed two-device runtime review. System status time is within the original OS-RENDERING allowance.",
+        "result": "passed",
+        "evidence_ref": {
+          "commit": "74d38f781d27aab4641ade2613c18ad9ae068332",
+          "path": "harness/evidence/ui-trial-runtime/Pro/attachments/26EFF4F3-1740-4488-9114-7330F7BFD620.png",
+          "sha256": "1532f4b5e549bf7389fc342167ff2105a98a175dafef959351f7e6bcc14bf4f0"
+        }
+      }
+    ],
+    "acceptance": {
+      "actor": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+      "role": "qa-owner",
+      "at": "2026-10-08T07:00:05.867778+00:00",
+      "statement": "运行验收及 Goal 04 阶段审核通过；固定审核摘要 7e2770dd199304f75d68291ceca3abbc62cf745d48d20b268ce4f29de0d445d9。时间为实际回复后的记录时间。",
+      "evidence_ref": {
+        "commit": "7eb45d32ed141d98835282a643c818997fdfb795",
+        "path": "harness/evidence/ui-trial-runtime/final-acceptance/human-approval.json",
+        "sha256": "23fa0938e19f3aca604b768bda76d37529e1dca18602df528b86df7e6a671722"
+      }
+    }
+  }
+}
