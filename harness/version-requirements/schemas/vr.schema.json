@@ -1,0 +1,7671 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:engineering-harness:version-requirements:vr:1",
+  "title": "Version Requirement Layer 1 — S0–S4 and shared identity envelopes",
+  "description": "Select a named definition. Cross-object obligations are checked by phase-specific rules. Unknown fields are rejected. Event payload is opaque here, never execution permission.",
+  "$defs": {
+    "commit": {
+      "type": "string",
+      "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "file": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "commit": {
+          "$ref": "#/$defs/commit"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "ref": {
+      "type": "object",
+      "properties": {
+        "commit": {
+          "$ref": "#/$defs/commit"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "commit",
+        "path",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "event_ref": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "commit": {
+          "$ref": "#/$defs/commit"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "event_id",
+        "commit",
+        "path",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "selector": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "lines",
+            "table",
+            "image",
+            "cells",
+            "records",
+            "key",
+            "time",
+            "object",
+            "whole-file"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "start": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "heading_path": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "sheet": {
+          "type": "string",
+          "minLength": 1
+        },
+        "range": {
+          "type": "string",
+          "minLength": 1
+        },
+        "key_path": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "region": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "dimensions": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "start_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "end_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "track": {
+          "type": "string",
+          "minLength": 1
+        },
+        "encoding": {
+          "type": "string",
+          "minLength": 1
+        },
+        "delimiter": {
+          "type": "string",
+          "minLength": 1
+        },
+        "columns": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "object_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "description"
+      ],
+      "additionalProperties": false
+    },
+    "source_ref": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "unit": {
+              "type": "string",
+              "minLength": 1
+            },
+            "role": {
+              "enum": [
+                "origin"
+              ]
+            },
+            "acceptance": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^AC-[0-9]{2,}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "unit",
+            "role"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "decision": {
+              "type": "string",
+              "minLength": 1
+            },
+            "role": {
+              "enum": [
+                "clarification"
+              ]
+            }
+          },
+          "required": [
+            "decision",
+            "role"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "asset_use": {
+      "type": "object",
+      "properties": {
+        "ref": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "$ref": "#/$defs/asset_identity_ref"
+            }
+          ]
+        },
+        "selector": {
+          "$ref": "#/$defs/selector"
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1
+        },
+        "acceptance": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^AC-[0-9]{2,}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "ref",
+        "purpose"
+      ],
+      "additionalProperties": false
+    },
+    "decision": {
+      "type": "object",
+      "properties": {
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "actor",
+        "role",
+        "at",
+        "statement",
+        "evidence_ref"
+      ],
+      "additionalProperties": false
+    },
+    "when": {
+      "anyOf": [
+        {
+          "enum": [
+            "always"
+          ]
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "condition": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+            },
+            "outcome": {
+              "enum": [
+                "true",
+                "false",
+                "unknown"
+              ]
+            },
+            "decision_ref": {
+              "$ref": "#/$defs/ref"
+            }
+          },
+          "required": [
+            "condition",
+            "outcome",
+            "decision_ref"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "target": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^R-[0-9]{3,}$"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "requirement": {
+              "type": "string",
+              "pattern": "^R-[0-9]{3,}$"
+            },
+            "version": {
+              "type": "string",
+              "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+            },
+            "delivery_line": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+            },
+            "baseline_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "record_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "configuration_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "availability_ref": {
+              "$ref": "#/$defs/ref"
+            }
+          },
+          "required": [
+            "requirement",
+            "version",
+            "delivery_line",
+            "baseline_ref",
+            "record_ref",
+            "configuration_ref",
+            "availability_ref"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "historical_requirement": {
+      "type": "object",
+      "properties": {
+        "requirement": {
+          "type": "string",
+          "pattern": "^R-[0-9]{3,}$"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "baseline_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "record_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "configuration_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decision_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "requirement",
+        "version",
+        "baseline_ref",
+        "record_ref",
+        "configuration_ref",
+        "reason",
+        "decision_ref"
+      ],
+      "additionalProperties": false
+    },
+    "constraint": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^CON-[0-9]{3,}$"
+        },
+        "requirement": {
+          "$ref": "#/$defs/target"
+        },
+        "acceptance": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^AC-[0-9]{2,}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "strength": {
+          "enum": [
+            "hard",
+            "soft"
+          ]
+        },
+        "when": {
+          "$ref": "#/$defs/when"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "applies_to": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^AC-[0-9]{2,}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "alternative": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "id",
+        "requirement",
+        "acceptance",
+        "strength"
+      ],
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "reason"
+          ]
+        },
+        {
+          "required": [
+            "source_refs"
+          ]
+        }
+      ]
+    },
+    "relationship": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^REL-[0-9]{3,}$"
+            },
+            "target": {
+              "$ref": "#/$defs/target"
+            },
+            "target_acceptance": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^AC-[0-9]{2,}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "type": {
+              "enum": [
+                "requires-capability"
+              ]
+            },
+            "strength": {
+              "enum": [
+                "hard",
+                "soft"
+              ]
+            },
+            "when": {
+              "$ref": "#/$defs/when"
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "applies_to": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^AC-[0-9]{2,}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "alternative": {
+              "type": "string",
+              "minLength": 1
+            },
+            "review_ref": {
+              "$ref": "#/$defs/ref"
+            }
+          },
+          "required": [
+            "id",
+            "target",
+            "target_acceptance",
+            "type",
+            "strength"
+          ],
+          "additionalProperties": false,
+          "anyOf": [
+            {
+              "required": [
+                "reason"
+              ]
+            },
+            {
+              "required": [
+                "source_refs"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^REL-[0-9]{3,}$"
+            },
+            "target": {
+              "$ref": "#/$defs/target"
+            },
+            "type": {
+              "enum": [
+                "related-to",
+                "conflicts-with"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            },
+            "question_ref": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "id",
+            "target",
+            "type",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "acceptance": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^AC-[0-9]{2,}$"
+        },
+        "condition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected": {
+          "type": "string",
+          "minLength": 1
+        },
+        "level": {
+          "enum": [
+            "unit",
+            "integration",
+            "system",
+            "acceptance"
+          ]
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "metric": {
+          "type": "string",
+          "minLength": 1
+        },
+        "threshold": {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "load": {
+          "type": "string",
+          "minLength": 1
+        },
+        "environment": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observation_window": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "condition",
+        "expected",
+        "level",
+        "method"
+      ],
+      "additionalProperties": false
+    },
+    "requirement": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "active": {
+          "enum": [
+            true
+          ]
+        },
+        "derived": {
+          "type": "boolean"
+        },
+        "normative": {
+          "enum": [
+            true
+          ]
+        },
+        "level": {
+          "type": [
+            "number",
+            "string"
+          ]
+        },
+        "header": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "links": {
+          "const": []
+        },
+        "reviewed": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ref": {
+          "const": ""
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "kind": {
+          "enum": [
+            "functional",
+            "quality",
+            "constraint",
+            "external-deliverable"
+          ]
+        },
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source_ref"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "asset_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/asset_use"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "hierarchy": {
+          "type": "object",
+          "properties": {
+            "parent": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/target"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "parent"
+          ],
+          "additionalProperties": false
+        },
+        "acceptance": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/acceptance"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/constraint"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "relationships": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/relationship"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "derived_from": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/historical_requirement"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "question_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "supersedes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/historical_requirement"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "retires": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/historical_requirement"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "schema_version",
+        "active",
+        "derived",
+        "normative",
+        "level",
+        "header",
+        "text",
+        "links",
+        "reviewed",
+        "revision",
+        "kind",
+        "owner",
+        "source_refs",
+        "asset_refs",
+        "hierarchy",
+        "acceptance",
+        "constraints",
+        "relationships",
+        "derived_from",
+        "question_refs"
+      ],
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "properties": {
+            "source_refs": {
+              "minItems": 1
+            }
+          }
+        },
+        {
+          "properties": {
+            "derived_from": {
+              "minItems": 1
+            }
+          }
+        }
+      ]
+    },
+    "version": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "delivery_line": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "integration_ref": {
+          "type": "string",
+          "pattern": "^refs/heads/[A-Za-z0-9._/-]+$"
+        },
+        "starting_commit": {
+          "$ref": "#/$defs/commit"
+        },
+        "owners": {
+          "type": "object",
+          "properties": {
+            "product-owner": {
+              "type": "string",
+              "minLength": 1
+            },
+            "engineering-owner": {
+              "type": "string",
+              "minLength": 1
+            },
+            "qa-owner": {
+              "type": "string",
+              "minLength": 1
+            },
+            "integrator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "release-owner": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "product-owner",
+            "engineering-owner",
+            "qa-owner",
+            "integrator"
+          ],
+          "additionalProperties": false
+        },
+        "predecessor_version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "predecessor_baseline": {
+          "$ref": "#/$defs/ref"
+        },
+        "predecessor_candidate": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "schema_version",
+        "version",
+        "delivery_line",
+        "integration_ref",
+        "starting_commit",
+        "owners"
+      ],
+      "additionalProperties": false
+    },
+    "document": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^DOC-[0-9]{3,}$"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role": {
+          "enum": [
+            "main",
+            "supporting",
+            "reference",
+            "unclassified"
+          ]
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "applicability": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "path",
+        "sha256",
+        "title",
+        "role",
+        "kind",
+        "applicability",
+        "required"
+      ],
+      "additionalProperties": false
+    },
+    "asset": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^AST-[0-9]{3,}$"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "external": {
+          "type": "object",
+          "properties": {
+            "uri": {
+              "type": "string",
+              "minLength": 1
+            },
+            "retention": {
+              "type": "string",
+              "minLength": 1
+            },
+            "retrieval_ref": {
+              "$ref": "#/$defs/ref"
+            }
+          },
+          "required": [
+            "uri",
+            "retention",
+            "retrieval_ref"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "path",
+        "sha256",
+        "media_type",
+        "required"
+      ],
+      "additionalProperties": false
+    },
+    "link": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "document": {
+          "type": "string",
+          "minLength": 1
+        },
+        "selector": {
+          "$ref": "#/$defs/selector"
+        },
+        "raw_target": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "enum": [
+            "resolved",
+            "external",
+            "missing",
+            "unsupported",
+            "ambiguous"
+          ]
+        },
+        "target": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "target_selector": {
+          "$ref": "#/$defs/selector"
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "disposition": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/decision"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_syntax": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_excerpt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "parsed_target": {
+          "type": "string",
+          "minLength": 1
+        },
+        "definition_excerpt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "document",
+        "selector",
+        "raw_target",
+        "status",
+        "target",
+        "required",
+        "disposition",
+        "source_syntax",
+        "source_excerpt",
+        "parsed_target",
+        "definition_excerpt"
+      ],
+      "additionalProperties": false
+    },
+    "document_relation": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "string",
+          "minLength": 1
+        },
+        "to": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "enum": [
+            "elaborates",
+            "constrains",
+            "supersedes"
+          ]
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "status": {
+          "enum": [
+            "confirmed",
+            "pending"
+          ]
+        }
+      },
+      "required": [
+        "from",
+        "to",
+        "type",
+        "scope",
+        "evidence_ref",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "intake": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "root": {
+          "type": "string",
+          "minLength": 1
+        },
+        "input_mode": {
+          "enum": [
+            "full",
+            "delta"
+          ]
+        },
+        "predecessor": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provided": {
+          "$ref": "#/$defs/decision"
+        },
+        "entry_documents": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "$ref": "#/$defs/sha256"
+              },
+              "disposition": {
+                "enum": [
+                  "document",
+                  "asset",
+                  "other",
+                  "unclassified"
+                ]
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "path",
+              "sha256",
+              "disposition",
+              "reason"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "documents": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/document"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "assets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/asset"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/link"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "relations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/document_relation"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "replacements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "previous": {
+                "type": "string",
+                "minLength": 1
+              },
+              "current": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "decision_ref": {
+                "$ref": "#/$defs/ref"
+              }
+            },
+            "required": [
+              "previous",
+              "current",
+              "decision_ref"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "markdown_dialect": {
+          "enum": [
+            "commonmark-tables-harness-headings-v1"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "root",
+        "input_mode",
+        "predecessor",
+        "provided",
+        "entry_documents",
+        "files",
+        "documents",
+        "assets",
+        "links",
+        "relations",
+        "replacements",
+        "markdown_dialect"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "input_mode": {
+                "const": "full"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "entry_documents": {
+                "minItems": 1
+              },
+              "documents": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "manifest": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "intakes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/intake"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "schema_version",
+        "version",
+        "intakes"
+      ],
+      "additionalProperties": false
+    },
+    "unit": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "file_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "selector": {
+          "$ref": "#/$defs/selector"
+        },
+        "fragment_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "asset_context": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "asset": {
+                "type": "string",
+                "minLength": 1
+              },
+              "document": {
+                "type": "string",
+                "minLength": 1
+              },
+              "link": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "asset",
+              "document",
+              "link"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "reading": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "unread",
+                "read",
+                "unreadable"
+              ]
+            },
+            "method": {
+              "type": "string",
+              "minLength": 1
+            },
+            "evidence_ref": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "method",
+            "evidence_ref"
+          ],
+          "additionalProperties": false
+        },
+        "disposition": {
+          "enum": [
+            "mapped",
+            "duplicate",
+            "context",
+            "excluded",
+            "superseded",
+            "pending"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "requirement": {
+                "type": "string",
+                "pattern": "^R-[0-9]{3,}$"
+              },
+              "revision": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "acceptance": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^AC-[0-9]{2,}$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "role": {
+                "enum": [
+                  "origin",
+                  "confirmation"
+                ]
+              }
+            },
+            "required": [
+              "requirement",
+              "revision",
+              "acceptance",
+              "role"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "duplicate_of": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope_decision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "supersedes_unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "successors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "decision_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "context_requirements": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^R-[0-9]{3,}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "previous_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "id",
+        "file",
+        "path",
+        "file_sha256",
+        "selector",
+        "fragment_sha256",
+        "asset_context",
+        "reading",
+        "disposition",
+        "reason",
+        "targets"
+      ],
+      "additionalProperties": false
+    },
+    "units": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "units": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/unit"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "schema_version",
+        "version",
+        "units"
+      ],
+      "additionalProperties": false
+    },
+    "included": {
+      "type": "object",
+      "properties": {
+        "requirement": {
+          "type": "string",
+          "pattern": "^R-[0-9]{3,}$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "delivery": {
+          "enum": [
+            "change",
+            "already-satisfied",
+            "external-deliverable"
+          ]
+        },
+        "transition": {
+          "enum": [
+            "added",
+            "modified",
+            "inherited"
+          ]
+        },
+        "record_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "configuration_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "predecessor": {
+          "$ref": "#/$defs/historical_requirement"
+        },
+        "source_confirmations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "unit": {
+                "type": "string",
+                "minLength": 1
+              },
+              "acceptance": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^AC-[0-9]{2,}$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "decision_ref": {
+                "$ref": "#/$defs/ref"
+              }
+            },
+            "required": [
+              "unit",
+              "acceptance",
+              "decision_ref"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "requirement",
+        "revision",
+        "delivery",
+        "transition",
+        "source_confirmations"
+      ],
+      "additionalProperties": false
+    },
+    "excluded": {
+      "type": "object",
+      "properties": {
+        "source_unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "requirement": {
+          "$ref": "#/$defs/target"
+        },
+        "disposition": {
+          "enum": [
+            "excluded",
+            "deferred",
+            "removed"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decision_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "predecessor": {
+          "$ref": "#/$defs/historical_requirement"
+        }
+      },
+      "required": [
+        "disposition",
+        "reason",
+        "decision_ref"
+      ],
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "source_unit"
+          ]
+        },
+        {
+          "required": [
+            "requirement"
+          ]
+        }
+      ]
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "included": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/included"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "excluded": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/excluded"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "context_requirements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "requirement": {
+                "type": "string",
+                "pattern": "^R-[0-9]{3,}$"
+              },
+              "record_ref": {
+                "$ref": "#/$defs/ref"
+              },
+              "configuration_ref": {
+                "$ref": "#/$defs/ref"
+              },
+              "version": {
+                "type": "string",
+                "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+              }
+            },
+            "required": [
+              "requirement",
+              "record_ref",
+              "configuration_ref"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "schema_version",
+        "version",
+        "included",
+        "excluded",
+        "context_requirements"
+      ],
+      "additionalProperties": false
+    },
+    "question": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "ambiguity",
+            "conflict",
+            "missing",
+            "feasibility",
+            "scope"
+          ]
+        },
+        "raised_in": {
+          "enum": [
+            "S0",
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6"
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "affected_requirements": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^R-[0-9]{3,}$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "blocking_for": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "status": {
+          "enum": [
+            "open",
+            "answered",
+            "resolved",
+            "duplicate",
+            "deferred",
+            "reopened"
+          ]
+        },
+        "response": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/decision"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "applied_to": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/file"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "verified_by": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/decision"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "duplicate_of": {
+          "type": "string",
+          "minLength": 1
+        },
+        "disposition_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "reopened_reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reopened_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "schema_version",
+        "id",
+        "kind",
+        "raised_in",
+        "source_refs",
+        "affected_requirements",
+        "blocking_for",
+        "owner",
+        "question",
+        "options",
+        "status",
+        "response",
+        "applied_to",
+        "verified_by"
+      ],
+      "additionalProperties": false
+    },
+    "review_check": {
+      "type": "object",
+      "properties": {
+        "check_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "source_units": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "outcome": {
+          "enum": [
+            "passed",
+            "failed",
+            "not-applicable",
+            "unreadable"
+          ]
+        },
+        "issue_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "input_digest": {
+          "$ref": "#/$defs/sha256"
+        },
+        "evidence_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "check_id",
+        "source_units",
+        "outcome",
+        "issue_refs",
+        "input_digest",
+        "evidence_ref"
+      ],
+      "additionalProperties": false
+    },
+    "dependency_disposition": {
+      "type": "object",
+      "properties": {
+        "origin_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "disposition": {
+          "enum": [
+            "internal",
+            "execution-edge",
+            "existing-provider",
+            "no-wait"
+          ]
+        },
+        "consumer_contributions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "provider_contributions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "edge_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "origin_ref",
+        "disposition",
+        "consumer_contributions",
+        "provider_contributions",
+        "edge_refs",
+        "reason",
+        "evidence_ref"
+      ],
+      "additionalProperties": false
+    },
+    "review": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phase": {
+          "enum": [
+            "intake",
+            "global",
+            "batch",
+            "engineering",
+            "planning",
+            "delivery"
+          ]
+        },
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "outcome": {
+          "enum": [
+            "passed",
+            "failed",
+            "incomplete"
+          ]
+        },
+        "evidence_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "reviewed_inputs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/file"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "context_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/file"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "processed_units": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "pending_units": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "issue_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/review_check"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "dependency_dispositions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/dependency_disposition"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "engineering": {
+          "type": "object",
+          "properties": {
+            "code_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "spec_refs": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/ref"
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            },
+            "resources": {
+              "type": "string",
+              "minLength": 1
+            },
+            "schedule_basis": {
+              "type": "string",
+              "minLength": 1
+            },
+            "verification_environment": {
+              "type": "string",
+              "minLength": 1
+            },
+            "build_evidence_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "shared_contract_refs": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/ref"
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            },
+            "assumptions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+                  },
+                  "statement": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "blocking": {
+                    "type": "boolean"
+                  },
+                  "resolution_ref": {
+                    "anyOf": [
+                      {
+                        "$ref": "#/$defs/ref"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "id",
+                  "statement",
+                  "blocking",
+                  "resolution_ref"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            },
+            "wip_limit": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "planning_limit": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "parallel_approval_ref": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "stage_order": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "availability": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/availability_assessment"
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            },
+            "planning_applicability": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/planning_applicability"
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            },
+            "ui_inputs_ref": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "ui_metadata_refs": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/ref"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "code_ref",
+            "spec_refs",
+            "resources",
+            "schedule_basis",
+            "verification_environment",
+            "build_evidence_ref",
+            "shared_contract_refs",
+            "assumptions",
+            "wip_limit",
+            "planning_limit",
+            "parallel_approval_ref"
+          ],
+          "additionalProperties": false
+        },
+        "reviewed_requirements": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^R-[0-9]{3,}$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "schema_version",
+        "id",
+        "phase",
+        "actor",
+        "role",
+        "at",
+        "outcome",
+        "evidence_ref",
+        "reviewed_inputs",
+        "context_refs",
+        "processed_units",
+        "pending_units",
+        "issue_refs",
+        "checks"
+      ],
+      "additionalProperties": false
+    },
+    "allocation": {
+      "type": "object",
+      "properties": {
+        "requirement": {
+          "type": "string",
+          "pattern": "^R-[0-9]{3,}$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "acceptance": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^AC-[0-9]{2,}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "contribution": {
+          "type": "string",
+          "minLength": 1
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "requirement_ref": {
+          "$ref": "#/$defs/historical_requirement"
+        }
+      },
+      "required": [
+        "requirement",
+        "revision",
+        "acceptance",
+        "contribution",
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "contribution": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/requirement_contribution"
+        },
+        {
+          "$ref": "#/$defs/technical_contribution"
+        }
+      ]
+    },
+    "edge": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^DEP-[0-9]{3,}$"
+        },
+        "candidate": {
+          "type": "string",
+          "minLength": 1
+        },
+        "endpoint": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "implementation",
+            "integration",
+            "release"
+          ]
+        },
+        "strength": {
+          "enum": [
+            "hard",
+            "soft"
+          ]
+        },
+        "when": {
+          "$ref": "#/$defs/when"
+        },
+        "origin_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "required_contribution": {
+          "$ref": "#/$defs/contribution"
+        },
+        "consumer_contribution": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "satisfied_when": {
+          "enum": [
+            "merged-and-verified-on-integration-base",
+            "integration-verified",
+            "release-combination",
+            "provider-available"
+          ]
+        },
+        "checkpoint": {
+          "enum": [
+            "apply-start",
+            "integration",
+            "merge",
+            "completion",
+            "release"
+          ]
+        },
+        "provider_stage": {
+          "enum": [
+            "contract",
+            "implemented",
+            "integrated",
+            "merged",
+            "released"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "alternative": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "strength",
+        "origin_refs",
+        "required_contribution",
+        "satisfied_when",
+        "checkpoint",
+        "provider_stage",
+        "reason"
+      ],
+      "additionalProperties": false,
+      "oneOf": [
+        {
+          "required": [
+            "candidate"
+          ],
+          "not": {
+            "required": [
+              "endpoint"
+            ]
+          }
+        },
+        {
+          "required": [
+            "endpoint"
+          ],
+          "not": {
+            "required": [
+              "candidate"
+            ]
+          }
+        }
+      ]
+    },
+    "candidate": {
+      "type": "object",
+      "properties": {
+        "candidate_id": {
+          "type": "string",
+          "pattern": "^C-[0-9]{3,}$"
+        },
+        "change_name": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+            }
+          ]
+        },
+        "allocation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/allocation"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "expected_capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "predecessor_edges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/edge"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "disposition": {
+          "enum": [
+            "planned",
+            "cancelled",
+            "superseded"
+          ]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "approval_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "replaced_by": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "shared_resources": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "candidate_id",
+        "change_name",
+        "allocation",
+        "expected_capabilities",
+        "predecessor_edges",
+        "disposition",
+        "rationale",
+        "approval_ref",
+        "shared_resources"
+      ],
+      "additionalProperties": false
+    },
+    "endpoint": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "kind": {
+          "enum": [
+            "existing",
+            "external"
+          ]
+        },
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "delivery_line": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "contract_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "allocation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/allocation"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "expected_condition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "feasibility_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "availability_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "target_line_path": {
+          "enum": [
+            "included",
+            "external-service",
+            "port-planned"
+          ]
+        },
+        "expected_capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "owner",
+        "version",
+        "delivery_line",
+        "contract_ref",
+        "allocation",
+        "expected_condition",
+        "feasibility_ref",
+        "availability_refs",
+        "target_line_path"
+      ],
+      "additionalProperties": false
+    },
+    "delivery_map": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "baseline": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/candidate"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "endpoints": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/endpoint"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "ui": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ui_claim"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "schema_version",
+        "version",
+        "revision",
+        "baseline",
+        "candidates",
+        "endpoints"
+      ],
+      "additionalProperties": false
+    },
+    "verification": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "requirement": {
+          "type": "string",
+          "pattern": "^R-[0-9]{3,}$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "acceptance": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^AC-[0-9]{2,}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "contributions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "level": {
+          "enum": [
+            "unit",
+            "integration",
+            "system",
+            "acceptance"
+          ]
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "environment": {
+          "type": "string",
+          "minLength": 1
+        },
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "checkpoint": {
+          "enum": [
+            "contribution",
+            "integration",
+            "completion",
+            "release"
+          ]
+        },
+        "final": {
+          "type": "boolean"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "edge_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^DEP-[0-9]{3,}$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "requirement",
+        "revision",
+        "acceptance",
+        "contributions",
+        "level",
+        "method",
+        "environment",
+        "owner",
+        "checkpoint",
+        "final",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "verification_plan": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "obligations": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/verification"
+              },
+              {
+                "$ref": "#/$defs/technical_verification"
+              }
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "approval_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "schema_version",
+        "version",
+        "revision",
+        "obligations",
+        "approval_ref"
+      ],
+      "additionalProperties": false
+    },
+    "derivation": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^DAS-[0-9]{3,}$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/asset_use"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1
+        },
+        "transformation": {
+          "type": "object",
+          "properties": {
+            "method": {
+              "enum": [
+                "manual",
+                "automatic"
+              ]
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            },
+            "actor": {
+              "type": "string",
+              "minLength": 1
+            },
+            "tool": {
+              "type": "string",
+              "minLength": 1
+            },
+            "tool_version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "parameters": {
+              "type": "string",
+              "minLength": 1
+            },
+            "script_ref": {
+              "$ref": "#/$defs/ref"
+            }
+          },
+          "required": [
+            "method",
+            "description",
+            "actor"
+          ],
+          "additionalProperties": false
+        },
+        "review_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "external": {
+          "type": "object",
+          "properties": {
+            "uri": {
+              "type": "string",
+              "minLength": 1
+            },
+            "retention": {
+              "type": "string",
+              "minLength": 1
+            },
+            "retrieval_ref": {
+              "$ref": "#/$defs/ref"
+            }
+          },
+          "required": [
+            "uri",
+            "retention",
+            "retrieval_ref"
+          ],
+          "additionalProperties": false
+        },
+        "received_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "id",
+        "revision",
+        "path",
+        "sha256",
+        "media_type",
+        "inputs",
+        "purpose",
+        "transformation",
+        "review_ref"
+      ],
+      "additionalProperties": false,
+      "dependentRequired": {
+        "external": [
+          "received_sha256"
+        ],
+        "received_sha256": [
+          "external"
+        ]
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "transformation": {
+                "properties": {
+                  "method": {
+                    "const": "automatic"
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "transformation": {
+                "anyOf": [
+                  {
+                    "required": [
+                      "script_ref"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "tool",
+                      "tool_version",
+                      "parameters"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "derived_assets": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "assets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/derivation"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "schema_version",
+        "version",
+        "assets"
+      ],
+      "additionalProperties": false
+    },
+    "approval": {
+      "type": "object",
+      "properties": {
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role": {
+          "enum": [
+            "product-owner",
+            "engineering-owner",
+            "qa-owner"
+          ]
+        },
+        "at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "content_commit": {
+          "$ref": "#/$defs/commit"
+        },
+        "evidence_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "actor",
+        "role",
+        "at",
+        "content_commit",
+        "evidence_ref"
+      ],
+      "additionalProperties": false
+    },
+    "manifest_entry": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "commit": {
+          "$ref": "#/$defs/commit"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "baseline": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^BL-v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?-[0-9]{3,}$"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "content_commit": {
+          "$ref": "#/$defs/commit"
+        },
+        "content_manifest": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/manifest_entry"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "approvals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/approval"
+          },
+          "minItems": 3,
+          "uniqueItems": true
+        },
+        "supersedes": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "requirement_change_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/event_ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "schema_version",
+        "id",
+        "version",
+        "content_commit",
+        "content_manifest",
+        "approvals",
+        "supersedes"
+      ],
+      "additionalProperties": false
+    },
+    "event": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "target_line": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "based_on_control": {
+          "$ref": "#/$defs/commit"
+        },
+        "payload": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "event_id",
+        "kind",
+        "version",
+        "target_line",
+        "actor",
+        "evidence_ref",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "events": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/event"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "schema_version",
+        "events"
+      ],
+      "additionalProperties": false
+    },
+    "published": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "event_ref": {
+                "$ref": "#/$defs/event_ref"
+              }
+            },
+            "required": [
+              "event_ref"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "events"
+      ],
+      "additionalProperties": false
+    },
+    "reservation": {
+      "type": "object",
+      "properties": {
+        "reservation_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "prefix": {
+          "enum": [
+            "R"
+          ]
+        },
+        "start": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "line": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "status": {
+          "enum": [
+            "reserved",
+            "consumed",
+            "abandoned"
+          ]
+        },
+        "evidence_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "used": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^R-[0-9]{3,}$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "reservation_id",
+        "prefix",
+        "start",
+        "end",
+        "owner",
+        "line",
+        "status",
+        "evidence_ref",
+        "used"
+      ],
+      "additionalProperties": false
+    },
+    "id_allocations": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "allocations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reservation"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "schema_version",
+        "allocations"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "kind": {
+          "enum": [
+            "decision",
+            "review",
+            "tool-run",
+            "readability",
+            "retrieval"
+          ]
+        },
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subject_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/file"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "result": {
+          "enum": [
+            "passed",
+            "failed",
+            "incomplete"
+          ]
+        },
+        "test_input": {
+          "type": "boolean"
+        },
+        "attachments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "schema_version",
+        "id",
+        "kind",
+        "actor",
+        "role",
+        "at",
+        "subject_refs",
+        "statement",
+        "result",
+        "test_input",
+        "attachments"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "evaluation_mode": {
+          "enum": [
+            "current",
+            "historical"
+          ]
+        },
+        "gate": {
+          "enum": [
+            "G0",
+            "G1",
+            "G2",
+            "G3",
+            "G4"
+          ]
+        },
+        "phase": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subject": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "delivery_line": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "checker_version": {
+          "enum": [
+            "vr-check/2"
+          ]
+        },
+        "rule_version": {
+          "enum": [
+            "vr-rules/2"
+          ]
+        },
+        "metadata_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "head_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "target_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "control_revision": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/commit"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "baseline_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "previous_control_revision": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/commit"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "publication_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "publication_evidence_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "baseline_contexts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/baseline_context"
+          },
+          "maxItems": 128,
+          "uniqueItems": true
+        },
+        "dispatch_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "trace_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "apply_request_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "apply_origin_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "planning_inputs_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "verification_inputs": {
+          "$ref": "#/$defs/delivery_verification_inputs"
+        },
+        "pre_archive_context_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "final_checks_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "merge_request_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "engineering_inputs": {
+          "type": "object",
+          "properties": {
+            "map_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "verification_plan_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "engineering_review_ref": {
+              "$ref": "#/$defs/ref"
+            }
+          },
+          "required": [
+            "map_ref",
+            "verification_plan_ref",
+            "engineering_review_ref"
+          ],
+          "additionalProperties": false
+        },
+        "integration_checks_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "slot_release_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "tiny_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "integration_observation_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "release_candidate_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "release_decision_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "release_observation_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "ui": {
+          "$ref": "#/$defs/ui_runtime_context"
+        }
+      },
+      "required": [
+        "schema_version",
+        "evaluation_mode",
+        "gate",
+        "phase",
+        "subject",
+        "version",
+        "delivery_line",
+        "checker_version",
+        "rule_version",
+        "metadata_revision",
+        "head_revision",
+        "target_revision",
+        "control_revision",
+        "baseline_ref"
+      ],
+      "additionalProperties": false
+    },
+    "project_config": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "authority_remote": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "control_ref": {
+          "type": "string",
+          "pattern": "^refs/heads/[A-Za-z0-9._/-]+$"
+        },
+        "pin_namespace": {
+          "enum": [
+            "refs/tags/vr-pin/"
+          ]
+        },
+        "support": {
+          "enum": [
+            "local-controlled-trial"
+          ]
+        },
+        "control_owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "retention_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "protection_evidence_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "id_allocation_mode": {
+          "enum": [
+            "serial",
+            "reserved"
+          ],
+          "default": "serial"
+        },
+        "ui_design": {
+          "enum": [
+            "enabled",
+            "not-adopted"
+          ]
+        }
+      },
+      "required": [
+        "schema_version",
+        "authority_remote",
+        "control_ref",
+        "pin_namespace",
+        "support",
+        "control_owner",
+        "retention_policy",
+        "protection_evidence_ref",
+        "ui_design"
+      ],
+      "additionalProperties": false
+    },
+    "asset_identity_ref": {
+      "type": "object",
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "manifest_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "identity",
+        "manifest_ref"
+      ],
+      "additionalProperties": false
+    },
+    "requirement_contribution": {
+      "type": "object",
+      "properties": {
+        "requirement": {
+          "type": "string",
+          "pattern": "^R-[0-9]{3,}$"
+        },
+        "acceptance": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^AC-[0-9]{2,}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "contribution": {
+          "type": "string",
+          "minLength": 1
+        },
+        "allocation_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "requirement",
+        "acceptance",
+        "contribution",
+        "allocation_ref"
+      ],
+      "additionalProperties": false
+    },
+    "technical_contribution": {
+      "type": "object",
+      "properties": {
+        "capability": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "contribution": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "capability",
+        "contribution"
+      ],
+      "additionalProperties": false
+    },
+    "technical_verification": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "level": {
+          "enum": [
+            "unit",
+            "integration",
+            "system",
+            "acceptance"
+          ]
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "environment": {
+          "type": "string",
+          "minLength": 1
+        },
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "checkpoint": {
+          "enum": [
+            "contribution",
+            "integration",
+            "completion",
+            "release"
+          ]
+        },
+        "final": {
+          "const": false
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "capability_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "edge_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^DEP-[0-9]{3,}$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "capability_ref",
+        "level",
+        "method",
+        "environment",
+        "owner",
+        "checkpoint",
+        "final",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "baseline_context": {
+      "type": "object",
+      "properties": {
+        "baseline_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "target_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "control_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "publication_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "publication_evidence_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "baseline_ref",
+        "target_revision",
+        "control_revision",
+        "publication_revision",
+        "publication_evidence_ref"
+      ],
+      "additionalProperties": false
+    },
+    "control_target": {
+      "type": "string",
+      "pattern": "^(?:candidate:v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?/C-[0-9]{3,}|requirement:v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?/R-[0-9]{3,}|scope:v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?/R-[0-9]{3,}/AC-[0-9]{2,}|version:v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?|(?:line|change|task|pr):[A-Za-z0-9][A-Za-z0-9._/-]*)$"
+    },
+    "control_entry": {
+      "enum": [
+        "propose",
+        "apply",
+        "merge",
+        "release"
+      ]
+    },
+    "hold_payload": {
+      "type": "object",
+      "properties": {
+        "targets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/control_target"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/control_entry"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "restore_conditions": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "targets",
+        "entries",
+        "reason",
+        "restore_conditions"
+      ],
+      "additionalProperties": false
+    },
+    "unhold_payload": {
+      "type": "object",
+      "properties": {
+        "hold_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/control_target"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/control_entry"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "alignment_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "authorization_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "hold_ref",
+        "targets",
+        "entries",
+        "alignment_refs",
+        "authorization_ref"
+      ],
+      "additionalProperties": false
+    },
+    "stop_payload": {
+      "type": "object",
+      "properties": {
+        "hold_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/event_ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "target": {
+          "$ref": "#/$defs/control_target"
+        },
+        "entry": {
+          "$ref": "#/$defs/control_entry"
+        },
+        "actual_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "task_ref": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "hold_refs",
+        "target",
+        "entry",
+        "actual_revision",
+        "task_ref"
+      ],
+      "additionalProperties": false
+    },
+    "planning_exception": {
+      "type": "object",
+      "properties": {
+        "stable_contract_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "unmet_implementation_edges": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "review_trigger": {
+          "type": "string",
+          "minLength": 1
+        },
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "approval": {
+          "$ref": "#/$defs/decision"
+        }
+      },
+      "required": [
+        "stable_contract_refs",
+        "unmet_implementation_edges",
+        "review_trigger",
+        "owner",
+        "approval"
+      ],
+      "additionalProperties": false
+    },
+    "dispatch_payload": {
+      "type": "object",
+      "properties": {
+        "candidate_id": {
+          "type": "string",
+          "pattern": "^C-[0-9]{3,}$"
+        },
+        "mode": {
+          "enum": [
+            "execution",
+            "planning-only"
+          ]
+        },
+        "baseline_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "map_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "verification_plan_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "engineering_review_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "target_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "context_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "release_decision": {
+          "$ref": "#/$defs/decision"
+        },
+        "propose_request": {
+          "$ref": "#/$defs/decision"
+        },
+        "planning_exception": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/planning_exception"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "candidate_id",
+        "mode",
+        "baseline_ref",
+        "map_ref",
+        "verification_plan_ref",
+        "engineering_review_ref",
+        "target_revision",
+        "context_refs",
+        "release_decision",
+        "propose_request",
+        "planning_exception"
+      ],
+      "additionalProperties": false
+    },
+    "alignment_payload": {
+      "type": "object",
+      "properties": {
+        "candidate_id": {
+          "type": "string",
+          "pattern": "^C-[0-9]{3,}$"
+        },
+        "mode": {
+          "enum": [
+            "execution",
+            "planning-only"
+          ]
+        },
+        "baseline_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "map_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "verification_plan_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "engineering_review_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "target_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "context_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "release_decision": {
+          "$ref": "#/$defs/decision"
+        },
+        "propose_request": {
+          "$ref": "#/$defs/decision"
+        },
+        "planning_exception": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/planning_exception"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "previous_dispatch_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "assessment_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "candidate_id",
+        "mode",
+        "baseline_ref",
+        "map_ref",
+        "verification_plan_ref",
+        "engineering_review_ref",
+        "target_revision",
+        "context_refs",
+        "release_decision",
+        "propose_request",
+        "planning_exception",
+        "previous_dispatch_ref",
+        "assessment_ref"
+      ],
+      "additionalProperties": false
+    },
+    "execution_identities": {
+      "type": "object",
+      "properties": {
+        "build_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "dependencies_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "configuration_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "environment_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "data_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "build_ref",
+        "dependencies_ref",
+        "configuration_ref",
+        "environment_ref",
+        "data_ref"
+      ],
+      "additionalProperties": false
+    },
+    "verification_case": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "definition_ref": {
+          "$ref": "#/$defs/execution_input"
+        },
+        "selector": {
+          "type": "object",
+          "properties": {
+            "classname": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "classname",
+            "name"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "definition_ref"
+      ],
+      "additionalProperties": false
+    },
+    "verification_coverage": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "contribution": {
+              "type": "string",
+              "minLength": 1
+            },
+            "case_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "requirement": {
+              "type": "string",
+              "pattern": "^R-[0-9]{3,}$"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "record_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "configuration_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "acceptance": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^AC-[0-9]{2,}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "contribution",
+            "case_ids",
+            "requirement",
+            "revision",
+            "record_ref",
+            "configuration_ref",
+            "acceptance"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "contribution": {
+              "type": "string",
+              "minLength": 1
+            },
+            "case_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "capability": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "contribution",
+            "case_ids",
+            "capability"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "verification_record": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "vr/1"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^E-[0-9]{3,}$"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "delivery_line": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "automatic",
+            "manual"
+          ]
+        },
+        "tested_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "worktree_diff_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "identities": {
+          "$ref": "#/$defs/execution_identities"
+        },
+        "input_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/execution_input"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "started_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "finished_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "execution_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "cases": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/verification_case"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "coverage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/verification_coverage"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "result": {
+          "enum": [
+            "passed",
+            "failed"
+          ]
+        },
+        "automatic": {
+          "type": "object",
+          "properties": {
+            "command": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "cwd": {
+              "type": "string",
+              "minLength": 1
+            },
+            "format": {
+              "type": "string",
+              "minLength": 1
+            },
+            "exit_code": {
+              "type": "integer"
+            },
+            "report_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "counts": {
+              "type": "object",
+              "properties": {
+                "discovered": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "executed": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "passed": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "failed": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "skipped": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "discovered",
+                "executed",
+                "passed",
+                "failed",
+                "skipped"
+              ],
+              "additionalProperties": false
+            },
+            "source_root": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "command",
+            "cwd",
+            "format",
+            "exit_code",
+            "report_ref",
+            "counts",
+            "source_root"
+          ],
+          "additionalProperties": false
+        },
+        "manual": {
+          "type": "object",
+          "properties": {
+            "steps": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "observations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "case_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "observed": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "result": {
+                    "enum": [
+                      "passed",
+                      "failed",
+                      "skipped"
+                    ]
+                  },
+                  "evidence_ref": {
+                    "$ref": "#/$defs/ref"
+                  }
+                },
+                "required": [
+                  "case_id",
+                  "observed",
+                  "result",
+                  "evidence_ref"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "acceptance": {
+              "$ref": "#/$defs/decision"
+            }
+          },
+          "required": [
+            "steps",
+            "observations",
+            "acceptance"
+          ],
+          "additionalProperties": false
+        },
+        "task_coverage": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/task_verification_coverage"
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "id",
+        "version",
+        "delivery_line",
+        "kind",
+        "tested_revision",
+        "worktree_diff_ref",
+        "identities",
+        "input_refs",
+        "started_at",
+        "finished_at",
+        "actor",
+        "execution_ref",
+        "cases",
+        "coverage",
+        "result"
+      ],
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "properties": {
+            "coverage": {
+              "minItems": 1
+            }
+          }
+        },
+        {
+          "required": [
+            "task_coverage"
+          ]
+        }
+      ]
+    },
+    "availability_assessment": {
+      "type": "object",
+      "properties": {
+        "edge_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "conclusion": {
+          "enum": [
+            "available",
+            "unavailable",
+            "unknown"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "assessment_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "observed_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "executions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "verification_ref": {
+                "$ref": "#/$defs/ref"
+              },
+              "identities": {
+                "$ref": "#/$defs/execution_identities"
+              }
+            },
+            "required": [
+              "verification_ref",
+              "identities"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "provider_integration": {
+          "type": "object",
+          "properties": {
+            "context_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "result_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "contract_ref": {
+              "$ref": "#/$defs/ref"
+            }
+          },
+          "required": [
+            "context_ref",
+            "result_ref",
+            "contract_ref"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "edge_id",
+        "target_revision",
+        "conclusion",
+        "reason",
+        "assessment_ref",
+        "observed_refs",
+        "executions"
+      ],
+      "additionalProperties": false
+    },
+    "execution_receipt": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "vr/1"
+        },
+        "kind": {
+          "const": "automatic-execution"
+        },
+        "tested_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "worktree_diff_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/file"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "identities": {
+          "$ref": "#/$defs/execution_identities"
+        },
+        "input_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/receipt_input"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "started_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "finished_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "command": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "cwd": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_root": {
+          "type": "string",
+          "minLength": 1
+        },
+        "format": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exit_code": {
+          "type": "integer"
+        },
+        "report_ref": {
+          "$ref": "#/$defs/file"
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "tested_revision",
+        "worktree_diff_ref",
+        "identities",
+        "input_refs",
+        "started_at",
+        "finished_at",
+        "actor",
+        "command",
+        "cwd",
+        "source_root",
+        "format",
+        "exit_code",
+        "report_ref"
+      ],
+      "additionalProperties": false
+    },
+    "openspec_command": {
+      "type": "object",
+      "properties": {
+        "args": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "exit_code": {
+          "type": "integer"
+        },
+        "stdout_ref": {
+          "$ref": "#/$defs/file"
+        }
+      },
+      "required": [
+        "args",
+        "exit_code",
+        "stdout_ref"
+      ],
+      "additionalProperties": false
+    },
+    "openspec_observation": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "vr/1"
+        },
+        "change": {
+          "type": "string",
+          "minLength": 1
+        },
+        "captured_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "project_root": {
+          "type": "string",
+          "minLength": 1
+        },
+        "schema_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "input_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "commands": {
+          "type": "object",
+          "properties": {
+            "schema": {
+              "$ref": "#/$defs/openspec_command"
+            },
+            "status": {
+              "$ref": "#/$defs/openspec_command"
+            },
+            "apply": {
+              "$ref": "#/$defs/openspec_command"
+            },
+            "validate": {
+              "$ref": "#/$defs/openspec_command"
+            }
+          },
+          "required": [
+            "schema",
+            "status",
+            "apply",
+            "validate"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "change",
+        "captured_revision",
+        "project_root",
+        "schema_ref",
+        "input_refs",
+        "commands"
+      ],
+      "additionalProperties": false
+    },
+    "trace_spec": {
+      "type": "object",
+      "properties": {
+        "file_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "requirement_title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scenario_title": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "file_ref",
+        "requirement_title",
+        "scenario_title"
+      ],
+      "additionalProperties": false
+    },
+    "trace_link": {
+      "type": "object",
+      "properties": {
+        "contribution": {
+          "type": "string",
+          "minLength": 1
+        },
+        "acceptance": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^AC-[0-9]{2,}$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "specs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/trace_spec"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "tasks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9]+\\.[0-9]+$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "verification_obligations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "contribution",
+        "acceptance",
+        "specs",
+        "tasks",
+        "verification_obligations"
+      ],
+      "additionalProperties": false
+    },
+    "trace_asset_use": {
+      "type": "object",
+      "properties": {
+        "contribution": {
+          "type": "string",
+          "minLength": 1
+        },
+        "use": {
+          "$ref": "#/$defs/asset_use"
+        },
+        "used_in": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "contribution",
+        "use",
+        "used_in"
+      ],
+      "additionalProperties": false
+    },
+    "planning_trace": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "vr/1"
+        },
+        "candidate_id": {
+          "type": "string",
+          "pattern": "^C-[0-9]{3,}$"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "delivery_line": {
+          "type": "string",
+          "minLength": 1
+        },
+        "change": {
+          "type": "string",
+          "minLength": 1
+        },
+        "baseline_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "dispatch_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "observation_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "planning_digest": {
+          "$ref": "#/$defs/sha256"
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/trace_link"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "design": {
+          "type": "object",
+          "properties": {
+            "disposition": {
+              "enum": [
+                "present",
+                "not-required"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            },
+            "evidence_ref": {
+              "$ref": "#/$defs/ref"
+            }
+          },
+          "required": [
+            "disposition",
+            "reason",
+            "evidence_ref"
+          ],
+          "additionalProperties": false
+        },
+        "asset_uses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/trace_asset_use"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "delivery": {
+          "$ref": "#/$defs/delivery_trace"
+        },
+        "asset_derivations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/change_derivation"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "schema_version",
+        "candidate_id",
+        "version",
+        "delivery_line",
+        "change",
+        "baseline_ref",
+        "dispatch_ref",
+        "observation_ref",
+        "planning_digest",
+        "links",
+        "design",
+        "asset_uses"
+      ],
+      "additionalProperties": false
+    },
+    "engineering_change": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "before_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "after_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "path",
+        "before_ref",
+        "after_ref"
+      ],
+      "additionalProperties": false
+    },
+    "planning_applicability": {
+      "type": "object",
+      "properties": {
+        "candidate_id": {
+          "type": "string",
+          "pattern": "^C-[0-9]{3,}$"
+        },
+        "origin_snapshot_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "origin_review_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "observation_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "target_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "target_changes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/engineering_change"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "conclusion": {
+          "enum": [
+            "no-impact",
+            "update-required",
+            "repartition",
+            "requirement-change",
+            "unknown"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "candidate_id",
+        "origin_snapshot_ref",
+        "origin_review_ref",
+        "observation_ref",
+        "target_revision",
+        "target_changes",
+        "conclusion",
+        "reason",
+        "evidence_ref"
+      ],
+      "additionalProperties": false
+    },
+    "apply_request": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "vr/1"
+        },
+        "candidate_id": {
+          "type": "string",
+          "pattern": "^C-[0-9]{3,}$"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "delivery_line": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "baseline_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "reservation_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "planning_review_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "planning_digest": {
+          "$ref": "#/$defs/sha256"
+        },
+        "task_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9]+\\.[0-9]+$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "decision": {
+          "$ref": "#/$defs/decision"
+        },
+        "planning_snapshot_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "schema_version",
+        "candidate_id",
+        "version",
+        "delivery_line",
+        "baseline_ref",
+        "reservation_ref",
+        "planning_review_ref",
+        "planning_digest",
+        "task_ids",
+        "decision"
+      ],
+      "additionalProperties": false
+    },
+    "worktree_file": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mode": {
+          "enum": [
+            "100644",
+            "100755",
+            "120000"
+          ]
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "path",
+        "mode",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "worktree_after": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mode": {
+          "enum": [
+            "100644",
+            "100755",
+            "120000"
+          ]
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "blob": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "path",
+        "mode",
+        "sha256",
+        "blob"
+      ],
+      "additionalProperties": false
+    },
+    "worktree_change": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "before": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/worktree_file"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "after": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/worktree_after"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "path",
+        "before",
+        "after"
+      ],
+      "additionalProperties": false
+    },
+    "worktree_snapshot": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "vr/1"
+        },
+        "kind": {
+          "const": "worktree-input"
+        },
+        "base_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "extra_roots": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "index_entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "mode": {
+                "enum": [
+                  "100644",
+                  "100755",
+                  "120000"
+                ]
+              },
+              "oid": {
+                "$ref": "#/$defs/commit"
+              },
+              "blob": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "path",
+              "mode",
+              "oid",
+              "blob"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/worktree_file"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "changes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/worktree_change"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "input_digest": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "base_revision",
+        "extra_roots",
+        "index_entries",
+        "files",
+        "changes",
+        "input_digest"
+      ],
+      "additionalProperties": false
+    },
+    "captured_input": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "content_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "path",
+        "content_ref"
+      ],
+      "additionalProperties": false
+    },
+    "captured_receipt_input": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "content_ref": {
+          "$ref": "#/$defs/file"
+        }
+      },
+      "required": [
+        "path",
+        "content_ref"
+      ],
+      "additionalProperties": false
+    },
+    "execution_input": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ref"
+        },
+        {
+          "$ref": "#/$defs/captured_input"
+        }
+      ]
+    },
+    "receipt_input": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ref"
+        },
+        {
+          "$ref": "#/$defs/captured_receipt_input"
+        }
+      ]
+    },
+    "task_evidence_links": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "vr/1"
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "task_id": {
+                "type": "string",
+                "pattern": "^[0-9]+\\.[0-9]+$"
+              },
+              "refs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/ref"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "task_id",
+              "refs"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "schema_version",
+        "entries"
+      ],
+      "additionalProperties": false
+    },
+    "delivery_trace": {
+      "type": "object",
+      "properties": {
+        "archive_observation_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "task_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "implementations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "task_id": {
+                "type": "string",
+                "pattern": "^[0-9]+\\.[0-9]+$"
+              },
+              "file_refs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/ref"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "task_id",
+              "file_refs"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "verification": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "obligation_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "verification_ref": {
+                "$ref": "#/$defs/ref"
+              },
+              "case_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "obligation_id",
+              "verification_ref",
+              "case_ids"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "integration_observation_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "task_ref",
+        "implementations",
+        "verification"
+      ],
+      "additionalProperties": false
+    },
+    "delivery_verification_inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "verification_ref": {
+            "$ref": "#/$defs/ref"
+          },
+          "tested_revision": {
+            "$ref": "#/$defs/commit"
+          },
+          "identities": {
+            "$ref": "#/$defs/execution_identities"
+          }
+        },
+        "required": [
+          "verification_ref",
+          "tested_revision",
+          "identities"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "openspec_archive_observation": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "vr/1"
+        },
+        "change": {
+          "type": "string",
+          "minLength": 1
+        },
+        "project_root": {
+          "type": "string",
+          "minLength": 1
+        },
+        "before_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "archive_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "planning_observation_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "command": {
+          "$ref": "#/$defs/openspec_command"
+        },
+        "workflow": {
+          "type": "object",
+          "properties": {
+            "execution_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "workflow_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "sync_evidence_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "sync": {
+              "enum": [
+                "synced",
+                "already-synced",
+                "no-delta",
+                "without-sync"
+              ]
+            }
+          },
+          "required": [
+            "execution_ref",
+            "workflow_ref",
+            "sync_evidence_ref",
+            "sync"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "change",
+        "project_root",
+        "before_revision",
+        "archive_revision",
+        "planning_observation_ref"
+      ],
+      "additionalProperties": false,
+      "oneOf": [
+        {
+          "required": [
+            "command"
+          ],
+          "not": {
+            "required": [
+              "workflow"
+            ]
+          }
+        },
+        {
+          "required": [
+            "workflow"
+          ],
+          "not": {
+            "required": [
+              "command"
+            ]
+          }
+        }
+      ]
+    },
+    "archive_move_receipt": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "vr/1"
+        },
+        "kind": {
+          "const": "archive-move"
+        },
+        "project_root": {
+          "type": "string",
+          "minLength": 1
+        },
+        "change": {
+          "type": "string",
+          "minLength": 1
+        },
+        "before_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "destination": {
+          "type": "string",
+          "minLength": 1
+        },
+        "command": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "exit_code": {
+          "type": "integer"
+        },
+        "started_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "finished_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stdout_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "stderr_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "project_root",
+        "change",
+        "before_revision",
+        "source",
+        "destination",
+        "command",
+        "exit_code",
+        "started_at",
+        "finished_at",
+        "actor",
+        "stdout_ref",
+        "stderr_ref"
+      ],
+      "additionalProperties": false
+    },
+    "command_run": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "vr/1"
+        },
+        "kind": {
+          "const": "command-run"
+        },
+        "command": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "cwd": {
+          "const": "."
+        },
+        "source_root": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tested_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "started_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "finished_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exit_code": {
+          "type": "integer"
+        },
+        "identities": {
+          "$ref": "#/$defs/execution_identities"
+        },
+        "input_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "stdout_ref": {
+          "$ref": "#/$defs/file"
+        },
+        "stderr_ref": {
+          "$ref": "#/$defs/file"
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "command",
+        "cwd",
+        "source_root",
+        "tested_revision",
+        "started_at",
+        "finished_at",
+        "actor",
+        "exit_code",
+        "identities",
+        "input_refs",
+        "stdout_ref",
+        "stderr_ref"
+      ],
+      "additionalProperties": false
+    },
+    "final_checks_observation": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "vr/1"
+        },
+        "change": {
+          "type": "string",
+          "minLength": 1
+        },
+        "project_root": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tested_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "target_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "input_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "policy_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "entry_policy_run_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "project_run_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "openspec": {
+          "type": "object",
+          "properties": {
+            "all": {
+              "$ref": "#/$defs/openspec_command"
+            },
+            "archived": {
+              "$ref": "#/$defs/openspec_command"
+            }
+          },
+          "required": [
+            "all",
+            "archived"
+          ],
+          "additionalProperties": false
+        },
+        "subject": {
+          "$ref": "#/$defs/tiny_subject"
+        }
+      },
+      "required": [
+        "schema_version",
+        "project_root",
+        "tested_revision",
+        "target_revision",
+        "input_refs",
+        "policy_refs",
+        "entry_policy_run_ref",
+        "project_run_refs",
+        "openspec"
+      ],
+      "additionalProperties": false,
+      "oneOf": [
+        {
+          "required": [
+            "change"
+          ],
+          "not": {
+            "required": [
+              "subject"
+            ]
+          }
+        },
+        {
+          "required": [
+            "subject"
+          ],
+          "not": {
+            "required": [
+              "change"
+            ]
+          }
+        }
+      ]
+    },
+    "merge_request": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "vr/1"
+        },
+        "change": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "delivery_line": {
+          "type": "string",
+          "minLength": 1
+        },
+        "baseline_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "reservation_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "dispatch_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "final_checks_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "candidate_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "target_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "review_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "decision": {
+          "$ref": "#/$defs/decision"
+        },
+        "subject": {
+          "$ref": "#/$defs/tiny_subject"
+        },
+        "tiny_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "schema_version",
+        "version",
+        "delivery_line",
+        "baseline_ref",
+        "final_checks_ref",
+        "candidate_revision",
+        "target_revision",
+        "review_ref",
+        "decision"
+      ],
+      "additionalProperties": false,
+      "oneOf": [
+        {
+          "required": [
+            "change",
+            "reservation_ref",
+            "dispatch_ref"
+          ],
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "subject"
+                ]
+              },
+              {
+                "required": [
+                  "tiny_ref"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "required": [
+            "subject",
+            "tiny_ref"
+          ],
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "change"
+                ]
+              },
+              {
+                "required": [
+                  "reservation_ref"
+                ]
+              },
+              {
+                "required": [
+                  "dispatch_ref"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "integration_observation": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "vr/1"
+        },
+        "pre_merge_context_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "pre_merge_result_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "source_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "merged_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "method": {
+          "enum": [
+            "fast-forward",
+            "merge",
+            "squash",
+            "rebase"
+          ]
+        },
+        "operation_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "confirmation": {
+          "$ref": "#/$defs/decision"
+        }
+      },
+      "required": [
+        "schema_version",
+        "pre_merge_context_ref",
+        "pre_merge_result_ref",
+        "source_revision",
+        "merged_revision",
+        "method",
+        "operation_ref",
+        "confirmation"
+      ],
+      "additionalProperties": false
+    },
+    "slot_release_payload": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/integrated_slot_release_payload"
+        },
+        {
+          "$ref": "#/$defs/cancelled_slot_release_payload"
+        }
+      ]
+    },
+    "change_derivation": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^DAS-[0-9]{3,}$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/asset_use"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1
+        },
+        "transformation": {
+          "type": "object",
+          "properties": {
+            "method": {
+              "enum": [
+                "manual",
+                "automatic"
+              ]
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            },
+            "actor": {
+              "type": "string",
+              "minLength": 1
+            },
+            "tool": {
+              "type": "string",
+              "minLength": 1
+            },
+            "tool_version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "parameters": {
+              "type": "string",
+              "minLength": 1
+            },
+            "script_ref": {
+              "$ref": "#/$defs/ref"
+            }
+          },
+          "required": [
+            "method",
+            "description",
+            "actor"
+          ],
+          "additionalProperties": false
+        },
+        "review_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "external": {
+          "type": "object",
+          "properties": {
+            "uri": {
+              "type": "string",
+              "minLength": 1
+            },
+            "retention": {
+              "type": "string",
+              "minLength": 1
+            },
+            "retrieval_ref": {
+              "$ref": "#/$defs/ref"
+            }
+          },
+          "required": [
+            "uri",
+            "retention",
+            "retrieval_ref"
+          ],
+          "additionalProperties": false
+        },
+        "received_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "output_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "id",
+        "revision",
+        "output_ref",
+        "sha256",
+        "media_type",
+        "inputs",
+        "purpose",
+        "transformation",
+        "review_ref"
+      ],
+      "additionalProperties": false,
+      "dependentRequired": {
+        "external": [
+          "received_sha256"
+        ],
+        "received_sha256": [
+          "external"
+        ]
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "transformation": {
+                "properties": {
+                  "method": {
+                    "const": "automatic"
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "transformation": {
+                "anyOf": [
+                  {
+                    "required": [
+                      "script_ref"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "tool",
+                      "tool_version",
+                      "parameters"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "tiny_subject": {
+      "type": "string",
+      "pattern": "^(?:task|pr):[A-Za-z0-9][A-Za-z0-9._/-]*$"
+    },
+    "tiny_association": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "vr/1"
+        },
+        "subject": {
+          "$ref": "#/$defs/tiny_subject"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "delivery_line": {
+          "type": "string",
+          "minLength": 1
+        },
+        "baseline_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "task_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "selection": {
+          "enum": [
+            "user-explicit",
+            "project-policy"
+          ]
+        },
+        "policy_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "spec_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "uniqueItems": true
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "requirement": {
+                "type": "string",
+                "pattern": "^R-[0-9]{3,}$"
+              },
+              "acceptance": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^AC-[0-9]{2,}$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "requirement",
+              "acceptance"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true
+        },
+        "ui_behaviors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "schema_version",
+        "subject",
+        "version",
+        "delivery_line",
+        "baseline_ref",
+        "task_ref",
+        "selection",
+        "policy_refs",
+        "spec_refs",
+        "requirements"
+      ],
+      "additionalProperties": false
+    },
+    "rc_disposition": {
+      "type": "object",
+      "properties": {
+        "object_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "action": {
+          "enum": [
+            "retain",
+            "revise",
+            "remove",
+            "replace",
+            "retest",
+            "investigate"
+          ]
+        },
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "revalidation": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "object_id",
+        "action",
+        "owner",
+        "reason",
+        "review_refs",
+        "revalidation"
+      ],
+      "additionalProperties": false
+    },
+    "rc_unmapped_disposition": {
+      "type": "object",
+      "properties": {
+        "group": {
+          "enum": [
+            "content",
+            "engineering-target"
+          ]
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "action": {
+          "enum": [
+            "accounted-for",
+            "investigate"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "group",
+        "path",
+        "action",
+        "reason",
+        "review_refs"
+      ],
+      "additionalProperties": false
+    },
+    "rc_proposal_payload": {
+      "type": "object",
+      "properties": {
+        "rc_id": {
+          "type": "string",
+          "pattern": "^RC-[0-9]{3,}$"
+        },
+        "from_context_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "known_targets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/control_target"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "request": {
+          "$ref": "#/$defs/decision"
+        }
+      },
+      "required": [
+        "rc_id",
+        "from_context_ref",
+        "source_refs",
+        "reason",
+        "known_targets",
+        "request"
+      ],
+      "additionalProperties": false
+    },
+    "rc_impact_payload": {
+      "type": "object",
+      "properties": {
+        "rc_id": {
+          "type": "string",
+          "pattern": "^RC-[0-9]{3,}$"
+        },
+        "previous_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "before_context_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "after_context_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "report_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "dispositions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rc_disposition"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "unmapped_dispositions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rc_unmapped_disposition"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "review": {
+          "$ref": "#/$defs/decision"
+        },
+        "historical_deliveries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rc_historical_delivery"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "rc_id",
+        "previous_ref",
+        "before_context_ref",
+        "after_context_ref",
+        "report_ref",
+        "dispositions",
+        "unmapped_dispositions",
+        "review"
+      ],
+      "additionalProperties": false
+    },
+    "rc_decision_payload": {
+      "type": "object",
+      "properties": {
+        "rc_id": {
+          "type": "string",
+          "pattern": "^RC-[0-9]{3,}$"
+        },
+        "previous_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "outcome": {
+          "enum": [
+            "approved",
+            "rejected",
+            "withdrawn"
+          ]
+        },
+        "content_context_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "decisions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/decision"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "rc_id",
+        "previous_ref",
+        "outcome",
+        "content_context_ref",
+        "decisions"
+      ],
+      "additionalProperties": false
+    },
+    "rc_baseline_payload": {
+      "type": "object",
+      "properties": {
+        "rc_id": {
+          "type": "string",
+          "pattern": "^RC-[0-9]{3,}$"
+        },
+        "previous_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "effective_context_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "confirmation": {
+          "$ref": "#/$defs/decision"
+        }
+      },
+      "required": [
+        "rc_id",
+        "previous_ref",
+        "effective_context_ref",
+        "confirmation"
+      ],
+      "additionalProperties": false
+    },
+    "rc_alignment_payload": {
+      "type": "object",
+      "properties": {
+        "rc_id": {
+          "type": "string",
+          "pattern": "^RC-[0-9]{3,}$"
+        },
+        "previous_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "context_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "object_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "review": {
+          "$ref": "#/$defs/decision"
+        }
+      },
+      "required": [
+        "rc_id",
+        "previous_ref",
+        "context_ref",
+        "object_ids",
+        "review"
+      ],
+      "additionalProperties": false
+    },
+    "rc_verification_payload": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/rc_integrated_verification_payload"
+        },
+        {
+          "$ref": "#/$defs/rc_cancelled_verification_payload"
+        },
+        {
+          "$ref": "#/$defs/rc_upstream_verification_payload"
+        }
+      ]
+    },
+    "integrated_slot_release_payload": {
+      "type": "object",
+      "properties": {
+        "candidate_id": {
+          "type": "string",
+          "pattern": "^C-[0-9]{3,}$"
+        },
+        "baseline_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "reservation_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "dispatch_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "integrated_context_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "integrated_result_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "confirmation": {
+          "$ref": "#/$defs/decision"
+        }
+      },
+      "required": [
+        "candidate_id",
+        "baseline_ref",
+        "reservation_ref",
+        "dispatch_ref",
+        "integrated_context_ref",
+        "integrated_result_ref",
+        "confirmation"
+      ],
+      "additionalProperties": false
+    },
+    "cancelled_slot_release_payload": {
+      "type": "object",
+      "properties": {
+        "candidate_id": {
+          "type": "string",
+          "pattern": "^C-[0-9]{3,}$"
+        },
+        "baseline_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "reservation_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "dispatch_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "confirmation": {
+          "$ref": "#/$defs/decision"
+        },
+        "outcome": {
+          "const": "cancelled"
+        },
+        "cancellation": {
+          "type": "object",
+          "properties": {
+            "context_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "rc_ref": {
+              "$ref": "#/$defs/event_ref"
+            },
+            "retained_revision": {
+              "$ref": "#/$defs/commit"
+            },
+            "cleanup_revision": {
+              "$ref": "#/$defs/commit"
+            },
+            "stop_refs": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/event_ref"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "delivery_stopped": {
+              "type": "object",
+              "properties": {
+                "state": {
+                  "enum": [
+                    "not-opened",
+                    "closed",
+                    "withdrawn"
+                  ]
+                },
+                "evidence_ref": {
+                  "$ref": "#/$defs/ref"
+                }
+              },
+              "required": [
+                "state",
+                "evidence_ref"
+              ],
+              "additionalProperties": false
+            },
+            "input_digest": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "reviews": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/decision"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          },
+          "required": [
+            "context_ref",
+            "rc_ref",
+            "retained_revision",
+            "cleanup_revision",
+            "stop_refs",
+            "delivery_stopped",
+            "input_digest",
+            "reviews"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "candidate_id",
+        "baseline_ref",
+        "reservation_ref",
+        "dispatch_ref",
+        "confirmation",
+        "outcome",
+        "cancellation"
+      ],
+      "additionalProperties": false
+    },
+    "rc_integrated_verification_payload": {
+      "type": "object",
+      "properties": {
+        "rc_id": {
+          "type": "string",
+          "pattern": "^RC-[0-9]{3,}$"
+        },
+        "previous_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "context_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "object_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "result_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "reviews": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/decision"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "required": [
+        "rc_id",
+        "previous_ref",
+        "context_ref",
+        "object_ids",
+        "result_ref",
+        "reviews"
+      ],
+      "additionalProperties": false
+    },
+    "rc_cancelled_verification_payload": {
+      "type": "object",
+      "properties": {
+        "rc_id": {
+          "type": "string",
+          "pattern": "^RC-[0-9]{3,}$"
+        },
+        "previous_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "context_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "object_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "reviews": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/decision"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "outcome": {
+          "const": "cancelled"
+        },
+        "slot_release_ref": {
+          "$ref": "#/$defs/event_ref"
+        }
+      },
+      "required": [
+        "rc_id",
+        "previous_ref",
+        "context_ref",
+        "object_ids",
+        "reviews",
+        "outcome",
+        "slot_release_ref"
+      ],
+      "additionalProperties": false
+    },
+    "rc_upstream_verification_payload": {
+      "type": "object",
+      "properties": {
+        "rc_id": {
+          "type": "string",
+          "pattern": "^RC-[0-9]{3,}$"
+        },
+        "previous_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "context_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "object_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "reviews": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/decision"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "outcome": {
+          "const": "upstream"
+        },
+        "input_digest": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "rc_id",
+        "previous_ref",
+        "context_ref",
+        "object_ids",
+        "reviews",
+        "outcome",
+        "input_digest"
+      ],
+      "additionalProperties": false
+    },
+    "release_environment": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "checkpoint": {
+          "enum": [
+            "completion",
+            "release"
+          ]
+        },
+        "environment_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "data_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "external_service_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "deployment_target_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "id",
+        "checkpoint",
+        "environment_ref",
+        "data_ref",
+        "external_service_refs",
+        "deployment_target_ref"
+      ],
+      "additionalProperties": false
+    },
+    "release_build": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "source_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "input_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "artifact_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "command": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "cwd": {
+          "type": "string",
+          "minLength": 1
+        },
+        "started_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "finished_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exit_code": {
+          "const": 0
+        },
+        "log_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "schema_version",
+        "source_revision",
+        "input_refs",
+        "artifact_ref",
+        "command",
+        "cwd",
+        "started_at",
+        "finished_at",
+        "exit_code",
+        "log_ref"
+      ],
+      "additionalProperties": false
+    },
+    "release_delivery_receipt": {
+      "type": "object",
+      "properties": {
+        "context_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "result_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "contributions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "context_ref",
+        "result_ref",
+        "contributions"
+      ],
+      "additionalProperties": false
+    },
+    "release_candidate": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "delivery_line": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "baseline_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "code_revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "input_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "dependencies_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "configuration_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "build_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "environments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/release_environment"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "delivery_receipts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/release_delivery_receipt"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "schema_version",
+        "version",
+        "delivery_line",
+        "id",
+        "baseline_ref",
+        "code_revision",
+        "input_refs",
+        "dependencies_ref",
+        "configuration_ref",
+        "build_ref",
+        "environments",
+        "delivery_receipts"
+      ],
+      "additionalProperties": false
+    },
+    "release_decision": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "delivery_line": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "candidate_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "phase": {
+          "enum": [
+            "completion",
+            "release"
+          ]
+        },
+        "reviews": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 3,
+          "uniqueItems": true
+        },
+        "authorization": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/decision"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "schema_version",
+        "version",
+        "delivery_line",
+        "id",
+        "candidate_ref",
+        "phase",
+        "reviews",
+        "authorization"
+      ],
+      "additionalProperties": false
+    },
+    "release_observation": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "vr/1"
+          ]
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "delivery_line": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "candidate_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "decision_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "build_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "deployment_target_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "outcome": {
+          "enum": [
+            "succeeded",
+            "failed"
+          ]
+        },
+        "operation_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "finished_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "post_verification_inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "verification_ref": {
+                "$ref": "#/$defs/ref"
+              },
+              "tested_revision": {
+                "$ref": "#/$defs/commit"
+              },
+              "identities": {
+                "$ref": "#/$defs/execution_identities"
+              }
+            },
+            "required": [
+              "verification_ref",
+              "tested_revision",
+              "identities"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "confirmation": {
+          "$ref": "#/$defs/decision"
+        }
+      },
+      "required": [
+        "schema_version",
+        "version",
+        "delivery_line",
+        "id",
+        "candidate_ref",
+        "decision_ref",
+        "build_ref",
+        "deployment_target_ref",
+        "outcome",
+        "operation_ref",
+        "finished_at",
+        "post_verification_inputs",
+        "confirmation"
+      ],
+      "additionalProperties": false
+    },
+    "release_operation": {
+      "type": "object",
+      "properties": {
+        "candidate_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "decision_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "build_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "deployment_target_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "log_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "started_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "finished_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cwd": {
+          "type": "string",
+          "minLength": 1
+        },
+        "command": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "exit_code": {
+          "type": "integer"
+        },
+        "artifact_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "candidate_ref",
+        "decision_ref",
+        "build_ref",
+        "deployment_target_ref",
+        "log_ref",
+        "actor",
+        "started_at",
+        "finished_at",
+        "cwd",
+        "command",
+        "exit_code",
+        "artifact_ref"
+      ],
+      "additionalProperties": false
+    },
+    "rc_historical_delivery": {
+      "type": "object",
+      "properties": {
+        "slot_release_ref": {
+          "$ref": "#/$defs/event_ref"
+        },
+        "object_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^(candidate:|change:).+"
+          },
+          "minItems": 1,
+          "maxItems": 2,
+          "uniqueItems": true
+        },
+        "input_digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "reviews": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/decision"
+          },
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "slot_release_ref",
+        "object_ids",
+        "input_digest",
+        "reviews"
+      ],
+      "additionalProperties": false
+    },
+    "ui_claim": {
+      "type": "object",
+      "properties": {
+        "contribution": {
+          "type": "string",
+          "minLength": 1
+        },
+        "behaviors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "contribution",
+        "behaviors"
+      ],
+      "additionalProperties": false
+    },
+    "ui_authority": {
+      "type": "object",
+      "properties": {
+        "repository": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "history_root": {
+          "type": "string",
+          "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$"
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$"
+        }
+      },
+      "required": [
+        "repository",
+        "ref",
+        "history_root",
+        "commit"
+      ],
+      "additionalProperties": false
+    },
+    "ui_inputs": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "vr-ui-inputs/1"
+        },
+        "rules": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "const": "ui-check/1"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "version",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "policy_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "bindings_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "authorities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ui_authority"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "schema_version",
+        "rules",
+        "policy_ref",
+        "bindings_ref",
+        "authorities"
+      ],
+      "additionalProperties": false
+    },
+    "ui_runtime_context": {
+      "type": "object",
+      "properties": {
+        "repositories": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "authorities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ui_authority"
+          },
+          "uniqueItems": true
+        },
+        "external_files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "uri": {
+                "type": "string",
+                "minLength": 1
+              },
+              "version": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "path": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "uri",
+              "version",
+              "sha256",
+              "path"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "repositories",
+        "authorities",
+        "external_files"
+      ],
+      "additionalProperties": false
+    },
+    "task_verification_coverage": {
+      "type": "object",
+      "properties": {
+        "subject": {
+          "$ref": "#/$defs/tiny_subject"
+        },
+        "tiny_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "ui_behaviors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "case_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "subject",
+        "tiny_ref",
+        "ui_behaviors",
+        "case_ids"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

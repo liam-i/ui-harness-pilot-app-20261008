@@ -1,0 +1,1707 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:engineering-harness:ui:1",
+  "title": "UI fixed-input target contract",
+  "$defs": {
+    "ref": {
+      "type": "object",
+      "properties": {
+        "repository": {
+          "type": "string",
+          "minLength": 1
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?!.*\\\\)(?!.*[\\x00-\\x1f\\x7f])(?!(?:[^/]+/)*\\.\\.?(/|$))(?!.*//)(?!.*[/]$)[^:]+$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "repository",
+        "commit",
+        "path",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "revision": {
+      "type": "object",
+      "properties": {
+        "repository": {
+          "type": "string",
+          "minLength": 1
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$"
+        }
+      },
+      "required": [
+        "repository",
+        "commit"
+      ],
+      "additionalProperties": false
+    },
+    "requirement": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/ref"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "requirement_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "acceptance": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "requirement_ref",
+            "revision",
+            "acceptance"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "size": {
+      "type": "object",
+      "properties": {
+        "device": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pt": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "dp": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "px": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "required": [
+        "device"
+      ],
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "pt"
+          ]
+        },
+        {
+          "required": [
+            "dp"
+          ]
+        },
+        {
+          "required": [
+            "px"
+          ]
+        }
+      ]
+    },
+    "platform": {
+      "type": "object",
+      "properties": {
+        "target": {
+          "type": "string",
+          "minLength": 1
+        },
+        "units": {
+          "type": "string",
+          "minLength": 1
+        },
+        "orientation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reference_sizes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/size"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "locale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "constraints": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "target",
+        "units",
+        "orientation",
+        "reference_sizes",
+        "locale"
+      ],
+      "additionalProperties": false
+    },
+    "file": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?!.*\\\\)(?!.*[\\x00-\\x1f\\x7f])(?!(?:[^/]+/)*\\.\\.?(/|$))(?!.*//)(?!.*[/]$)[^:]+$"
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required_for_engineering": {
+          "type": "boolean"
+        },
+        "dimensions_px": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "required": [
+        "path",
+        "media_type",
+        "sha256",
+        "bytes",
+        "purpose",
+        "required_for_engineering"
+      ],
+      "additionalProperties": false
+    },
+    "coverage": {
+      "type": "object",
+      "properties": {
+        "behavior_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "screen_states": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "unit": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        },
+        "release": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        }
+      },
+      "required": [
+        "behavior_ref",
+        "screen_states"
+      ],
+      "additionalProperties": false,
+      "dependentRequired": {
+        "unit": [
+          "release"
+        ],
+        "release": [
+          "unit"
+        ]
+      }
+    },
+    "difference": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        },
+        "basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?!.*\\\\)(?!.*[\\x00-\\x1f\\x7f])(?!(?:[^/]+/)*\\.\\.?(/|$))(?!.*//)(?!.*[/]$)[^:]+$"
+        }
+      },
+      "required": [
+        "id",
+        "basis",
+        "review_path"
+      ],
+      "additionalProperties": false
+    },
+    "binding-difference": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        },
+        "basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "id",
+        "basis",
+        "review_ref"
+      ],
+      "additionalProperties": false
+    },
+    "asset-input": {
+      "type": "object",
+      "properties": {
+        "source_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1
+        },
+        "transform": {
+          "type": "string",
+          "minLength": 1
+        },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!/)(?!.*\\\\)(?!.*[\\x00-\\x1f\\x7f])(?!(?:[^/]+/)*\\.\\.?(/|$))(?!.*//)(?!.*[/]$)[^:]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "owner": {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "AST",
+                "DAS"
+              ]
+            },
+            "id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+            },
+            "manifest_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "record_pointer": {
+              "type": "string",
+              "pattern": "^/",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "id",
+            "manifest_ref",
+            "record_pointer"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "source_ref",
+        "license",
+        "transform",
+        "outputs"
+      ],
+      "additionalProperties": false
+    },
+    "external-object": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        },
+        "uri": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dimensions_px": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "recovery": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required_for_engineering": {
+          "type": "boolean"
+        },
+        "pointer_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?!.*\\\\)(?!.*[\\x00-\\x1f\\x7f])(?!(?:[^/]+/)*\\.\\.?(/|$))(?!.*//)(?!.*[/]$)[^:]+$"
+        }
+      },
+      "required": [
+        "id",
+        "uri",
+        "version",
+        "sha256",
+        "bytes",
+        "media_type",
+        "recovery",
+        "required_for_engineering"
+      ],
+      "additionalProperties": false
+    },
+    "package": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "ui-design/1"
+        },
+        "unit": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        },
+        "release": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        },
+        "producer": {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "enum": [
+                "team",
+                "ai",
+                "mixed"
+              ]
+            },
+            "tool_observation_ref": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*\\\\)(?!.*[\\x00-\\x1f\\x7f])(?!(?:[^/]+/)*\\.\\.?(/|$))(?!.*//)(?!.*[/]$)[^:]+$"
+            }
+          },
+          "required": [
+            "mode",
+            "tool_observation_ref"
+          ],
+          "additionalProperties": false
+        },
+        "brief_ref": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?!.*\\\\)(?!.*[\\x00-\\x1f\\x7f])(?!(?:[^/]+/)*\\.\\.?(/|$))(?!.*//)(?!.*[/]$)[^:]+$"
+        },
+        "requirement_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/requirement"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "platforms": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/platform"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "screens": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+              },
+              "states": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "handoff_path": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!/)(?!.*\\\\)(?!.*[\\x00-\\x1f\\x7f])(?!(?:[^/]+/)*\\.\\.?(/|$))(?!.*//)(?!.*[/]$)[^:]+$"
+              }
+            },
+            "required": [
+              "id",
+              "states",
+              "handoff_path"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "states": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reference": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!/)(?!.*\\\\)(?!.*[\\x00-\\x1f\\x7f])(?!(?:[^/]+/)*\\.\\.?(/|$))(?!.*//)(?!.*[/]$)[^:]+$"
+              },
+              "parameters": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "reference",
+              "parameters"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "flows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+              },
+              "from": {
+                "type": "string",
+                "minLength": 1
+              },
+              "trigger": {
+                "type": "string",
+                "minLength": 1
+              },
+              "to": {
+                "type": "string",
+                "minLength": 1
+              },
+              "behavior_ref": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "from",
+              "trigger",
+              "to",
+              "behavior_ref"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "coverage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/coverage"
+          },
+          "minItems": 1
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "approved_release_ref": {
+                "$ref": "#/$defs/ref"
+              }
+            },
+            "required": [
+              "approved_release_ref"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/file"
+          },
+          "minItems": 1
+        },
+        "asset_inputs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/asset-input"
+          },
+          "minItems": 0
+        },
+        "external_objects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/external-object"
+          },
+          "minItems": 0
+        },
+        "acceptance": {
+          "type": "object",
+          "properties": {
+            "handoff_path": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(?!/)(?!.*\\\\)(?!.*[\\x00-\\x1f\\x7f])(?!(?:[^/]+/)*\\.\\.?(/|$))(?!.*//)(?!.*[/]$)[^:]+$"
+            },
+            "expected_ref": {
+              "$ref": "#/$defs/ref"
+            },
+            "required_states": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "allowed_differences": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/difference"
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "handoff_path",
+            "expected_ref",
+            "required_states",
+            "allowed_differences"
+          ],
+          "additionalProperties": false
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "open_questions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1
+              },
+              "blocker": {
+                "type": "boolean"
+              },
+              "resolution_ref": {
+                "$ref": "#/$defs/ref"
+              }
+            },
+            "required": [
+              "id",
+              "description",
+              "blocker"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "schema_version",
+        "unit",
+        "release",
+        "producer",
+        "brief_ref",
+        "requirement_refs",
+        "platforms",
+        "screens",
+        "states",
+        "flows",
+        "coverage",
+        "dependencies",
+        "files",
+        "asset_inputs",
+        "external_objects",
+        "acceptance",
+        "limitations",
+        "open_questions"
+      ],
+      "additionalProperties": false
+    },
+    "reviewer": {
+      "type": "object",
+      "properties": {
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "decision": {
+          "const": "accepted"
+        },
+        "decided_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "time_basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?!.*\\\\)(?!.*[\\x00-\\x1f\\x7f])(?!(?:[^/]+/)*\\.\\.?(/|$))(?!.*//)(?!.*[/]$)[^:]+$"
+        },
+        "evidence_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "actor",
+        "roles",
+        "decision",
+        "decided_at",
+        "evidence_path",
+        "evidence_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "approve": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "ui-decision/1"
+        },
+        "kind": {
+          "const": "approve"
+        },
+        "decision_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        },
+        "unit": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        },
+        "release": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        },
+        "package_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "reviewers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reviewer"
+          },
+          "minItems": 1
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "closure_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "scope": {
+          "type": "object",
+          "properties": {
+            "platforms": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/platform"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "screen_states": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "platforms",
+            "screen_states"
+          ],
+          "additionalProperties": false
+        },
+        "engineering_review_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "decision_id",
+        "unit",
+        "release",
+        "package_ref",
+        "reviewers",
+        "limitations",
+        "closure_ref",
+        "scope",
+        "engineering_review_ref"
+      ],
+      "additionalProperties": false
+    },
+    "withdraw": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "ui-decision/1"
+        },
+        "kind": {
+          "const": "withdraw"
+        },
+        "decision_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        },
+        "unit": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        },
+        "release": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        },
+        "package_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "reviewers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reviewer"
+          },
+          "minItems": 1
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "approved_release_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prohibit_new_consumers": {
+          "type": "boolean"
+        },
+        "prohibit_existing_consumers": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "decision_id",
+        "unit",
+        "release",
+        "package_ref",
+        "reviewers",
+        "limitations",
+        "approved_release_ref",
+        "reason",
+        "prohibit_new_consumers",
+        "prohibit_existing_consumers"
+      ],
+      "additionalProperties": false
+    },
+    "supersede": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "ui-decision/1"
+        },
+        "kind": {
+          "const": "supersede"
+        },
+        "decision_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        },
+        "unit": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        },
+        "release": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        },
+        "package_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "reviewers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reviewer"
+          },
+          "minItems": 1
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "approved_release_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "replacement_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prohibit_new_consumers": {
+          "type": "boolean"
+        },
+        "prohibit_existing_consumers": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "decision_id",
+        "unit",
+        "release",
+        "package_ref",
+        "reviewers",
+        "limitations",
+        "approved_release_ref",
+        "replacement_ref",
+        "reason",
+        "prohibit_new_consumers",
+        "prohibit_existing_consumers"
+      ],
+      "additionalProperties": false
+    },
+    "decision": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/approve"
+        },
+        {
+          "$ref": "#/$defs/withdraw"
+        },
+        {
+          "$ref": "#/$defs/supersede"
+        }
+      ]
+    },
+    "closure-package": {
+      "type": "object",
+      "properties": {
+        "unit": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+        },
+        "package_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "external_inputs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "approved_release_ref": {
+                "$ref": "#/$defs/ref"
+              }
+            },
+            "required": [
+              "approved_release_ref"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "external_objects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/external-object"
+          },
+          "minItems": 0
+        },
+        "approval": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "unit",
+        "package_ref",
+        "files",
+        "external_inputs",
+        "dependencies",
+        "approval"
+      ],
+      "additionalProperties": false
+    },
+    "closure-report": {
+      "type": "object",
+      "properties": {
+        "checked_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "content_commit": {
+          "type": "string",
+          "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$"
+        },
+        "packages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/closure-package"
+          },
+          "minItems": 1
+        },
+        "policy_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "result": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "checked_at",
+        "method",
+        "content_commit",
+        "packages",
+        "policy_ref",
+        "result"
+      ],
+      "additionalProperties": false
+    },
+    "consumer": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "contribution",
+            "endpoint",
+            "task",
+            "change"
+          ]
+        },
+        "subject": {
+          "type": "string",
+          "minLength": 1
+        },
+        "record_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "identity_pointer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "association_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "kind",
+        "subject",
+        "record_ref"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "enum": [
+                  "contribution",
+                  "endpoint"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "identity_pointer"
+            ]
+          }
+        }
+      ]
+    },
+    "binding": {
+      "type": "object",
+      "properties": {
+        "consumer": {
+          "$ref": "#/$defs/consumer"
+        },
+        "applicability": {
+          "enum": [
+            "required",
+            "reuse",
+            "not-applicable"
+          ]
+        },
+        "rationale_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "approved_releases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "approved_release_ref": {
+                "$ref": "#/$defs/ref"
+              }
+            },
+            "required": [
+              "approved_release_ref"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "coverage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/coverage"
+          },
+          "minItems": 0
+        },
+        "allowed_differences": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/binding-difference"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "consumer",
+        "applicability",
+        "rationale_ref",
+        "approved_releases",
+        "coverage",
+        "allowed_differences"
+      ],
+      "additionalProperties": false
+    },
+    "bindings": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "ui-bindings/1"
+        },
+        "bindings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/binding"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "schema_version",
+        "bindings"
+      ],
+      "additionalProperties": false
+    },
+    "authority": {
+      "type": "object",
+      "properties": {
+        "repository": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ref": {
+          "type": "string",
+          "pattern": "^refs/(heads|tags)/[^\\s]+$"
+        },
+        "history_root": {
+          "type": "string",
+          "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$"
+        },
+        "decision_glob": {
+          "const": "design/units/*/decisions"
+        },
+        "remote": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?:/|file:///|https://|ssh://)"
+        }
+      },
+      "required": [
+        "repository",
+        "ref",
+        "history_root",
+        "decision_glob",
+        "remote"
+      ],
+      "additionalProperties": false
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "ui-policy/1"
+        },
+        "authorities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/authority"
+          },
+          "minItems": 0
+        },
+        "actors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "actor": {
+                "type": "string",
+                "minLength": 1
+              },
+              "roles": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "evidence_refs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/ref"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "actor",
+              "roles",
+              "evidence_refs"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "required_roles": {
+          "type": "object",
+          "properties": {
+            "approve": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "withdraw": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "supersede": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "approve",
+            "withdraw",
+            "supersede"
+          ],
+          "additionalProperties": false
+        },
+        "basis_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "retention": {
+          "type": "string",
+          "minLength": 1
+        },
+        "adoption": {
+          "type": "object",
+          "properties": {
+            "ui": {
+              "enum": [
+                "enabled",
+                "not-adopted"
+              ]
+            },
+            "requirements": {
+              "enum": [
+                "adopted",
+                "not-adopted"
+              ]
+            }
+          },
+          "required": [
+            "ui",
+            "requirements"
+          ],
+          "additionalProperties": false
+        },
+        "required_capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "schema_version",
+        "authorities",
+        "actors",
+        "required_roles",
+        "basis_refs",
+        "retention",
+        "adoption",
+        "required_capabilities"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "adoption": {
+                "properties": {
+                  "ui": {
+                    "const": "enabled"
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "authorities": {
+                "minItems": 1
+              },
+              "actors": {
+                "minItems": 1
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "authorities": {
+                "maxItems": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    "snapshot-authority": {
+      "type": "object",
+      "properties": {
+        "repository": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "history_root": {
+          "type": "string",
+          "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$"
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$"
+        }
+      },
+      "required": [
+        "repository",
+        "ref",
+        "history_root",
+        "commit"
+      ],
+      "additionalProperties": false
+    },
+    "selection": {
+      "type": "object",
+      "properties": {
+        "consumer": {
+          "$ref": "#/$defs/consumer"
+        },
+        "behaviors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "consumption": {
+          "enum": [
+            "new",
+            "existing"
+          ]
+        }
+      },
+      "required": [
+        "consumer",
+        "behaviors",
+        "consumption"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "ui-snapshot/1"
+        },
+        "mode": {
+          "enum": [
+            "historical",
+            "current"
+          ]
+        },
+        "rules": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "const": "ui-check/1"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "version",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "repositories": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "policy_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "authorities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/snapshot-authority"
+          },
+          "minItems": 0
+        },
+        "bindings_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "subject": {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "candidate",
+                "scope",
+                "task",
+                "change"
+              ]
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "head": {
+              "$ref": "#/$defs/revision"
+            },
+            "target": {
+              "$ref": "#/$defs/revision"
+            }
+          },
+          "required": [
+            "kind",
+            "id",
+            "head"
+          ],
+          "additionalProperties": false
+        },
+        "selections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/selection"
+          },
+          "minItems": 1
+        },
+        "external_files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "uri": {
+                "type": "string",
+                "minLength": 1
+              },
+              "version": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "path": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "uri",
+              "version",
+              "sha256",
+              "path"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "action": {
+          "enum": [
+            "propose",
+            "start",
+            "resume",
+            "pre-merge",
+            "integrated",
+            "release",
+            "scope-accept",
+            "version-admit"
+          ]
+        }
+      },
+      "required": [
+        "schema_version",
+        "mode",
+        "rules",
+        "repositories",
+        "policy_ref",
+        "authorities",
+        "bindings_ref",
+        "subject",
+        "selections",
+        "external_files"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "current"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "action"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/package"
+    },
+    {
+      "$ref": "#/$defs/decision"
+    },
+    {
+      "$ref": "#/$defs/bindings"
+    },
+    {
+      "$ref": "#/$defs/policy"
+    },
+    {
+      "$ref": "#/$defs/snapshot"
+    }
+  ]
+}

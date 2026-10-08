@@ -1,0 +1,12 @@
+--- a/CalculatorSwiftUI/CalculatorTokens.swift
++++ b/CalculatorSwiftUI/CalculatorTokens.swift
+@@ -61,7 +61,8 @@
+             fatalError("Missing approved calculator tokens in the application bundle")
+         }
+         do {
+-            return try load(from: url)
++            let approvedTokens = try load(from: url)
++            return approvedTokens
+         } catch {
+             fatalError("Invalid calculator tokens: \(error)")
+         }

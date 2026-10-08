@@ -1,14 +1,24 @@
-# 人工sidecar示意，不向现有严格Trace/Tiny模型增加字段。
+# ui-bindings/1目标sidecar，不向尚未扩展的Trace/Tiny模型增加字段。
 schema_version: ui-bindings/1
 bindings:
   - consumer:
       kind: change # contribution / endpoint / task / change，按真实入口选择
       subject: <真实C、scope、任务/PR或Change身份>
-      record_ref: <原delivery-map/任务/Proposal的repository/commit/path/sha256>
+      record_ref:
+        repository: <原delivery-map/任务/Proposal仓库身份>
+        commit: <已有完整提交>
+        path: <原记录路径>
+        sha256: <实际64位摘要>
       # contribution/endpoint另固定原实际分配；task固定已有任务/PR及适用tiny_association。
+      # contribution/endpoint必填identity_pointer，指向record_ref内原身份字符串。
+      # task适用时填association_ref完整固定引用；不复制关联内容。
       # 不复制描述、依赖图、任务内容或完成状态。
     applicability: required # required / reuse / not-applicable
-    rationale_ref: <当前UI适用性判断及真实审阅的固定引用>
+    rationale_ref:
+      repository: <工程审阅仓库身份>
+      commit: <已有完整提交>
+      path: <当前UI适用性判断及真实审阅>
+      sha256: <实际64位摘要>
     approved_releases:
       - approved_release_ref:
           repository: <UI权威仓库身份>
@@ -19,6 +29,7 @@ bindings:
       - behavior_ref: <实际R修订/AC或工程行为>
         screen_states: [<screen/state>]
     allowed_differences: []
+    # 差异条目为id/basis/review_ref；id和basis必须来自获批包，review_ref固定本轮工程核对。
     # not-applicable时approved_releases/coverage可空，必须有具体受审依据。
     # reuse保留原包语境，在rationale_ref复核本轮需求和平台适用性。
 # 权威观察/工程Review/运行E沿原阶段记录，引用此绑定，不将动态进度写进sidecar。

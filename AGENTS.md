@@ -4,8 +4,8 @@
 
 - 本项目是隔离的开源iOS 计算器试点，SwiftUI／Swift5／Xcode27.0。源自本仓库初始提交，不向上游推送。
 - `CalculatorSwiftUI/` 放原生产品代码，原测试目录继续使用；`openspec/specs/` 放已接受行为，`openspec/changes/` 放当前Change及唯一Tasks。
-- 本轮仅纳入已确认设计的主屏tokens消费，保留原计算／游戏规则。明确Standard，未采用需求层，不造R/AC/BL或空候选。
-- UI源独立；获批A/D及原决定必须固定引用。实际runtime资源导入本项目，不能直接从design工作目录加载。按已复制的`harness/ui-design/manual-checklist.md`人工核对，现有工具不提供自动UI Gate。
+- 原人工试点的 Standard 已交付，原归档和证据保留。本轮按用户2026-10-08批准的 scope.md，仅采用 Version v0.1.0-harness-ui 的 R-001/AC-01、AC-02；existing endpoint、零候选，明确 Tiny 等价修改，不新增 Change/Tasks/Archive。
+- UI源独立；沿用原获批A/D及决定，产品只消费已导入的固定资源。本轮按已安装的`harness/ui-design/requirements.md`读取当前任务、固定UI输入和原控制观察；开始/恢复检查失败必须停止产品编辑，明确核对差异后重观测。新运行仍需人审。
 - 行为实现使用项目TDD；静态资源与布局核对实际屏幕，已有行为补测不伪造RED。项目不使用Node作为业务运行时。
 
 ## 开始与分流

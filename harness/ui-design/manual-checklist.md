@@ -29,7 +29,8 @@
 | 无需求层Tiny | 原任务／PR保存同等固定绑定 | 原Tiny边界仍成立，不因视觉改动小就自动Tiny |
 
 - [ ] required／reuse保存完整A引用、当前覆盖和允许差异；not-applicable保存具体受审依据。不能因缺包、缺工具或未批准改判无UI影响。
-- [ ] 按[权威约定](authority.md)重新观察当前UI决定，保存policy固定引用、remote/ref、实际SHA、历史及原始证据；current未知停止，不借historical通过放行。
+- [ ] 按[离线检查](offline-check.md)保存固定快照、规则身份、真实退出码与完整JSON；历史PASS只证明所选时点，不替代下一项current与原工程审阅核对。
+- [ ] 按[当前观察](current-check.md)和[权威约定](authority.md)重新观察当前UI决定，保存policy固定引用、remote/ref、实际SHA、历史及原始证据；current未知停止，不借historical通过放行。
 - [ ] 同时核对原业务目标、控制、依赖、有效请求和阶段停点；UI人工通过不授予Apply、Merge或发布。
 - [ ] 当前Design解释组件／资源映射，唯一Tasks关联实现与验收。UI无业务变化不机械重签BL；业务变化走原需求／RC。
 

@@ -1,0 +1,33 @@
+# 内容D产生后保存的闭包预检证据；它不构成设计批准。
+# 同一模型可用JSON或YAML编码；不使用alias，不引用报告自身的未来提交。
+checked_at: <实际核查时间和时区>
+method: <逐项核对方法及人工执行者>
+content_commit: <已有完整内容D>
+packages:
+  - unit: UI-001
+    package_ref:
+      repository: <UI仓库身份>
+      commit: <同一D>
+      path: design/units/UI-001/releases/U001/manifest.yaml
+      sha256: <manifest实际64位摘要>
+    files:
+      - repository: <UI仓库身份>
+        commit: <同一D>
+        path: design/units/UI-001/releases/U001/brief.md
+        sha256: <brief实际64位摘要>
+      # 列出全部files，不仅brief；不重复列manifest或LFS pointer。
+    external_inputs:
+      - repository: <输入仓库身份>
+        commit: <已有完整提交>
+        path: <需求/expected/asset source/原owner manifest/问题解决证据>
+        sha256: <实际64位摘要>
+      # 完整、去重的固定输入集合；按manifest实际引用逐项填写。
+    dependencies: [] # 与manifest的固定approved_release_ref集合一致
+    external_objects: [] # 有外部媒体时与manifest声明逐项一致，已实际核对字节
+    approval: absent; candidate review only
+policy_ref:
+  repository: <已审权威约定仓库身份>
+  commit: <已有完整提交>
+  path: <实际policy或明确受审依据>
+  sha256: <实际64位摘要>
+result: <本次真实预检结论及未完成范围；不得代写批准>

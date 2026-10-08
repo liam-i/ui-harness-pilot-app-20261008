@@ -1,0 +1,37 @@
+{
+  "recorded_at": "2026-10-08T06:01:17.647636+00:00",
+  "user_message_date": "2026-10-08",
+  "source": "Human message in this Codex conversation, replying to the immediately preceding two-item approval request",
+  "user_text": "批准",
+  "decision": "approved",
+  "pilot": {
+    "review_digest": "ab78af8bd36a2fed12248e8390846114064cfd40ac267a65f65af0b9d5e2cc1c",
+    "manifest_sha256": "6e309e5f516d6807f4716a7bcefd5b0eb8d49461e7327cd9a60f408cc02cc349",
+    "approved_files": {
+      "proposed-tiny.patch": "bc939fb44d9cdb7813b7fd2015bf2a6a6422ee8ede50a61851ed2198ddc4eeb1",
+      "scope.md": "352a5062fa1842b91e1d9dd12673a0985b486fc02b517e5ff8313d6c8cbbe7f2",
+      "README.md": "64d161122612dbb9588920c391604a3b84d101c3a14e53e8958e6ae635faf5f1",
+      "calculator-ui-spec.md": "a99233f4eb2cc0786fb8713e1a6a2cabec4c1913d95167115a4c93484ed48e1c"
+    },
+    "scope": "Exactly the submitted calculator Version/R/AC/current Spec/equivalent Tiny/local isolated commits and fresh native verification; current user fulfils product, engineering and QA baseline review roles as stated in submitted README",
+    "D": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+    "A": "db1d8d36482883a46f6624c02cde4241547f3d18",
+    "code_start": "11db94f866f265fd726771fad1f4aa6ff691501e"
+  },
+  "full_version": {
+    "proposal_sha256": "f9579cdb517780149d1ea59a9b0475a2f57ad03e218cca9b430fba6ca7d9c214",
+    "suite": "full_version",
+    "timeout_seconds": 1500,
+    "run_directory": "/private/tmp/ui-goal04-20261006-azi78jzc/full-version-02",
+    "preserve_all_cases_and_assertions": true,
+    "original_900_second_failure_retained": true
+  },
+  "not_authorized_by_this_decision": [
+    "runtime acceptance before new results",
+    "product release",
+    "upstream push",
+    "main repository commit",
+    "Goal 05"
+  ],
+  "recorded_by": "Codex, mechanical transcription of actual human response, not a synthetic role decision"
+}

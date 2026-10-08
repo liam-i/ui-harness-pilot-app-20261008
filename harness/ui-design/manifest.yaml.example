@@ -1,4 +1,4 @@
-# 人工填写示例。当前不提供机器 Schema；尖括号必须替换。
+# 目标合同人工填写示例；完整严格模型见schemas/ui.schema.json。尖括号必须替换。
 schema_version: ui-design/1
 unit: UI-001
 release: U001
@@ -15,7 +15,9 @@ platforms:
   - target: <OS及原生框架或引擎>
     units: <布局单位及像素换算>
     orientation: <本轮方向>
-    reference_sizes: [<具体尺寸>]
+    reference_sizes:
+      - device: <所选设备或参考画面>
+        pt: [375, 667] # 按实际选择pt/dp/px，不能照搬示例尺寸
     locale: <语言>
 screens:
   - id: <screen>
@@ -45,12 +47,16 @@ files:
     # 图片另填dimensions_px: [宽, 高]；handoff写明倍率及布局单位。
   # 必须逐项列出全部交付文件：handoff、tokens、sources、references、assets等。
   # 除本清单外，包内文件集合须与files完全相等；相对路径不得逃逸。
-asset_inputs: [] # 已有AST/DAS填原owner及固定引用；新输出填输入、许可及变换映射
+asset_inputs: [] # source_ref/license/transform/outputs；原owner填kind/id/manifest_ref/record_pointer
 external_objects: [] # 必需大媒体填不可变对象版本、真实字节摘要/尺寸及恢复方法
 acceptance:
   handoff_path: handoff.md
-  expected_ref: <独立预期的固定引用>
+  expected_ref:
+    repository: <独立预期仓库身份>
+    commit: <已有完整提交>
+    path: <独立预期文件>
+    sha256: <实际64位摘要>
   required_states: [<screen/state>]
   allowed_differences: []
 limitations: []
-open_questions: [] # 影响当前消费的blocker未解决不能批准
+open_questions: [] # 条目为id/description/blocker，可加resolution_ref；未解决blocker拒绝

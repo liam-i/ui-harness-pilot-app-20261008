@@ -1,0 +1,46 @@
+{
+  "python_minor": "3.13",
+  "package_count": 23,
+  "support": "local-controlled-trial",
+  "doorstop": {
+    "version": "3.2",
+    "commit": "b4f7f623010f131f5fde37212dde61019ffcf720",
+    "repository": "https://github.com/doorstop-dev/doorstop"
+  },
+  "source_files": {
+    "doorstop": {
+      "core/item.py": "dcd11edcf3dd30c416d454de6e5fceaf3c32550712c9a45a80db17a7015aa43b",
+      "cli/main.py": "f8460bee9f489d2c8542d7e6115e40e4f48ffa38deebf2c4cae87b7ac8889c3b",
+      "cli/commands.py": "cef0a1de659818b4523bced32b895ec687a62e9b3c79afc3654840d1468bfff8",
+      "core/publisher.py": "d5206aeb2ef8a55e4b34dad19044c196568e0942f0e4f8cb77f1a2f0733ea96f",
+      "core/validators/item_validator.py": "92d9d5e2fc2bad55984cd1966d5342c4f4ad685f06811dcd7bf567ef28a6b437",
+      "settings.py": "6f83789ae13c6f761ac3333d9da810f13e234e47be37d197cb370ac1e5deaa1b",
+      "core/vcs/git.py": "5ee35ca232b02e7a5955ca5ee023f8cd41105107de7e0cf199725f85c738e076",
+      "core/document.py": "0b62cfbc5ee30837402643a5e8f64d3f9212dd0d3fd6c07842d9d9acfb118a12"
+    },
+    "yaml": {
+      "constructor.py": "90d8247da78b524c10618fd0e857f54f3d97570fe91b5c5513d024ef3faf88b0",
+      "loader.py": "5156becc8aa6905482218abf3e04869b835226db4763645fff3438fdbd5f1cdd"
+    },
+    "jsonschema": {
+      "validators.py": "97f171b995b4b0ca05530a9366a1252fb1753f99f3cb7b1068b6d9aab1096fa5",
+      "_keywords.py": "afcfc3aea01f9fa40bc109e65c4820bde89253e51a20bda9da7b8f20d7a57c57"
+    },
+    "markdown": {
+      "core.py": "58799503dc189e0bb2b278aa4d0bb425bf95354b5092db90f6c3473932c077ae",
+      "extensions/fenced_code.py": "fe3cc05d34c26176240b2b7b3bb39e6b179d3aeb65f9b2ea6515951aeb10e8af"
+    },
+    "markdown_it": {
+      "main.py": "bf3b93db72c9c8aacf28dc8728a01b38790d5a9c0895d38650cf881acbf60c73",
+      "rules_inline/link.py": "da80fe7c0741d31cb10d1b592d38f32de59bcc9d64f5b6cf5509a885be7c46e2",
+      "rules_inline/image.py": "59bb20ee38273ad2972305c63493a51bb3914e190c90156897122d0b4a61e82d",
+      "rules_inline/autolink.py": "a4fa2a258f22f7d56d167eca814ccc69c90c7aad61cadce2a15bd6b3e5503d1a",
+      "rules_block/reference.py": "b9ed6a65b51a50fd0622fc138e1ea70f552d0a28fcbb0b0832e616d710647247",
+      "rules_block/table.py": "f2731df4e34639f7c447b05799cf646db87190b8eda57efd7552d1d226ad1a73"
+    },
+    "mdurl": {
+      "__init__.py": "d6fa44f3d3725e7888459342ff87fa04f9b751be1b3e7b637f2ca12d147ba295",
+      "_parse.py": "7b365290cdbfe0d436671d38eec11d7091bb3584111478992bb63c20d1c5cf06"
+    }
+  }
+}

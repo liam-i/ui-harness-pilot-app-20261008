@@ -1,0 +1,40 @@
+{
+  "version": "ui-check/1",
+  "python_minor": "3.13",
+  "platform": {
+    "system": "Darwin",
+    "machine": "arm64"
+  },
+  "dependencies": {
+    "attrs": "26.1.0",
+    "jsonschema-specifications": "2025.9.1",
+    "jsonschema": "4.26.0",
+    "PyYAML": "6.0.3",
+    "referencing": "0.37.0",
+    "rpds-py": "2026.6.3",
+    "Pillow": "12.0.0"
+  },
+  "files": {
+    "check.py": "dc2787340699f96d4bdf17c47e3daed84b5c4cec3b43f10cd984da19eaa2c16a",
+    "config/requirements.lock": "83c0ebd66ba9035a60b625e519782fa68a165d860c466bfba6574eafafaf88b6",
+    "lib/ui_design/__init__.py": "c916cd340b0bceb262cf5999324a500bc92609a06a844956195a908a00ee5690",
+    "lib/ui_design/api.py": "85690a418986f8cee8c749a84e06f4329412da42a0bf1a7a5e6598e342538203",
+    "lib/ui_design/errors.py": "524a1e80362e7b7187773c46a58aabf9c3897489b4b453a32a1ade8ade1032f6",
+    "lib/ui_design/history.py": "4a8f97a2ce6f6cec2ae4142e6a18451bb2c0aed6160bc469385b15f6b92ed1f6",
+    "lib/ui_design/media.py": "51d1c132079a29218a13935768c641468d8a254ebc72c004728ca4d7d09ace63",
+    "lib/ui_design/models.py": "77af375e459ff28d073521fad7cfa87094db736015c283334d609dba9b018428",
+    "lib/ui_design/objects.py": "2ce542c26d30dce3dc67655ca640ac478580d9b7fd042b30dd1ae0a7ee2d5c5f",
+    "lib/ui_design/observation.py": "d035942800e51a5234bf3db3ddfdfbf67c804eaec917c934832666b09d93034d",
+    "lib/ui_design/runtime.py": "e708817c6e90517ebf2d0de5b30b7a3195eefaf2a7fbb5929471ba92cec74992",
+    "lib/ui_design/validation.py": "c14f4905e2f6c5855e869ec1b8c002b038b5f8e8d88841d76a50905464529352",
+    "schemas/ui.schema.json": "6db5acf79dc36a17689fc30e84657e06dc935f60c15208063b508004a6de550e",
+    "ui-design-check": "78b1b3512dc207a7bbdb0699a0148842a6cb21ed1c76428dad3377bb4f9f1f58"
+  },
+  "capabilities": [
+    "fixed-objects",
+    "strict-models",
+    "historical-decisions",
+    "current-observation",
+    "no-requirements-context"
+  ]
+}

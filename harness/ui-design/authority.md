@@ -1,6 +1,6 @@
 # 人工 UI 权威约定
 
-在独立记录中填写并经项目负责人审阅；取得实际提交后由工程 Review 固定本文件的 repository／commit／path／SHA-256。它是人工检查输入，不启用自动能力，也不修改需求层 project config。
+在独立记录中填写并经项目负责人审阅；取得实际提交后由工程 Review 固定本文件的 repository／commit／path／SHA-256。离线检查使用[policy模板](policy.yaml.example)表达同一权威，`basis_refs`固定实际审阅依据；不得仅抄YAML名字便声称已核身份。当前观察按[共用observer](current-check.md)执行；不修改需求层project config。
 
 | 事实 | 必填内容 |
 | --- | --- |

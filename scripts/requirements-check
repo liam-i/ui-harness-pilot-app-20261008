@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# 复制到业务项目 scripts/requirements-check；唯一运行时在项目 .harness 中。
+set -euo pipefail
+root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P)"
+runtime="$root/.harness/version-requirements-venv/bin/python"
+entry="$root/harness/version-requirements/lib/cli.py"
+if [[ ! -x "$runtime" || ! -f "$entry" ]]; then
+  echo 'requirements-check: 项目副本或隔离 Python 未安装；按模板 README 准备，不回退全局工具。' >&2
+  exit 2
+fi
+export REQUIREMENTS_CHECK_ENTRY_PATH="${BASH_SOURCE[0]}"
+exec "$runtime" -I -B "$entry" "$@"

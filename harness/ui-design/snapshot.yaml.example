@@ -1,0 +1,44 @@
+# 固定工程上下文；selections来自独立的受审输入，不能由checker的actual生成。
+schema_version: ui-snapshot/1
+mode: current # historical只复算固定时点；动作入口拒绝historical
+action: start # propose / start / resume / pre-merge / integrated / release
+rules:
+  version: ui-check/1
+  sha256: <本轮受审安装的--describe结果>
+repositories:
+  project: <本地完整工程仓库位置>
+  ui: <本地完整UI权威副本位置>
+policy_ref:
+  repository: project
+  commit: <已有完整提交>
+  path: harness/ui-design/config/project.yaml
+  sha256: <实际policy摘要>
+authorities:
+  - repository: ui
+    ref: refs/heads/main
+    history_root: <必须等于policy中的受审起点>
+    commit: <本次选定的完整UI权威SHA，current必须与实际远端查询相同>
+bindings_ref:
+  repository: project
+  commit: <已有完整提交>
+  path: <本轮固定ui-bindings.yaml>
+  sha256: <实际摘要>
+subject:
+  kind: change # candidate / scope / task / change
+  id: <真实Change名称>
+  head:
+    repository: project
+    commit: <实际受检工程提交>
+  # 有target时同样用repository/commit；不填不存在的候选、BL或R。
+selections:
+  - consumer:
+      kind: change
+      subject: <同一真实Change名称>
+      record_ref:
+        repository: project
+        commit: <已有完整提交>
+        path: openspec/changes/<真实Change>/proposal.md
+        sha256: <实际摘要>
+    behaviors: [<本轮受审工程行为或确切R修订/AC>]
+    consumption: new # existing需要既有实际采用依据，不用于绕过限制
+external_files: [] # 恢复外部媒体后填uri/version/sha256/path；只读本地path

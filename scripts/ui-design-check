@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+# In an installed project the entry lives in scripts/, with the library beside it.
+entry_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+if [[ -f "$entry_dir/check.py" ]]; then
+  ui_tool_root="$entry_dir"
+else
+  ui_tool_root="$entry_dir/../harness/ui-design"
+fi
+if [[ -z "${UI_DESIGN_PYTHON:-}" || ! -x "$UI_DESIGN_PYTHON" ]]; then
+  printf '%s\n' '{"schema_version":"ui-result/1","result":"FAIL","mode":null,"rules":null,"inputs":[],"packages":[],"engineering_authorized":false,"current_permission":false,"proof_scope":"no fixed-input verification completed","diagnostics":[{"code":"runtime.unavailable","message":"Set UI_DESIGN_PYTHON to an executable interpreter in the locked UI virtual environment","source":"entry","location":""}]}'
+  exit 2
+fi
+export UI_DESIGN_ENTRY_PATH="${BASH_SOURCE[0]}"
+exec "$UI_DESIGN_PYTHON" -I -B "$ui_tool_root/check.py" "$@"

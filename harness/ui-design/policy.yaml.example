@@ -1,0 +1,30 @@
+# 必须由项目负责人核对；模板本身不是批准。固定此文件后由原工程Review引用。
+schema_version: ui-policy/1
+adoption:
+  ui: enabled # not-adopted 只用于明确未采用且无UI义务的项目；authorities须为空
+  requirements: not-adopted # adopted 不表示已安装需求层UI门禁
+required_capabilities: [fixed-objects, strict-models, historical-decisions, current-observation]
+authorities:
+  - repository: <稳定仓库身份>
+    remote: /absolute/path/to/retained-ui.git # 或无内嵌凭据的 https:// / ssh:// 完整地址
+    ref: refs/heads/main
+    history_root: <已经存在且受审的完整起点提交>
+    decision_glob: design/units/*/decisions
+actors:
+  - actor: <实际人审身份，与决定记录相同>
+    roles: [product, ui]
+    evidence_refs:
+      - repository: <证据仓库身份>
+        commit: <已有完整提交>
+        path: <实际身份及职责依据>
+        sha256: <真实64位摘要>
+required_roles:
+  approve: [product, ui]
+  withdraw: [product, ui]
+  supersede: [product, ui]
+basis_refs:
+  - repository: <权威约定仓库身份>
+    commit: <已有完整提交>
+    path: <原工程审阅和权威依据>
+    sha256: <真实64位摘要>
+retention: <固定对象、媒体及历史留存方式和责任人>

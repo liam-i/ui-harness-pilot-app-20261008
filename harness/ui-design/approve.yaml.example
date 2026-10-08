@@ -15,7 +15,14 @@ closure_ref:
   path: <逐文件、递归依赖及外部媒体的完整摘要清单>
   sha256: <实际摘要>
 scope:
-  platforms: [<明确的平台与尺寸>]
+  platforms:
+    - target: <与manifest相同的平台与技术栈>
+      units: <相同单位及换算>
+      orientation: <相同方向>
+      reference_sizes:
+        - device: <相同设备>
+          pt: [375, 667] # 按manifest选择pt/dp/px及真实尺寸
+      locale: <相同语言>
   screen_states: [<screen/state>]
 reviewers:
   - actor: <经项目核对的真人身份>
@@ -33,3 +40,4 @@ engineering_review_ref:
 limitations: []
 # 此记录不能填自身未来A的SHA。A提交产生后，消费者才固定该记录的commit/path/sha256。
 # 原批准不可覆盖；撤回/替代另存具名决定，引用原批准及包，说明旧消费者是否禁止继续。
+# 受审闭包的具体格式见closure.yaml.example；不要把候选预检结论填成批准。
