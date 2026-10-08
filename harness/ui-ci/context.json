@@ -1,5 +1,5 @@
 {
-  "bindings_path": "requirements/versions/v0.1.0-harness-ui/ui-bindings.yaml",
+  "bindings_path": "harness/ui-ci/intentionally-absent-bindings.json",
   "business_repository": "project",
   "policy_path": "harness/ui-design/config/project.yaml",
   "snapshot": {
