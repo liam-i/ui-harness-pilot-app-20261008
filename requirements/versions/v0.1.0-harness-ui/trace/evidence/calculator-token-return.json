@@ -1,0 +1,42 @@
+{
+  "schema_version": "vr/1",
+  "subject": "task:calculator-token-return",
+  "version": "v0.1.0-harness-ui",
+  "delivery_line": "main",
+  "baseline_ref": {
+    "commit": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
+    "path": "requirements/versions/v0.1.0-harness-ui/baselines/BL-v0.1.0-harness-ui-001.yaml",
+    "sha256": "13152ceca1009116a9df5a20db7a11a1b0925343314b8228f5ebe70c920f0423"
+  },
+  "task_ref": {
+    "commit": "3f5d6914048a169ed8f7d962d0e85069d116cc33",
+    "path": "harness/tasks/calculator-token-return.md",
+    "sha256": "9ad64fde14027c9267c33f2aea1b8d3edbbe200b2f1b2e8a85f5e9d8a37ef5aa"
+  },
+  "selection": "user-explicit",
+  "policy_refs": [
+    {
+      "commit": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
+      "path": "AGENTS.md",
+      "sha256": "f0bf18d55eee14ef88e9cbbaaa468f221773c8ee7d696e43cd21ae89cc92db4d"
+    }
+  ],
+  "spec_refs": [
+    {
+      "commit": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
+      "path": "openspec/specs/calculator-ui/spec.md",
+      "sha256": "a99233f4eb2cc0786fb8713e1a6a2cabec4c1913d95167115a4c93484ed48e1c"
+    }
+  ],
+  "requirements": [
+    {
+      "requirement": "R-001",
+      "acceptance": [
+        "AC-01"
+      ]
+    }
+  ],
+  "ui_behaviors": [
+    "R-001/r1/AC-01"
+  ]
+}
