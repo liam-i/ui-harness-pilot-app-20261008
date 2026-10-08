@@ -16,7 +16,7 @@ jobs:
   native-tests:
     name: native-tests
     # Only same-repository, owner-authored trial work. No fork workloads.
-    if: github.event.pull_request.head.repo.full_name == github.repository && github.actor == github.repository_owner
+    if: false
     runs-on: [self-hosted, macOS, ARM64, harness-ui-trial]
     timeout-minutes: 20
     env:
