@@ -5,7 +5,7 @@
   "actor": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
   "role": "engineering-owner",
   "at": "2026-10-08T06:16:53.323999+00:00",
-  "outcome": "passed",
+  "outcome": "incomplete",
   "evidence_ref": {
     "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
     "path": "harness/evidence/ui-trial-approval/transcription-review.md",
@@ -548,13 +548,13 @@
   ],
   "engineering": {
     "code_ref": {
-      "commit": "65d9a67551242134ad3c4d90836e8bf088a5b1e5",
+      "commit": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
       "path": "CalculatorSwiftUI/CalculatorTokens.swift",
       "sha256": "94c03f77d47e17be550874721242a94297e1bf4ca0b220dc485b2d0e60ac4387"
     },
     "spec_refs": [
       {
-        "commit": "65d9a67551242134ad3c4d90836e8bf088a5b1e5",
+        "commit": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
         "path": "openspec/specs/calculator-ui/spec.md",
         "sha256": "a99233f4eb2cc0786fb8713e1a6a2cabec4c1913d95167115a4c93484ed48e1c"
       }
@@ -571,7 +571,12 @@
     "assumptions": [],
     "wip_limit": 1,
     "planning_limit": 0,
-    "parallel_approval_ref": null
+    "parallel_approval_ref": null,
+    "ui_inputs_ref": {
+      "commit": "bf15242514ff02e3d6c542bd03f2e9615417e3dd",
+      "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/ui-inputs-001.json",
+      "sha256": "0f8e0c674b3d594e2c629119eab1350ce73275fe575720a6045ff78a29daeb0d"
+    }
   },
   "dependency_dispositions": []
 }
