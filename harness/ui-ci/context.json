@@ -1,12 +1,12 @@
 {
-  "bindings_path": "harness/ui-ci/intentionally-absent-bindings.json",
+  "bindings_path": "requirements/versions/v0.1.0-harness-ui/ui-bindings.yaml",
   "business_repository": "project",
   "policy_path": "harness/ui-design/config/project.yaml",
   "snapshot": {
     "action": "pre-merge",
     "authorities": [
       {
-        "commit": "aaf7b57f7fc4accc78384058ca78c88788f98a3c",
+        "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
         "history_root": "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52",
         "ref": "refs/heads/main",
         "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority"
