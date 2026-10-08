@@ -14,6 +14,9 @@
 | [bindings.yaml.example](bindings.yaml.example) | 已采用需求层时为本 Version 的 `ui-bindings.yaml`；否则把适用条目保存到当前 Design 或真实任务／PR |
 | [authority.md](authority.md) | 人工权威约定；固定policy必须有真实审阅依据 |
 | [manual-checklist.md](manual-checklist.md) | 制作、审定、取包、工程消费、验收与恢复操作 |
+| [文件适配器](adapters/files.md) | A 接收／B 本地制作；获批 Git 文件的只读取包与新目录导出 |
+| [UI Skill](skills/ui-design-workflow/SKILL.md) | 按所选设计角色与工程角色接续；复制到业务 `.agents/skills/ui-design-workflow/`，同时保留本目录在 `harness/ui-design/` |
+| [iOS 平台 CI](ci/README.md) | 所选专用设备的真实构建、固定输入及 GitHub Job 配置；平台门禁须另行实际验收 |
 | [离线检查](offline-check.md) | 隔离安装、薄入口、固定快照、输出和失败恢复 |
 | [当前观察](current-check.md)／[无需求层接线](no-requirements.md) | 独立权威查询、动作前复查、原Change／任务／PR与失败恢复 |
 | [需求层接线](requirements.md) | 原贡献／任务、工程Review、实际E、G2/G3/G4当前组合及恢复；完整采用仍受验证边界限制 |
@@ -21,6 +24,8 @@
 | [policy.yaml.example](policy.yaml.example)／[snapshot.yaml.example](snapshot.yaml.example) | 固定权威与当前／历史快照，填写实际身份后使用 |
 
 最短路径：固定 Brief → A 接收成品或 B 制作并迭代 → 导出完整内容提交 D → 真人确认最终字节 → 另存批准提交 A → 消费方固定 A 并恢复 D → 沿原工程流程实现、验收。
+
+需要 Codex 协助设计或取包时，将 `skills/ui-design-workflow/` 复制到业务项目的 `.agents/skills/`；已有同名 Skill 先审阅差异再更新。在业务对话中指定 `$ui-design-workflow` 及实际 Brief／固定快照／当前操作范围。Skill 正文使用业务根目录下的 `harness/ui-design/` 材料，不能只复制 Skill 后缺省合同，也不能把模板中的说明当作业务批准。
 
 UI 包只定义设计输入。业务义务仍在原需求／Spec，技术选择在当前 Change 的 Design，唯一实施任务在 Tasks；没有需求层时不补 R/AC、BL 或空候选。设计批准与工程实施授权分别保存。使用说明自包含，不依赖教程计划或测试答案。
 
