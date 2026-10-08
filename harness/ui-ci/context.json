@@ -1,0 +1,48 @@
+{
+  "bindings_path": "requirements/versions/v0.1.0-harness-ui/ui-bindings.yaml",
+  "business_repository": "project",
+  "policy_path": "harness/ui-design/config/project.yaml",
+  "snapshot": {
+    "action": "pre-merge",
+    "authorities": [
+      {
+        "commit": "aaf7b57f7fc4accc78384058ca78c88788f98a3c",
+        "history_root": "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52",
+        "ref": "refs/heads/main",
+        "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority"
+      }
+    ],
+    "external_files": [],
+    "mode": "current",
+    "rules": {
+      "sha256": "86f8ede38d0ecc841e590bf08db6462a05916cda044284f0ac0b296dec529fe5",
+      "version": "ui-check/1"
+    },
+    "schema_version": "ui-snapshot/1",
+    "selections": [
+      {
+        "behaviors": [
+          "R-001/r1/AC-01",
+          "R-001/r1/AC-02"
+        ],
+        "consumer": {
+          "identity_pointer": "/endpoints/0/allocation/0/id",
+          "kind": "endpoint",
+          "record_ref": {
+            "commit": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
+            "path": "requirements/versions/v0.1.0-harness-ui/delivery-map.yaml",
+            "repository": "project",
+            "sha256": "b00922c19cfd1a433f2cae0a88ae264a1c9aa380f717dc03a645bec4db915147"
+          },
+          "subject": "whole"
+        },
+        "consumption": "existing"
+      }
+    ],
+    "subject": {
+      "id": "scope:calculator-main/whole",
+      "kind": "scope"
+    }
+  },
+  "ui_repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority"
+}

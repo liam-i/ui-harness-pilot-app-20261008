@@ -1,0 +1,86 @@
+# Copy into an explicitly authorized pilot repository after preparing its inputs.
+# The dedicated temporary runner must already have the reviewed Xcode, Python,
+# two permitted simulators and read access to the reviewed UI authority.
+# Before registering a public-repository runner, require approval for all external
+# fork contributors in repository settings. The job condition alone is insufficient.
+name: Native UI
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: native-ui-${{ github.repository }}
+  cancel-in-progress: false
+jobs:
+  native-tests:
+    name: native-tests
+    # Only same-repository, owner-authored trial work. No fork workloads.
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.actor == github.repository_owner
+    runs-on: [self-hosted, macOS, ARM64, harness-ui-trial]
+    timeout-minutes: 20
+    env:
+      CHECKED_SHA: ${{ github.event.pull_request.head.sha }}
+      UI_AUTHORITY_URL: ${{ vars.UI_AUTHORITY_URL }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Prepare locked environment and complete UI history
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$CHECKED_SHA"
+          test -n "$UI_AUTHORITY_URL"
+          python3.13 -m venv "$RUNNER_TEMP/ui-tools"
+          "$RUNNER_TEMP/ui-tools/bin/python" -m pip install --require-hashes -r harness/ui-design/config/requirements.lock
+          echo "UI_DESIGN_PYTHON=$RUNNER_TEMP/ui-tools/bin/python" >> "$GITHUB_ENV"
+          git -c core.hooksPath=/dev/null clone --no-single-branch "$UI_AUTHORITY_URL" "$RUNNER_TEMP/ui-authority"
+          mkdir "$RUNNER_TEMP/ui-evidence"
+      - name: Check current fixed design inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$UI_DESIGN_PYTHON" -B harness/ui-design/ci/check_inputs.py \
+            --root "$PWD" --head "$CHECKED_SHA" --config harness/ui-ci/context.json \
+            --ui-repository "$RUNNER_TEMP/ui-authority" --output "$RUNNER_TEMP/ui-evidence/ui-inputs.json"
+      - name: Build and run the reviewed native suite
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$UI_DESIGN_PYTHON" -B harness/ui-design/ci/ios.py \
+            --root "$PWD" --head "$CHECKED_SHA" --config harness/ui-ci/ios.json \
+            --output "$RUNNER_TEMP/ui-evidence/native"
+      - name: Recheck authority after native execution
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$UI_DESIGN_PYTHON" -B harness/ui-design/ci/check_inputs.py \
+            --root "$PWD" --head "$CHECKED_SHA" --config harness/ui-ci/context.json \
+            --ui-repository "$RUNNER_TEMP/ui-authority" --output "$RUNNER_TEMP/ui-evidence/ui-inputs-after.json"
+      - name: Retain success or failure evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: native-ui-${{ github.event.pull_request.head.sha }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/ui-evidence
+            !${{ runner.temp }}/ui-evidence/native/device-*-before.stdout
+          if-no-files-found: error
+          retention-days: 14
+  native-ui:
+    name: native-ui
+    needs: native-tests
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 1
+    steps:
+      - name: Require an executed and successful native job
+        env:
+          NATIVE_RESULT: ${{ needs.native-tests.result }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$NATIVE_RESULT" = success

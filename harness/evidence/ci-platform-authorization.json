@@ -1,0 +1,13 @@
+{
+  "public_runner_boundary": "All external fork contributors require workflow approval in repository settings; no external work is approved; repository-scoped temporary runner, no service. Full unrelated simulator inventory omitted from uploaded artifacts; selected device state retained.",
+  "quotes": [
+    "允许按审核页创建并运行",
+    "使用 GitHub 公开库"
+  ],
+  "review_candidate_manifest_sha256": "3afbf72934c45712840e62f482f80e13d412ec86873e35449fbcf475aa0e28fe",
+  "scope": "Same three selected repositories, CI files, temporary repository-specific runners, original two simulators, trial PRs and required checks. Public visibility and public HTTPS authority access. No product code change, merge or release. Not final platform/run acceptance.",
+  "source": "direct human user messages in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+  "ui_authority": "https://github.com/liam-i/ui-harness-pilot-design-20261008.git",
+  "unchanged_approval": "db1d8d36482883a46f6624c02cde4241547f3d18",
+  "unchanged_design": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60"
+}
