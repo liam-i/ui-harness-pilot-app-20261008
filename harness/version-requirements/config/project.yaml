@@ -1,0 +1,16 @@
+{
+  "schema_version": "vr/1",
+  "authority_remote": "origin",
+  "control_ref": "refs/heads/control",
+  "pin_namespace": "refs/tags/vr-pin/",
+  "support": "local-controlled-trial",
+  "control_owner": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+  "retention_policy": "Local isolated bare authority plus immutable bundle and runtime evidence retention; no hosted branch-protection claim.",
+  "protection_evidence_ref": {
+    "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+    "path": "harness/evidence/ui-trial-approval/user-decision.json",
+    "sha256": "ca202ef728ea413165ed6564a3e35e01e5bd3af380028f4f98857a3082a0d15c"
+  },
+  "id_allocation_mode": "serial",
+  "ui_design": "enabled"
+}
