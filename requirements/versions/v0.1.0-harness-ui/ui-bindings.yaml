@@ -1,0 +1,116 @@
+{
+  "schema_version": "ui-bindings/1",
+  "bindings": [
+    {
+      "consumer": {
+        "kind": "endpoint",
+        "subject": "whole",
+        "record_ref": {
+          "repository": "project",
+          "commit": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
+          "path": "requirements/versions/v0.1.0-harness-ui/delivery-map.yaml",
+          "sha256": "b00922c19cfd1a433f2cae0a88ae264a1c9aa380f717dc03a645bec4db915147"
+        },
+        "identity_pointer": "/endpoints/0/allocation/0/id"
+      },
+      "applicability": "required",
+      "rationale_ref": {
+        "repository": "project",
+        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      },
+      "approved_releases": [
+        {
+          "approved_release_ref": {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+            "path": "design/units/UI-CALCULATOR/decisions/approve-U001.yaml",
+            "sha256": "78d7f4acab4fbb74a2098bfe26560f67ddb3d6538017fff53e2011c740236682"
+          }
+        }
+      ],
+      "coverage": [
+        {
+          "behavior_ref": "R-001/r1/AC-01",
+          "screen_states": [
+            "calc/initial"
+          ]
+        },
+        {
+          "behavior_ref": "R-001/r1/AC-02",
+          "screen_states": [
+            "calc/initial"
+          ]
+        }
+      ],
+      "allowed_differences": [
+        {
+          "id": "OS-RENDERING",
+          "basis": "原生系统栏/字体/符号/语义色、sheet/alert绘制以iOS27实际为准；不改变应用tokens、文案、布局约束和行为",
+          "review_ref": {
+            "repository": "project",
+            "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+            "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+            "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+          }
+        }
+      ]
+    },
+    {
+      "consumer": {
+        "kind": "task",
+        "subject": "task:calculator-token-return",
+        "record_ref": {
+          "repository": "project",
+          "commit": "3f5d6914048a169ed8f7d962d0e85069d116cc33",
+          "path": "harness/tasks/calculator-token-return.md",
+          "sha256": "9ad64fde14027c9267c33f2aea1b8d3edbbe200b2f1b2e8a85f5e9d8a37ef5aa"
+        },
+        "association_ref": {
+          "repository": "project",
+          "commit": "60527418e09ca5bf6b1c03926b247087e19e8407",
+          "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/calculator-token-return.json",
+          "sha256": "4f5c248425fd1ac5d9adc3035f0a28c15e73f62d7dd4362a5ca65f2f54d5e3e7"
+        }
+      },
+      "applicability": "required",
+      "rationale_ref": {
+        "repository": "project",
+        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      },
+      "approved_releases": [
+        {
+          "approved_release_ref": {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+            "path": "design/units/UI-CALCULATOR/decisions/approve-U001.yaml",
+            "sha256": "78d7f4acab4fbb74a2098bfe26560f67ddb3d6538017fff53e2011c740236682"
+          }
+        }
+      ],
+      "coverage": [
+        {
+          "behavior_ref": "R-001/r1/AC-01",
+          "screen_states": [
+            "calc/initial"
+          ]
+        }
+      ],
+      "allowed_differences": [
+        {
+          "id": "OS-RENDERING",
+          "basis": "原生系统栏/字体/符号/语义色、sheet/alert绘制以iOS27实际为准；不改变应用tokens、文案、布局约束和行为",
+          "review_ref": {
+            "repository": "project",
+            "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+            "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+            "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+          }
+        }
+      ]
+    }
+  ]
+}
