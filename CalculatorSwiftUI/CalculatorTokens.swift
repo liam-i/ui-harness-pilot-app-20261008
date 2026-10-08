@@ -61,7 +61,8 @@ struct CalculatorTokens: Decodable {
             fatalError("Missing approved calculator tokens in the application bundle")
         }
         do {
-            return try load(from: url)
+            let approvedTokens = try load(from: url)
+            return approvedTokens
         } catch {
             fatalError("Invalid calculator tokens: \(error)")
         }
