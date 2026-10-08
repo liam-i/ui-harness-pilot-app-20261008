@@ -6,7 +6,7 @@
     "action": "pre-merge",
     "authorities": [
       {
-        "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+        "commit": "aaf7b57f7fc4accc78384058ca78c88788f98a3c",
         "history_root": "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52",
         "ref": "refs/heads/main",
         "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority"

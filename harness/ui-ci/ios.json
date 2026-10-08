@@ -23,7 +23,7 @@
   "expected_tests": 11,
   "project": "CalculatorSwiftUI.xcodeproj",
   "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-27-0",
-  "scheme": "CalculatorSwiftUI",
+  "scheme": "IntentionalMissingScheme",
   "test_targets": [],
   "test_timeout_seconds": 300,
   "xcode_version": "Xcode 27.0\nBuild version 27A266a"
