@@ -1,0 +1,467 @@
+{
+  "schema_version": "vr/1",
+  "id": "B-001",
+  "phase": "batch",
+  "actor": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+  "role": "qa-owner",
+  "at": "2026-10-08T06:16:53.323999+00:00",
+  "outcome": "passed",
+  "evidence_ref": {
+    "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+    "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+    "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+  },
+  "reviewed_inputs": [
+    {
+      "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+      "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+      "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+    },
+    {
+      "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+      "path": "harness/evidence/ui-trial-approval/user-decision.json",
+      "sha256": "ca202ef728ea413165ed6564a3e35e01e5bd3af380028f4f98857a3082a0d15c"
+    },
+    {
+      "path": "harness/ui-design/check.py",
+      "sha256": "dc2787340699f96d4bdf17c47e3daed84b5c4cec3b43f10cd984da19eaa2c16a"
+    },
+    {
+      "path": "harness/ui-design/config/project.yaml",
+      "sha256": "96b6bcf1dacd6cc3516c940caee710fdffb30fa2dfae52c519d25c8eee8b6220"
+    },
+    {
+      "path": "harness/ui-design/config/requirements.lock",
+      "sha256": "83c0ebd66ba9035a60b625e519782fa68a165d860c466bfba6574eafafaf88b6"
+    },
+    {
+      "path": "harness/ui-design/config/rules.lock.json",
+      "sha256": "86f8ede38d0ecc841e590bf08db6462a05916cda044284f0ac0b296dec529fe5"
+    },
+    {
+      "path": "harness/ui-design/lib/ui_design/__init__.py",
+      "sha256": "c916cd340b0bceb262cf5999324a500bc92609a06a844956195a908a00ee5690"
+    },
+    {
+      "path": "harness/ui-design/lib/ui_design/api.py",
+      "sha256": "85690a418986f8cee8c749a84e06f4329412da42a0bf1a7a5e6598e342538203"
+    },
+    {
+      "path": "harness/ui-design/lib/ui_design/errors.py",
+      "sha256": "524a1e80362e7b7187773c46a58aabf9c3897489b4b453a32a1ade8ade1032f6"
+    },
+    {
+      "path": "harness/ui-design/lib/ui_design/history.py",
+      "sha256": "4a8f97a2ce6f6cec2ae4142e6a18451bb2c0aed6160bc469385b15f6b92ed1f6"
+    },
+    {
+      "path": "harness/ui-design/lib/ui_design/media.py",
+      "sha256": "51d1c132079a29218a13935768c641468d8a254ebc72c004728ca4d7d09ace63"
+    },
+    {
+      "path": "harness/ui-design/lib/ui_design/models.py",
+      "sha256": "77af375e459ff28d073521fad7cfa87094db736015c283334d609dba9b018428"
+    },
+    {
+      "path": "harness/ui-design/lib/ui_design/objects.py",
+      "sha256": "2ce542c26d30dce3dc67655ca640ac478580d9b7fd042b30dd1ae0a7ee2d5c5f"
+    },
+    {
+      "path": "harness/ui-design/lib/ui_design/observation.py",
+      "sha256": "d035942800e51a5234bf3db3ddfdfbf67c804eaec917c934832666b09d93034d"
+    },
+    {
+      "path": "harness/ui-design/lib/ui_design/runtime.py",
+      "sha256": "e708817c6e90517ebf2d0de5b30b7a3195eefaf2a7fbb5929471ba92cec74992"
+    },
+    {
+      "path": "harness/ui-design/lib/ui_design/validation.py",
+      "sha256": "c14f4905e2f6c5855e869ec1b8c002b038b5f8e8d88841d76a50905464529352"
+    },
+    {
+      "path": "harness/ui-design/schemas/ui.schema.json",
+      "sha256": "6db5acf79dc36a17689fc30e84657e06dc935f60c15208063b508004a6de550e"
+    },
+    {
+      "path": "harness/ui-design/ui-design-check",
+      "sha256": "78b1b3512dc207a7bbdb0699a0148842a6cb21ed1c76428dad3377bb4f9f1f58"
+    },
+    {
+      "path": "harness/version-requirements/config/project.yaml",
+      "sha256": "f09c6eb59b1d34272b745ad82bd4299f439ade1e884dc6ba29b6f35cceb6d690"
+    },
+    {
+      "path": "harness/version-requirements/config/requirements.lock",
+      "sha256": "54cee692e2049beaf55fdd96aaff18c20d06dd2665450d67e5ff99e90f001190"
+    },
+    {
+      "path": "harness/version-requirements/config/runtime.json",
+      "sha256": "4518671b5746b9fcd89509da727e8e65a69f4ee7505c36f8577fd3d34c2fb813"
+    },
+    {
+      "path": "harness/version-requirements/lib/__init__.py",
+      "sha256": "458d9628690295f9328f308cfbbf46f2349b89a0e2215cfa1c97041d4a1aa8ee"
+    },
+    {
+      "path": "harness/version-requirements/lib/archive.py",
+      "sha256": "a5dbc10764e2f2ea0a9b755444222634eb7f594bf66a9aa1ff2d752f25a0d6b6"
+    },
+    {
+      "path": "harness/version-requirements/lib/assets.py",
+      "sha256": "1dcbeed82c6fc310e7b9e0dcd7b43805af540ccc84cc96c3a1770eaa6c997fbe"
+    },
+    {
+      "path": "harness/version-requirements/lib/availability.py",
+      "sha256": "8f2da0b3462941ef0c636e715b41d4f72f63adce162a3b98cfc63b5ff62f3a14"
+    },
+    {
+      "path": "harness/version-requirements/lib/backend.py",
+      "sha256": "5bb6a11c4b04eda55b527646e5902c0010521602f558733bf7aa06e7e265fc49"
+    },
+    {
+      "path": "harness/version-requirements/lib/baselines.py",
+      "sha256": "0fc93a2446307834dd7632462cdabe47afc5dfaa139afbb60f0a8291d32e93d7"
+    },
+    {
+      "path": "harness/version-requirements/lib/cancellation.py",
+      "sha256": "dfe9f58bee406d7e92203cf6b64a74b0e7512f65df2237848ba1a4c5ab749214"
+    },
+    {
+      "path": "harness/version-requirements/lib/change_assets.py",
+      "sha256": "6d77738fef1e28ccb91f98b46e5a6e6b864d3e63692d1322e8fcc394960f2c19"
+    },
+    {
+      "path": "harness/version-requirements/lib/cli.py",
+      "sha256": "1200e1777c157ced267e9040d50c253c0c401e4ceaaefd1010b4d5ce3f547791"
+    },
+    {
+      "path": "harness/version-requirements/lib/completion.py",
+      "sha256": "d1fafc38946447435bc157e438aaea926510e30a52350ab130f29d03634e8026"
+    },
+    {
+      "path": "harness/version-requirements/lib/context.py",
+      "sha256": "334c5ba1f54bff97e9d2ff2f93f0dfc931ba09e8c1e51bad08ae36ce0be8a6c1"
+    },
+    {
+      "path": "harness/version-requirements/lib/control.py",
+      "sha256": "14b6b092f082c0848e663bcf9ff01124c3dddf6c121476317d26ba7df662e5ce"
+    },
+    {
+      "path": "harness/version-requirements/lib/control_delivery.py",
+      "sha256": "fe357d5a0655dc7a1001db85709d4d734c929c2a0a86dc60a0edecc0bd0197b8"
+    },
+    {
+      "path": "harness/version-requirements/lib/control_holds.py",
+      "sha256": "03ceea08adcb949a8bf8a63ffa2c7d73946d3c4bde7f31f725b2d295a2e93c4f"
+    },
+    {
+      "path": "harness/version-requirements/lib/core.py",
+      "sha256": "aa54e0ad51938ac5baf78cce74849faac7c08338133dde73b02d6c9009f6d83b"
+    },
+    {
+      "path": "harness/version-requirements/lib/delivery.py",
+      "sha256": "28e6e931b28d582b7f7f8ece9723d597b0074f775935b8b22c4bbf1ce0a48e9b"
+    },
+    {
+      "path": "harness/version-requirements/lib/delivery_trace.py",
+      "sha256": "21bc36fe7c95d969ee73b167712f8f2bd7084e2a86255c42629be7aefaece28f"
+    },
+    {
+      "path": "harness/version-requirements/lib/dispatch.py",
+      "sha256": "d792a992216a109c66ddc93ce64c285e3c6b135be55813f70fe07b65b75a6149"
+    },
+    {
+      "path": "harness/version-requirements/lib/engineering_view.py",
+      "sha256": "719b515f0b35c181dfd0227eef41551806d638429e263493bfa0b4c3ad81d6f4"
+    },
+    {
+      "path": "harness/version-requirements/lib/errors.py",
+      "sha256": "88f9eca2771ded25e4f4ab1b3542556d1e13434ec8ed30d5bda382fe8f7d8076"
+    },
+    {
+      "path": "harness/version-requirements/lib/execution.py",
+      "sha256": "1df02d9753b61fc757cc21704112a102bcf621ec48caa77f6aa5b6fd23c1601c"
+    },
+    {
+      "path": "harness/version-requirements/lib/feasibility.py",
+      "sha256": "c0d86aedccd4afb5503c0f01572bef519d421cf102dcec7dc8685e4ae5e55d63"
+    },
+    {
+      "path": "harness/version-requirements/lib/final_checks.py",
+      "sha256": "443661e9fbd4cf6e1f1e8730e168ec036fe49a03bc210cfdeb94cef5677c93cc"
+    },
+    {
+      "path": "harness/version-requirements/lib/gitstore.py",
+      "sha256": "6bc99d8d0111417ec57e68e7fc504b6de0c8f21267d77de617e24c00b701e2e8"
+    },
+    {
+      "path": "harness/version-requirements/lib/handoff.py",
+      "sha256": "e621ace143aeefaf54bdac9b0cbb737aa5898adade8fe28ef903afc1ca1f151e"
+    },
+    {
+      "path": "harness/version-requirements/lib/impact.py",
+      "sha256": "1a353b55403d013e8482c798339b6f2e5c724acba2cf694c75a536e40dcdee29"
+    },
+    {
+      "path": "harness/version-requirements/lib/integrated.py",
+      "sha256": "84da12ed5477e5cabd9e43cf6cc7e5ba8c40eba921a6fbd0684409c1ba935dd3"
+    },
+    {
+      "path": "harness/version-requirements/lib/integrated_receipt.py",
+      "sha256": "4959281ad139754555a9b6c52547242e84575e21448f63ae6d6aad3c4bd2badf"
+    },
+    {
+      "path": "harness/version-requirements/lib/integration.py",
+      "sha256": "512b487673e0fbefc6373b6e5631c765cbbd306ec7d52e37cff049173bd13770"
+    },
+    {
+      "path": "harness/version-requirements/lib/markdown_source.py",
+      "sha256": "f61d1d6c6dca7c067f7a39901c2071a239637047f83687acc3dfa664ef8ff81a"
+    },
+    {
+      "path": "harness/version-requirements/lib/metrics.py",
+      "sha256": "54525f49b1c66b2ac3e93c2efdb85c9c10a26856fd4977787f95f911fc34386a"
+    },
+    {
+      "path": "harness/version-requirements/lib/models.py",
+      "sha256": "29432e0cabbde35bb7e64e4a305ffab85844e4c73c076f0af49e0ae4d8e83ad4"
+    },
+    {
+      "path": "harness/version-requirements/lib/observations.py",
+      "sha256": "7ac6281f62abb4bd183588fb6f7c61f908b5b0dc0d17daf4d8ed984e51af471a"
+    },
+    {
+      "path": "harness/version-requirements/lib/openspec_artifacts.py",
+      "sha256": "12eb16b2f26315089d6a3a5323f1b62dbcc65030caf267ee8aedac4f059ae2ff"
+    },
+    {
+      "path": "harness/version-requirements/lib/planning.py",
+      "sha256": "c013f3cb580485e577faa3420a22ef90e61f4c38aa534e729baefc5e46a43bbf"
+    },
+    {
+      "path": "harness/version-requirements/lib/planning_applicability.py",
+      "sha256": "b5159e94da796854480bf57e6164ee2a4bc327d6461a75aaa6a98b15d8eea14e"
+    },
+    {
+      "path": "harness/version-requirements/lib/planning_trace.py",
+      "sha256": "3f5c4609999032112ed45913beec7b6613bd0b028a8209f4d10279267655c190"
+    },
+    {
+      "path": "harness/version-requirements/lib/prearchive.py",
+      "sha256": "086fb757ac41cb6240f2065ff7f2c5943c71a46feb3aaaa131aac9c09fb4bc41"
+    },
+    {
+      "path": "harness/version-requirements/lib/premerge.py",
+      "sha256": "9e786a3784d96303e72293a5595a93f8a6955ca84c87c11537d948f00de1118e"
+    },
+    {
+      "path": "harness/version-requirements/lib/questions.py",
+      "sha256": "ba33f9613d61407be19cf6bb775cf9a603fed5aa2134c13adae118426052287e"
+    },
+    {
+      "path": "harness/version-requirements/lib/readiness.py",
+      "sha256": "ee8cdea4496eed06c378f6d0db4be1a9355a55bd217bb22245090672b3b06717"
+    },
+    {
+      "path": "harness/version-requirements/lib/relations.py",
+      "sha256": "c0d981dedac60702e6e874cf310bce6a4758bfc6b401c1152e644fc750f7b50b"
+    },
+    {
+      "path": "harness/version-requirements/lib/rendering.py",
+      "sha256": "16e46c2322dbb01ba7a85e64e78b9d514bc99007bb55ca9a95dc00e66dad0d93"
+    },
+    {
+      "path": "harness/version-requirements/lib/report.py",
+      "sha256": "38987e7d4afb2e30a227354520cf748080fac7c422e4a6ae27592f69a4358de9"
+    },
+    {
+      "path": "harness/version-requirements/lib/requirement_changes.py",
+      "sha256": "48e38d936fb3a2580dd47440b04a340aa007e617178241cd185a076a70344b63"
+    },
+    {
+      "path": "harness/version-requirements/lib/requirements.py",
+      "sha256": "7616f0cfddf987816771cd5b719b06d40a3b74f097356ca18eb2c445c2f95a23"
+    },
+    {
+      "path": "harness/version-requirements/lib/review_scope.py",
+      "sha256": "85118c8fd454ce76c6ef19bfb53e2e5895993d9eef0b26e1876b3ec3d569dfba"
+    },
+    {
+      "path": "harness/version-requirements/lib/reviews.py",
+      "sha256": "ec9f51fbd7e43953b8515479c4a8580cb8abbadba4bdbf4f44082c04c8e8a4bb"
+    },
+    {
+      "path": "harness/version-requirements/lib/runtime.py",
+      "sha256": "17c9d058e67b8e6471e0dcca6850f1e8e315926cc002c23f6908e0d2dea1e713"
+    },
+    {
+      "path": "harness/version-requirements/lib/scope_delivery.py",
+      "sha256": "1bb5c9a8534ed6060edfe70106b6818758e0e193ae12d0f7090764bf336e8c6b"
+    },
+    {
+      "path": "harness/version-requirements/lib/sources.py",
+      "sha256": "340317749801c246f70d42fefd582c1d969b21b486937d4f3b8c9e8486f260b1"
+    },
+    {
+      "path": "harness/version-requirements/lib/tiny_delivery.py",
+      "sha256": "37fcc64e5e985173963c809d1d62ab8a6c6b18ac014f2da43ed289e915317647"
+    },
+    {
+      "path": "harness/version-requirements/lib/ui_completion.py",
+      "sha256": "7ccbd878eaeae562aea9334ae59fe779ad82d0b68595f05e808b7965c66ed1db"
+    },
+    {
+      "path": "harness/version-requirements/lib/ui_integration.py",
+      "sha256": "7fcac129e3466bab629a91d1d480c137bb5027f7947c56b391a520592bea23af"
+    },
+    {
+      "path": "harness/version-requirements/lib/ui_metadata.py",
+      "sha256": "80264a5923ffe8514f8949d30ad6906fed83a22abb497a5952bc11b8619f2f7f"
+    },
+    {
+      "path": "harness/version-requirements/lib/ui_receipts.py",
+      "sha256": "0019f02a59a839303cf2efdca67458b1c8ca8c92af047fba41cfe954221adda2"
+    },
+    {
+      "path": "harness/version-requirements/lib/verification.py",
+      "sha256": "36b96b41a6aad36ac04551dfa81abcacab294b06148f5c15114c16016fe32a7d"
+    },
+    {
+      "path": "harness/version-requirements/lib/worktree.py",
+      "sha256": "33e3fa50c6dedec9ba92995a71f924d45b0195f33583a21cd07d289e5b9707b5"
+    },
+    {
+      "path": "harness/version-requirements/requirements-check",
+      "sha256": "2443f5c249dfe3d37897d77b4778a7cade43c7cb2318ad7d32b71fc2be0e25a2"
+    },
+    {
+      "path": "harness/version-requirements/review.py",
+      "sha256": "e919b4c0b2ecbf06384a407e11ccc1fb35b66a556fcff592c21397f7c29379a6"
+    },
+    {
+      "path": "harness/version-requirements/schemas/vr.schema.json",
+      "sha256": "b496f86cd23f1e084ef3dad71aecfac6c5f367187a52e3c78375d31a894fa2e1"
+    },
+    {
+      "path": "requirements/items/.doorstop.yml",
+      "sha256": "d5d4d8a673c0539082eb91cc688a10863f6cfa455fd4f4bf8230b21e5768c611"
+    },
+    {
+      "path": "requirements/items/R-001.yml",
+      "sha256": "ee93f08f0e66f4e618032c2e5fe0d68033eac9651b1d7233020a867e120600c1"
+    },
+    {
+      "path": "requirements/versions/v0.1.0-harness-ui/reviews/global.yaml",
+      "sha256": "c3fe1b74119c25df6e53e029ea0836edec7d3325ae80bc87d81d1abbec90ccb8"
+    },
+    {
+      "path": "requirements/versions/v0.1.0-harness-ui/scope.yaml",
+      "sha256": "8bed2b2e792b3fb37d079b18d54211eca9125480aca077a98fca6c1ffdd3f8df"
+    },
+    {
+      "path": "requirements/versions/v0.1.0-harness-ui/source/intake-001/scope.md",
+      "sha256": "352a5062fa1842b91e1d9dd12673a0985b486fc02b517e5ff8313d6c8cbbe7f2"
+    },
+    {
+      "path": "requirements/versions/v0.1.0-harness-ui/source/manifest.yaml",
+      "sha256": "7901e936b1bebdd3579d411fa6a140d12d5833e64d9419c116f3bf390c29350c"
+    },
+    {
+      "path": "requirements/versions/v0.1.0-harness-ui/source/units.yaml",
+      "sha256": "539bee7a5fdca09f61008b4684ef391e9e500b629a688c1c147c8cb526be7f9b"
+    },
+    {
+      "path": "requirements/versions/v0.1.0-harness-ui/version.yaml",
+      "sha256": "52d2af0cf243b202bf8a97da68dd20031c277ebe4ffd689b1a46cacee7b6daa5"
+    },
+    {
+      "path": "scripts/requirements-check",
+      "sha256": "2443f5c249dfe3d37897d77b4778a7cade43c7cb2318ad7d32b71fc2be0e25a2"
+    },
+    {
+      "path": "scripts/ui-design-check",
+      "sha256": "78b1b3512dc207a7bbdb0699a0148842a6cb21ed1c76428dad3377bb4f9f1f58"
+    }
+  ],
+  "context_refs": [],
+  "processed_units": [
+    "v0.1.0-harness-ui/intake-001/SRC-001"
+  ],
+  "pending_units": [],
+  "issue_refs": [],
+  "checks": [
+    {
+      "check_id": "asset-interpretation",
+      "source_units": [
+        "v0.1.0-harness-ui/intake-001/SRC-001"
+      ],
+      "outcome": "passed",
+      "issue_refs": [],
+      "input_digest": "1dcdbf6e6c761d5859ba155c4ceef919d1e01ae66a97e9a304a132d03d581ee4",
+      "evidence_ref": {
+        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      }
+    },
+    {
+      "check_id": "completeness-and-duplicates",
+      "source_units": [
+        "v0.1.0-harness-ui/intake-001/SRC-001"
+      ],
+      "outcome": "passed",
+      "issue_refs": [],
+      "input_digest": "1dcdbf6e6c761d5859ba155c4ceef919d1e01ae66a97e9a304a132d03d581ee4",
+      "evidence_ref": {
+        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      }
+    },
+    {
+      "check_id": "consistency-and-testability",
+      "source_units": [
+        "v0.1.0-harness-ui/intake-001/SRC-001"
+      ],
+      "outcome": "passed",
+      "issue_refs": [],
+      "input_digest": "1dcdbf6e6c761d5859ba155c4ceef919d1e01ae66a97e9a304a132d03d581ee4",
+      "evidence_ref": {
+        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      }
+    },
+    {
+      "check_id": "question-application",
+      "source_units": [
+        "v0.1.0-harness-ui/intake-001/SRC-001"
+      ],
+      "outcome": "passed",
+      "issue_refs": [],
+      "input_digest": "1dcdbf6e6c761d5859ba155c4ceef919d1e01ae66a97e9a304a132d03d581ee4",
+      "evidence_ref": {
+        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      }
+    },
+    {
+      "check_id": "source-fidelity",
+      "source_units": [
+        "v0.1.0-harness-ui/intake-001/SRC-001"
+      ],
+      "outcome": "passed",
+      "issue_refs": [],
+      "input_digest": "1dcdbf6e6c761d5859ba155c4ceef919d1e01ae66a97e9a304a132d03d581ee4",
+      "evidence_ref": {
+        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      }
+    }
+  ],
+  "reviewed_requirements": [
+    "R-001"
+  ]
+}
