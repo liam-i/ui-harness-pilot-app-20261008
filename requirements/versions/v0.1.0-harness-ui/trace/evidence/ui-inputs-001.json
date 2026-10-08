@@ -1,0 +1,25 @@
+{
+  "schema_version": "vr-ui-inputs/1",
+  "rules": {
+    "version": "ui-check/1",
+    "sha256": "86f8ede38d0ecc841e590bf08db6462a05916cda044284f0ac0b296dec529fe5"
+  },
+  "policy_ref": {
+    "commit": "65d9a67551242134ad3c4d90836e8bf088a5b1e5",
+    "path": "harness/ui-design/config/project.yaml",
+    "sha256": "96b6bcf1dacd6cc3516c940caee710fdffb30fa2dfae52c519d25c8eee8b6220"
+  },
+  "bindings_ref": {
+    "commit": "aec1259af4e2c4150bdd5b9ffd2344b1640f9a06",
+    "path": "requirements/versions/v0.1.0-harness-ui/ui-bindings.yaml",
+    "sha256": "82150a075326d144d1d14f9dec754eac78f6cdfced7ad1e65eb16b002bab5950"
+  },
+  "authorities": [
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "ref": "refs/heads/main",
+      "history_root": "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52",
+      "commit": "db1d8d36482883a46f6624c02cde4241547f3d18"
+    }
+  ]
+}
