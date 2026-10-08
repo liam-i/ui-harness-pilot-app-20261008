@@ -1,0 +1,102 @@
+{
+  "recorded_at": "2026-10-08T07:00:05.867778+00:00",
+  "time_basis": "Recording time after actual reply; exact platform send time unavailable. First post-reply UTC clock observation was 2026-10-08 06:53:24 UTC.",
+  "source": "Actual human request_user_input_async response in this Codex conversation",
+  "question_item_id": "[\"request_user_input_async\",\"call_a60618e077ff41d9957dca5c98802a62\",0]",
+  "question": "请确认[本次运行与 Goal 04 阶段审核](/Users/liam/Developer/workflow.md/ai-native-sdlc/engineering-harness/tests/ui-design/evidence/goal04/pilot-runtime-review/README.md)：完整整链通过，两台模拟器各 11 项测试通过，新旧界面已对照。是否验收通过并完成 Goal 04？只结项本阶段，不启动 Goal 05。固定审核摘要：7e2770dd199304f75d68291ceca3abbc62cf745d48d20b268ce4f29de0d445d9。",
+  "raw_reply": "运行验收及 Goal 04 阶段审核通过",
+  "reviewer": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+  "decision": "Runtime acceptance and Goal04 stage Review approved; close Goal04 only",
+  "scope": "The exact submitted two-device calculator runtime and Goal04 stage contract, retained evidence and stated limitations",
+  "review_manifest": {
+    "path": "engineering-harness/tests/ui-design/evidence/goal04/pilot-runtime-review/review-manifest.json",
+    "sha256": "b30933a9bb8232406d15fecf142afbdbb432d19f169b8d016b5ed640261282a5"
+  },
+  "review_digest": "7e2770dd199304f75d68291ceca3abbc62cf745d48d20b268ce4f29de0d445d9",
+  "reviewed_files": {
+    "../approved-pilot-01-directories.json": {
+      "bytes": 57846,
+      "sha256": "5c090e2ab121e36b2120639ad62ce0c95e60948f8bba530d44dfc5394adaf27a"
+    },
+    "../approved-pilot-01-materials.json": {
+      "bytes": 388142,
+      "sha256": "a3a4e938fecb2b941d4a92d7b3a1c78472db52a48339564483adab4c5c172daa"
+    },
+    "../full-version-02-materials.json": {
+      "bytes": 289062,
+      "sha256": "fa906bfb5c287154febdc7645aae1cf9a63c473570cd5fc40ccc9e09febd6c44"
+    },
+    "../stage-review-2026-10-08.md": {
+      "bytes": 4563,
+      "sha256": "16df0327f025782f75320bfd004db091f9b716ef4a2387b5ec30f77a7e91328e"
+    },
+    "../stage-source-check-2026-10-08.json": {
+      "bytes": 765,
+      "sha256": "49469c748487bdb68114c0f7c72dfbfe12408646eccbbd03f1f191def5e3da70"
+    },
+    "E-001-checked.json": {
+      "bytes": 20398,
+      "sha256": "15f8d27c8ae3a6fb6b494c77b59c79b9eceb5837065c9c3a138e5b42881d4efd"
+    },
+    "E-002-checked.json": {
+      "bytes": 20406,
+      "sha256": "0e193098515208880dde322eca11d6bb074178ebf686f3dcd1888a13b82c2f26"
+    },
+    "README.md": {
+      "bytes": 2633,
+      "sha256": "843aa2ff0777577d2d96d2a1d9f7b8a2131f2b47ab5ced47e9469b81695acbe7"
+    },
+    "actual-codex-stop-review.json": {
+      "bytes": 1353,
+      "sha256": "6d90e29490159ee26b5a92be2bfa62c7063abc76fd590447759f7e9eb03d99d6"
+    },
+    "actual-tiny.patch": {
+      "bytes": 611,
+      "sha256": "3c2610c6c146591aef90f300e1d0c8ce4f7d017baf39a4d1afc899a47346bf8f"
+    },
+    "device-states-final.json": {
+      "bytes": 1338,
+      "sha256": "e0f6df322569d02f6abdfcd5e209a20057a8742cb4918a4d4ab89e11bbfffbdb"
+    },
+    "native-ui-inputs-checked.json": {
+      "bytes": 56165,
+      "sha256": "70d52f2af8ac44d5caae1bca635adf39a7d2d538f918d43a037ba96066bc27bc"
+    },
+    "preparation-issues.json": {
+      "bytes": 2098,
+      "sha256": "3993f0b9a27dd5cdfa5bd28ffc25e07309fe69064b778373e7435822f6929773"
+    },
+    "pro-actual.png": {
+      "bytes": 581575,
+      "sha256": "1532f4b5e549bf7389fc342167ff2105a98a175dafef959351f7e6bcc14bf4f0"
+    },
+    "pro-approved.png": {
+      "bytes": 651340,
+      "sha256": "99f1c4aeb3ed0e8b783d5eb4f327125844ad6007db7c35864be0e29b2aea28e0"
+    },
+    "runtime-summary.json": {
+      "bytes": 8376,
+      "sha256": "d9e591167301a955b8d4120b65ba8123104acfd5eec9e30559274961dc693626"
+    },
+    "se-actual.png": {
+      "bytes": 280428,
+      "sha256": "e24003ef5509867f0ad8e1f97318c1e566edc228100672ec09100f4587d42ac8"
+    },
+    "se-approved.png": {
+      "bytes": 317761,
+      "sha256": "5dfce1b101d2f85f0bc48bdd680968e0db1cbd3ff16f0bf010f97b496447b4f4"
+    }
+  },
+  "verification": {
+    "files": 18,
+    "mismatches": []
+  },
+  "recorded_by": "Codex, literal transcription of the actual human decision; not a synthetic approval",
+  "retained_evidence_policy": "Reviewed files and E-001/E-002 remain unchanged. This new record supplies the actual decision after their submission.",
+  "next_action": "Finish acceptance recording and Goal04 handoff, mark the existing Goal complete, then stop. Await explicit Goal05 start.",
+  "not_authorized_by_this_reply": [
+    "Start Goal05",
+    "Commit/push/merge the main Harness repository",
+    "Product release or expanded trial scope"
+  ]
+}

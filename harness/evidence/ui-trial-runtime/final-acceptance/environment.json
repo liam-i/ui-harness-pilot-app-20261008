@@ -1,0 +1,17 @@
+{
+  "tested_revision": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+  "scope": "Manual inspection of the two retained native executions; no new run",
+  "device_refs": {
+    "SE": {
+      "commit": "74d38f781d27aab4641ade2613c18ad9ae068332",
+      "path": "harness/evidence/ui-trial-runtime/SE/environment.json",
+      "sha256": "c8d090430fd5be8db9100f7cda9b55ff2c6825e89a64e3faa3246e52b453e567"
+    },
+    "Pro": {
+      "commit": "74d38f781d27aab4641ade2613c18ad9ae068332",
+      "path": "harness/evidence/ui-trial-runtime/Pro/environment.json",
+      "sha256": "d46606d3114c937cff7f35f8d3a16c04b4d563a827003e914d4187d8ff4724e9"
+    }
+  },
+  "same_native_build_files": true
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "manual captured-output review",
+  "tested_revision": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+  "started_at": "2026-10-08T06:33:35.891508+00:00",
+  "finished_at": "2026-10-08T07:00:05.867778+00:00",
+  "observation_actor": "Codex in this conversation",
+  "human_acceptance_actor": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+  "timestamp_basis": "Recording time after actual reply; exact platform send time unavailable. First post-reply UTC clock observation was 2026-10-08 06:53:24 UTC.",
+  "steps": [
+    "Inspect the original approved U001 screenshots and the new SE A01 capture.",
+    "Inspect the new Pro A01 capture against its original approved screenshot.",
+    "Submit both comparisons and the exact runtime evidence to the actual user; retain their response without changing the submission."
+  ],
+  "observations": [
+    {
+      "case_id": "SE-initial",
+      "observed": "Codex inspected the new A01 screenshot against the original approved screenshot: initial 0.00, four columns/five rows, readable labels and unchanged layout/colors/fonts, no observed clipping or overlap. Human accepted the fixed two-device runtime review. System status time is within the original OS-RENDERING allowance.",
+      "result": "passed",
+      "evidence_ref": {
+        "commit": "74d38f781d27aab4641ade2613c18ad9ae068332",
+        "path": "harness/evidence/ui-trial-runtime/SE/attachments/865D7FB2-AEA8-4255-AE33-1A15B16E5CBC.png",
+        "sha256": "e24003ef5509867f0ad8e1f97318c1e566edc228100672ec09100f4587d42ac8"
+      }
+    },
+    {
+      "case_id": "Pro-initial",
+      "observed": "Codex inspected the new A01 screenshot against the original approved screenshot: initial 0.00, four columns/five rows, readable labels and unchanged layout/colors/fonts, no observed clipping or overlap. Human accepted the fixed two-device runtime review. System status time is within the original OS-RENDERING allowance.",
+      "result": "passed",
+      "evidence_ref": {
+        "commit": "74d38f781d27aab4641ade2613c18ad9ae068332",
+        "path": "harness/evidence/ui-trial-runtime/Pro/attachments/26EFF4F3-1740-4488-9114-7330F7BFD620.png",
+        "sha256": "1532f4b5e549bf7389fc342167ff2105a98a175dafef959351f7e6bcc14bf4f0"
+      }
+    }
+  ],
+  "human_response": "运行验收及 Goal 04 阶段审核通过",
+  "review_digest": "7e2770dd199304f75d68291ceca3abbc62cf745d48d20b268ce4f29de0d445d9",
+  "scope": "Only the submitted two simulator captures; automatic E-001/E-002 retain native test results. No additional human interaction steps are claimed."
+}
