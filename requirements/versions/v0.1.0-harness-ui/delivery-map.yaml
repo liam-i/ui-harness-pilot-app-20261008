@@ -8,7 +8,7 @@
     {
       "id": "calculator-main",
       "kind": "existing",
-      "owner": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+      "owner": "engineering-owner",
       "version": "v0.1.0-harness-ui",
       "delivery_line": "main",
       "contract_ref": {

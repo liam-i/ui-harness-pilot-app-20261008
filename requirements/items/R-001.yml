@@ -6,11 +6,11 @@ level: 1
 header: 批准的计算器主屏设计与tokens消费
 text: 计算器主屏保持已确认设计并从应用包实际加载批准的 tokens。
 links: []
-reviewed: VpkxKtzdxrHQ0MFgZJqlnr-L6NBbD9lijZybuZig4ic=
+reviewed: ZlZOPJhGPaXwqRrLXdPyKeSXwMr6YEYvRCzQrBOKeYo=
 ref: ''
 revision: 1
 kind: functional
-owner: current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46
+owner: product-owner
 source_refs:
 - unit: v0.1.0-harness-ui/intake-001/SRC-001
   role: origin

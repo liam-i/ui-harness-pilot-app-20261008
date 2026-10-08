@@ -16,7 +16,7 @@
       "level": "integration",
       "method": "运行原CalculatorTokensTests并核对实际bundle资源及原始xcresult。",
       "environment": "Xcode27/iOS27, original SE3 and iPhone17Pro dedicated simulators, portrait/light/English/default text",
-      "owner": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+      "owner": "qa-owner",
       "checkpoint": "contribution",
       "final": true,
       "evidence_refs": []
@@ -34,7 +34,7 @@
       "level": "acceptance",
       "method": "原UI测试加两个尺寸新截图；Codex实际观察后由当前用户验收。",
       "environment": "Xcode27/iOS27, original SE3 and iPhone17Pro dedicated simulators, portrait/light/English/default text",
-      "owner": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+      "owner": "qa-owner",
       "checkpoint": "contribution",
       "final": true,
       "evidence_refs": []
