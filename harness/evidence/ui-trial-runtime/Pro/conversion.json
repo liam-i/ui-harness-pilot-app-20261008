@@ -1,0 +1,104 @@
+{
+  "converter_sha256": "f05e8a69c652fbe56e37894033dea95bbb5e2492c8db830cb98513787fb4aeb8",
+  "tests_json_sha256": "c2adbb469709cfb254496f7f19807bc94e29339f238c7bb9c0b8181cfa243982",
+  "summary_json_sha256": "9f7977e7f6a6e5090520987c6423cf831d31df8232e9caead9a0ed36d4c47933",
+  "report_sha256": "87965397ef82afae6c41b72c6c12d5e1f5916daa2e2e86c49ca1c8517534229b",
+  "leaf_results": [
+    {
+      "id": "CalculationRegressionTests/testAppendingDigitsPreservesExistingInputBehavior()",
+      "classname": "CalculationRegressionTests",
+      "name": "testAppendingDigitsPreservesExistingInputBehavior()",
+      "definition": "CalculatorTests/CalculationRegressionTests.swift",
+      "result": "passed",
+      "nodeIdentifierURL": "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculationRegressionTests/testAppendingDigitsPreservesExistingInputBehavior"
+    },
+    {
+      "id": "CalculationRegressionTests/testExistingArithmeticAndNonfiniteResults()",
+      "classname": "CalculationRegressionTests",
+      "name": "testExistingArithmeticAndNonfiniteResults()",
+      "definition": "CalculatorTests/CalculationRegressionTests.swift",
+      "result": "passed",
+      "nodeIdentifierURL": "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculationRegressionTests/testExistingArithmeticAndNonfiniteResults"
+    },
+    {
+      "id": "CalculationRegressionTests/testExistingTrigonometricFunctionsUseRadians()",
+      "classname": "CalculationRegressionTests",
+      "name": "testExistingTrigonometricFunctionsUseRadians()",
+      "definition": "CalculatorTests/CalculationRegressionTests.swift",
+      "result": "passed",
+      "nodeIdentifierURL": "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculationRegressionTests/testExistingTrigonometricFunctionsUseRadians"
+    },
+    {
+      "id": "CalculatorTokensTests/testApplicationBundleContainsTheFixedApprovedResource()",
+      "classname": "CalculatorTokensTests",
+      "name": "testApplicationBundleContainsTheFixedApprovedResource()",
+      "definition": "CalculatorTests/CalculatorTokensTests.swift",
+      "result": "passed",
+      "nodeIdentifierURL": "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculatorTokensTests/testApplicationBundleContainsTheFixedApprovedResource"
+    },
+    {
+      "id": "CalculatorTokensTests/testDecodeUsesSuppliedValuesInsteadOfFixedConstants()",
+      "classname": "CalculatorTokensTests",
+      "name": "testDecodeUsesSuppliedValuesInsteadOfFixedConstants()",
+      "definition": "CalculatorTests/CalculatorTokensTests.swift",
+      "result": "passed",
+      "nodeIdentifierURL": "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculatorTokensTests/testDecodeUsesSuppliedValuesInsteadOfFixedConstants"
+    },
+    {
+      "id": "CalculatorTokensTests/testInvalidLayoutUnitsAndOpacityAreRejected()",
+      "classname": "CalculatorTokensTests",
+      "name": "testInvalidLayoutUnitsAndOpacityAreRejected()",
+      "definition": "CalculatorTests/CalculatorTokensTests.swift",
+      "result": "passed",
+      "nodeIdentifierURL": "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculatorTokensTests/testInvalidLayoutUnitsAndOpacityAreRejected"
+    },
+    {
+      "id": "CalculatorTokensTests/testLoadReadsTheApprovedFile()",
+      "classname": "CalculatorTokensTests",
+      "name": "testLoadReadsTheApprovedFile()",
+      "definition": "CalculatorTests/CalculatorTokensTests.swift",
+      "result": "passed",
+      "nodeIdentifierURL": "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculatorTokensTests/testLoadReadsTheApprovedFile"
+    },
+    {
+      "id": "CalculatorTokensTests/testMalformedJSONAndUnknownSemanticColorAreRejected()",
+      "classname": "CalculatorTokensTests",
+      "name": "testMalformedJSONAndUnknownSemanticColorAreRejected()",
+      "definition": "CalculatorTests/CalculatorTokensTests.swift",
+      "result": "passed",
+      "nodeIdentifierURL": "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculatorTokensTests/testMalformedJSONAndUnknownSemanticColorAreRejected"
+    },
+    {
+      "id": "CalculatorTokensTests/testMissingRequiredFieldIsRejected()",
+      "classname": "CalculatorTokensTests",
+      "name": "testMissingRequiredFieldIsRejected()",
+      "definition": "CalculatorTests/CalculatorTokensTests.swift",
+      "result": "passed",
+      "nodeIdentifierURL": "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculatorTokensTests/testMissingRequiredFieldIsRejected"
+    },
+    {
+      "id": "CalculatorTokensTests/testMissingResourceReportsTheReadFailure()",
+      "classname": "CalculatorTokensTests",
+      "name": "testMissingResourceReportsTheReadFailure()",
+      "definition": "CalculatorTests/CalculatorTokensTests.swift",
+      "result": "passed",
+      "nodeIdentifierURL": "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculatorTokensTests/testMissingResourceReportsTheReadFailure"
+    },
+    {
+      "id": "CalculatorUITests/testApprovedCasesOnCurrentDevice()",
+      "classname": "CalculatorUITests",
+      "name": "testApprovedCasesOnCurrentDevice()",
+      "definition": "CalculatorUITests/CalculatorUITests.swift",
+      "result": "passed",
+      "nodeIdentifierURL": "test://com.apple.xcode/CalculatorSwiftUI/CalculatorUITests/CalculatorUITests/testApprovedCasesOnCurrentDevice"
+    }
+  ],
+  "counts": {
+    "discovered": 11,
+    "executed": 11,
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0
+  },
+  "scope": "The native report is retained unchanged. This mapping preserves all leaf results and does not invent tests, native exit status, coverage or human acceptance."
+}

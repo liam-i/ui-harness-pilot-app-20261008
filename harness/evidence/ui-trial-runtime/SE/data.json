@@ -1,0 +1,17 @@
+{
+  "tokens_ref": {
+    "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+    "path": "CalculatorSwiftUI/tokens.json",
+    "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+  },
+  "test_tokens_ref": {
+    "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+    "path": "CalculatorTests/approved-tokens.json",
+    "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+  },
+  "expected_ref": {
+    "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+    "path": "CalculatorUITests/app-expected.json",
+    "sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c"
+  }
+}

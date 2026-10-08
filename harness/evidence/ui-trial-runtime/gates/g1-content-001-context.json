@@ -1,0 +1,16 @@
+{
+  "schema_version": "vr/1",
+  "evaluation_mode": "current",
+  "gate": "G1",
+  "phase": "content",
+  "subject": "version:v0.1.0-harness-ui",
+  "version": "v0.1.0-harness-ui",
+  "delivery_line": "main",
+  "checker_version": "vr-check/2",
+  "rule_version": "vr-rules/2",
+  "metadata_revision": "7216b6c7bc1dda461f43aa0cd5b38a270c3b48ed",
+  "head_revision": "7216b6c7bc1dda461f43aa0cd5b38a270c3b48ed",
+  "target_revision": "65d9a67551242134ad3c4d90836e8bf088a5b1e5",
+  "control_revision": null,
+  "baseline_ref": null
+}

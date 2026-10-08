@@ -1,0 +1,82 @@
+{
+  "tested_revision": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+  "command": [
+    "xcodebuild",
+    "-project",
+    "CalculatorSwiftUI.xcodeproj",
+    "-scheme",
+    "CalculatorSwiftUI",
+    "-sdk",
+    "iphonesimulator",
+    "-destination",
+    "platform=iOS Simulator,id=D14EBF55-3D41-419E-8F85-306D5D812CFD",
+    "-configuration",
+    "Debug",
+    "-derivedDataPath",
+    "/private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/native/derived",
+    "-resultBundlePath",
+    "/private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/native/Pro/tests.xcresult",
+    "-disableAutomaticPackageResolution",
+    "-parallel-testing-enabled",
+    "NO",
+    "CODE_SIGNING_ALLOWED=NO",
+    "IPHONEOS_DEPLOYMENT_TARGET=15.0",
+    "test"
+  ],
+  "native_exit_code": 0,
+  "files": {
+    "CalculatorSwiftUI.debug.dylib": {
+      "bytes": 392592,
+      "sha256": "06dc5dadd4b7e83e7cd75efa26d0bc18140376a6f8e7b8b487bb5eda4b8f01f7"
+    },
+    "__preview.dylib": {
+      "bytes": 16768,
+      "sha256": "a8fa8a7673c1d86a2b2ea60a8da78077bd202d232a2aa32ba0f9ed9699ab5ace"
+    },
+    "CalculatorSwiftUI": {
+      "bytes": 40224,
+      "sha256": "923e59dbd9b4ffe7c7f5448f130d05747967013bee809b21301ff5a55766eae3"
+    },
+    "tokens.json": {
+      "bytes": 601,
+      "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+    },
+    "Info.plist": {
+      "bytes": 1409,
+      "sha256": "0768d24fdd220a7a3c4d8c5f73dbf9c8f526869f113a7c023dad8f8eb4a28325"
+    },
+    "PkgInfo": {
+      "bytes": 8,
+      "sha256": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+    },
+    "Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib": {
+      "bytes": 1225,
+      "sha256": "107980c54274d72fb604e1e82ef4f0820de45b9dd36cd5899c20f972f8ceb582"
+    },
+    "Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib": {
+      "bytes": 924,
+      "sha256": "54f3637f671feba5f19e82ec4f4a7fb448bb3cfc0fb180f089aa571fc8f053e2"
+    },
+    "Base.lproj/LaunchScreen.storyboardc/Info.plist": {
+      "bytes": 258,
+      "sha256": "1f255d5cc53b531e3f29a9406a8df49a958e2bf9443d3e20bd8374f707f7d5c8"
+    },
+    "PlugIns/CalculatorTests.xctest/approved-tokens.json": {
+      "bytes": 601,
+      "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+    },
+    "PlugIns/CalculatorTests.xctest/CalculatorTests": {
+      "bytes": 186976,
+      "sha256": "ed3c6d750ba5ec2354a39b96a4d7daa1829fbf4943b3f648ea8528f4c236a6be"
+    },
+    "PlugIns/CalculatorTests.xctest/Info.plist": {
+      "bytes": 678,
+      "sha256": "ed4f45a2302d885f2ec7bb13236b643e9017bd5574a1633226f939b05dbce6ce"
+    }
+  },
+  "tokens": {
+    "path": "/private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/native/derived/Build/Products/Debug-iphonesimulator/CalculatorSwiftUI.app/tokens.json",
+    "bytes": 601,
+    "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+  }
+}

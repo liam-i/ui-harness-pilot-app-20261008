@@ -1,0 +1,167 @@
+{
+  "devices" : [
+    {
+      "architecture" : "arm64",
+      "deviceId" : "D14EBF55-3D41-419E-8F85-306D5D812CFD",
+      "deviceName" : "UI-Goal01-Pro-20260930",
+      "modelName" : "iPhone 17 Pro",
+      "osBuildNumber" : "24A434",
+      "osVersion" : "27.0",
+      "platform" : "iOS Simulator"
+    }
+  ],
+  "testNodes" : [
+    {
+      "children" : [
+        {
+          "children" : [
+            {
+              "children" : [
+                {
+                  "duration" : "0.0021s",
+                  "durationInSeconds" : 0.0021409988403320312,
+                  "name" : "testAppendingDigitsPreservesExistingInputBehavior()",
+                  "nodeIdentifier" : "CalculationRegressionTests/testAppendingDigitsPreservesExistingInputBehavior()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculationRegressionTests/testAppendingDigitsPreservesExistingInputBehavior",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0005s",
+                  "durationInSeconds" : 0.0005010366439819336,
+                  "name" : "testExistingArithmeticAndNonfiniteResults()",
+                  "nodeIdentifier" : "CalculationRegressionTests/testExistingArithmeticAndNonfiniteResults()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculationRegressionTests/testExistingArithmeticAndNonfiniteResults",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00039s",
+                  "durationInSeconds" : 0.00039196014404296875,
+                  "name" : "testExistingTrigonometricFunctionsUseRadians()",
+                  "nodeIdentifier" : "CalculationRegressionTests/testExistingTrigonometricFunctionsUseRadians()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculationRegressionTests/testExistingTrigonometricFunctionsUseRadians",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                }
+              ],
+              "name" : "CalculationRegressionTests",
+              "nodeIdentifierURL" : "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculationRegressionTests",
+              "nodeType" : "Test Suite",
+              "result" : "Passed"
+            },
+            {
+              "children" : [
+                {
+                  "duration" : "0.0024s",
+                  "durationInSeconds" : 0.0024150609970092773,
+                  "name" : "testApplicationBundleContainsTheFixedApprovedResource()",
+                  "nodeIdentifier" : "CalculatorTokensTests/testApplicationBundleContainsTheFixedApprovedResource()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculatorTokensTests/testApplicationBundleContainsTheFixedApprovedResource",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0013s",
+                  "durationInSeconds" : 0.0012680292129516602,
+                  "name" : "testDecodeUsesSuppliedValuesInsteadOfFixedConstants()",
+                  "nodeIdentifier" : "CalculatorTokensTests/testDecodeUsesSuppliedValuesInsteadOfFixedConstants()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculatorTokensTests/testDecodeUsesSuppliedValuesInsteadOfFixedConstants",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.004s",
+                  "durationInSeconds" : 0.004011034965515137,
+                  "name" : "testInvalidLayoutUnitsAndOpacityAreRejected()",
+                  "nodeIdentifier" : "CalculatorTokensTests/testInvalidLayoutUnitsAndOpacityAreRejected()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculatorTokensTests/testInvalidLayoutUnitsAndOpacityAreRejected",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00064s",
+                  "durationInSeconds" : 0.000641942024230957,
+                  "name" : "testLoadReadsTheApprovedFile()",
+                  "nodeIdentifier" : "CalculatorTokensTests/testLoadReadsTheApprovedFile()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculatorTokensTests/testLoadReadsTheApprovedFile",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.0015s",
+                  "durationInSeconds" : 0.0014920234680175781,
+                  "name" : "testMalformedJSONAndUnknownSemanticColorAreRejected()",
+                  "nodeIdentifier" : "CalculatorTokensTests/testMalformedJSONAndUnknownSemanticColorAreRejected()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculatorTokensTests/testMalformedJSONAndUnknownSemanticColorAreRejected",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00075s",
+                  "durationInSeconds" : 0.0007470846176147461,
+                  "name" : "testMissingRequiredFieldIsRejected()",
+                  "nodeIdentifier" : "CalculatorTokensTests/testMissingRequiredFieldIsRejected()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculatorTokensTests/testMissingRequiredFieldIsRejected",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "0.00065s",
+                  "durationInSeconds" : 0.0006510019302368164,
+                  "name" : "testMissingResourceReportsTheReadFailure()",
+                  "nodeIdentifier" : "CalculatorTokensTests/testMissingResourceReportsTheReadFailure()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculatorTokensTests/testMissingResourceReportsTheReadFailure",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                }
+              ],
+              "name" : "CalculatorTokensTests",
+              "nodeIdentifierURL" : "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests/CalculatorTokensTests",
+              "nodeType" : "Test Suite",
+              "result" : "Passed"
+            }
+          ],
+          "name" : "CalculatorTests",
+          "nodeIdentifierURL" : "test://com.apple.xcode/CalculatorSwiftUI/CalculatorTests",
+          "nodeType" : "Unit test bundle",
+          "result" : "Passed"
+        },
+        {
+          "children" : [
+            {
+              "children" : [
+                {
+                  "duration" : "1分钟56秒",
+                  "durationInSeconds" : 116.20555102825165,
+                  "name" : "testApprovedCasesOnCurrentDevice()",
+                  "nodeIdentifier" : "CalculatorUITests/testApprovedCasesOnCurrentDevice()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/CalculatorSwiftUI/CalculatorUITests/CalculatorUITests/testApprovedCasesOnCurrentDevice",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                }
+              ],
+              "name" : "CalculatorUITests",
+              "nodeIdentifierURL" : "test://com.apple.xcode/CalculatorSwiftUI/CalculatorUITests/CalculatorUITests",
+              "nodeType" : "Test Suite",
+              "result" : "Passed"
+            }
+          ],
+          "name" : "CalculatorUITests",
+          "nodeIdentifierURL" : "test://com.apple.xcode/CalculatorSwiftUI/CalculatorUITests",
+          "nodeType" : "UI test bundle",
+          "result" : "Passed"
+        }
+      ],
+      "name" : "CalculatorSwiftUI",
+      "nodeType" : "Test Plan",
+      "result" : "Passed"
+    }
+  ],
+  "testPlanConfigurations" : [
+    {
+      "configurationId" : "1",
+      "configurationName" : "Test Scheme Action"
+    }
+  ]
+}

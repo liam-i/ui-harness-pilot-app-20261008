@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/private/tmp/ui-goal04-20261006-azi78jzc/check-real-tiny-boundary.py",
+    "tiny-stale-002",
+    "resume",
+    "/private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/gates/tiny-start-context.json"
+  ],
+  "implementation": "/private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/app/harness/version-requirements/lib/tiny_delivery.py",
+  "cwd": "/Users/liam/Developer/workflow.md/ai-native-sdlc",
+  "started_at": "2026-10-08T06:21:45.946971+00:00",
+  "finished_at": "2026-10-08T06:21:49.373274+00:00",
+  "exit_code": 1,
+  "context_sha256": "07435b6e77e3262ef3816471ea6d7631f00c920795671eee0b26ea61e23dd62c",
+  "output_sha256": "26458e7e9606334fca61b4ca4d27b6fb9e3bcf6089094c8e856fd107cc49abf1"
+}

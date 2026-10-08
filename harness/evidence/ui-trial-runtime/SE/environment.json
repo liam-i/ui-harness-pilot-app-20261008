@@ -1,0 +1,49 @@
+{
+  "device": {
+    "dataPath": "/Users/liam/Library/Developer/CoreSimulator/Devices/4F72CD21-F071-4835-87B2-1456D125374B/data",
+    "dataPathSize": 2855190528,
+    "logPath": "/Users/liam/Library/Logs/CoreSimulator/4F72CD21-F071-4835-87B2-1456D125374B",
+    "udid": "4F72CD21-F071-4835-87B2-1456D125374B",
+    "lastUsedAt": "2026-09-30T10:06:00Z",
+    "isAvailable": true,
+    "logPathSize": 327680,
+    "deviceTypeIdentifier": "com.apple.CoreSimulator.SimDeviceType.iPhone-SE-3rd-generation",
+    "state": "Shutdown",
+    "name": "UI-Goal01-SE-20260930"
+  },
+  "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-27-0",
+  "settings": {
+    "appearance_before": "light",
+    "content_size_before": "large",
+    "appearance": "light",
+    "content_size": "large",
+    "languages": "XCTest launchArguments -AppleLanguages (en) -AppleLocale en_US",
+    "orientation": "Original portrait setting; verify resulting screenshots before acceptance"
+  },
+  "tools": {
+    "xcode": "Xcode 27.0\nBuild version 27A266a",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "sdk": "27.0"
+  },
+  "actual_native_devices": [
+    {
+      "device": {
+        "architecture": "arm64",
+        "deviceId": "4F72CD21-F071-4835-87B2-1456D125374B",
+        "deviceName": "UI-Goal01-SE-20260930",
+        "modelName": "iPhone SE (3rd generation)",
+        "osBuildNumber": "24A434",
+        "osVersion": "27.0",
+        "platform": "iOS Simulator"
+      },
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "passedTests": 11,
+      "skippedTests": 0,
+      "testPlanConfiguration": {
+        "configurationId": "1",
+        "configurationName": "Test Scheme Action"
+      }
+    }
+  ]
+}

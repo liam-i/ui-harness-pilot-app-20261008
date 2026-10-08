@@ -1,0 +1,35 @@
+{
+  "project_ref": {
+    "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+    "path": "CalculatorSwiftUI.xcodeproj/project.pbxproj",
+    "sha256": "b14ffcbb73afc80288fc7b7eebe0279456f0a7b2c4d5d415ee0f7501a82e58c6"
+  },
+  "scheme_ref": {
+    "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+    "path": "CalculatorSwiftUI.xcodeproj/xcshareddata/xcschemes/CalculatorSwiftUI.xcscheme",
+    "sha256": "d58e8335e415f1874f4c3a066399dd611141cc5419cdd4b20336435007649975"
+  },
+  "command": [
+    "xcodebuild",
+    "-project",
+    "CalculatorSwiftUI.xcodeproj",
+    "-scheme",
+    "CalculatorSwiftUI",
+    "-sdk",
+    "iphonesimulator",
+    "-destination",
+    "platform=iOS Simulator,id=4F72CD21-F071-4835-87B2-1456D125374B",
+    "-configuration",
+    "Debug",
+    "-derivedDataPath",
+    "/private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/native/derived",
+    "-resultBundlePath",
+    "/private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/native/SE/tests.xcresult",
+    "-disableAutomaticPackageResolution",
+    "-parallel-testing-enabled",
+    "NO",
+    "CODE_SIGNING_ALLOWED=NO",
+    "IPHONEOS_DEPLOYMENT_TARGET=15.0",
+    "test"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "vr/1",
+  "evaluation_mode": "current",
+  "gate": "G1",
+  "phase": "effective",
+  "subject": "baseline:BL-v0.1.0-harness-ui-001",
+  "version": "v0.1.0-harness-ui",
+  "delivery_line": "main",
+  "checker_version": "vr-check/2",
+  "rule_version": "vr-rules/2",
+  "metadata_revision": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
+  "head_revision": "7216b6c7bc1dda461f43aa0cd5b38a270c3b48ed",
+  "target_revision": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
+  "control_revision": "d0139fdcad94f31ea285ba5c53b5920bd475ee75",
+  "baseline_ref": {
+    "commit": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
+    "path": "requirements/versions/v0.1.0-harness-ui/baselines/BL-v0.1.0-harness-ui-001.yaml",
+    "sha256": "13152ceca1009116a9df5a20db7a11a1b0925343314b8228f5ebe70c920f0423"
+  }
+}

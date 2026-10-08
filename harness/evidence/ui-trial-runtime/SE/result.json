@@ -1,0 +1,292 @@
+{
+  "device": "SE",
+  "udid": "4F72CD21-F071-4835-87B2-1456D125374B",
+  "prior_device": {
+    "dataPath": "/Users/liam/Library/Developer/CoreSimulator/Devices/4F72CD21-F071-4835-87B2-1456D125374B/data",
+    "dataPathSize": 2855190528,
+    "logPath": "/Users/liam/Library/Logs/CoreSimulator/4F72CD21-F071-4835-87B2-1456D125374B",
+    "udid": "4F72CD21-F071-4835-87B2-1456D125374B",
+    "lastUsedAt": "2026-09-30T10:06:00Z",
+    "isAvailable": true,
+    "logPathSize": 327680,
+    "deviceTypeIdentifier": "com.apple.CoreSimulator.SimDeviceType.iPhone-SE-3rd-generation",
+    "state": "Shutdown",
+    "name": "UI-Goal01-SE-20260930"
+  },
+  "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-27-0",
+  "tested_revision": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+  "actor": "Codex in current approved local trial",
+  "cleanup_required": "Restore appearance/content size if changed, then shutdown this dedicated simulator; do not alter other devices",
+  "prepared_at": "2026-10-08T06:25:26.964436+00:00",
+  "input_refs": [
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "AGENTS.md",
+      "sha256": "f0bf18d55eee14ef88e9cbbaaa468f221773c8ee7d696e43cd21ae89cc92db4d"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI.xcodeproj/project.pbxproj",
+      "sha256": "b14ffcbb73afc80288fc7b7eebe0279456f0a7b2c4d5d415ee0f7501a82e58c6"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+      "sha256": "5f1e4220053ebe6c73e2f69d43950ddbb644d4ff7ec39f69fb2e3b33d62c0f80"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+      "sha256": "dfa0f9bb85b95ccba9c6811adadf8cb407fb5d52088e89db83ebc308ec448542"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI.xcodeproj/xcshareddata/xcschemes/CalculatorSwiftUI.xcscheme",
+      "sha256": "d58e8335e415f1874f4c3a066399dd611141cc5419cdd4b20336435007649975"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Application/AppDelegate.swift",
+      "sha256": "374973f55caa3dc2b4920a70106e7c740b532483e090d16992b5138f630f4649"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Application/Info.plist",
+      "sha256": "118af696872f039fa293e1a67b34e5a7d3117d9b137eecd8ba17d6cae3425d20"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Application/SceneDelegate.swift",
+      "sha256": "a0b7ee060bfed07c63c864d0f1ab65a9b1a4b63145b1f47824ff41ea340a0654"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "sha256": "6d2789aa71ac42a5c775306b46c45609c9a627da135ec468f519544c509ffa19"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Assets.xcassets/Contents.json",
+      "sha256": "972ec1fd42325872438eb085ac29e94f51c10788ec18ec5549439950866c541d"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Base.lproj/LaunchScreen.storyboard",
+      "sha256": "1c958c5c65f324959b05c02f170004f3f5aad29e9ca0c2545767efd5b6b15616"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/CalculatorTokens.swift",
+      "sha256": "b8ba670702c1c9fc6c66ccf82be273a9105ecd3ec49edecbcfff183d26e85937"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Preview Content/Preview Assets.xcassets/Contents.json",
+      "sha256": "972ec1fd42325872438eb085ac29e94f51c10788ec18ec5549439950866c541d"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Views/ActionView.swift",
+      "sha256": "5a0701a4d272555c6fc4ba9fafae5067fd5f7ab7858eb553ad0cf86616f5b1b8"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Views/ContentView.swift",
+      "sha256": "db7d90e2c4a0d82209cde1e68fe2827911c32a70e3a72329b8bfb776e867e24a"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Views/FunctionView.swift",
+      "sha256": "4e9adb4ecbf2c8338f19746051110fcc51715e045b1ed39e887e7cb2efc72082"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/Views/NumberView.swift",
+      "sha256": "289f3c7ce9573f94bf9746818ace0798f33664ef5c7a6066e1dc7e7675ecbc7c"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorSwiftUI/tokens.json",
+      "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorTests/CalculationRegressionTests.swift",
+      "sha256": "902d403d8a38326d5ffbfb8bd9edf14bfd1f124f9c99a3972e17b2c74400f990"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorTests/CalculatorTokensTests.swift",
+      "sha256": "6ec211e396679bef9afa2cd09770c317cee90ddc042ef5ec769a5963b3add70e"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorTests/approved-tokens.json",
+      "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorUITests/CalculatorUITests.swift",
+      "sha256": "7c944906530138643bf96c907205f660de0bf9a5a670b410874fe57d6609e734"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "CalculatorUITests/app-expected.json",
+      "sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "harness/tasks/calculator-token-return.md",
+      "sha256": "9ad64fde14027c9267c33f2aea1b8d3edbbe200b2f1b2e8a85f5e9d8a37ef5aa"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "openspec/specs/calculator-ui/spec.md",
+      "sha256": "a99233f4eb2cc0786fb8713e1a6a2cabec4c1913d95167115a4c93484ed48e1c"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "requirements/items/.doorstop.yml",
+      "sha256": "d5d4d8a673c0539082eb91cc688a10863f6cfa455fd4f4bf8230b21e5768c611"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "requirements/items/R-001.yml",
+      "sha256": "ee93f08f0e66f4e618032c2e5fe0d68033eac9651b1d7233020a867e120600c1"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/calculator-token-return.json",
+      "sha256": "4f5c248425fd1ac5d9adc3035f0a28c15e73f62d7dd4362a5ca65f2f54d5e3e7"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/ui-inputs-001.json",
+      "sha256": "0f8e0c674b3d594e2c629119eab1350ce73275fe575720a6045ff78a29daeb0d"
+    },
+    {
+      "commit": "532cf93e909d1c381c52fee0ca1b86e9ec922f4c",
+      "path": "requirements/versions/v0.1.0-harness-ui/verification-plan.yaml",
+      "sha256": "1629b09e91cc0f5fdc34af7acf170f35eeb9b12552533569bd2477e609c9f4d7"
+    }
+  ],
+  "tools": {
+    "xcode": "Xcode 27.0\nBuild version 27A266a",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "sdk": "27.0"
+  },
+  "environment": {
+    "appearance_before": "light",
+    "content_size_before": "large",
+    "appearance": "light",
+    "content_size": "large",
+    "languages": "XCTest launchArguments -AppleLanguages (en) -AppleLocale en_US",
+    "orientation": "Original portrait setting; verify resulting screenshots before acceptance"
+  },
+  "command": [
+    "xcodebuild",
+    "-project",
+    "CalculatorSwiftUI.xcodeproj",
+    "-scheme",
+    "CalculatorSwiftUI",
+    "-sdk",
+    "iphonesimulator",
+    "-destination",
+    "platform=iOS Simulator,id=4F72CD21-F071-4835-87B2-1456D125374B",
+    "-configuration",
+    "Debug",
+    "-derivedDataPath",
+    "/private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/native/derived",
+    "-resultBundlePath",
+    "/private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/native/SE/tests.xcresult",
+    "-disableAutomaticPackageResolution",
+    "-parallel-testing-enabled",
+    "NO",
+    "CODE_SIGNING_ALLOWED=NO",
+    "IPHONEOS_DEPLOYMENT_TARGET=15.0",
+    "test"
+  ],
+  "cwd": "/private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/app",
+  "started_at": "2026-10-08T06:25:39.461173+00:00",
+  "timeout_seconds": 300,
+  "finished_at": "2026-10-08T06:28:14.010113+00:00",
+  "seconds": 154.5488244999433,
+  "exit_code": 0,
+  "source_unchanged": true,
+  "summary_export_exit": 0,
+  "tests_export_exit": 0,
+  "attachments_export_exit": 0,
+  "bundled_tokens": {
+    "path": "/private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/native/derived/Build/Products/Debug-iphonesimulator/CalculatorSwiftUI.app/tokens.json",
+    "bytes": 601,
+    "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+  },
+  "build_files": {
+    "CalculatorSwiftUI.debug.dylib": {
+      "bytes": 392592,
+      "sha256": "06dc5dadd4b7e83e7cd75efa26d0bc18140376a6f8e7b8b487bb5eda4b8f01f7"
+    },
+    "__preview.dylib": {
+      "bytes": 16768,
+      "sha256": "a8fa8a7673c1d86a2b2ea60a8da78077bd202d232a2aa32ba0f9ed9699ab5ace"
+    },
+    "CalculatorSwiftUI": {
+      "bytes": 40224,
+      "sha256": "923e59dbd9b4ffe7c7f5448f130d05747967013bee809b21301ff5a55766eae3"
+    },
+    "tokens.json": {
+      "bytes": 601,
+      "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+    },
+    "Info.plist": {
+      "bytes": 1409,
+      "sha256": "0768d24fdd220a7a3c4d8c5f73dbf9c8f526869f113a7c023dad8f8eb4a28325"
+    },
+    "PkgInfo": {
+      "bytes": 8,
+      "sha256": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+    },
+    "Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib": {
+      "bytes": 1225,
+      "sha256": "107980c54274d72fb604e1e82ef4f0820de45b9dd36cd5899c20f972f8ceb582"
+    },
+    "Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib": {
+      "bytes": 924,
+      "sha256": "54f3637f671feba5f19e82ec4f4a7fb448bb3cfc0fb180f089aa571fc8f053e2"
+    },
+    "Base.lproj/LaunchScreen.storyboardc/Info.plist": {
+      "bytes": 258,
+      "sha256": "1f255d5cc53b531e3f29a9406a8df49a958e2bf9443d3e20bd8374f707f7d5c8"
+    },
+    "PlugIns/CalculatorTests.xctest/approved-tokens.json": {
+      "bytes": 601,
+      "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+    },
+    "PlugIns/CalculatorTests.xctest/CalculatorTests": {
+      "bytes": 186976,
+      "sha256": "ed3c6d750ba5ec2354a39b96a4d7daa1829fbf4943b3f648ea8528f4c236a6be"
+    },
+    "PlugIns/CalculatorTests.xctest/Info.plist": {
+      "bytes": 678,
+      "sha256": "ed4f45a2302d885f2ec7bb13236b643e9017bd5574a1633226f939b05dbce6ce"
+    }
+  },
+  "cleanup": [
+    {
+      "action": "restore appearance",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "action": "restore content_size",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "action": "shutdown original dedicated device",
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ],
+  "closed_at": "2026-10-08T06:28:18.001737+00:00"
+}

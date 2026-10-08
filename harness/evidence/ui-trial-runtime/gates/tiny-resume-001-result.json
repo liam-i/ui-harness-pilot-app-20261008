@@ -1,0 +1,3393 @@
+{
+  "rule_id": "tiny.boundary",
+  "result": "passed",
+  "subject": "task:calculator-token-return",
+  "action": "resume",
+  "current_checked": true,
+  "engineering_authorized": false,
+  "merge_ready": false,
+  "ui": {
+    "contract": {
+      "subject": {
+        "kind": "task",
+        "id": "task:calculator-token-return"
+      },
+      "contributions": [
+        "calculator-main/whole"
+      ],
+      "policy": {
+        "path": "harness/ui-design/config/project.yaml",
+        "sha256": "96b6bcf1dacd6cc3516c940caee710fdffb30fa2dfae52c519d25c8eee8b6220"
+      },
+      "rules": {
+        "version": "ui-check/1",
+        "sha256": "86f8ede38d0ecc841e590bf08db6462a05916cda044284f0ac0b296dec529fe5"
+      },
+      "bindings": [
+        {
+          "consumer": {
+            "kind": "task",
+            "subject": "task:calculator-token-return"
+          },
+          "behaviors": [
+            "R-001/r1/AC-01"
+          ],
+          "binding": {
+            "applicability": "required",
+            "approved_releases": [
+              {
+                "approved_release_ref": {
+                  "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+                  "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+                  "path": "design/units/UI-CALCULATOR/decisions/approve-U001.yaml",
+                  "sha256": "78d7f4acab4fbb74a2098bfe26560f67ddb3d6538017fff53e2011c740236682"
+                }
+              }
+            ],
+            "coverage": [
+              {
+                "behavior_ref": "R-001/r1/AC-01",
+                "screen_states": [
+                  "calc/initial"
+                ]
+              }
+            ],
+            "allowed_differences": [
+              {
+                "id": "OS-RENDERING",
+                "basis": "原生系统栏/字体/符号/语义色、sheet/alert绘制以iOS27实际为准；不改变应用tokens、文案、布局约束和行为",
+                "review_ref": {
+                  "repository": "project",
+                  "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+                  "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+                  "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "inputs_ref": {
+      "commit": "bf15242514ff02e3d6c542bd03f2e9615417e3dd",
+      "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/ui-inputs-001.json",
+      "sha256": "0f8e0c674b3d594e2c629119eab1350ce73275fe575720a6045ff78a29daeb0d"
+    },
+    "policy_ref": {
+      "commit": "65d9a67551242134ad3c4d90836e8bf088a5b1e5",
+      "path": "harness/ui-design/config/project.yaml",
+      "sha256": "96b6bcf1dacd6cc3516c940caee710fdffb30fa2dfae52c519d25c8eee8b6220"
+    },
+    "bindings_ref": {
+      "commit": "aec1259af4e2c4150bdd5b9ffd2344b1640f9a06",
+      "path": "requirements/versions/v0.1.0-harness-ui/ui-bindings.yaml",
+      "sha256": "82150a075326d144d1d14f9dec754eac78f6cdfced7ad1e65eb16b002bab5950"
+    },
+    "snapshot": {
+      "schema_version": "ui-snapshot/1",
+      "mode": "current",
+      "action": "resume",
+      "rules": {
+        "version": "ui-check/1",
+        "sha256": "86f8ede38d0ecc841e590bf08db6462a05916cda044284f0ac0b296dec529fe5"
+      },
+      "repositories": {
+        "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority": "/private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/ui",
+        "project": "/private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/app"
+      },
+      "policy_ref": {
+        "repository": "project",
+        "commit": "65d9a67551242134ad3c4d90836e8bf088a5b1e5",
+        "path": "harness/ui-design/config/project.yaml",
+        "sha256": "96b6bcf1dacd6cc3516c940caee710fdffb30fa2dfae52c519d25c8eee8b6220"
+      },
+      "bindings_ref": {
+        "repository": "project",
+        "commit": "aec1259af4e2c4150bdd5b9ffd2344b1640f9a06",
+        "path": "requirements/versions/v0.1.0-harness-ui/ui-bindings.yaml",
+        "sha256": "82150a075326d144d1d14f9dec754eac78f6cdfced7ad1e65eb16b002bab5950"
+      },
+      "authorities": [
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "ref": "refs/heads/main",
+          "history_root": "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52",
+          "commit": "aaf7b57f7fc4accc78384058ca78c88788f98a3c"
+        }
+      ],
+      "external_files": [],
+      "subject": {
+        "kind": "task",
+        "id": "task:calculator-token-return",
+        "head": {
+          "repository": "project",
+          "commit": "8a7f225909882df4e0da1f6fc70b2f4dc9721a9e"
+        },
+        "target": {
+          "repository": "project",
+          "commit": "ed187bc127c4557cf992d6afbc742a1e6f207d3b"
+        }
+      },
+      "selections": [
+        {
+          "consumer": {
+            "kind": "task",
+            "subject": "task:calculator-token-return",
+            "record_ref": {
+              "repository": "project",
+              "commit": "3f5d6914048a169ed8f7d962d0e85069d116cc33",
+              "path": "harness/tasks/calculator-token-return.md",
+              "sha256": "9ad64fde14027c9267c33f2aea1b8d3edbbe200b2f1b2e8a85f5e9d8a37ef5aa"
+            },
+            "association_ref": {
+              "repository": "project",
+              "commit": "60527418e09ca5bf6b1c03926b247087e19e8407",
+              "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/calculator-token-return.json",
+              "sha256": "4f5c248425fd1ac5d9adc3035f0a28c15e73f62d7dd4362a5ca65f2f54d5e3e7"
+            }
+          },
+          "behaviors": [
+            "R-001/r1/AC-01"
+          ],
+          "consumption": "new"
+        }
+      ]
+    },
+    "result": {
+      "schema_version": "ui-result/1",
+      "result": "PASS",
+      "mode": "current",
+      "engineering_authorized": false,
+      "current_permission": false,
+      "rules": {
+        "version": "ui-check/1",
+        "sha256": "86f8ede38d0ecc841e590bf08db6462a05916cda044284f0ac0b296dec529fe5"
+      },
+      "inputs": [
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+          "path": "inputs/app-expected.json",
+          "sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+          "path": "inputs/app-scope.md",
+          "sha256": "ed8725c10f6a64a4371c174f7848ab0fc01122c4ca4c802cfbb0a43ce3603b1e"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+          "path": "inputs/archives/app-a1f33650f3adcf7f89e8d403dd469dff7d57c6b1.zip",
+          "sha256": "1c4bce626a13b99f4ab42fde9456eefcf66e766d068a29b4cf706e136d5419b9"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+          "path": "inputs/authority.md",
+          "sha256": "8c84263dc8ad1db635d66336b2b08d7a76d2f673396e3d670dbb1c21b950b5ef"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+          "path": "inputs/sources.json",
+          "sha256": "7e65dd352f55ba50acf5bfa575f36f3a25ef7468eca0db05851546686bb5adfe"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+          "path": "design/units/UI-2048-MENU/releases/U001/manifest.yaml",
+          "sha256": "062a4887d998100c3bcda978f3b6630087b35b51206a5777ef1ccabaad9a18b2"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+          "path": "design/units/UI-CALCULATOR/releases/U001/LICENSE-upstream.txt",
+          "sha256": "68e6220ac2a1aba3fbfb1f8397165ea4f84a0e29ae2793df29b51b8b85560bb0"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+          "path": "design/units/UI-CALCULATOR/releases/U001/brief.md",
+          "sha256": "163383123e717516aeec51850175ec2521f4d4f8e75e49b0f1477c7353cca897"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+          "path": "design/units/UI-CALCULATOR/releases/U001/expected-copy.json",
+          "sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+          "path": "design/units/UI-CALCULATOR/releases/U001/handoff.md",
+          "sha256": "a74db5cfc93c7d44cbe9f503a754c3bfb20f7561e1ecc399635ccfa9fc8fe119"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+          "path": "design/units/UI-CALCULATOR/releases/U001/manifest.yaml",
+          "sha256": "2f1ec315db7bf890fde151b6c8ad8ca6075759f6ab7daf6ee976d0a121306630"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+          "path": "design/units/UI-CALCULATOR/releases/U001/references/original-runtime-pro.png",
+          "sha256": "99f1c4aeb3ed0e8b783d5eb4f327125844ad6007db7c35864be0e29b2aea28e0"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+          "path": "design/units/UI-CALCULATOR/releases/U001/references/original-runtime-se.png",
+          "sha256": "5dfce1b101d2f85f0bc48bdd680968e0db1cbd3ff16f0bf010f97b496447b4f4"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+          "path": "design/units/UI-CALCULATOR/releases/U001/references/source-images.json",
+          "sha256": "a1d383afbe7bd888aae0ed52f0c60ed0389868b8f57cc85414a03d9219c9f546"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+          "path": "design/units/UI-CALCULATOR/releases/U001/references/upstream-1.png",
+          "sha256": "d43f471e56fb9b7b63f367eb1eb86bedca0f4c1244861b667ce163b85f947ace"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+          "path": "design/units/UI-CALCULATOR/releases/U001/references/upstream-2.png",
+          "sha256": "db0674fb9a750faea86bdc65495e502b0e1da752d876cd68d39debc91c521882"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+          "path": "design/units/UI-CALCULATOR/releases/U001/sources.md",
+          "sha256": "6be5a33e88cb5e66200581749c545ac13f5e5274084fe1d7056a5beb47c3b8dc"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+          "path": "design/units/UI-CALCULATOR/releases/U001/tokens.json",
+          "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+          "path": "design/units/UI-2048-MENU/decisions/approve-U001.yaml",
+          "sha256": "b634b272ddbd1712f605ec436835338a4a32b2c58b1779cc44c4bc54905fb171"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+          "path": "design/units/UI-2048-MENU/decisions/user-approval-U001.json",
+          "sha256": "6bd21a75e160955cbdd1c8f9c7a2399fbc3a3232cca80785cae279805de34b7f"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+          "path": "design/units/UI-CALCULATOR/decisions/approve-U001.yaml",
+          "sha256": "78d7f4acab4fbb74a2098bfe26560f67ddb3d6538017fff53e2011c740236682"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+          "path": "design/units/UI-CALCULATOR/decisions/user-approval-U001.json",
+          "sha256": "6bd21a75e160955cbdd1c8f9c7a2399fbc3a3232cca80785cae279805de34b7f"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "e0541e083c06deb694d091872b08e3499e9d72be",
+          "path": "reviews/candidate-closure.json",
+          "sha256": "b39774c0716420f68330610410a01eada96a6d99ab22a1a5dee0ef614c29e4c9"
+        },
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "e0541e083c06deb694d091872b08e3499e9d72be",
+          "path": "reviews/engineering-feasibility.md",
+          "sha256": "bf0ce54b873ec353b9c53271a55989353209d6c0a82e160fea8ba47d91bb7479"
+        },
+        {
+          "repository": "project",
+          "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+          "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+          "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+        },
+        {
+          "repository": "project",
+          "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+          "path": "harness/evidence/ui-trial-approval/user-decision.json",
+          "sha256": "ca202ef728ea413165ed6564a3e35e01e5bd3af380028f4f98857a3082a0d15c"
+        },
+        {
+          "repository": "project",
+          "commit": "3f5d6914048a169ed8f7d962d0e85069d116cc33",
+          "path": "harness/tasks/calculator-token-return.md",
+          "sha256": "9ad64fde14027c9267c33f2aea1b8d3edbbe200b2f1b2e8a85f5e9d8a37ef5aa"
+        },
+        {
+          "repository": "project",
+          "commit": "60527418e09ca5bf6b1c03926b247087e19e8407",
+          "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/calculator-token-return.json",
+          "sha256": "4f5c248425fd1ac5d9adc3035f0a28c15e73f62d7dd4362a5ca65f2f54d5e3e7"
+        },
+        {
+          "repository": "project",
+          "commit": "65d9a67551242134ad3c4d90836e8bf088a5b1e5",
+          "path": "harness/ui-design/config/project.yaml",
+          "sha256": "96b6bcf1dacd6cc3516c940caee710fdffb30fa2dfae52c519d25c8eee8b6220"
+        },
+        {
+          "repository": "project",
+          "commit": "aec1259af4e2c4150bdd5b9ffd2344b1640f9a06",
+          "path": "requirements/versions/v0.1.0-harness-ui/ui-bindings.yaml",
+          "sha256": "82150a075326d144d1d14f9dec754eac78f6cdfced7ad1e65eb16b002bab5950"
+        }
+      ],
+      "packages": [
+        {
+          "package_ref": {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+            "path": "design/units/UI-CALCULATOR/releases/U001/manifest.yaml",
+            "sha256": "2f1ec315db7bf890fde151b6c8ad8ca6075759f6ab7daf6ee976d0a121306630"
+          },
+          "unit": "UI-CALCULATOR",
+          "release": "U001",
+          "files": [
+            {
+              "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+              "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+              "path": "design/units/UI-CALCULATOR/releases/U001/LICENSE-upstream.txt",
+              "sha256": "68e6220ac2a1aba3fbfb1f8397165ea4f84a0e29ae2793df29b51b8b85560bb0"
+            },
+            {
+              "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+              "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+              "path": "design/units/UI-CALCULATOR/releases/U001/brief.md",
+              "sha256": "163383123e717516aeec51850175ec2521f4d4f8e75e49b0f1477c7353cca897"
+            },
+            {
+              "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+              "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+              "path": "design/units/UI-CALCULATOR/releases/U001/expected-copy.json",
+              "sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c"
+            },
+            {
+              "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+              "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+              "path": "design/units/UI-CALCULATOR/releases/U001/handoff.md",
+              "sha256": "a74db5cfc93c7d44cbe9f503a754c3bfb20f7561e1ecc399635ccfa9fc8fe119"
+            },
+            {
+              "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+              "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+              "path": "design/units/UI-CALCULATOR/releases/U001/references/original-runtime-pro.png",
+              "sha256": "99f1c4aeb3ed0e8b783d5eb4f327125844ad6007db7c35864be0e29b2aea28e0"
+            },
+            {
+              "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+              "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+              "path": "design/units/UI-CALCULATOR/releases/U001/references/original-runtime-se.png",
+              "sha256": "5dfce1b101d2f85f0bc48bdd680968e0db1cbd3ff16f0bf010f97b496447b4f4"
+            },
+            {
+              "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+              "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+              "path": "design/units/UI-CALCULATOR/releases/U001/references/source-images.json",
+              "sha256": "a1d383afbe7bd888aae0ed52f0c60ed0389868b8f57cc85414a03d9219c9f546"
+            },
+            {
+              "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+              "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+              "path": "design/units/UI-CALCULATOR/releases/U001/references/upstream-1.png",
+              "sha256": "d43f471e56fb9b7b63f367eb1eb86bedca0f4c1244861b667ce163b85f947ace"
+            },
+            {
+              "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+              "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+              "path": "design/units/UI-CALCULATOR/releases/U001/references/upstream-2.png",
+              "sha256": "db0674fb9a750faea86bdc65495e502b0e1da752d876cd68d39debc91c521882"
+            },
+            {
+              "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+              "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+              "path": "design/units/UI-CALCULATOR/releases/U001/sources.md",
+              "sha256": "6be5a33e88cb5e66200581749c545ac13f5e5274084fe1d7056a5beb47c3b8dc"
+            },
+            {
+              "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+              "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+              "path": "design/units/UI-CALCULATOR/releases/U001/tokens.json",
+              "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+            }
+          ],
+          "external_inputs": [
+            {
+              "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+              "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+              "path": "inputs/app-scope.md",
+              "sha256": "ed8725c10f6a64a4371c174f7848ab0fc01122c4ca4c802cfbb0a43ce3603b1e"
+            },
+            {
+              "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+              "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+              "path": "inputs/app-expected.json",
+              "sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c"
+            },
+            {
+              "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+              "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+              "path": "inputs/archives/app-a1f33650f3adcf7f89e8d403dd469dff7d57c6b1.zip",
+              "sha256": "1c4bce626a13b99f4ab42fde9456eefcf66e766d068a29b4cf706e136d5419b9"
+            },
+            {
+              "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+              "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+              "path": "inputs/sources.json",
+              "sha256": "7e65dd352f55ba50acf5bfa575f36f3a25ef7468eca0db05851546686bb5adfe"
+            }
+          ],
+          "dependencies": []
+        }
+      ],
+      "diagnostics": [],
+      "proof_scope": "one live UI ref observation and fixed-content verification; no continuing lock or engineering permission",
+      "implementation": {
+        "rules": {
+          "version": "ui-check/1",
+          "sha256": "86f8ede38d0ecc841e590bf08db6462a05916cda044284f0ac0b296dec529fe5"
+        },
+        "files": {
+          "check.py": "dc2787340699f96d4bdf17c47e3daed84b5c4cec3b43f10cd984da19eaa2c16a",
+          "config/requirements.lock": "83c0ebd66ba9035a60b625e519782fa68a165d860c466bfba6574eafafaf88b6",
+          "lib/ui_design/__init__.py": "c916cd340b0bceb262cf5999324a500bc92609a06a844956195a908a00ee5690",
+          "lib/ui_design/api.py": "85690a418986f8cee8c749a84e06f4329412da42a0bf1a7a5e6598e342538203",
+          "lib/ui_design/errors.py": "524a1e80362e7b7187773c46a58aabf9c3897489b4b453a32a1ade8ade1032f6",
+          "lib/ui_design/history.py": "4a8f97a2ce6f6cec2ae4142e6a18451bb2c0aed6160bc469385b15f6b92ed1f6",
+          "lib/ui_design/media.py": "51d1c132079a29218a13935768c641468d8a254ebc72c004728ca4d7d09ace63",
+          "lib/ui_design/models.py": "77af375e459ff28d073521fad7cfa87094db736015c283334d609dba9b018428",
+          "lib/ui_design/objects.py": "2ce542c26d30dce3dc67655ca640ac478580d9b7fd042b30dd1ae0a7ee2d5c5f",
+          "lib/ui_design/observation.py": "d035942800e51a5234bf3db3ddfdfbf67c804eaec917c934832666b09d93034d",
+          "lib/ui_design/runtime.py": "e708817c6e90517ebf2d0de5b30b7a3195eefaf2a7fbb5929471ba92cec74992",
+          "lib/ui_design/validation.py": "c14f4905e2f6c5855e869ec1b8c002b038b5f8e8d88841d76a50905464529352",
+          "schemas/ui.schema.json": "6db5acf79dc36a17689fc30e84657e06dc935f60c15208063b508004a6de550e",
+          "ui-design-check": "78b1b3512dc207a7bbdb0699a0148842a6cb21ed1c76428dad3377bb4f9f1f58"
+        },
+        "dependencies": {
+          "attrs": "26.1.0",
+          "jsonschema-specifications": "2025.9.1",
+          "jsonschema": "4.26.0",
+          "PyYAML": "6.0.3",
+          "referencing": "0.37.0",
+          "rpds-py": "2026.6.3",
+          "Pillow": "12.0.0"
+        },
+        "python_minor": "3.13",
+        "platform": {
+          "system": "Darwin",
+          "machine": "arm64"
+        },
+        "capabilities": [
+          "fixed-objects",
+          "strict-models",
+          "historical-decisions",
+          "current-observation",
+          "no-requirements-context"
+        ],
+        "invoked_entry": "/private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/app/harness/ui-design/check.py"
+      },
+      "authorities": [
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "ref": "refs/heads/main",
+          "history_root": "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52",
+          "commit": "aaf7b57f7fc4accc78384058ca78c88788f98a3c",
+          "commits": [
+            "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52",
+            "99526d0a38689138bd81fcd8f09e9693502d7d41",
+            "3dd129e52cf4d86d2bd4e6d51c2d8cde75948231",
+            "51ec3351dd1bed964a4dda115e02bae1bfa6335a",
+            "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+            "e0541e083c06deb694d091872b08e3499e9d72be",
+            "db1d8d36482883a46f6624c02cde4241547f3d18",
+            "aaf7b57f7fc4accc78384058ca78c88788f98a3c"
+          ],
+          "decision_files": 4
+        }
+      ],
+      "consumers": [
+        {
+          "consumer": {
+            "kind": "task",
+            "subject": "task:calculator-token-return",
+            "record_ref": {
+              "repository": "project",
+              "commit": "3f5d6914048a169ed8f7d962d0e85069d116cc33",
+              "path": "harness/tasks/calculator-token-return.md",
+              "sha256": "9ad64fde14027c9267c33f2aea1b8d3edbbe200b2f1b2e8a85f5e9d8a37ef5aa"
+            },
+            "association_ref": {
+              "repository": "project",
+              "commit": "60527418e09ca5bf6b1c03926b247087e19e8407",
+              "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/calculator-token-return.json",
+              "sha256": "4f5c248425fd1ac5d9adc3035f0a28c15e73f62d7dd4362a5ca65f2f54d5e3e7"
+            }
+          },
+          "applicability": "required",
+          "coverage": [
+            {
+              "behavior_ref": "R-001/r1/AC-01",
+              "screen_states": [
+                "calc/initial"
+              ]
+            }
+          ],
+          "allowed_differences": [
+            {
+              "id": "OS-RENDERING",
+              "basis": "原生系统栏/字体/符号/语义色、sheet/alert绘制以iOS27实际为准；不改变应用tokens、文案、布局约束和行为",
+              "review_ref": {
+                "repository": "project",
+                "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+                "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+                "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+              }
+            }
+          ]
+        }
+      ],
+      "ui_required": true,
+      "external_objects": [],
+      "fixed_result": {
+        "schema_version": "ui-result/1",
+        "result": "PASS",
+        "mode": "current",
+        "engineering_authorized": false,
+        "current_permission": false,
+        "rules": {
+          "version": "ui-check/1",
+          "sha256": "86f8ede38d0ecc841e590bf08db6462a05916cda044284f0ac0b296dec529fe5"
+        },
+        "inputs": [
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+            "path": "inputs/app-expected.json",
+            "sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+            "path": "inputs/app-scope.md",
+            "sha256": "ed8725c10f6a64a4371c174f7848ab0fc01122c4ca4c802cfbb0a43ce3603b1e"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+            "path": "inputs/archives/app-a1f33650f3adcf7f89e8d403dd469dff7d57c6b1.zip",
+            "sha256": "1c4bce626a13b99f4ab42fde9456eefcf66e766d068a29b4cf706e136d5419b9"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+            "path": "inputs/authority.md",
+            "sha256": "8c84263dc8ad1db635d66336b2b08d7a76d2f673396e3d670dbb1c21b950b5ef"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+            "path": "inputs/sources.json",
+            "sha256": "7e65dd352f55ba50acf5bfa575f36f3a25ef7468eca0db05851546686bb5adfe"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+            "path": "design/units/UI-2048-MENU/releases/U001/manifest.yaml",
+            "sha256": "062a4887d998100c3bcda978f3b6630087b35b51206a5777ef1ccabaad9a18b2"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+            "path": "design/units/UI-CALCULATOR/releases/U001/LICENSE-upstream.txt",
+            "sha256": "68e6220ac2a1aba3fbfb1f8397165ea4f84a0e29ae2793df29b51b8b85560bb0"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+            "path": "design/units/UI-CALCULATOR/releases/U001/brief.md",
+            "sha256": "163383123e717516aeec51850175ec2521f4d4f8e75e49b0f1477c7353cca897"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+            "path": "design/units/UI-CALCULATOR/releases/U001/expected-copy.json",
+            "sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+            "path": "design/units/UI-CALCULATOR/releases/U001/handoff.md",
+            "sha256": "a74db5cfc93c7d44cbe9f503a754c3bfb20f7561e1ecc399635ccfa9fc8fe119"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+            "path": "design/units/UI-CALCULATOR/releases/U001/manifest.yaml",
+            "sha256": "2f1ec315db7bf890fde151b6c8ad8ca6075759f6ab7daf6ee976d0a121306630"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+            "path": "design/units/UI-CALCULATOR/releases/U001/references/original-runtime-pro.png",
+            "sha256": "99f1c4aeb3ed0e8b783d5eb4f327125844ad6007db7c35864be0e29b2aea28e0"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+            "path": "design/units/UI-CALCULATOR/releases/U001/references/original-runtime-se.png",
+            "sha256": "5dfce1b101d2f85f0bc48bdd680968e0db1cbd3ff16f0bf010f97b496447b4f4"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+            "path": "design/units/UI-CALCULATOR/releases/U001/references/source-images.json",
+            "sha256": "a1d383afbe7bd888aae0ed52f0c60ed0389868b8f57cc85414a03d9219c9f546"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+            "path": "design/units/UI-CALCULATOR/releases/U001/references/upstream-1.png",
+            "sha256": "d43f471e56fb9b7b63f367eb1eb86bedca0f4c1244861b667ce163b85f947ace"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+            "path": "design/units/UI-CALCULATOR/releases/U001/references/upstream-2.png",
+            "sha256": "db0674fb9a750faea86bdc65495e502b0e1da752d876cd68d39debc91c521882"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+            "path": "design/units/UI-CALCULATOR/releases/U001/sources.md",
+            "sha256": "6be5a33e88cb5e66200581749c545ac13f5e5274084fe1d7056a5beb47c3b8dc"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+            "path": "design/units/UI-CALCULATOR/releases/U001/tokens.json",
+            "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+            "path": "design/units/UI-2048-MENU/decisions/approve-U001.yaml",
+            "sha256": "b634b272ddbd1712f605ec436835338a4a32b2c58b1779cc44c4bc54905fb171"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+            "path": "design/units/UI-2048-MENU/decisions/user-approval-U001.json",
+            "sha256": "6bd21a75e160955cbdd1c8f9c7a2399fbc3a3232cca80785cae279805de34b7f"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+            "path": "design/units/UI-CALCULATOR/decisions/approve-U001.yaml",
+            "sha256": "78d7f4acab4fbb74a2098bfe26560f67ddb3d6538017fff53e2011c740236682"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+            "path": "design/units/UI-CALCULATOR/decisions/user-approval-U001.json",
+            "sha256": "6bd21a75e160955cbdd1c8f9c7a2399fbc3a3232cca80785cae279805de34b7f"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "e0541e083c06deb694d091872b08e3499e9d72be",
+            "path": "reviews/candidate-closure.json",
+            "sha256": "b39774c0716420f68330610410a01eada96a6d99ab22a1a5dee0ef614c29e4c9"
+          },
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "e0541e083c06deb694d091872b08e3499e9d72be",
+            "path": "reviews/engineering-feasibility.md",
+            "sha256": "bf0ce54b873ec353b9c53271a55989353209d6c0a82e160fea8ba47d91bb7479"
+          },
+          {
+            "repository": "project",
+            "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+            "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+            "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+          },
+          {
+            "repository": "project",
+            "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+            "path": "harness/evidence/ui-trial-approval/user-decision.json",
+            "sha256": "ca202ef728ea413165ed6564a3e35e01e5bd3af380028f4f98857a3082a0d15c"
+          },
+          {
+            "repository": "project",
+            "commit": "3f5d6914048a169ed8f7d962d0e85069d116cc33",
+            "path": "harness/tasks/calculator-token-return.md",
+            "sha256": "9ad64fde14027c9267c33f2aea1b8d3edbbe200b2f1b2e8a85f5e9d8a37ef5aa"
+          },
+          {
+            "repository": "project",
+            "commit": "60527418e09ca5bf6b1c03926b247087e19e8407",
+            "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/calculator-token-return.json",
+            "sha256": "4f5c248425fd1ac5d9adc3035f0a28c15e73f62d7dd4362a5ca65f2f54d5e3e7"
+          },
+          {
+            "repository": "project",
+            "commit": "65d9a67551242134ad3c4d90836e8bf088a5b1e5",
+            "path": "harness/ui-design/config/project.yaml",
+            "sha256": "96b6bcf1dacd6cc3516c940caee710fdffb30fa2dfae52c519d25c8eee8b6220"
+          },
+          {
+            "repository": "project",
+            "commit": "aec1259af4e2c4150bdd5b9ffd2344b1640f9a06",
+            "path": "requirements/versions/v0.1.0-harness-ui/ui-bindings.yaml",
+            "sha256": "82150a075326d144d1d14f9dec754eac78f6cdfced7ad1e65eb16b002bab5950"
+          }
+        ],
+        "packages": [
+          {
+            "package_ref": {
+              "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+              "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+              "path": "design/units/UI-CALCULATOR/releases/U001/manifest.yaml",
+              "sha256": "2f1ec315db7bf890fde151b6c8ad8ca6075759f6ab7daf6ee976d0a121306630"
+            },
+            "unit": "UI-CALCULATOR",
+            "release": "U001",
+            "files": [
+              {
+                "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+                "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+                "path": "design/units/UI-CALCULATOR/releases/U001/LICENSE-upstream.txt",
+                "sha256": "68e6220ac2a1aba3fbfb1f8397165ea4f84a0e29ae2793df29b51b8b85560bb0"
+              },
+              {
+                "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+                "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+                "path": "design/units/UI-CALCULATOR/releases/U001/brief.md",
+                "sha256": "163383123e717516aeec51850175ec2521f4d4f8e75e49b0f1477c7353cca897"
+              },
+              {
+                "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+                "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+                "path": "design/units/UI-CALCULATOR/releases/U001/expected-copy.json",
+                "sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c"
+              },
+              {
+                "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+                "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+                "path": "design/units/UI-CALCULATOR/releases/U001/handoff.md",
+                "sha256": "a74db5cfc93c7d44cbe9f503a754c3bfb20f7561e1ecc399635ccfa9fc8fe119"
+              },
+              {
+                "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+                "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+                "path": "design/units/UI-CALCULATOR/releases/U001/references/original-runtime-pro.png",
+                "sha256": "99f1c4aeb3ed0e8b783d5eb4f327125844ad6007db7c35864be0e29b2aea28e0"
+              },
+              {
+                "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+                "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+                "path": "design/units/UI-CALCULATOR/releases/U001/references/original-runtime-se.png",
+                "sha256": "5dfce1b101d2f85f0bc48bdd680968e0db1cbd3ff16f0bf010f97b496447b4f4"
+              },
+              {
+                "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+                "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+                "path": "design/units/UI-CALCULATOR/releases/U001/references/source-images.json",
+                "sha256": "a1d383afbe7bd888aae0ed52f0c60ed0389868b8f57cc85414a03d9219c9f546"
+              },
+              {
+                "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+                "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+                "path": "design/units/UI-CALCULATOR/releases/U001/references/upstream-1.png",
+                "sha256": "d43f471e56fb9b7b63f367eb1eb86bedca0f4c1244861b667ce163b85f947ace"
+              },
+              {
+                "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+                "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+                "path": "design/units/UI-CALCULATOR/releases/U001/references/upstream-2.png",
+                "sha256": "db0674fb9a750faea86bdc65495e502b0e1da752d876cd68d39debc91c521882"
+              },
+              {
+                "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+                "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+                "path": "design/units/UI-CALCULATOR/releases/U001/sources.md",
+                "sha256": "6be5a33e88cb5e66200581749c545ac13f5e5274084fe1d7056a5beb47c3b8dc"
+              },
+              {
+                "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+                "commit": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+                "path": "design/units/UI-CALCULATOR/releases/U001/tokens.json",
+                "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+              }
+            ],
+            "external_inputs": [
+              {
+                "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+                "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+                "path": "inputs/app-scope.md",
+                "sha256": "ed8725c10f6a64a4371c174f7848ab0fc01122c4ca4c802cfbb0a43ce3603b1e"
+              },
+              {
+                "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+                "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+                "path": "inputs/app-expected.json",
+                "sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c"
+              },
+              {
+                "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+                "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+                "path": "inputs/archives/app-a1f33650f3adcf7f89e8d403dd469dff7d57c6b1.zip",
+                "sha256": "1c4bce626a13b99f4ab42fde9456eefcf66e766d068a29b4cf706e136d5419b9"
+              },
+              {
+                "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+                "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+                "path": "inputs/sources.json",
+                "sha256": "7e65dd352f55ba50acf5bfa575f36f3a25ef7468eca0db05851546686bb5adfe"
+              }
+            ],
+            "dependencies": []
+          }
+        ],
+        "diagnostics": [],
+        "proof_scope": "fixed-time bytes, declared identities and decision history; no remote observation or human impersonation",
+        "implementation": {
+          "rules": {
+            "version": "ui-check/1",
+            "sha256": "86f8ede38d0ecc841e590bf08db6462a05916cda044284f0ac0b296dec529fe5"
+          },
+          "files": {
+            "check.py": "dc2787340699f96d4bdf17c47e3daed84b5c4cec3b43f10cd984da19eaa2c16a",
+            "config/requirements.lock": "83c0ebd66ba9035a60b625e519782fa68a165d860c466bfba6574eafafaf88b6",
+            "lib/ui_design/__init__.py": "c916cd340b0bceb262cf5999324a500bc92609a06a844956195a908a00ee5690",
+            "lib/ui_design/api.py": "85690a418986f8cee8c749a84e06f4329412da42a0bf1a7a5e6598e342538203",
+            "lib/ui_design/errors.py": "524a1e80362e7b7187773c46a58aabf9c3897489b4b453a32a1ade8ade1032f6",
+            "lib/ui_design/history.py": "4a8f97a2ce6f6cec2ae4142e6a18451bb2c0aed6160bc469385b15f6b92ed1f6",
+            "lib/ui_design/media.py": "51d1c132079a29218a13935768c641468d8a254ebc72c004728ca4d7d09ace63",
+            "lib/ui_design/models.py": "77af375e459ff28d073521fad7cfa87094db736015c283334d609dba9b018428",
+            "lib/ui_design/objects.py": "2ce542c26d30dce3dc67655ca640ac478580d9b7fd042b30dd1ae0a7ee2d5c5f",
+            "lib/ui_design/observation.py": "d035942800e51a5234bf3db3ddfdfbf67c804eaec917c934832666b09d93034d",
+            "lib/ui_design/runtime.py": "e708817c6e90517ebf2d0de5b30b7a3195eefaf2a7fbb5929471ba92cec74992",
+            "lib/ui_design/validation.py": "c14f4905e2f6c5855e869ec1b8c002b038b5f8e8d88841d76a50905464529352",
+            "schemas/ui.schema.json": "6db5acf79dc36a17689fc30e84657e06dc935f60c15208063b508004a6de550e",
+            "ui-design-check": "78b1b3512dc207a7bbdb0699a0148842a6cb21ed1c76428dad3377bb4f9f1f58"
+          },
+          "dependencies": {
+            "attrs": "26.1.0",
+            "jsonschema-specifications": "2025.9.1",
+            "jsonschema": "4.26.0",
+            "PyYAML": "6.0.3",
+            "referencing": "0.37.0",
+            "rpds-py": "2026.6.3",
+            "Pillow": "12.0.0"
+          },
+          "python_minor": "3.13",
+          "platform": {
+            "system": "Darwin",
+            "machine": "arm64"
+          },
+          "capabilities": [
+            "fixed-objects",
+            "strict-models",
+            "historical-decisions",
+            "current-observation",
+            "no-requirements-context"
+          ],
+          "invoked_entry": "/private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/app/harness/ui-design/check.py"
+        },
+        "authorities": [
+          {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "ref": "refs/heads/main",
+            "history_root": "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52",
+            "commit": "aaf7b57f7fc4accc78384058ca78c88788f98a3c",
+            "commits": [
+              "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52",
+              "99526d0a38689138bd81fcd8f09e9693502d7d41",
+              "3dd129e52cf4d86d2bd4e6d51c2d8cde75948231",
+              "51ec3351dd1bed964a4dda115e02bae1bfa6335a",
+              "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+              "e0541e083c06deb694d091872b08e3499e9d72be",
+              "db1d8d36482883a46f6624c02cde4241547f3d18",
+              "aaf7b57f7fc4accc78384058ca78c88788f98a3c"
+            ],
+            "decision_files": 4
+          }
+        ],
+        "consumers": [
+          {
+            "consumer": {
+              "kind": "task",
+              "subject": "task:calculator-token-return",
+              "record_ref": {
+                "repository": "project",
+                "commit": "3f5d6914048a169ed8f7d962d0e85069d116cc33",
+                "path": "harness/tasks/calculator-token-return.md",
+                "sha256": "9ad64fde14027c9267c33f2aea1b8d3edbbe200b2f1b2e8a85f5e9d8a37ef5aa"
+              },
+              "association_ref": {
+                "repository": "project",
+                "commit": "60527418e09ca5bf6b1c03926b247087e19e8407",
+                "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/calculator-token-return.json",
+                "sha256": "4f5c248425fd1ac5d9adc3035f0a28c15e73f62d7dd4362a5ca65f2f54d5e3e7"
+              }
+            },
+            "applicability": "required",
+            "coverage": [
+              {
+                "behavior_ref": "R-001/r1/AC-01",
+                "screen_states": [
+                  "calc/initial"
+                ]
+              }
+            ],
+            "allowed_differences": [
+              {
+                "id": "OS-RENDERING",
+                "basis": "原生系统栏/字体/符号/语义色、sheet/alert绘制以iOS27实际为准；不改变应用tokens、文案、布局约束和行为",
+                "review_ref": {
+                  "repository": "project",
+                  "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+                  "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+                  "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+                }
+              }
+            ]
+          }
+        ],
+        "ui_required": true,
+        "external_objects": []
+      },
+      "observations": [
+        {
+          "remote": "/private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/ui-authority.git",
+          "ref": "refs/heads/main",
+          "started_at": "2026-10-08T06:22:44.019667+00:00",
+          "command": [
+            "git",
+            "--no-optional-locks",
+            "-c",
+            "core.hooksPath=/dev/null",
+            "-c",
+            "core.fsmonitor=false",
+            "-c",
+            "credential.helper=",
+            "-c",
+            "core.askPass=",
+            "-c",
+            "protocol.allow=never",
+            "-c",
+            "protocol.file.allow=always",
+            "-c",
+            "protocol.https.allow=always",
+            "-c",
+            "protocol.ssh.allow=always",
+            "ls-remote",
+            "--exit-code",
+            "--refs",
+            "/private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/ui-authority.git",
+            "refs/heads/main"
+          ],
+          "cwd": "/",
+          "actual_commit": "aaf7b57f7fc4accc78384058ca78c88788f98a3c",
+          "exit_code": 0,
+          "stdout": "aaf7b57f7fc4accc78384058ca78c88788f98a3c\trefs/heads/main\n",
+          "stderr": "",
+          "finished_at": "2026-10-08T06:22:44.036868+00:00",
+          "selections": [
+            {
+              "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+              "ref": "refs/heads/main",
+              "history_root": "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52",
+              "commit": "aaf7b57f7fc4accc78384058ca78c88788f98a3c"
+            }
+          ]
+        }
+      ],
+      "action": "resume",
+      "policy_ref": {
+        "repository": "project",
+        "commit": "65d9a67551242134ad3c4d90836e8bf088a5b1e5",
+        "path": "harness/ui-design/config/project.yaml",
+        "sha256": "96b6bcf1dacd6cc3516c940caee710fdffb30fa2dfae52c519d25c8eee8b6220"
+      },
+      "current_checked": true
+    },
+    "input_digest": "cf686cdcebb92fd34202709d36eda519a3b3bd65d22192581b9344221a604208"
+  },
+  "control_revision": "d0139fdcad94f31ea285ba5c53b5920bd475ee75",
+  "subjects": [
+    "requirement:v0.1.0-harness-ui/R-001",
+    "scope:v0.1.0-harness-ui/R-001/AC-01",
+    "task:calculator-token-return",
+    "version:v0.1.0-harness-ui"
+  ],
+  "task_ref": {
+    "commit": "3f5d6914048a169ed8f7d962d0e85069d116cc33",
+    "path": "harness/tasks/calculator-token-return.md",
+    "sha256": "9ad64fde14027c9267c33f2aea1b8d3edbbe200b2f1b2e8a85f5e9d8a37ef5aa"
+  },
+  "tiny_ref": {
+    "commit": "60527418e09ca5bf6b1c03926b247087e19e8407",
+    "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/calculator-token-return.json",
+    "sha256": "4f5c248425fd1ac5d9adc3035f0a28c15e73f62d7dd4362a5ca65f2f54d5e3e7"
+  },
+  "worktree": {
+    "schema_version": "vr/1",
+    "kind": "worktree-input",
+    "base_revision": "8a7f225909882df4e0da1f6fc70b2f4dc9721a9e",
+    "extra_roots": [
+      "openspec",
+      "requirements"
+    ],
+    "index_entries": [
+      {
+        "path": ".agents/skills/.openspec-target",
+        "mode": "100644",
+        "oid": "2695308abc6a1809b05ea44d296ea8f4012658d5",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/openspec-apply-change/SKILL.md",
+        "mode": "100644",
+        "oid": "cc0dad9acd5771f5750796d6b1e690e01dcdc8ea",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/openspec-archive-change/SKILL.md",
+        "mode": "100644",
+        "oid": "b83ab878f6caaf8c8c8724ec5886c5ad81cc70f2",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/openspec-explore/SKILL.md",
+        "mode": "100644",
+        "oid": "ae52cc6e612e9caf6caa1907baecebe6096ae5b0",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/openspec-explore/agents/openai.yaml",
+        "mode": "100644",
+        "oid": "5b1f887a9138416870f64ba2fe21602e4a59cfa7",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/openspec-propose/SKILL.md",
+        "mode": "100644",
+        "oid": "0e4d83d5d206d6c5f656788265a5e2ce4844f046",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/openspec-sync-specs/SKILL.md",
+        "mode": "100644",
+        "oid": "d399e025c435b29bccecca988fbecd592fbd9a4d",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/openspec-update-change/SKILL.md",
+        "mode": "100644",
+        "oid": "6a18caa769b9e98a10c53c0bbd1a715da3c6a503",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/openspec-verify-change/SKILL.md",
+        "mode": "100644",
+        "oid": "905c497a0136e01d09ea824c637e548acea31932",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/openspec-verify-change/agents/openai.yaml",
+        "mode": "100644",
+        "oid": "5b1f887a9138416870f64ba2fe21602e4a59cfa7",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/receiving-code-review/SKILL.md",
+        "mode": "100644",
+        "oid": "b23bf82bb2f9da35ff57332b6a92195e81de0b2b",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/receiving-code-review/agents/openai.yaml",
+        "mode": "100644",
+        "oid": "5b1f887a9138416870f64ba2fe21602e4a59cfa7",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/systematic-debugging/SKILL.md",
+        "mode": "100644",
+        "oid": "b820ad88cbef403e354c301eadb30379c8b36ee7",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/systematic-debugging/agents/openai.yaml",
+        "mode": "100644",
+        "oid": "5b1f887a9138416870f64ba2fe21602e4a59cfa7",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/systematic-debugging/condition-based-waiting-example.ts",
+        "mode": "100644",
+        "oid": "703a06b653160d060bbf46ab5c6e0cd7446bd592",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/systematic-debugging/condition-based-waiting.md",
+        "mode": "100644",
+        "oid": "70994f777c586f7d4c43033aac34c7cf0da6688b",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/systematic-debugging/defense-in-depth.md",
+        "mode": "100644",
+        "oid": "e2483354dc2b62478a2624e34ca18bc0efe887b2",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/systematic-debugging/root-cause-tracing.md",
+        "mode": "100644",
+        "oid": "5c43eb357c9fbc66d1b8296c63de1a6e6e5dedf9",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/test-driven-development/SKILL.md",
+        "mode": "100644",
+        "oid": "d4a9a075e90e5f8f65ffdec8a526582649398cd2",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/test-driven-development/agents/openai.yaml",
+        "mode": "100644",
+        "oid": "fcf9655e665fb7c0844ea32dcdc360fc180237ec",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/test-driven-development/writing-good-tests.md",
+        "mode": "100644",
+        "oid": "6b542b838e8f248bdb7ecef81bf3d5aaa602066e",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/verification-before-completion/SKILL.md",
+        "mode": "100644",
+        "oid": "407bc7e9cb903cfb16553c6b32f722500a02ebf3",
+        "blob": null
+      },
+      {
+        "path": ".agents/skills/verification-before-completion/agents/openai.yaml",
+        "mode": "100644",
+        "oid": "5b1f887a9138416870f64ba2fe21602e4a59cfa7",
+        "blob": null
+      },
+      {
+        "path": ".gitignore",
+        "mode": "100644",
+        "oid": "7bdda24298701b8afec057528fd03ffd41ae6226",
+        "blob": null
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "oid": "989887b999392194f339deead02857ff58f65cd0",
+        "blob": null
+      },
+      {
+        "path": "CalculatorSwiftUI.xcodeproj/project.pbxproj",
+        "mode": "100644",
+        "oid": "0e4509f2153d0f499a61c08c02ef956c8ffe577d",
+        "blob": null
+      },
+      {
+        "path": "CalculatorSwiftUI.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+        "mode": "100644",
+        "oid": "9dba975c145873f65d58017aaf913d92361fdefd",
+        "blob": null
+      },
+      {
+        "path": "CalculatorSwiftUI.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+        "mode": "100644",
+        "oid": "18d981003d68d0546c4804ac2ff47dd97c6e7921",
+        "blob": null
+      },
+      {
+        "path": "CalculatorSwiftUI.xcodeproj/xcshareddata/xcschemes/CalculatorSwiftUI.xcscheme",
+        "mode": "100644",
+        "oid": "7c5cf59b0c33795f3e7ec797d032435324c61eb8",
+        "blob": null
+      },
+      {
+        "path": "CalculatorSwiftUI/Application/AppDelegate.swift",
+        "mode": "100644",
+        "oid": "ac72ff6135c8e6a3247b63d40b70e2f48dc5f5da",
+        "blob": null
+      },
+      {
+        "path": "CalculatorSwiftUI/Application/Info.plist",
+        "mode": "100644",
+        "oid": "9742bf0f46083de015f0aaa3380c075e53caa259",
+        "blob": null
+      },
+      {
+        "path": "CalculatorSwiftUI/Application/SceneDelegate.swift",
+        "mode": "100644",
+        "oid": "7e28006b53dcba568a0bbd0e0534fa563c587039",
+        "blob": null
+      },
+      {
+        "path": "CalculatorSwiftUI/Assets.xcassets/AppIcon.appiconset/Contents.json",
+        "mode": "100644",
+        "oid": "d8db8d65fd79fd541b2b7eba75c7378af3448f9c",
+        "blob": null
+      },
+      {
+        "path": "CalculatorSwiftUI/Assets.xcassets/Contents.json",
+        "mode": "100644",
+        "oid": "da4a164c918651cdd1e11dca5cc62c333f097601",
+        "blob": null
+      },
+      {
+        "path": "CalculatorSwiftUI/Base.lproj/LaunchScreen.storyboard",
+        "mode": "100644",
+        "oid": "865e9329f3767a7c1dd66294b8025bf81dee7d2c",
+        "blob": null
+      },
+      {
+        "path": "CalculatorSwiftUI/CalculatorTokens.swift",
+        "mode": "100644",
+        "oid": "37c913dfb3948d574df66b5edc4a3fb393d7a792",
+        "blob": null
+      },
+      {
+        "path": "CalculatorSwiftUI/Preview Content/Preview Assets.xcassets/Contents.json",
+        "mode": "100644",
+        "oid": "da4a164c918651cdd1e11dca5cc62c333f097601",
+        "blob": null
+      },
+      {
+        "path": "CalculatorSwiftUI/Views/ActionView.swift",
+        "mode": "100644",
+        "oid": "c7d95ea76396f16e43a896b8bbcae1592b4c0b53",
+        "blob": null
+      },
+      {
+        "path": "CalculatorSwiftUI/Views/ContentView.swift",
+        "mode": "100644",
+        "oid": "f8490a7229564ff6bb40657510d0a9b1f9a334d1",
+        "blob": null
+      },
+      {
+        "path": "CalculatorSwiftUI/Views/FunctionView.swift",
+        "mode": "100644",
+        "oid": "37b8770419e1bae88421ba9cbb9c50d0bef2b452",
+        "blob": null
+      },
+      {
+        "path": "CalculatorSwiftUI/Views/NumberView.swift",
+        "mode": "100644",
+        "oid": "b5c80cf17678f7fc82fb0d678475adec9b0fadff",
+        "blob": null
+      },
+      {
+        "path": "CalculatorSwiftUI/tokens.json",
+        "mode": "100644",
+        "oid": "9ce8e501860f43c42f77fd2739f1e15d4678dbce",
+        "blob": null
+      },
+      {
+        "path": "CalculatorTests/CalculationRegressionTests.swift",
+        "mode": "100644",
+        "oid": "3215d758bc4b7273092d00bc918054951fea82bd",
+        "blob": null
+      },
+      {
+        "path": "CalculatorTests/CalculatorTokensTests.swift",
+        "mode": "100644",
+        "oid": "1ccc56cfb71d5f24d8a06a146299eb72925e8788",
+        "blob": null
+      },
+      {
+        "path": "CalculatorTests/approved-tokens.json",
+        "mode": "100644",
+        "oid": "9ce8e501860f43c42f77fd2739f1e15d4678dbce",
+        "blob": null
+      },
+      {
+        "path": "CalculatorUITests/CalculatorUITests.swift",
+        "mode": "100644",
+        "oid": "0bf645c9710850e09dd1acfcdf30b63312478712",
+        "blob": null
+      },
+      {
+        "path": "CalculatorUITests/app-expected.json",
+        "mode": "100644",
+        "oid": "14b7551f512c3e77dcd1248d555bc7834a068d2a",
+        "blob": null
+      },
+      {
+        "path": "LICENSE",
+        "mode": "100644",
+        "oid": "a2680e6091c851310e862df3823fdf6bf086318f",
+        "blob": null
+      },
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "oid": "11f71d6ab870b2b6243b59d1f14d13b0cef6b910",
+        "blob": null
+      },
+      {
+        "path": "harness/evidence/final-project-checks.json",
+        "mode": "100644",
+        "oid": "caa9dc67778bb2c266ce89ed89f0af0cda125bbb",
+        "blob": null
+      },
+      {
+        "path": "harness/evidence/final-runtime-review.json",
+        "mode": "100644",
+        "oid": "04b19598c921433d717caf3e8e4bc158fe54ee66",
+        "blob": null
+      },
+      {
+        "path": "harness/evidence/planning-approval.json",
+        "mode": "100644",
+        "oid": "55cdb495e8c2e5b49a0410a94f64906c28989cb4",
+        "blob": null
+      },
+      {
+        "path": "harness/evidence/runtime-acceptance.json",
+        "mode": "100644",
+        "oid": "7786cb6b6fb13afaeb32e25f139de9d9ed21ae5d",
+        "blob": null
+      },
+      {
+        "path": "harness/evidence/runtime-token-import.json",
+        "mode": "100644",
+        "oid": "4e64be14bcd00fe85a61865223cb764712b6a864",
+        "blob": null
+      },
+      {
+        "path": "harness/evidence/ui-approved-inputs.json",
+        "mode": "100644",
+        "oid": "09e6ab210cf0504b81c5c7f84bc2d4974b4fd37c",
+        "blob": null
+      },
+      {
+        "path": "harness/evidence/ui-approved-recovery.json",
+        "mode": "100644",
+        "oid": "2bd39aa54fd8d733a665c76a3a90d2e157534a8a",
+        "blob": null
+      },
+      {
+        "path": "harness/evidence/ui-before-apply-app.json",
+        "mode": "100644",
+        "oid": "d75afaafe2dd999690e0e2c880e22cbb9dbb25f0",
+        "blob": null
+      },
+      {
+        "path": "harness/evidence/ui-before-archive.json",
+        "mode": "100644",
+        "oid": "2718661cd9f20b815ac05d9ad3e3d5610915defb",
+        "blob": null
+      },
+      {
+        "path": "harness/evidence/ui-before-propose.json",
+        "mode": "100644",
+        "oid": "6a7703a9c2c013be179e2d0f0d91b0e13f8a1f90",
+        "blob": null
+      },
+      {
+        "path": "harness/evidence/ui-missing-token-recovery.json",
+        "mode": "100644",
+        "oid": "ba4677ceca1735db561c67fa898de0caae7275da",
+        "blob": null
+      },
+      {
+        "path": "harness/evidence/ui-trial-approval/README.md",
+        "mode": "100644",
+        "oid": "a80aa7e65c64bafee5fdfa473b20cf0c5d1c5ba6",
+        "blob": null
+      },
+      {
+        "path": "harness/evidence/ui-trial-approval/calculator-ui-spec.md",
+        "mode": "100644",
+        "oid": "f311ba653dfa2522ff5749522609ecbedbad87d5",
+        "blob": null
+      },
+      {
+        "path": "harness/evidence/ui-trial-approval/proposed-tiny.patch",
+        "mode": "100644",
+        "oid": "d74e640cd25bbd956d30c9dd0822d73e5f1b943d",
+        "blob": null
+      },
+      {
+        "path": "harness/evidence/ui-trial-approval/scope.md",
+        "mode": "100644",
+        "oid": "efd8fae49528164d9cad12d4627001cd35754614",
+        "blob": null
+      },
+      {
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "mode": "100644",
+        "oid": "3f5fb2b88ff64137f194e5ae5956686faed8e4e7",
+        "blob": null
+      },
+      {
+        "path": "harness/evidence/ui-trial-approval/user-decision.json",
+        "mode": "100644",
+        "oid": "fbbeba4c91d6da38745753e3bb008bbf53f645f5",
+        "blob": null
+      },
+      {
+        "path": "harness/openspec-profile.json",
+        "mode": "100644",
+        "oid": "f4aa829ea5ff98dfb1223133166a8a27600c905e",
+        "blob": null
+      },
+      {
+        "path": "harness/openspec-version",
+        "mode": "100644",
+        "oid": "0eed1a29efd64781078b23d253073644e9234b14",
+        "blob": null
+      },
+      {
+        "path": "harness/tasks/calculator-token-return.md",
+        "mode": "100644",
+        "oid": "3264fbb4fc2d704b9abd99cfa90f2aa85bffe36e",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/README.md",
+        "mode": "100644",
+        "oid": "524a5d53d24fe58d77933fa32dfd2f0b292edf02",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/approve.yaml.example",
+        "mode": "100644",
+        "oid": "025d33cfe17456c319da27c4cde66534e2021662",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/authority.md",
+        "mode": "100644",
+        "oid": "503eaa414e1c365798b65e4b9e0e8c1af38871c5",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/bindings.yaml.example",
+        "mode": "100644",
+        "oid": "d7e593e3a3fc419f8d5c8ee5105e1f4f6c0ed0f4",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/brief.md",
+        "mode": "100644",
+        "oid": "31228fcf3412952aea1fd651aa29526fcccf2318",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/check.py",
+        "mode": "100644",
+        "oid": "075211fb3fed137641ea4879ee17576ded7edb22",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/closure.yaml.example",
+        "mode": "100644",
+        "oid": "b177364b285b69e21b87808cf6eaffcf4ec2a59b",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/config/project.yaml",
+        "mode": "100644",
+        "oid": "5e5b6bb7d0e00d935c7b51ece268ce3ebb5f21e8",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/config/requirements.lock",
+        "mode": "100644",
+        "oid": "36c4bc0f6567c5ff0f04c9eb8b6e33ed021c6e6a",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/config/rules.lock.json",
+        "mode": "100644",
+        "oid": "2eb7519310e0001fb836150b1e3d0a081319d61c",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/current-check.md",
+        "mode": "100644",
+        "oid": "1db3c18fbc9c04a8698fa9ed06822de52580cd64",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/data-contract.md",
+        "mode": "100644",
+        "oid": "4b65b7375fa2c8088bc1ce204921dff86aff31f1",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/handoff.md",
+        "mode": "100644",
+        "oid": "cd9df4ced41f0df2b4ab1737c0661424fc32dac7",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/__init__.py",
+        "mode": "100644",
+        "oid": "6ad55c9d14391e9c700d77d4d7047d2c314407d1",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/api.py",
+        "mode": "100644",
+        "oid": "73e624ac783806ebec89c7d54d46e2b85ccd4e7d",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/errors.py",
+        "mode": "100644",
+        "oid": "58a84825e9740d9ac0d4e7757566dba48371972e",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/history.py",
+        "mode": "100644",
+        "oid": "5d411158c3c8d55e074ec35e48ce21514e7f3cdb",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/media.py",
+        "mode": "100644",
+        "oid": "1a152e8ba87c4db7fa1e6bedadb605d181fc2d69",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/models.py",
+        "mode": "100644",
+        "oid": "7e356dcc277c8a097f6ba72e4b5e2f6f6eae77d7",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/objects.py",
+        "mode": "100644",
+        "oid": "3fa62332a61a565e0419098906d7731715e3757f",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/observation.py",
+        "mode": "100644",
+        "oid": "8547c92118e53a4146f7f9ccc90323c79fb70269",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/runtime.py",
+        "mode": "100644",
+        "oid": "d624524ac8e0de84b2e715c46853895a92e39293",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/validation.py",
+        "mode": "100644",
+        "oid": "ae921a76c540de27c2957d30245e6528d4c2e7d9",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/manifest.yaml.example",
+        "mode": "100644",
+        "oid": "43d5ae186dfbda7ad37233366c2e5d1c8d63b48a",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/manual-checklist.md",
+        "mode": "100644",
+        "oid": "dc21cdc9be505fde75465143479c5fdc95e63f52",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/no-requirements.md",
+        "mode": "100644",
+        "oid": "080b87c4986680d6880e9c6e4faa9615af105fd2",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/offline-check.md",
+        "mode": "100644",
+        "oid": "e582c9a19969642ec58474b08beb5ea71a8a61fc",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/policy.yaml.example",
+        "mode": "100644",
+        "oid": "6cb0ab93c3c40ca4de592e5761aa6fa243330467",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/requirements.md",
+        "mode": "100644",
+        "oid": "30d9049831e1985f3d9d4819f971c6a6ea34f4e3",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/schemas/ui.schema.json",
+        "mode": "100644",
+        "oid": "0a8da2d072baf3624a17459777a5a6fb14a16a9e",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/snapshot.yaml.example",
+        "mode": "100644",
+        "oid": "352380fbc6a43aa51c2d09f57ab4e882ecef03c7",
+        "blob": null
+      },
+      {
+        "path": "harness/ui-design/ui-design-check",
+        "mode": "100644",
+        "oid": "62ed9c60de0ed1faeead73dcdebe6cecdd8e5b0a",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/README.md",
+        "mode": "100644",
+        "oid": "f1f5e4e8f7097d2e1862d263842d7d047f430f8f",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/ci.py",
+        "mode": "100644",
+        "oid": "ca926e0e9a94486d6f7b6d67694562a5f92ff7d5",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/config/doorstop.yml",
+        "mode": "100644",
+        "oid": "9a1e91d18c57bb540685abb64bd3d4889d7442b4",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/config/project.yaml",
+        "mode": "100644",
+        "oid": "7999793d1a0d2c8b14c4770a3a2d28cbe1dcd973",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/config/requirements.lock",
+        "mode": "100644",
+        "oid": "d30801bdc6eb062c2b6f83f0d7073fc2a20d11d2",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/config/runtime.json",
+        "mode": "100644",
+        "oid": "f529941ba3e7a5d2eb1eac99c50da24cc03d14d6",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/guidance/README.md",
+        "mode": "100644",
+        "oid": "9c0c2bc235e4be331695819cf6e4c92dc4d38c0e",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/guidance/requirement-change.md",
+        "mode": "100644",
+        "oid": "deb733ea784d9199bcc03d60ac8736c8acde040f",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/guidance/s0-intake.md",
+        "mode": "100644",
+        "oid": "0467872859b916d481cca0e882b2a52fcf97f8b3",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/guidance/s1-challenge.md",
+        "mode": "100644",
+        "oid": "f1eb0ed326808572dcf8e23873d4d4215ca58825",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/guidance/s2-requirements.md",
+        "mode": "100644",
+        "oid": "7f146ef3d930d9f3f424baade365670c54bab3e2",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/guidance/s3-engineering.md",
+        "mode": "100644",
+        "oid": "289fd5a2e5f143f7a106ee62bde80118057dd1f6",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/guidance/s4-baseline.md",
+        "mode": "100644",
+        "oid": "0bd3d4f2ac2a585afd4a7568b124fc12c5fc39cf",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/guidance/s5-dispatch.md",
+        "mode": "100644",
+        "oid": "4cf110ef7d5293ed4a8ded2942ced557e0845097",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/guidance/s5-planning.md",
+        "mode": "100644",
+        "oid": "cdc4d7e211d8ee32c04f7b8ec645d339a6e36010",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/guidance/s6-delivery.md",
+        "mode": "100644",
+        "oid": "65291bb5efa64bf8563cc4a5cb333e35e6dbaf59",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/guidance/s7-completion.md",
+        "mode": "100644",
+        "oid": "4377dd4b31abc9af48e2755c7f263feeb942c4b8",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/guidance/version-iteration.md",
+        "mode": "100644",
+        "oid": "e096ca9bcc373914c0146be1cf16d01f597240c0",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/__init__.py",
+        "mode": "100644",
+        "oid": "8676401e13ea588cbd12f1b28638ef5cf2ef2127",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/archive.py",
+        "mode": "100644",
+        "oid": "3144da78aa7260f2e66b7d9fd5a17558298f2a3c",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/assets.py",
+        "mode": "100644",
+        "oid": "c8ab41a25f64e9d2b4c2445b62d5c170801529c9",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/availability.py",
+        "mode": "100644",
+        "oid": "405921efbf65ede72e5e6295eb00aa02310cc3ba",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/backend.py",
+        "mode": "100644",
+        "oid": "72d14b880b38fc94d6d48ec72f8050f61fe44ea0",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/baselines.py",
+        "mode": "100644",
+        "oid": "c8737a1c114e7b98205ea181f04ec2ac1cac2adb",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/cancellation.py",
+        "mode": "100644",
+        "oid": "e53a9d3ea89f112beb2b84721e0702b17ae1572c",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/change_assets.py",
+        "mode": "100644",
+        "oid": "307b175982909c91fddcd6350b3af681de488449",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/cli.py",
+        "mode": "100644",
+        "oid": "29317fe1760e9f7648a3daf0fbd1a92c6a226abe",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/completion.py",
+        "mode": "100644",
+        "oid": "9e03e375674a0bee3e9e7fba229c9ea57073c1f5",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/context.py",
+        "mode": "100644",
+        "oid": "d35ed481f2310a6e19a5313f11486a397357eaff",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/control.py",
+        "mode": "100644",
+        "oid": "2bbd49c896c02872f39d722fd94bdf546ad426f0",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/control_delivery.py",
+        "mode": "100644",
+        "oid": "09867e75ce05577466d9d41aa6f0278716b44bfe",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/control_holds.py",
+        "mode": "100644",
+        "oid": "2e8d4b2afc420951c4e1f9af9efae6005cb207df",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/core.py",
+        "mode": "100644",
+        "oid": "b4138d42e42abb39ecf65c5d4eb5af58b0f37ddb",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/delivery.py",
+        "mode": "100644",
+        "oid": "b95531faa11671fe5337fbd5c9252a110557798c",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/delivery_trace.py",
+        "mode": "100644",
+        "oid": "7a0aa5c9b4ba99a23e33174d02d8e3f74ac2b3ce",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/dispatch.py",
+        "mode": "100644",
+        "oid": "766f347346ebaa378247e2f961b803d07b1838de",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/engineering_view.py",
+        "mode": "100644",
+        "oid": "9eb1270ba22ea0d8228cdbd205ef092bea2ad58e",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/errors.py",
+        "mode": "100644",
+        "oid": "a0c19c685346707a4f1dabe9c28de203c16cc30b",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/execution.py",
+        "mode": "100644",
+        "oid": "778c8b9cd822c89f4c055bfa90320a19c2928432",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/feasibility.py",
+        "mode": "100644",
+        "oid": "32dd50436db279b8b589c4cfbb78705ace679d24",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/final_checks.py",
+        "mode": "100644",
+        "oid": "91117a080fc64dbf190e88ed040fbbadb775053b",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/gitstore.py",
+        "mode": "100644",
+        "oid": "3bb9d49f1d4af0a689e2941073a4514bc0606d6e",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/handoff.py",
+        "mode": "100644",
+        "oid": "fbcd186ed45892d57cb0119f4dca7d5b76c75f56",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/impact.py",
+        "mode": "100644",
+        "oid": "05922dd5f5f3c4feaf9c3c4482db9d3d991afc54",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/integrated.py",
+        "mode": "100644",
+        "oid": "c4467845ecdd1a75207585945833cb2aae48a6a2",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/integrated_receipt.py",
+        "mode": "100644",
+        "oid": "634563c5fd519ab494c72ec52080a3a0b8d107a0",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/integration.py",
+        "mode": "100644",
+        "oid": "c590425a792042b0c580f8b28c80db0a57122179",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/markdown_source.py",
+        "mode": "100644",
+        "oid": "afb6db8a6bd01c1216897ab811e5ed27d93fe018",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/metrics.py",
+        "mode": "100644",
+        "oid": "16998caeb1443355ca0d753572326b3d668444dd",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/models.py",
+        "mode": "100644",
+        "oid": "7bcf01a30433120391e0a029c3ff70e1c52c490e",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/observations.py",
+        "mode": "100644",
+        "oid": "771e521499d437372cf3213b2c82f021d1636906",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/openspec_artifacts.py",
+        "mode": "100644",
+        "oid": "c05f53d227a196427b6bb2e9ee910c59caa7ed23",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/planning.py",
+        "mode": "100644",
+        "oid": "b554e8c0ce68bec0095a9887c10affd463c5516a",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/planning_applicability.py",
+        "mode": "100644",
+        "oid": "f924157a075b8b7a1db9da18f1cf950127fb9e27",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/planning_trace.py",
+        "mode": "100644",
+        "oid": "0c15e7d3f0197a1692b2c3cc7ceec8fb9fc1c241",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/prearchive.py",
+        "mode": "100644",
+        "oid": "3afda80fb3e834d7dc6d1959074f084e8c7ff91f",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/premerge.py",
+        "mode": "100644",
+        "oid": "0c52c5d53bf1398d82e6cec3a019252b95c7447d",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/questions.py",
+        "mode": "100644",
+        "oid": "7998c14a9404908451da7e06be0fe9d8bf6d46a2",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/readiness.py",
+        "mode": "100644",
+        "oid": "d6078c21a18b7fc7ee6c7efb8960f0766df57e9f",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/relations.py",
+        "mode": "100644",
+        "oid": "592faf41719ac875a0bb31290bba4d239b989557",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/rendering.py",
+        "mode": "100644",
+        "oid": "e2815947d2335241cfe8b2394940e63dd9d00377",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/report.py",
+        "mode": "100644",
+        "oid": "664f97d785f305e7dc8ffe0933fdef368a4eead1",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/requirement_changes.py",
+        "mode": "100644",
+        "oid": "100190f6500ab3a00d7edc9fcd78a2ad16c0c9a7",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/requirements.py",
+        "mode": "100644",
+        "oid": "9924df5f5549913c58916bb0a00ceed7b52d6c54",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/review_scope.py",
+        "mode": "100644",
+        "oid": "4971d2115b386ce5463fd65774ca50f3c41da7b1",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/reviews.py",
+        "mode": "100644",
+        "oid": "6a9ecaa7b18d828271eadae9132b604311169ebe",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/runtime.py",
+        "mode": "100644",
+        "oid": "68bbb4286fcc1d0c85850fd9d4cbbe62a07bfc62",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/scope_delivery.py",
+        "mode": "100644",
+        "oid": "9b910d6cf9a380a31126f7e2bf210c37d74269b2",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/sources.py",
+        "mode": "100644",
+        "oid": "b2f4a5c36cbe1abc00e9e2b20db71f4b36bb7e6e",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/tiny_delivery.py",
+        "mode": "100644",
+        "oid": "e2c9af419582bbfc1f4be1679da56a2489873a8a",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/ui_completion.py",
+        "mode": "100644",
+        "oid": "d35dd5a45052405b2fd1528dd2585dc2c9c7dd9b",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/ui_integration.py",
+        "mode": "100644",
+        "oid": "ce95b8eeab5d97535b7c333718e74850e664e83f",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/ui_metadata.py",
+        "mode": "100644",
+        "oid": "3dfa0d519a44fb7717ac8edad6cc0b0c06d437d8",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/ui_receipts.py",
+        "mode": "100644",
+        "oid": "1fdc492ba4946717114dfd1b9a0594eab4b2a6dc",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/verification.py",
+        "mode": "100644",
+        "oid": "13f0439b9822d66425e5967debf998cf1f510989",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/lib/worktree.py",
+        "mode": "100644",
+        "oid": "c81dca23759b8bdc0fad215f588f44c21d3500c3",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/requirements-check",
+        "mode": "100644",
+        "oid": "f5fd1391433ff0fc96f95ed8acb7487d6518a8fc",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/review.py",
+        "mode": "100644",
+        "oid": "f9fb9f448f7b5f9a890b2cd0be643abc503e193d",
+        "blob": null
+      },
+      {
+        "path": "harness/version-requirements/schemas/vr.schema.json",
+        "mode": "100644",
+        "oid": "e1355a0c6d3a98416d55911774974ac3a3dccca6",
+        "blob": null
+      },
+      {
+        "path": "openspec/changes/archive/.gitkeep",
+        "mode": "100644",
+        "oid": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "blob": null
+      },
+      {
+        "path": "openspec/changes/archive/2026-09-30-adopt-calculator-ui-tokens/.openspec.yaml",
+        "mode": "100644",
+        "oid": "c8b925d18137801b04ed8424259348b0e9c14c5f",
+        "blob": null
+      },
+      {
+        "path": "openspec/changes/archive/2026-09-30-adopt-calculator-ui-tokens/design.md",
+        "mode": "100644",
+        "oid": "ee9bbcb621354dbddedcec250d069603972f1faf",
+        "blob": null
+      },
+      {
+        "path": "openspec/changes/archive/2026-09-30-adopt-calculator-ui-tokens/proposal.md",
+        "mode": "100644",
+        "oid": "b4f1e1b13462d45ed17cfc7f283e646ec976bbbb",
+        "blob": null
+      },
+      {
+        "path": "openspec/changes/archive/2026-09-30-adopt-calculator-ui-tokens/tasks.md",
+        "mode": "100644",
+        "oid": "3c1aa5c752b98b51ac8b9af5785073cec3a19138",
+        "blob": null
+      },
+      {
+        "path": "openspec/config.yaml",
+        "mode": "100644",
+        "oid": "23ccb0a1780863cc77832c6a1341e69572587449",
+        "blob": null
+      },
+      {
+        "path": "openspec/specs/.gitkeep",
+        "mode": "100644",
+        "oid": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "blob": null
+      },
+      {
+        "path": "openspec/specs/calculator-ui/spec.md",
+        "mode": "100644",
+        "oid": "f311ba653dfa2522ff5749522609ecbedbad87d5",
+        "blob": null
+      },
+      {
+        "path": "requirements/items/.doorstop.yml",
+        "mode": "100644",
+        "oid": "9a1e91d18c57bb540685abb64bd3d4889d7442b4",
+        "blob": null
+      },
+      {
+        "path": "requirements/items/R-001.yml",
+        "mode": "100644",
+        "oid": "aae72c47250d3d91663d16ae8f5e22ff530f914c",
+        "blob": null
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/baselines/BL-v0.1.0-harness-ui-001.yaml",
+        "mode": "100644",
+        "oid": "bb75df7294ee5c288e48437d6a3478e31fcee224",
+        "blob": null
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/delivery-map.yaml",
+        "mode": "100644",
+        "oid": "7ba15c6be2c24bf432b4e70a0140307f31195859",
+        "blob": null
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/reviews/batches/B-001.yaml",
+        "mode": "100644",
+        "oid": "79cebedcedeae6b14419e824fc249ac779d4e948",
+        "blob": null
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/reviews/engineering.yaml",
+        "mode": "100644",
+        "oid": "111655fb0ff55116aa5a1c2862ba1cddd7b94c43",
+        "blob": null
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/reviews/global.yaml",
+        "mode": "100644",
+        "oid": "54f31548ec98a5d77cbb15111f1d915ef7fdaff0",
+        "blob": null
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/reviews/intake.yaml",
+        "mode": "100644",
+        "oid": "077e2df3107367b7948890e4b884f066854dead1",
+        "blob": null
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/reviews/publication-observation.json",
+        "mode": "100644",
+        "oid": "661edad53b89b85ad9250b6f505606d076193e9c",
+        "blob": null
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/scope.yaml",
+        "mode": "100644",
+        "oid": "cae3bbbe7fa68696773ef2f4cc65c94846bfcec2",
+        "blob": null
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/source/intake-001/scope.md",
+        "mode": "100644",
+        "oid": "efd8fae49528164d9cad12d4627001cd35754614",
+        "blob": null
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/source/manifest.yaml",
+        "mode": "100644",
+        "oid": "591e9b889654350310fa3367c40175aeb396d8ef",
+        "blob": null
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/source/units.yaml",
+        "mode": "100644",
+        "oid": "abd9fb287f4dd8ea9dc2ca4a4dcf5cca67196939",
+        "blob": null
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/calculator-token-return.json",
+        "mode": "100644",
+        "oid": "85d6154f312acb19dcf6849d0bb7c6b8d8614133",
+        "blob": null
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/ui-inputs-001.json",
+        "mode": "100644",
+        "oid": "1584112147c731a7ccee1a9828e3a1bd79f905fe",
+        "blob": null
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/ui-bindings.yaml",
+        "mode": "100644",
+        "oid": "2a32a1c6cfff7b074b32b3638d4031fac350d6fb",
+        "blob": null
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/verification-plan.yaml",
+        "mode": "100644",
+        "oid": "51878391bf182ad5da939606a687abb524febc08",
+        "blob": null
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/version.yaml",
+        "mode": "100644",
+        "oid": "ffa483e5fef60d94ffbaeed2dc36384659ae281a",
+        "blob": null
+      },
+      {
+        "path": "scripts/adapt-openspec-workflows.mjs",
+        "mode": "100644",
+        "oid": "d9395b1e3a42ec72dc9301ba6eba1cd4831d09a8",
+        "blob": null
+      },
+      {
+        "path": "scripts/openspec.sh",
+        "mode": "100644",
+        "oid": "b020b94df6618d5472d7e9948036ea015fecc129",
+        "blob": null
+      },
+      {
+        "path": "scripts/requirements-check",
+        "mode": "100644",
+        "oid": "f5fd1391433ff0fc96f95ed8acb7487d6518a8fc",
+        "blob": null
+      },
+      {
+        "path": "scripts/ui-design-check",
+        "mode": "100644",
+        "oid": "62ed9c60de0ed1faeead73dcdebe6cecdd8e5b0a",
+        "blob": null
+      },
+      {
+        "path": "third_party/superpowers-lite/codex/LICENSE",
+        "mode": "100644",
+        "oid": "abf0390320aa14406af7a520b9b0739fdda9bf08",
+        "blob": null
+      },
+      {
+        "path": "third_party/superpowers-lite/codex/origin.json",
+        "mode": "100644",
+        "oid": "d5d7917d03352b4ad5658d1a73703249d89859c3",
+        "blob": null
+      }
+    ],
+    "files": [
+      {
+        "path": ".agents/skills/.openspec-target",
+        "mode": "100644",
+        "sha256": "243b0dc9b847e66c440dca985e10fe0ce9e29c379b018ddd5747ba8948f84cc8"
+      },
+      {
+        "path": ".agents/skills/openspec-apply-change/SKILL.md",
+        "mode": "100644",
+        "sha256": "ae0905de507b9c0dfcd65d97b124f73ba8a9c5bcada16808f3ddfe3dab201152"
+      },
+      {
+        "path": ".agents/skills/openspec-archive-change/SKILL.md",
+        "mode": "100644",
+        "sha256": "581ae5679612e832e93170a727216e714fbed17ba947848f806cacceb3228963"
+      },
+      {
+        "path": ".agents/skills/openspec-explore/SKILL.md",
+        "mode": "100644",
+        "sha256": "9c956b64199460996c18a667f4848b0e8d9e39ff8634334fecaa111b79d79832"
+      },
+      {
+        "path": ".agents/skills/openspec-explore/agents/openai.yaml",
+        "mode": "100644",
+        "sha256": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94"
+      },
+      {
+        "path": ".agents/skills/openspec-propose/SKILL.md",
+        "mode": "100644",
+        "sha256": "5a1997695e482429e2f2a23301cd18cc028b9f5bdbab77d8ed262912316e3e81"
+      },
+      {
+        "path": ".agents/skills/openspec-sync-specs/SKILL.md",
+        "mode": "100644",
+        "sha256": "e8d926b302b87319a25ca65842cc1ed971412891f79ae197702c6857708ae385"
+      },
+      {
+        "path": ".agents/skills/openspec-update-change/SKILL.md",
+        "mode": "100644",
+        "sha256": "823f77d2cd927c2a89c1936d20765ab5157dba184d788a1513ddd76c227a7399"
+      },
+      {
+        "path": ".agents/skills/openspec-verify-change/SKILL.md",
+        "mode": "100644",
+        "sha256": "dbecf993b659eb0b5da271bac409637bee5ac267619f9b44de771317971091ac"
+      },
+      {
+        "path": ".agents/skills/openspec-verify-change/agents/openai.yaml",
+        "mode": "100644",
+        "sha256": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94"
+      },
+      {
+        "path": ".agents/skills/receiving-code-review/SKILL.md",
+        "mode": "100644",
+        "sha256": "0b1872b3dc2eb6a173f8a6ecc7b6e882a59785a6d7ba2987ae2702ff868d06a2"
+      },
+      {
+        "path": ".agents/skills/receiving-code-review/agents/openai.yaml",
+        "mode": "100644",
+        "sha256": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94"
+      },
+      {
+        "path": ".agents/skills/systematic-debugging/SKILL.md",
+        "mode": "100644",
+        "sha256": "ba25e02685f8c16266bfb22052364a5b72d3d73f05a1cb1770e20b0335a78fb9"
+      },
+      {
+        "path": ".agents/skills/systematic-debugging/agents/openai.yaml",
+        "mode": "100644",
+        "sha256": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94"
+      },
+      {
+        "path": ".agents/skills/systematic-debugging/condition-based-waiting-example.ts",
+        "mode": "100644",
+        "sha256": "40ae5ebe497fdf310200e43fe986552546d0a22837c0d39e855db1cfd33eb88e"
+      },
+      {
+        "path": ".agents/skills/systematic-debugging/condition-based-waiting.md",
+        "mode": "100644",
+        "sha256": "e89fec8400d6cd50f43407cec9fab50976ba4d55d0ec2eb51c0bd68036b54c26"
+      },
+      {
+        "path": ".agents/skills/systematic-debugging/defense-in-depth.md",
+        "mode": "100644",
+        "sha256": "1e175fb86fc357e58c6aebf5441e481e1b7868b4380c0456b63a17eefbd18ba7"
+      },
+      {
+        "path": ".agents/skills/systematic-debugging/root-cause-tracing.md",
+        "mode": "100644",
+        "sha256": "0dbc465954b924c1231fa383855bee543efef1a22750ede12edc20bf2fab69c7"
+      },
+      {
+        "path": ".agents/skills/test-driven-development/SKILL.md",
+        "mode": "100644",
+        "sha256": "e36386e6cb2a10369b3e06913db72cc70e5c5b1e1e8b73b111b1c34c8652cebc"
+      },
+      {
+        "path": ".agents/skills/test-driven-development/agents/openai.yaml",
+        "mode": "100644",
+        "sha256": "8619a54e8c098122a7f3881394f84ca89b684366e848233a29ad18b6ec363935"
+      },
+      {
+        "path": ".agents/skills/test-driven-development/writing-good-tests.md",
+        "mode": "100644",
+        "sha256": "5fc653fefcf38483c1da416541cbc6f3844606355c19ec73ddc934a6b34454bc"
+      },
+      {
+        "path": ".agents/skills/verification-before-completion/SKILL.md",
+        "mode": "100644",
+        "sha256": "b1cdcec51b537376ef69c44847a161ef62ccb4c779705867d581467084169655"
+      },
+      {
+        "path": ".agents/skills/verification-before-completion/agents/openai.yaml",
+        "mode": "100644",
+        "sha256": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94"
+      },
+      {
+        "path": ".gitignore",
+        "mode": "100644",
+        "sha256": "a187c89347d09954f25eead3522fba6a9c2e6b876406729453b3e79084a425a0"
+      },
+      {
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "sha256": "f0bf18d55eee14ef88e9cbbaaa468f221773c8ee7d696e43cd21ae89cc92db4d"
+      },
+      {
+        "path": "CalculatorSwiftUI.xcodeproj/project.pbxproj",
+        "mode": "100644",
+        "sha256": "b14ffcbb73afc80288fc7b7eebe0279456f0a7b2c4d5d415ee0f7501a82e58c6"
+      },
+      {
+        "path": "CalculatorSwiftUI.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+        "mode": "100644",
+        "sha256": "5f1e4220053ebe6c73e2f69d43950ddbb644d4ff7ec39f69fb2e3b33d62c0f80"
+      },
+      {
+        "path": "CalculatorSwiftUI.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+        "mode": "100644",
+        "sha256": "dfa0f9bb85b95ccba9c6811adadf8cb407fb5d52088e89db83ebc308ec448542"
+      },
+      {
+        "path": "CalculatorSwiftUI.xcodeproj/xcshareddata/xcschemes/CalculatorSwiftUI.xcscheme",
+        "mode": "100644",
+        "sha256": "d58e8335e415f1874f4c3a066399dd611141cc5419cdd4b20336435007649975"
+      },
+      {
+        "path": "CalculatorSwiftUI/Application/AppDelegate.swift",
+        "mode": "100644",
+        "sha256": "374973f55caa3dc2b4920a70106e7c740b532483e090d16992b5138f630f4649"
+      },
+      {
+        "path": "CalculatorSwiftUI/Application/Info.plist",
+        "mode": "100644",
+        "sha256": "118af696872f039fa293e1a67b34e5a7d3117d9b137eecd8ba17d6cae3425d20"
+      },
+      {
+        "path": "CalculatorSwiftUI/Application/SceneDelegate.swift",
+        "mode": "100644",
+        "sha256": "a0b7ee060bfed07c63c864d0f1ab65a9b1a4b63145b1f47824ff41ea340a0654"
+      },
+      {
+        "path": "CalculatorSwiftUI/Assets.xcassets/AppIcon.appiconset/Contents.json",
+        "mode": "100644",
+        "sha256": "6d2789aa71ac42a5c775306b46c45609c9a627da135ec468f519544c509ffa19"
+      },
+      {
+        "path": "CalculatorSwiftUI/Assets.xcassets/Contents.json",
+        "mode": "100644",
+        "sha256": "972ec1fd42325872438eb085ac29e94f51c10788ec18ec5549439950866c541d"
+      },
+      {
+        "path": "CalculatorSwiftUI/Base.lproj/LaunchScreen.storyboard",
+        "mode": "100644",
+        "sha256": "1c958c5c65f324959b05c02f170004f3f5aad29e9ca0c2545767efd5b6b15616"
+      },
+      {
+        "path": "CalculatorSwiftUI/CalculatorTokens.swift",
+        "mode": "100644",
+        "sha256": "94c03f77d47e17be550874721242a94297e1bf4ca0b220dc485b2d0e60ac4387"
+      },
+      {
+        "path": "CalculatorSwiftUI/Preview Content/Preview Assets.xcassets/Contents.json",
+        "mode": "100644",
+        "sha256": "972ec1fd42325872438eb085ac29e94f51c10788ec18ec5549439950866c541d"
+      },
+      {
+        "path": "CalculatorSwiftUI/Views/ActionView.swift",
+        "mode": "100644",
+        "sha256": "5a0701a4d272555c6fc4ba9fafae5067fd5f7ab7858eb553ad0cf86616f5b1b8"
+      },
+      {
+        "path": "CalculatorSwiftUI/Views/ContentView.swift",
+        "mode": "100644",
+        "sha256": "db7d90e2c4a0d82209cde1e68fe2827911c32a70e3a72329b8bfb776e867e24a"
+      },
+      {
+        "path": "CalculatorSwiftUI/Views/FunctionView.swift",
+        "mode": "100644",
+        "sha256": "4e9adb4ecbf2c8338f19746051110fcc51715e045b1ed39e887e7cb2efc72082"
+      },
+      {
+        "path": "CalculatorSwiftUI/Views/NumberView.swift",
+        "mode": "100644",
+        "sha256": "289f3c7ce9573f94bf9746818ace0798f33664ef5c7a6066e1dc7e7675ecbc7c"
+      },
+      {
+        "path": "CalculatorSwiftUI/tokens.json",
+        "mode": "100644",
+        "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+      },
+      {
+        "path": "CalculatorTests/CalculationRegressionTests.swift",
+        "mode": "100644",
+        "sha256": "902d403d8a38326d5ffbfb8bd9edf14bfd1f124f9c99a3972e17b2c74400f990"
+      },
+      {
+        "path": "CalculatorTests/CalculatorTokensTests.swift",
+        "mode": "100644",
+        "sha256": "6ec211e396679bef9afa2cd09770c317cee90ddc042ef5ec769a5963b3add70e"
+      },
+      {
+        "path": "CalculatorTests/approved-tokens.json",
+        "mode": "100644",
+        "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+      },
+      {
+        "path": "CalculatorUITests/CalculatorUITests.swift",
+        "mode": "100644",
+        "sha256": "7c944906530138643bf96c907205f660de0bf9a5a670b410874fe57d6609e734"
+      },
+      {
+        "path": "CalculatorUITests/app-expected.json",
+        "mode": "100644",
+        "sha256": "8d705bffa2f4684f3e42f55dfa47a25eeed88e43730d31a83a651eecb514e92c"
+      },
+      {
+        "path": "LICENSE",
+        "mode": "100644",
+        "sha256": "68e6220ac2a1aba3fbfb1f8397165ea4f84a0e29ae2793df29b51b8b85560bb0"
+      },
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "sha256": "15890f5a337a9b5eede65e7e0f30e26b9ae457430e20a4567f57d8bef3e0243f"
+      },
+      {
+        "path": "harness/evidence/final-project-checks.json",
+        "mode": "100644",
+        "sha256": "f038ec5cd61a019c14bb34ff679e7ea15fdaf5f830dc6f36427a57f69ca88764"
+      },
+      {
+        "path": "harness/evidence/final-runtime-review.json",
+        "mode": "100644",
+        "sha256": "405851e383d725e5ae3365127574c7fd31c228edf044fa7ae29c37968bd0a740"
+      },
+      {
+        "path": "harness/evidence/planning-approval.json",
+        "mode": "100644",
+        "sha256": "61b13da305ca568db06898f11f4a454196452eef87121f426ce61af1c91e811f"
+      },
+      {
+        "path": "harness/evidence/runtime-acceptance.json",
+        "mode": "100644",
+        "sha256": "626689303e46619ffe8834428dc1ec79449c37e885c9a46dea6b39f254bbc782"
+      },
+      {
+        "path": "harness/evidence/runtime-token-import.json",
+        "mode": "100644",
+        "sha256": "e14d5c76db6c9ac8baf41b678f9ac649525b868d2d2e854107ef9c669d901b7a"
+      },
+      {
+        "path": "harness/evidence/ui-approved-inputs.json",
+        "mode": "100644",
+        "sha256": "d4b8d8b3ab37988ccbec18128571d3f301ac9749c713066e4afe3e41e387b66a"
+      },
+      {
+        "path": "harness/evidence/ui-approved-recovery.json",
+        "mode": "100644",
+        "sha256": "dd5390c2b350b5273fe5f8d1b84786f43fcf339029f7b3e4273ebaa337380b4c"
+      },
+      {
+        "path": "harness/evidence/ui-before-apply-app.json",
+        "mode": "100644",
+        "sha256": "1b65e9f5a5639361ca31b90ac8cfe84cd20bf3659d6da6ff74b259b22f797d86"
+      },
+      {
+        "path": "harness/evidence/ui-before-archive.json",
+        "mode": "100644",
+        "sha256": "31e9cd75369e51a5d1635032557f4e9e801aa35d6aa4a7da6f824855527891c9"
+      },
+      {
+        "path": "harness/evidence/ui-before-propose.json",
+        "mode": "100644",
+        "sha256": "f07697f3d3e7902baa012a9e7d1225df0e7b60d4fa740006774ad7d40b39a70d"
+      },
+      {
+        "path": "harness/evidence/ui-missing-token-recovery.json",
+        "mode": "100644",
+        "sha256": "735098a47ce908345b78845e82e7c16960b6a2e1f109b33585341dfbfe778fb0"
+      },
+      {
+        "path": "harness/evidence/ui-trial-approval/README.md",
+        "mode": "100644",
+        "sha256": "64d161122612dbb9588920c391604a3b84d101c3a14e53e8958e6ae635faf5f1"
+      },
+      {
+        "path": "harness/evidence/ui-trial-approval/calculator-ui-spec.md",
+        "mode": "100644",
+        "sha256": "a99233f4eb2cc0786fb8713e1a6a2cabec4c1913d95167115a4c93484ed48e1c"
+      },
+      {
+        "path": "harness/evidence/ui-trial-approval/proposed-tiny.patch",
+        "mode": "100644",
+        "sha256": "bc939fb44d9cdb7813b7fd2015bf2a6a6422ee8ede50a61851ed2198ddc4eeb1"
+      },
+      {
+        "path": "harness/evidence/ui-trial-approval/scope.md",
+        "mode": "100644",
+        "sha256": "352a5062fa1842b91e1d9dd12673a0985b486fc02b517e5ff8313d6c8cbbe7f2"
+      },
+      {
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "mode": "100644",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      },
+      {
+        "path": "harness/evidence/ui-trial-approval/user-decision.json",
+        "mode": "100644",
+        "sha256": "ca202ef728ea413165ed6564a3e35e01e5bd3af380028f4f98857a3082a0d15c"
+      },
+      {
+        "path": "harness/openspec-profile.json",
+        "mode": "100644",
+        "sha256": "ea033bfc05820b0218a0b4f6c960f4f24799340a707412a26fe4844fa0e57513"
+      },
+      {
+        "path": "harness/openspec-version",
+        "mode": "100644",
+        "sha256": "c92df6bdde330be219d62f48ec6490b01889436f2f59027aab200e74de619168"
+      },
+      {
+        "path": "harness/tasks/calculator-token-return.md",
+        "mode": "100644",
+        "sha256": "9ad64fde14027c9267c33f2aea1b8d3edbbe200b2f1b2e8a85f5e9d8a37ef5aa"
+      },
+      {
+        "path": "harness/ui-design/README.md",
+        "mode": "100644",
+        "sha256": "7d4befe8d26d6bd5336f55c08dda8ccfbfd0d174e574222294ce060490369c22"
+      },
+      {
+        "path": "harness/ui-design/approve.yaml.example",
+        "mode": "100644",
+        "sha256": "e8cba906856a3e8b481fe02c36909530774929a2c65e1a299cd4632c3e12d1be"
+      },
+      {
+        "path": "harness/ui-design/authority.md",
+        "mode": "100644",
+        "sha256": "fc910fc936bcf927a6aa0ad4892819b6c1b8a652e62a92321ef0eb77ad8290b1"
+      },
+      {
+        "path": "harness/ui-design/bindings.yaml.example",
+        "mode": "100644",
+        "sha256": "2af0904c955a199794683b6bfd647146fc4caa7137deb6d2439184beb3a08d4a"
+      },
+      {
+        "path": "harness/ui-design/brief.md",
+        "mode": "100644",
+        "sha256": "a2b5882b8a6a40112a312bd3e4330cf73088bffa935479b8a0cf55ac330c018c"
+      },
+      {
+        "path": "harness/ui-design/check.py",
+        "mode": "100644",
+        "sha256": "dc2787340699f96d4bdf17c47e3daed84b5c4cec3b43f10cd984da19eaa2c16a"
+      },
+      {
+        "path": "harness/ui-design/closure.yaml.example",
+        "mode": "100644",
+        "sha256": "1548c5b7468a4da5ec11e9a832d3fdda6ed301d5cf159af11ab33a88a446483f"
+      },
+      {
+        "path": "harness/ui-design/config/project.yaml",
+        "mode": "100644",
+        "sha256": "96b6bcf1dacd6cc3516c940caee710fdffb30fa2dfae52c519d25c8eee8b6220"
+      },
+      {
+        "path": "harness/ui-design/config/requirements.lock",
+        "mode": "100644",
+        "sha256": "83c0ebd66ba9035a60b625e519782fa68a165d860c466bfba6574eafafaf88b6"
+      },
+      {
+        "path": "harness/ui-design/config/rules.lock.json",
+        "mode": "100644",
+        "sha256": "86f8ede38d0ecc841e590bf08db6462a05916cda044284f0ac0b296dec529fe5"
+      },
+      {
+        "path": "harness/ui-design/current-check.md",
+        "mode": "100644",
+        "sha256": "6757bd3559e0ab9cb8c138a36324f52c6fea3f6ed0433536647652eb7f205e0e"
+      },
+      {
+        "path": "harness/ui-design/data-contract.md",
+        "mode": "100644",
+        "sha256": "388acc1cceea79713c88730044169ceee0b71527e387fd398d79f8e47c0bee8a"
+      },
+      {
+        "path": "harness/ui-design/handoff.md",
+        "mode": "100644",
+        "sha256": "bec6eceb8f72f44195475fb064510f4881977e96f76872cfbb62786ca8a94026"
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/__init__.py",
+        "mode": "100644",
+        "sha256": "c916cd340b0bceb262cf5999324a500bc92609a06a844956195a908a00ee5690"
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/api.py",
+        "mode": "100644",
+        "sha256": "85690a418986f8cee8c749a84e06f4329412da42a0bf1a7a5e6598e342538203"
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/errors.py",
+        "mode": "100644",
+        "sha256": "524a1e80362e7b7187773c46a58aabf9c3897489b4b453a32a1ade8ade1032f6"
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/history.py",
+        "mode": "100644",
+        "sha256": "4a8f97a2ce6f6cec2ae4142e6a18451bb2c0aed6160bc469385b15f6b92ed1f6"
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/media.py",
+        "mode": "100644",
+        "sha256": "51d1c132079a29218a13935768c641468d8a254ebc72c004728ca4d7d09ace63"
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/models.py",
+        "mode": "100644",
+        "sha256": "77af375e459ff28d073521fad7cfa87094db736015c283334d609dba9b018428"
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/objects.py",
+        "mode": "100644",
+        "sha256": "2ce542c26d30dce3dc67655ca640ac478580d9b7fd042b30dd1ae0a7ee2d5c5f"
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/observation.py",
+        "mode": "100644",
+        "sha256": "d035942800e51a5234bf3db3ddfdfbf67c804eaec917c934832666b09d93034d"
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/runtime.py",
+        "mode": "100644",
+        "sha256": "e708817c6e90517ebf2d0de5b30b7a3195eefaf2a7fbb5929471ba92cec74992"
+      },
+      {
+        "path": "harness/ui-design/lib/ui_design/validation.py",
+        "mode": "100644",
+        "sha256": "c14f4905e2f6c5855e869ec1b8c002b038b5f8e8d88841d76a50905464529352"
+      },
+      {
+        "path": "harness/ui-design/manifest.yaml.example",
+        "mode": "100644",
+        "sha256": "ffb94664ae5141b5ca0da731153cf40c95ac62437513a336fb390f47e2443caa"
+      },
+      {
+        "path": "harness/ui-design/manual-checklist.md",
+        "mode": "100644",
+        "sha256": "0ba3ab28081e2ea416e2b88546e866234e3b037a88bc91882a62f36cf27ad2f1"
+      },
+      {
+        "path": "harness/ui-design/no-requirements.md",
+        "mode": "100644",
+        "sha256": "8b8719c3cf825e6f2df49086212172566a88b922df88dcf9829e306ef5e8ab96"
+      },
+      {
+        "path": "harness/ui-design/offline-check.md",
+        "mode": "100644",
+        "sha256": "5074158381b0347be2566e4c41d2f93814964fb2a5466c6348e3a573ebb281dd"
+      },
+      {
+        "path": "harness/ui-design/policy.yaml.example",
+        "mode": "100644",
+        "sha256": "96f65c0d2c5a78861c62181ddc9c0955f06a11b1f15a3f533b2d0c8ef0ee23f8"
+      },
+      {
+        "path": "harness/ui-design/requirements.md",
+        "mode": "100644",
+        "sha256": "93191c80fa8c252ac41928824591d2df080992949e46116d5650bff5391c4df5"
+      },
+      {
+        "path": "harness/ui-design/schemas/ui.schema.json",
+        "mode": "100644",
+        "sha256": "6db5acf79dc36a17689fc30e84657e06dc935f60c15208063b508004a6de550e"
+      },
+      {
+        "path": "harness/ui-design/snapshot.yaml.example",
+        "mode": "100644",
+        "sha256": "829110193eb8dfaebbe6dc077576443d31cb5412af7f71bdc2d5544f42fff76e"
+      },
+      {
+        "path": "harness/ui-design/ui-design-check",
+        "mode": "100644",
+        "sha256": "78b1b3512dc207a7bbdb0699a0148842a6cb21ed1c76428dad3377bb4f9f1f58"
+      },
+      {
+        "path": "harness/version-requirements/README.md",
+        "mode": "100644",
+        "sha256": "580b4ec6e83b87c844826dec5f9693b50e9c5a06796dcc779930835ccaabac6c"
+      },
+      {
+        "path": "harness/version-requirements/ci.py",
+        "mode": "100644",
+        "sha256": "e55609767a3c0b8ccca6d3bcbabd7208feb1c5d66118fb35aa7e180ea9181277"
+      },
+      {
+        "path": "harness/version-requirements/config/doorstop.yml",
+        "mode": "100644",
+        "sha256": "d5d4d8a673c0539082eb91cc688a10863f6cfa455fd4f4bf8230b21e5768c611"
+      },
+      {
+        "path": "harness/version-requirements/config/project.yaml",
+        "mode": "100644",
+        "sha256": "f09c6eb59b1d34272b745ad82bd4299f439ade1e884dc6ba29b6f35cceb6d690"
+      },
+      {
+        "path": "harness/version-requirements/config/requirements.lock",
+        "mode": "100644",
+        "sha256": "54cee692e2049beaf55fdd96aaff18c20d06dd2665450d67e5ff99e90f001190"
+      },
+      {
+        "path": "harness/version-requirements/config/runtime.json",
+        "mode": "100644",
+        "sha256": "4518671b5746b9fcd89509da727e8e65a69f4ee7505c36f8577fd3d34c2fb813"
+      },
+      {
+        "path": "harness/version-requirements/guidance/README.md",
+        "mode": "100644",
+        "sha256": "762c3e861cf28a0f9b96d91cb1bff99516bda4e8acf889a51c6e872739dc16ac"
+      },
+      {
+        "path": "harness/version-requirements/guidance/requirement-change.md",
+        "mode": "100644",
+        "sha256": "4a01439fcd4d7d2309f6577bdb55e6f79d2d8a3145e89e636781c603c4cb52fd"
+      },
+      {
+        "path": "harness/version-requirements/guidance/s0-intake.md",
+        "mode": "100644",
+        "sha256": "5963cc7dcac84e4c26ae8556c62974d90540d3d81083c9d8b10d11ba5d9b4df4"
+      },
+      {
+        "path": "harness/version-requirements/guidance/s1-challenge.md",
+        "mode": "100644",
+        "sha256": "721c25491119e74de7571dac2d81e0832b9af6370862004fdaf22358bc9d2c60"
+      },
+      {
+        "path": "harness/version-requirements/guidance/s2-requirements.md",
+        "mode": "100644",
+        "sha256": "e7527221e71433262211228e7066a803558eb2a6e35514c8adeb9e33a2a16443"
+      },
+      {
+        "path": "harness/version-requirements/guidance/s3-engineering.md",
+        "mode": "100644",
+        "sha256": "045017d100255e57146318764c98db9efa6886c02e01d8926681070059af03c0"
+      },
+      {
+        "path": "harness/version-requirements/guidance/s4-baseline.md",
+        "mode": "100644",
+        "sha256": "93ae17df1db27e98d1d91aa8cd3c1369dff82ddeec7267fd5ca6624686fee7d5"
+      },
+      {
+        "path": "harness/version-requirements/guidance/s5-dispatch.md",
+        "mode": "100644",
+        "sha256": "de149fe8d5fb34fe2d0c4aa3181ecd194d7f388df5a890342d29db5850a6ac11"
+      },
+      {
+        "path": "harness/version-requirements/guidance/s5-planning.md",
+        "mode": "100644",
+        "sha256": "d4c3fd2743bd6307d3e055c61ad305d456972438ef46efb5234a28554a4b5408"
+      },
+      {
+        "path": "harness/version-requirements/guidance/s6-delivery.md",
+        "mode": "100644",
+        "sha256": "63e8c27aba30e49d2279f72bcf2218994c01a056bd060d97ce268b1c76f7624e"
+      },
+      {
+        "path": "harness/version-requirements/guidance/s7-completion.md",
+        "mode": "100644",
+        "sha256": "4a1fbe1feec250971b89c6b8efc71e2f9dbe9bf08f27a2f3e30023e53f05acf2"
+      },
+      {
+        "path": "harness/version-requirements/guidance/version-iteration.md",
+        "mode": "100644",
+        "sha256": "2584dfe5d111c4d5641c590c6f1dc0423fabf651a4795c77e250c7cc60627b39"
+      },
+      {
+        "path": "harness/version-requirements/lib/__init__.py",
+        "mode": "100644",
+        "sha256": "458d9628690295f9328f308cfbbf46f2349b89a0e2215cfa1c97041d4a1aa8ee"
+      },
+      {
+        "path": "harness/version-requirements/lib/archive.py",
+        "mode": "100644",
+        "sha256": "a5dbc10764e2f2ea0a9b755444222634eb7f594bf66a9aa1ff2d752f25a0d6b6"
+      },
+      {
+        "path": "harness/version-requirements/lib/assets.py",
+        "mode": "100644",
+        "sha256": "1dcbeed82c6fc310e7b9e0dcd7b43805af540ccc84cc96c3a1770eaa6c997fbe"
+      },
+      {
+        "path": "harness/version-requirements/lib/availability.py",
+        "mode": "100644",
+        "sha256": "8f2da0b3462941ef0c636e715b41d4f72f63adce162a3b98cfc63b5ff62f3a14"
+      },
+      {
+        "path": "harness/version-requirements/lib/backend.py",
+        "mode": "100644",
+        "sha256": "5bb6a11c4b04eda55b527646e5902c0010521602f558733bf7aa06e7e265fc49"
+      },
+      {
+        "path": "harness/version-requirements/lib/baselines.py",
+        "mode": "100644",
+        "sha256": "0fc93a2446307834dd7632462cdabe47afc5dfaa139afbb60f0a8291d32e93d7"
+      },
+      {
+        "path": "harness/version-requirements/lib/cancellation.py",
+        "mode": "100644",
+        "sha256": "dfe9f58bee406d7e92203cf6b64a74b0e7512f65df2237848ba1a4c5ab749214"
+      },
+      {
+        "path": "harness/version-requirements/lib/change_assets.py",
+        "mode": "100644",
+        "sha256": "6d77738fef1e28ccb91f98b46e5a6e6b864d3e63692d1322e8fcc394960f2c19"
+      },
+      {
+        "path": "harness/version-requirements/lib/cli.py",
+        "mode": "100644",
+        "sha256": "1200e1777c157ced267e9040d50c253c0c401e4ceaaefd1010b4d5ce3f547791"
+      },
+      {
+        "path": "harness/version-requirements/lib/completion.py",
+        "mode": "100644",
+        "sha256": "d1fafc38946447435bc157e438aaea926510e30a52350ab130f29d03634e8026"
+      },
+      {
+        "path": "harness/version-requirements/lib/context.py",
+        "mode": "100644",
+        "sha256": "334c5ba1f54bff97e9d2ff2f93f0dfc931ba09e8c1e51bad08ae36ce0be8a6c1"
+      },
+      {
+        "path": "harness/version-requirements/lib/control.py",
+        "mode": "100644",
+        "sha256": "14b6b092f082c0848e663bcf9ff01124c3dddf6c121476317d26ba7df662e5ce"
+      },
+      {
+        "path": "harness/version-requirements/lib/control_delivery.py",
+        "mode": "100644",
+        "sha256": "fe357d5a0655dc7a1001db85709d4d734c929c2a0a86dc60a0edecc0bd0197b8"
+      },
+      {
+        "path": "harness/version-requirements/lib/control_holds.py",
+        "mode": "100644",
+        "sha256": "03ceea08adcb949a8bf8a63ffa2c7d73946d3c4bde7f31f725b2d295a2e93c4f"
+      },
+      {
+        "path": "harness/version-requirements/lib/core.py",
+        "mode": "100644",
+        "sha256": "aa54e0ad51938ac5baf78cce74849faac7c08338133dde73b02d6c9009f6d83b"
+      },
+      {
+        "path": "harness/version-requirements/lib/delivery.py",
+        "mode": "100644",
+        "sha256": "28e6e931b28d582b7f7f8ece9723d597b0074f775935b8b22c4bbf1ce0a48e9b"
+      },
+      {
+        "path": "harness/version-requirements/lib/delivery_trace.py",
+        "mode": "100644",
+        "sha256": "21bc36fe7c95d969ee73b167712f8f2bd7084e2a86255c42629be7aefaece28f"
+      },
+      {
+        "path": "harness/version-requirements/lib/dispatch.py",
+        "mode": "100644",
+        "sha256": "d792a992216a109c66ddc93ce64c285e3c6b135be55813f70fe07b65b75a6149"
+      },
+      {
+        "path": "harness/version-requirements/lib/engineering_view.py",
+        "mode": "100644",
+        "sha256": "719b515f0b35c181dfd0227eef41551806d638429e263493bfa0b4c3ad81d6f4"
+      },
+      {
+        "path": "harness/version-requirements/lib/errors.py",
+        "mode": "100644",
+        "sha256": "88f9eca2771ded25e4f4ab1b3542556d1e13434ec8ed30d5bda382fe8f7d8076"
+      },
+      {
+        "path": "harness/version-requirements/lib/execution.py",
+        "mode": "100644",
+        "sha256": "1df02d9753b61fc757cc21704112a102bcf621ec48caa77f6aa5b6fd23c1601c"
+      },
+      {
+        "path": "harness/version-requirements/lib/feasibility.py",
+        "mode": "100644",
+        "sha256": "c0d86aedccd4afb5503c0f01572bef519d421cf102dcec7dc8685e4ae5e55d63"
+      },
+      {
+        "path": "harness/version-requirements/lib/final_checks.py",
+        "mode": "100644",
+        "sha256": "443661e9fbd4cf6e1f1e8730e168ec036fe49a03bc210cfdeb94cef5677c93cc"
+      },
+      {
+        "path": "harness/version-requirements/lib/gitstore.py",
+        "mode": "100644",
+        "sha256": "6bc99d8d0111417ec57e68e7fc504b6de0c8f21267d77de617e24c00b701e2e8"
+      },
+      {
+        "path": "harness/version-requirements/lib/handoff.py",
+        "mode": "100644",
+        "sha256": "e621ace143aeefaf54bdac9b0cbb737aa5898adade8fe28ef903afc1ca1f151e"
+      },
+      {
+        "path": "harness/version-requirements/lib/impact.py",
+        "mode": "100644",
+        "sha256": "1a353b55403d013e8482c798339b6f2e5c724acba2cf694c75a536e40dcdee29"
+      },
+      {
+        "path": "harness/version-requirements/lib/integrated.py",
+        "mode": "100644",
+        "sha256": "84da12ed5477e5cabd9e43cf6cc7e5ba8c40eba921a6fbd0684409c1ba935dd3"
+      },
+      {
+        "path": "harness/version-requirements/lib/integrated_receipt.py",
+        "mode": "100644",
+        "sha256": "4959281ad139754555a9b6c52547242e84575e21448f63ae6d6aad3c4bd2badf"
+      },
+      {
+        "path": "harness/version-requirements/lib/integration.py",
+        "mode": "100644",
+        "sha256": "512b487673e0fbefc6373b6e5631c765cbbd306ec7d52e37cff049173bd13770"
+      },
+      {
+        "path": "harness/version-requirements/lib/markdown_source.py",
+        "mode": "100644",
+        "sha256": "f61d1d6c6dca7c067f7a39901c2071a239637047f83687acc3dfa664ef8ff81a"
+      },
+      {
+        "path": "harness/version-requirements/lib/metrics.py",
+        "mode": "100644",
+        "sha256": "54525f49b1c66b2ac3e93c2efdb85c9c10a26856fd4977787f95f911fc34386a"
+      },
+      {
+        "path": "harness/version-requirements/lib/models.py",
+        "mode": "100644",
+        "sha256": "29432e0cabbde35bb7e64e4a305ffab85844e4c73c076f0af49e0ae4d8e83ad4"
+      },
+      {
+        "path": "harness/version-requirements/lib/observations.py",
+        "mode": "100644",
+        "sha256": "7ac6281f62abb4bd183588fb6f7c61f908b5b0dc0d17daf4d8ed984e51af471a"
+      },
+      {
+        "path": "harness/version-requirements/lib/openspec_artifacts.py",
+        "mode": "100644",
+        "sha256": "12eb16b2f26315089d6a3a5323f1b62dbcc65030caf267ee8aedac4f059ae2ff"
+      },
+      {
+        "path": "harness/version-requirements/lib/planning.py",
+        "mode": "100644",
+        "sha256": "c013f3cb580485e577faa3420a22ef90e61f4c38aa534e729baefc5e46a43bbf"
+      },
+      {
+        "path": "harness/version-requirements/lib/planning_applicability.py",
+        "mode": "100644",
+        "sha256": "b5159e94da796854480bf57e6164ee2a4bc327d6461a75aaa6a98b15d8eea14e"
+      },
+      {
+        "path": "harness/version-requirements/lib/planning_trace.py",
+        "mode": "100644",
+        "sha256": "3f5c4609999032112ed45913beec7b6613bd0b028a8209f4d10279267655c190"
+      },
+      {
+        "path": "harness/version-requirements/lib/prearchive.py",
+        "mode": "100644",
+        "sha256": "086fb757ac41cb6240f2065ff7f2c5943c71a46feb3aaaa131aac9c09fb4bc41"
+      },
+      {
+        "path": "harness/version-requirements/lib/premerge.py",
+        "mode": "100644",
+        "sha256": "9e786a3784d96303e72293a5595a93f8a6955ca84c87c11537d948f00de1118e"
+      },
+      {
+        "path": "harness/version-requirements/lib/questions.py",
+        "mode": "100644",
+        "sha256": "ba33f9613d61407be19cf6bb775cf9a603fed5aa2134c13adae118426052287e"
+      },
+      {
+        "path": "harness/version-requirements/lib/readiness.py",
+        "mode": "100644",
+        "sha256": "ee8cdea4496eed06c378f6d0db4be1a9355a55bd217bb22245090672b3b06717"
+      },
+      {
+        "path": "harness/version-requirements/lib/relations.py",
+        "mode": "100644",
+        "sha256": "c0d981dedac60702e6e874cf310bce6a4758bfc6b401c1152e644fc750f7b50b"
+      },
+      {
+        "path": "harness/version-requirements/lib/rendering.py",
+        "mode": "100644",
+        "sha256": "16e46c2322dbb01ba7a85e64e78b9d514bc99007bb55ca9a95dc00e66dad0d93"
+      },
+      {
+        "path": "harness/version-requirements/lib/report.py",
+        "mode": "100644",
+        "sha256": "38987e7d4afb2e30a227354520cf748080fac7c422e4a6ae27592f69a4358de9"
+      },
+      {
+        "path": "harness/version-requirements/lib/requirement_changes.py",
+        "mode": "100644",
+        "sha256": "48e38d936fb3a2580dd47440b04a340aa007e617178241cd185a076a70344b63"
+      },
+      {
+        "path": "harness/version-requirements/lib/requirements.py",
+        "mode": "100644",
+        "sha256": "7616f0cfddf987816771cd5b719b06d40a3b74f097356ca18eb2c445c2f95a23"
+      },
+      {
+        "path": "harness/version-requirements/lib/review_scope.py",
+        "mode": "100644",
+        "sha256": "85118c8fd454ce76c6ef19bfb53e2e5895993d9eef0b26e1876b3ec3d569dfba"
+      },
+      {
+        "path": "harness/version-requirements/lib/reviews.py",
+        "mode": "100644",
+        "sha256": "ec9f51fbd7e43953b8515479c4a8580cb8abbadba4bdbf4f44082c04c8e8a4bb"
+      },
+      {
+        "path": "harness/version-requirements/lib/runtime.py",
+        "mode": "100644",
+        "sha256": "17c9d058e67b8e6471e0dcca6850f1e8e315926cc002c23f6908e0d2dea1e713"
+      },
+      {
+        "path": "harness/version-requirements/lib/scope_delivery.py",
+        "mode": "100644",
+        "sha256": "1bb5c9a8534ed6060edfe70106b6818758e0e193ae12d0f7090764bf336e8c6b"
+      },
+      {
+        "path": "harness/version-requirements/lib/sources.py",
+        "mode": "100644",
+        "sha256": "340317749801c246f70d42fefd582c1d969b21b486937d4f3b8c9e8486f260b1"
+      },
+      {
+        "path": "harness/version-requirements/lib/tiny_delivery.py",
+        "mode": "100644",
+        "sha256": "37fcc64e5e985173963c809d1d62ab8a6c6b18ac014f2da43ed289e915317647"
+      },
+      {
+        "path": "harness/version-requirements/lib/ui_completion.py",
+        "mode": "100644",
+        "sha256": "7ccbd878eaeae562aea9334ae59fe779ad82d0b68595f05e808b7965c66ed1db"
+      },
+      {
+        "path": "harness/version-requirements/lib/ui_integration.py",
+        "mode": "100644",
+        "sha256": "7fcac129e3466bab629a91d1d480c137bb5027f7947c56b391a520592bea23af"
+      },
+      {
+        "path": "harness/version-requirements/lib/ui_metadata.py",
+        "mode": "100644",
+        "sha256": "80264a5923ffe8514f8949d30ad6906fed83a22abb497a5952bc11b8619f2f7f"
+      },
+      {
+        "path": "harness/version-requirements/lib/ui_receipts.py",
+        "mode": "100644",
+        "sha256": "0019f02a59a839303cf2efdca67458b1c8ca8c92af047fba41cfe954221adda2"
+      },
+      {
+        "path": "harness/version-requirements/lib/verification.py",
+        "mode": "100644",
+        "sha256": "36b96b41a6aad36ac04551dfa81abcacab294b06148f5c15114c16016fe32a7d"
+      },
+      {
+        "path": "harness/version-requirements/lib/worktree.py",
+        "mode": "100644",
+        "sha256": "33e3fa50c6dedec9ba92995a71f924d45b0195f33583a21cd07d289e5b9707b5"
+      },
+      {
+        "path": "harness/version-requirements/requirements-check",
+        "mode": "100644",
+        "sha256": "2443f5c249dfe3d37897d77b4778a7cade43c7cb2318ad7d32b71fc2be0e25a2"
+      },
+      {
+        "path": "harness/version-requirements/review.py",
+        "mode": "100644",
+        "sha256": "e919b4c0b2ecbf06384a407e11ccc1fb35b66a556fcff592c21397f7c29379a6"
+      },
+      {
+        "path": "harness/version-requirements/schemas/vr.schema.json",
+        "mode": "100644",
+        "sha256": "b496f86cd23f1e084ef3dad71aecfac6c5f367187a52e3c78375d31a894fa2e1"
+      },
+      {
+        "path": "openspec/changes/archive/.gitkeep",
+        "mode": "100644",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "openspec/changes/archive/2026-09-30-adopt-calculator-ui-tokens/.openspec.yaml",
+        "mode": "100644",
+        "sha256": "ed11730240938c1ef4172912b8c66ce8991739280a68029038fbbf8bff62d430"
+      },
+      {
+        "path": "openspec/changes/archive/2026-09-30-adopt-calculator-ui-tokens/design.md",
+        "mode": "100644",
+        "sha256": "5e3f20925f63ab9bfcd5990a6f402c89903a3caf9f41413625edb14d91604142"
+      },
+      {
+        "path": "openspec/changes/archive/2026-09-30-adopt-calculator-ui-tokens/proposal.md",
+        "mode": "100644",
+        "sha256": "68975f3a868ce1bbefa2d5eed4e81c97ed6b893abb495a7f346541bb95781de8"
+      },
+      {
+        "path": "openspec/changes/archive/2026-09-30-adopt-calculator-ui-tokens/tasks.md",
+        "mode": "100644",
+        "sha256": "dc89157e3941232a69482f50e8f42903cfc81394411abfa348df29f268152d08"
+      },
+      {
+        "path": "openspec/config.yaml",
+        "mode": "100644",
+        "sha256": "e3bc69920d6c58fabfac78f5bad5007f4f36d10f150d1f08746574b17fecd917"
+      },
+      {
+        "path": "openspec/specs/.gitkeep",
+        "mode": "100644",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "openspec/specs/calculator-ui/spec.md",
+        "mode": "100644",
+        "sha256": "a99233f4eb2cc0786fb8713e1a6a2cabec4c1913d95167115a4c93484ed48e1c"
+      },
+      {
+        "path": "requirements/items/.doorstop.yml",
+        "mode": "100644",
+        "sha256": "d5d4d8a673c0539082eb91cc688a10863f6cfa455fd4f4bf8230b21e5768c611"
+      },
+      {
+        "path": "requirements/items/R-001.yml",
+        "mode": "100644",
+        "sha256": "ee93f08f0e66f4e618032c2e5fe0d68033eac9651b1d7233020a867e120600c1"
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/baselines/BL-v0.1.0-harness-ui-001.yaml",
+        "mode": "100644",
+        "sha256": "13152ceca1009116a9df5a20db7a11a1b0925343314b8228f5ebe70c920f0423"
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/delivery-map.yaml",
+        "mode": "100644",
+        "sha256": "b00922c19cfd1a433f2cae0a88ae264a1c9aa380f717dc03a645bec4db915147"
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/reviews/batches/B-001.yaml",
+        "mode": "100644",
+        "sha256": "b6dbf80268bf9344b9f4b7cddbee9e2debf4d3a4684b718112435ea824e26664"
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/reviews/engineering.yaml",
+        "mode": "100644",
+        "sha256": "47eff2ec46dcf5b1fbd4d58957ec00737879bf6c82b5ebe4a89d83dbaf181280"
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/reviews/global.yaml",
+        "mode": "100644",
+        "sha256": "c3fe1b74119c25df6e53e029ea0836edec7d3325ae80bc87d81d1abbec90ccb8"
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/reviews/intake.yaml",
+        "mode": "100644",
+        "sha256": "714681381f3be8f67ff7a48bc1295c2135c598f229acc84d2832ab93ad883ad1"
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/reviews/publication-observation.json",
+        "mode": "100644",
+        "sha256": "75bc4abdc30ce60665e733dc33e26ea4fd6b674a12b463d0671f2168935c8ef7"
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/scope.yaml",
+        "mode": "100644",
+        "sha256": "8bed2b2e792b3fb37d079b18d54211eca9125480aca077a98fca6c1ffdd3f8df"
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/source/intake-001/scope.md",
+        "mode": "100644",
+        "sha256": "352a5062fa1842b91e1d9dd12673a0985b486fc02b517e5ff8313d6c8cbbe7f2"
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/source/manifest.yaml",
+        "mode": "100644",
+        "sha256": "7901e936b1bebdd3579d411fa6a140d12d5833e64d9419c116f3bf390c29350c"
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/source/units.yaml",
+        "mode": "100644",
+        "sha256": "539bee7a5fdca09f61008b4684ef391e9e500b629a688c1c147c8cb526be7f9b"
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/calculator-token-return.json",
+        "mode": "100644",
+        "sha256": "4f5c248425fd1ac5d9adc3035f0a28c15e73f62d7dd4362a5ca65f2f54d5e3e7"
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/ui-inputs-001.json",
+        "mode": "100644",
+        "sha256": "0f8e0c674b3d594e2c629119eab1350ce73275fe575720a6045ff78a29daeb0d"
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/ui-bindings.yaml",
+        "mode": "100644",
+        "sha256": "82150a075326d144d1d14f9dec754eac78f6cdfced7ad1e65eb16b002bab5950"
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/verification-plan.yaml",
+        "mode": "100644",
+        "sha256": "1629b09e91cc0f5fdc34af7acf170f35eeb9b12552533569bd2477e609c9f4d7"
+      },
+      {
+        "path": "requirements/versions/v0.1.0-harness-ui/version.yaml",
+        "mode": "100644",
+        "sha256": "52d2af0cf243b202bf8a97da68dd20031c277ebe4ffd689b1a46cacee7b6daa5"
+      },
+      {
+        "path": "scripts/adapt-openspec-workflows.mjs",
+        "mode": "100644",
+        "sha256": "203c7346e633439fde988c27a14d124741c0766ab7f5fa0427248dfde405f6ae"
+      },
+      {
+        "path": "scripts/openspec.sh",
+        "mode": "100644",
+        "sha256": "598da8a1af1b649f9387d2fb3bdfa62b8ab4d9130d5af55fa1e3978100da0de9"
+      },
+      {
+        "path": "scripts/requirements-check",
+        "mode": "100644",
+        "sha256": "2443f5c249dfe3d37897d77b4778a7cade43c7cb2318ad7d32b71fc2be0e25a2"
+      },
+      {
+        "path": "scripts/ui-design-check",
+        "mode": "100644",
+        "sha256": "78b1b3512dc207a7bbdb0699a0148842a6cb21ed1c76428dad3377bb4f9f1f58"
+      },
+      {
+        "path": "third_party/superpowers-lite/codex/LICENSE",
+        "mode": "100644",
+        "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
+      },
+      {
+        "path": "third_party/superpowers-lite/codex/origin.json",
+        "mode": "100644",
+        "sha256": "70113aab0eac9108ff5d22c3106dc5719b70646b53ded5cf391f4351de6fe718"
+      }
+    ],
+    "changes": [],
+    "input_digest": "ce981bb181136c23dc378178e3fea7eb81945946a900c0c6f8c6fe500b8a7aeb"
+  },
+  "scope": "task boundary inputs and restrictions only; retain the original task scope, authorization and recovery limits"
+}

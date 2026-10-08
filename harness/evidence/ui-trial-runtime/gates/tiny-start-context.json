@@ -1,0 +1,62 @@
+{
+  "schema_version": "vr/1",
+  "evaluation_mode": "current",
+  "gate": "G3",
+  "phase": "pre-merge",
+  "subject": "task:calculator-token-return",
+  "version": "v0.1.0-harness-ui",
+  "delivery_line": "main",
+  "checker_version": "vr-check/2",
+  "rule_version": "vr-rules/2",
+  "metadata_revision": "8a7f225909882df4e0da1f6fc70b2f4dc9721a9e",
+  "head_revision": "8a7f225909882df4e0da1f6fc70b2f4dc9721a9e",
+  "target_revision": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
+  "control_revision": "d0139fdcad94f31ea285ba5c53b5920bd475ee75",
+  "baseline_ref": {
+    "commit": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
+    "path": "requirements/versions/v0.1.0-harness-ui/baselines/BL-v0.1.0-harness-ui-001.yaml",
+    "sha256": "13152ceca1009116a9df5a20db7a11a1b0925343314b8228f5ebe70c920f0423"
+  },
+  "publication_revision": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
+  "publication_evidence_ref": {
+    "commit": "de1062c99e3567b6d9435b6c41a8c151af04519b",
+    "path": "requirements/versions/v0.1.0-harness-ui/reviews/publication-observation.json",
+    "sha256": "75bc4abdc30ce60665e733dc33e26ea4fd6b674a12b463d0671f2168935c8ef7"
+  },
+  "tiny_ref": {
+    "commit": "60527418e09ca5bf6b1c03926b247087e19e8407",
+    "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/calculator-token-return.json",
+    "sha256": "4f5c248425fd1ac5d9adc3035f0a28c15e73f62d7dd4362a5ca65f2f54d5e3e7"
+  },
+  "engineering_inputs": {
+    "map_ref": {
+      "commit": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
+      "path": "requirements/versions/v0.1.0-harness-ui/delivery-map.yaml",
+      "sha256": "b00922c19cfd1a433f2cae0a88ae264a1c9aa380f717dc03a645bec4db915147"
+    },
+    "verification_plan_ref": {
+      "commit": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
+      "path": "requirements/versions/v0.1.0-harness-ui/verification-plan.yaml",
+      "sha256": "1629b09e91cc0f5fdc34af7acf170f35eeb9b12552533569bd2477e609c9f4d7"
+    },
+    "engineering_review_ref": {
+      "commit": "8a7f225909882df4e0da1f6fc70b2f4dc9721a9e",
+      "path": "requirements/versions/v0.1.0-harness-ui/reviews/engineering.yaml",
+      "sha256": "47eff2ec46dcf5b1fbd4d58957ec00737879bf6c82b5ebe4a89d83dbaf181280"
+    }
+  },
+  "ui": {
+    "repositories": {
+      "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority": "/private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/ui"
+    },
+    "authorities": [
+      {
+        "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+        "ref": "refs/heads/main",
+        "history_root": "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52",
+        "commit": "db1d8d36482883a46f6624c02cde4241547f3d18"
+      }
+    ],
+    "external_files": []
+  }
+}

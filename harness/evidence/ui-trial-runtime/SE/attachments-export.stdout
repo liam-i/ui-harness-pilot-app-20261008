@@ -1,0 +1,38 @@
+Skipped export for CalculationRegressionTests/testAppendingDigitsPreservesExistingInputBehavior(): no matching attachments
+
+Skipped export for CalculationRegressionTests/testExistingArithmeticAndNonfiniteResults(): no matching attachments
+
+Skipped export for CalculationRegressionTests/testExistingTrigonometricFunctionsUseRadians(): no matching attachments
+
+Skipped export for CalculatorTokensTests/testApplicationBundleContainsTheFixedApprovedResource(): no matching attachments
+
+Skipped export for CalculatorTokensTests/testDecodeUsesSuppliedValuesInsteadOfFixedConstants(): no matching attachments
+
+Skipped export for CalculatorTokensTests/testInvalidLayoutUnitsAndOpacityAreRejected(): no matching attachments
+
+Skipped export for CalculatorTokensTests/testLoadReadsTheApprovedFile(): no matching attachments
+
+Skipped export for CalculatorTokensTests/testMalformedJSONAndUnknownSemanticColorAreRejected(): no matching attachments
+
+Skipped export for CalculatorTokensTests/testMissingRequiredFieldIsRejected(): no matching attachments
+
+Skipped export for CalculatorTokensTests/testMissingResourceReportsTheReadFailure(): no matching attachments
+
+Exported 15 attachments for: CalculatorUITests/testApprovedCasesOnCurrentDevice():
+File: C46DFE03-4DA7-4F8E-AC59-3D3F1A7D0E77.png, suggested name: "A15_0_51EA3F06-0DE2-4196-BFC0-34421D297AC7.png"
+File: 9A08C9DD-3156-4618-AD78-389C9CDC3536.png, suggested name: "A14_0_BD62C64E-C876-4CF3-8C5C-8D9E1CE81A78.png"
+File: EC9ABDB5-7234-4073-B2EA-917C5C991F26.png, suggested name: "A13_0_D50DDFB4-ED4C-4ADD-9518-0F1683BE467F.png"
+File: E2EB8E89-3F7D-4745-9C9C-5AACE38BDD4E.png, suggested name: "A12_0_4BA94973-A00C-4694-9225-0A5A6317EF4C.png"
+File: 44E75700-28B9-435E-B1DE-46DCF53EECB1.png, suggested name: "A11_0_E05BF366-E842-48DC-A648-63371988DF05.png"
+File: 145DB573-A31F-4F15-B9F2-7453B7B87272.png, suggested name: "A10_0_0C050D46-69D5-42AF-A0CC-26A3C525443E.png"
+File: CCA23A24-CDD1-40BD-AE1F-C3B55CD49E13.png, suggested name: "A09_0_3FA9CDC6-F5E7-4B6D-BF78-4B2129BD7AE9.png"
+File: 3F6B0709-55D2-4F30-818A-348544271063.png, suggested name: "A08_0_BEE1E736-0482-481B-B398-1C554AC2255D.png"
+File: 531522A1-6BCF-4AD6-9981-6F866C0178F3.png, suggested name: "A07_0_9D389E58-B5A4-4D9D-BBA4-A62575981E1A.png"
+File: 42D119A0-3FEB-48DB-873B-CEB6CE660910.png, suggested name: "A06_0_CF5D2189-B8FA-4563-AD03-1E5AEB5E74FC.png"
+File: 73B97B74-F2AA-4F98-81E2-B52B075340D9.png, suggested name: "A05_0_36284F51-188E-424A-96BA-2953283EB7E8.png"
+File: 55ADA4CF-BCF7-4BF8-AC5F-2CF51C8AAEE2.png, suggested name: "A04_0_8393AD12-B29B-462B-919C-BCA4F3B0847B.png"
+File: A8C1AFF4-5873-47BC-9F6A-595ACE47AC24.png, suggested name: "A03_0_61036E4A-AA63-4B19-B8DF-CC76E108EAF1.png"
+File: 5CD1B697-6875-4779-B4D7-CE08B3D63EC7.png, suggested name: "A02_0_8539D46F-D6DB-4EC8-A978-0DE65D2C714C.png"
+File: 865D7FB2-AEA8-4255-AE33-1A15B16E5CBC.png, suggested name: "A01_0_0F7AF3DE-3A84-47B0-BB05-ACE7829B2453.png"
+
+Generated manifest file with attachment details: /private/tmp/ui-goal04-20261006-azi78jzc/formal-pilot-preparation/native/SE/attachments/manifest.json
