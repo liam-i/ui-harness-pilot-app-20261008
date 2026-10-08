@@ -1,16 +1,246 @@
 {
-  "schema_version": "vr/1",
-  "id": "engineering",
-  "phase": "engineering",
   "actor": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
-  "role": "engineering-owner",
   "at": "2026-10-08T06:19:52.178144+00:00",
-  "outcome": "passed",
+  "checks": [
+    {
+      "check_id": "asset-adoption",
+      "evidence_ref": {
+        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      },
+      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
+      "issue_refs": [],
+      "outcome": "passed",
+      "source_units": [
+        "v0.1.0-harness-ui/intake-001/SRC-001"
+      ]
+    },
+    {
+      "check_id": "delivery-coverage",
+      "evidence_ref": {
+        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      },
+      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
+      "issue_refs": [],
+      "outcome": "passed",
+      "source_units": [
+        "v0.1.0-harness-ui/intake-001/SRC-001"
+      ]
+    },
+    {
+      "check_id": "dependency-dispositions",
+      "evidence_ref": {
+        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      },
+      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
+      "issue_refs": [],
+      "outcome": "passed",
+      "source_units": [
+        "v0.1.0-harness-ui/intake-001/SRC-001"
+      ]
+    },
+    {
+      "check_id": "engineering-context",
+      "evidence_ref": {
+        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      },
+      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
+      "issue_refs": [],
+      "outcome": "passed",
+      "source_units": [
+        "v0.1.0-harness-ui/intake-001/SRC-001"
+      ]
+    },
+    {
+      "check_id": "question-applicability",
+      "evidence_ref": {
+        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      },
+      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
+      "issue_refs": [],
+      "outcome": "passed",
+      "source_units": [
+        "v0.1.0-harness-ui/intake-001/SRC-001"
+      ]
+    },
+    {
+      "check_id": "stage-feasibility",
+      "evidence_ref": {
+        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      },
+      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
+      "issue_refs": [],
+      "outcome": "passed",
+      "source_units": [
+        "v0.1.0-harness-ui/intake-001/SRC-001"
+      ]
+    },
+    {
+      "check_id": "ui-applicability",
+      "evidence_ref": {
+        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      },
+      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
+      "issue_refs": [],
+      "outcome": "passed",
+      "source_units": [
+        "v0.1.0-harness-ui/intake-001/SRC-001"
+      ]
+    },
+    {
+      "check_id": "ui-coverage",
+      "evidence_ref": {
+        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      },
+      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
+      "issue_refs": [],
+      "outcome": "passed",
+      "source_units": [
+        "v0.1.0-harness-ui/intake-001/SRC-001"
+      ]
+    },
+    {
+      "check_id": "ui-delivery",
+      "evidence_ref": {
+        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      },
+      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
+      "issue_refs": [],
+      "outcome": "passed",
+      "source_units": [
+        "v0.1.0-harness-ui/intake-001/SRC-001"
+      ]
+    },
+    {
+      "check_id": "ui-inputs",
+      "evidence_ref": {
+        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      },
+      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
+      "issue_refs": [],
+      "outcome": "passed",
+      "source_units": [
+        "v0.1.0-harness-ui/intake-001/SRC-001"
+      ]
+    },
+    {
+      "check_id": "verification-responsibility",
+      "evidence_ref": {
+        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+      },
+      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
+      "issue_refs": [],
+      "outcome": "passed",
+      "source_units": [
+        "v0.1.0-harness-ui/intake-001/SRC-001"
+      ]
+    }
+  ],
+  "context_refs": [
+    {
+      "commit": "65d9a67551242134ad3c4d90836e8bf088a5b1e5",
+      "path": "harness/evidence/final-runtime-review.json",
+      "sha256": "405851e383d725e5ae3365127574c7fd31c228edf044fa7ae29c37968bd0a740"
+    },
+    {
+      "commit": "65d9a67551242134ad3c4d90836e8bf088a5b1e5",
+      "path": "harness/ui-design/config/project.yaml",
+      "sha256": "96b6bcf1dacd6cc3516c940caee710fdffb30fa2dfae52c519d25c8eee8b6220"
+    },
+    {
+      "commit": "aec1259af4e2c4150bdd5b9ffd2344b1640f9a06",
+      "path": "requirements/versions/v0.1.0-harness-ui/ui-bindings.yaml",
+      "sha256": "82150a075326d144d1d14f9dec754eac78f6cdfced7ad1e65eb16b002bab5950"
+    },
+    {
+      "commit": "bf15242514ff02e3d6c542bd03f2e9615417e3dd",
+      "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/ui-inputs-001.json",
+      "sha256": "0f8e0c674b3d594e2c629119eab1350ce73275fe575720a6045ff78a29daeb0d"
+    },
+    {
+      "commit": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
+      "path": "CalculatorSwiftUI/CalculatorTokens.swift",
+      "sha256": "94c03f77d47e17be550874721242a94297e1bf4ca0b220dc485b2d0e60ac4387"
+    },
+    {
+      "commit": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
+      "path": "openspec/specs/calculator-ui/spec.md",
+      "sha256": "a99233f4eb2cc0786fb8713e1a6a2cabec4c1913d95167115a4c93484ed48e1c"
+    }
+  ],
+  "dependency_dispositions": [],
+  "engineering": {
+    "assumptions": [],
+    "build_evidence_ref": {
+      "commit": "65d9a67551242134ad3c4d90836e8bf088a5b1e5",
+      "path": "harness/evidence/final-runtime-review.json",
+      "sha256": "405851e383d725e5ae3365127574c7fd31c228edf044fa7ae29c37968bd0a740"
+    },
+    "code_ref": {
+      "commit": "320326df3bdc0c0d423b2b9fc40957042d15bc47",
+      "path": "CalculatorSwiftUI/CalculatorTokens.swift",
+      "sha256": "b8ba670702c1c9fc6c66ccf82be273a9105ecd3ec49edecbcfff183d26e85937"
+    },
+    "parallel_approval_ref": null,
+    "planning_limit": 0,
+    "resources": "Original reviewed Xcode and two dedicated simulators; temporary repository-specific runner; authorized public GitHub pilot.",
+    "schedule_basis": "Only the user-authorized CI platform trial. Product semantics and R/AC/BL unchanged; actual hosted runs and final human acceptance remain separate.",
+    "shared_contract_refs": [
+      {
+        "commit": "73dbc6bf350a573ae112f2a53db0d2fd8bbcf283",
+        "path": "harness/evidence/ci-platform-authorization.json",
+        "sha256": "b238ada6952d17b16243d19d8910d9f962e3bf9d9c12c915e6b3e8867006de52"
+      }
+    ],
+    "spec_refs": [
+      {
+        "commit": "320326df3bdc0c0d423b2b9fc40957042d15bc47",
+        "path": "openspec/specs/calculator-ui/spec.md",
+        "sha256": "a99233f4eb2cc0786fb8713e1a6a2cabec4c1913d95167115a4c93484ed48e1c"
+      }
+    ],
+    "ui_inputs_ref": {
+      "commit": "ba2de26d1407cadf027c233962e2341b4e666204",
+      "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/ui-inputs-ci-public.json",
+      "sha256": "63259db84a6506378a48f8085bb6ccc69c133da28e73b712a3d5c28450e1506d"
+    },
+    "verification_environment": "Xcode27.0, Swift5, iOS27, SE3 + iPhone17Pro portrait/light/English/default text",
+    "wip_limit": 1
+  },
   "evidence_ref": {
     "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
     "path": "harness/evidence/ui-trial-approval/transcription-review.md",
     "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
   },
+  "id": "engineering",
+  "issue_refs": [],
+  "outcome": "incomplete",
+  "pending_units": [],
+  "phase": "engineering",
+  "processed_units": [
+    "v0.1.0-harness-ui/intake-001/SRC-001"
+  ],
   "reviewed_inputs": [
     {
       "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
@@ -831,230 +1061,6 @@
       "sha256": "1629b09e91cc0f5fdc34af7acf170f35eeb9b12552533569bd2477e609c9f4d7"
     }
   ],
-  "context_refs": [
-    {
-      "commit": "65d9a67551242134ad3c4d90836e8bf088a5b1e5",
-      "path": "harness/evidence/final-runtime-review.json",
-      "sha256": "405851e383d725e5ae3365127574c7fd31c228edf044fa7ae29c37968bd0a740"
-    },
-    {
-      "commit": "65d9a67551242134ad3c4d90836e8bf088a5b1e5",
-      "path": "harness/ui-design/config/project.yaml",
-      "sha256": "96b6bcf1dacd6cc3516c940caee710fdffb30fa2dfae52c519d25c8eee8b6220"
-    },
-    {
-      "commit": "aec1259af4e2c4150bdd5b9ffd2344b1640f9a06",
-      "path": "requirements/versions/v0.1.0-harness-ui/ui-bindings.yaml",
-      "sha256": "82150a075326d144d1d14f9dec754eac78f6cdfced7ad1e65eb16b002bab5950"
-    },
-    {
-      "commit": "bf15242514ff02e3d6c542bd03f2e9615417e3dd",
-      "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/ui-inputs-001.json",
-      "sha256": "0f8e0c674b3d594e2c629119eab1350ce73275fe575720a6045ff78a29daeb0d"
-    },
-    {
-      "commit": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
-      "path": "CalculatorSwiftUI/CalculatorTokens.swift",
-      "sha256": "94c03f77d47e17be550874721242a94297e1bf4ca0b220dc485b2d0e60ac4387"
-    },
-    {
-      "commit": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
-      "path": "openspec/specs/calculator-ui/spec.md",
-      "sha256": "a99233f4eb2cc0786fb8713e1a6a2cabec4c1913d95167115a4c93484ed48e1c"
-    }
-  ],
-  "processed_units": [
-    "v0.1.0-harness-ui/intake-001/SRC-001"
-  ],
-  "pending_units": [],
-  "issue_refs": [],
-  "checks": [
-    {
-      "check_id": "asset-adoption",
-      "source_units": [
-        "v0.1.0-harness-ui/intake-001/SRC-001"
-      ],
-      "outcome": "passed",
-      "issue_refs": [],
-      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
-      "evidence_ref": {
-        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
-        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
-        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
-      }
-    },
-    {
-      "check_id": "delivery-coverage",
-      "source_units": [
-        "v0.1.0-harness-ui/intake-001/SRC-001"
-      ],
-      "outcome": "passed",
-      "issue_refs": [],
-      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
-      "evidence_ref": {
-        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
-        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
-        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
-      }
-    },
-    {
-      "check_id": "dependency-dispositions",
-      "source_units": [
-        "v0.1.0-harness-ui/intake-001/SRC-001"
-      ],
-      "outcome": "passed",
-      "issue_refs": [],
-      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
-      "evidence_ref": {
-        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
-        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
-        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
-      }
-    },
-    {
-      "check_id": "engineering-context",
-      "source_units": [
-        "v0.1.0-harness-ui/intake-001/SRC-001"
-      ],
-      "outcome": "passed",
-      "issue_refs": [],
-      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
-      "evidence_ref": {
-        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
-        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
-        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
-      }
-    },
-    {
-      "check_id": "question-applicability",
-      "source_units": [
-        "v0.1.0-harness-ui/intake-001/SRC-001"
-      ],
-      "outcome": "passed",
-      "issue_refs": [],
-      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
-      "evidence_ref": {
-        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
-        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
-        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
-      }
-    },
-    {
-      "check_id": "stage-feasibility",
-      "source_units": [
-        "v0.1.0-harness-ui/intake-001/SRC-001"
-      ],
-      "outcome": "passed",
-      "issue_refs": [],
-      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
-      "evidence_ref": {
-        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
-        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
-        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
-      }
-    },
-    {
-      "check_id": "ui-applicability",
-      "source_units": [
-        "v0.1.0-harness-ui/intake-001/SRC-001"
-      ],
-      "outcome": "passed",
-      "issue_refs": [],
-      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
-      "evidence_ref": {
-        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
-        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
-        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
-      }
-    },
-    {
-      "check_id": "ui-coverage",
-      "source_units": [
-        "v0.1.0-harness-ui/intake-001/SRC-001"
-      ],
-      "outcome": "passed",
-      "issue_refs": [],
-      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
-      "evidence_ref": {
-        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
-        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
-        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
-      }
-    },
-    {
-      "check_id": "ui-delivery",
-      "source_units": [
-        "v0.1.0-harness-ui/intake-001/SRC-001"
-      ],
-      "outcome": "passed",
-      "issue_refs": [],
-      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
-      "evidence_ref": {
-        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
-        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
-        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
-      }
-    },
-    {
-      "check_id": "ui-inputs",
-      "source_units": [
-        "v0.1.0-harness-ui/intake-001/SRC-001"
-      ],
-      "outcome": "passed",
-      "issue_refs": [],
-      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
-      "evidence_ref": {
-        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
-        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
-        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
-      }
-    },
-    {
-      "check_id": "verification-responsibility",
-      "source_units": [
-        "v0.1.0-harness-ui/intake-001/SRC-001"
-      ],
-      "outcome": "passed",
-      "issue_refs": [],
-      "input_digest": "299ca10463da25f5216f4633868354b6c3cf6a1d3c46dbd8e79cd3a71a3cbd59",
-      "evidence_ref": {
-        "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
-        "path": "harness/evidence/ui-trial-approval/transcription-review.md",
-        "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
-      }
-    }
-  ],
-  "engineering": {
-    "code_ref": {
-      "commit": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
-      "path": "CalculatorSwiftUI/CalculatorTokens.swift",
-      "sha256": "94c03f77d47e17be550874721242a94297e1bf4ca0b220dc485b2d0e60ac4387"
-    },
-    "spec_refs": [
-      {
-        "commit": "ed187bc127c4557cf992d6afbc742a1e6f207d3b",
-        "path": "openspec/specs/calculator-ui/spec.md",
-        "sha256": "a99233f4eb2cc0786fb8713e1a6a2cabec4c1913d95167115a4c93484ed48e1c"
-      }
-    ],
-    "resources": "原计算器工程与原两台授权模拟器；本地隔离，Codex串行整合。",
-    "schedule_basis": "仅获审等价Tiny与新运行，不扩展产品范围；基线成立后开始，最终运行另行验收。",
-    "verification_environment": "Xcode27.0, Swift5, iOS27, SE3 + iPhone17Pro portrait/light/English/default text",
-    "build_evidence_ref": {
-      "commit": "65d9a67551242134ad3c4d90836e8bf088a5b1e5",
-      "path": "harness/evidence/final-runtime-review.json",
-      "sha256": "405851e383d725e5ae3365127574c7fd31c228edf044fa7ae29c37968bd0a740"
-    },
-    "shared_contract_refs": [],
-    "assumptions": [],
-    "wip_limit": 1,
-    "planning_limit": 0,
-    "parallel_approval_ref": null,
-    "ui_inputs_ref": {
-      "commit": "bf15242514ff02e3d6c542bd03f2e9615417e3dd",
-      "path": "requirements/versions/v0.1.0-harness-ui/trace/evidence/ui-inputs-001.json",
-      "sha256": "0f8e0c674b3d594e2c629119eab1350ce73275fe575720a6045ff78a29daeb0d"
-    }
-  },
-  "dependency_dispositions": []
+  "role": "engineering-owner",
+  "schema_version": "vr/1"
 }
