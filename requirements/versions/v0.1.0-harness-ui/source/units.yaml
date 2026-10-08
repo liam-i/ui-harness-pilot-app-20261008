@@ -1,0 +1,40 @@
+{
+  "schema_version": "vr/1",
+  "version": "v0.1.0-harness-ui",
+  "units": [
+    {
+      "id": "v0.1.0-harness-ui/intake-001/SRC-001",
+      "file": "v0.1.0-harness-ui/intake-001/DOC-001",
+      "path": "requirements/versions/v0.1.0-harness-ui/source/intake-001/scope.md",
+      "file_sha256": "352a5062fa1842b91e1d9dd12673a0985b486fc02b517e5ff8313d6c8cbbe7f2",
+      "selector": {
+        "kind": "whole-file",
+        "description": "Complete approved limited scope, including constraints on this trial"
+      },
+      "fragment_sha256": "352a5062fa1842b91e1d9dd12673a0985b486fc02b517e5ff8313d6c8cbbe7f2",
+      "asset_context": [],
+      "reading": {
+        "status": "read",
+        "method": "Codex read the complete fixed file; actual user approval and explicit structured-transcription authorization retained separately.",
+        "evidence_ref": {
+          "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+          "path": "harness/evidence/ui-trial-approval/transcription-review.md",
+          "sha256": "a875bb8734dcf86ff70fe3efa2260aed43ae1696cd2093b7e1b9ab780a87296f"
+        }
+      },
+      "disposition": "mapped",
+      "reason": "The two stated promises map exactly to R-001/AC-01 and AC-02; remaining paragraphs constrain this same trial without adding product obligations.",
+      "targets": [
+        {
+          "requirement": "R-001",
+          "revision": 1,
+          "acceptance": [
+            "AC-01",
+            "AC-02"
+          ],
+          "role": "origin"
+        }
+      ]
+    }
+  ]
+}

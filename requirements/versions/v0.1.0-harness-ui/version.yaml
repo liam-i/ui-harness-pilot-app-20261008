@@ -1,0 +1,13 @@
+{
+  "schema_version": "vr/1",
+  "version": "v0.1.0-harness-ui",
+  "delivery_line": "main",
+  "integration_ref": "refs/heads/main",
+  "starting_commit": "65d9a67551242134ad3c4d90836e8bf088a5b1e5",
+  "owners": {
+    "product-owner": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+    "engineering-owner": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+    "qa-owner": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+    "integrator": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46"
+  }
+}

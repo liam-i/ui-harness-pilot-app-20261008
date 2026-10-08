@@ -1,0 +1,34 @@
+schema_version: vr/1
+active: true
+derived: false
+normative: true
+level: 1
+header: 批准的计算器主屏设计与tokens消费
+text: 计算器主屏保持已确认设计并从应用包实际加载批准的 tokens。
+links: []
+reviewed: VpkxKtzdxrHQ0MFgZJqlnr-L6NBbD9lijZybuZig4ic=
+ref: ''
+revision: 1
+kind: functional
+owner: current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46
+source_refs:
+- unit: v0.1.0-harness-ui/intake-001/SRC-001
+  role: origin
+asset_refs: []
+hierarchy:
+  parent: null
+acceptance:
+- id: AC-01
+  condition: 原生应用启动及现有测试运行
+  expected: 实际应用包 tokens 的 SHA-256 为 08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d，资源不超过16KiB，布局与颜色数值沿获批包；缺件或无效值仍按原实现拒绝。
+  level: integration
+  method: 运行原CalculatorTokensTests并核对实际bundle资源及原始xcresult。
+- id: AC-02
+  condition: 原两台专用模拟器，浅色/英文/竖屏/默认字号
+  expected: 主屏保留四列五行、完整标签及初始0.00；原两个尺寸不出现遮挡或越出安全区。沿原批准的系统字体/符号绘制差异，不新增适配承诺。
+  level: acceptance
+  method: 原UI测试加两个尺寸新截图；Codex实际观察后由当前用户验收。
+constraints: []
+relationships: []
+derived_from: []
+question_refs: []

@@ -1,0 +1,51 @@
+{
+  "schema_version": "vr/1",
+  "version": "v0.1.0-harness-ui",
+  "intakes": [
+    {
+      "id": "v0.1.0-harness-ui/intake-001",
+      "root": "source/intake-001",
+      "input_mode": "full",
+      "predecessor": null,
+      "markdown_dialect": "commonmark-tables-harness-headings-v1",
+      "provided": {
+        "actor": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+        "role": "product-owner",
+        "at": "2026-10-08T06:15:38.019836+00:00",
+        "statement": "2026-10-08 approved fixed pilot scope; timestamp records transcription, not exact human send time.",
+        "evidence_ref": {
+          "commit": "0739051a94c3b4738dea35e7de757f868202b90f",
+          "path": "harness/evidence/ui-trial-approval/user-decision.json",
+          "sha256": "ca202ef728ea413165ed6564a3e35e01e5bd3af380028f4f98857a3082a0d15c"
+        }
+      },
+      "files": [
+        {
+          "path": "scope.md",
+          "sha256": "352a5062fa1842b91e1d9dd12673a0985b486fc02b517e5ff8313d6c8cbbe7f2",
+          "disposition": "document",
+          "reason": "Fixed scope approved by the actual current user"
+        }
+      ],
+      "documents": [
+        {
+          "id": "DOC-001",
+          "path": "scope.md",
+          "sha256": "352a5062fa1842b91e1d9dd12673a0985b486fc02b517e5ff8313d6c8cbbe7f2",
+          "title": "计算器需求层UI受限试点",
+          "role": "main",
+          "kind": "prd",
+          "applicability": "v0.1.0-harness-ui",
+          "required": true
+        }
+      ],
+      "entry_documents": [
+        "DOC-001"
+      ],
+      "assets": [],
+      "links": [],
+      "relations": [],
+      "replacements": []
+    }
+  ]
+}

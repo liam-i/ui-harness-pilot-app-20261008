@@ -1,0 +1,15 @@
+{
+  "schema_version": "vr/1",
+  "version": "v0.1.0-harness-ui",
+  "included": [
+    {
+      "requirement": "R-001",
+      "revision": 1,
+      "transition": "added",
+      "delivery": "already-satisfied",
+      "source_confirmations": []
+    }
+  ],
+  "excluded": [],
+  "context_requirements": []
+}

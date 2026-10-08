@@ -1,0 +1,25 @@
+settings:
+  digits: 3
+  prefix: R
+  sep: '-'
+attributes:
+  reviewed:
+    - schema_version
+    - revision
+    - kind
+    - owner
+    - source_refs
+    - asset_refs
+    - acceptance
+    - hierarchy
+    - constraints
+    - relationships
+    - derived_from
+    - supersedes
+    - retires
+    - question_refs
+  publish:
+    - revision
+    - kind
+    - owner
+    - acceptance
