@@ -96,7 +96,12 @@ def execute(root, config, head, output, interruption=None):
                        if row["udid"] == device["udid"] and row["name"] == device["name"]]
             if len(matches) != 1 or matches[0][0] != config["runtime"] or not matches[0][1]["isAvailable"] or matches[0][1]["state"] != "Shutdown":
                 raise ValueError("dedicated simulator is absent, unavailable, busy or has a different runtime")
-            one = {"device": device, "before": matches[0], "passed": False, "cleanup": [], "cleanup_errors": []}
+            # Keep the whole build tree for each device, including partial failures.
+            derived = output / (label + "-derived")
+            bundle = derived / "Build/Products/Debug-iphonesimulator" / config["app_bundle"]
+            one = {"device": device, "before": matches[0], "passed": False, "cleanup": [], "cleanup_errors": [],
+                   "derived_data_path": derived.relative_to(output).as_posix(),
+                   "app_bundle_path": bundle.relative_to(output).as_posix()}
             record["devices"].append(one)
             boot_requested = False
             appearance = size = None
@@ -112,7 +117,7 @@ def execute(root, config, head, output, interruption=None):
                 result_bundle = output / (label + ".xcresult")
                 command = ["xcodebuild", "-project", config["project"], "-scheme", config["scheme"],
                     "-sdk", "iphonesimulator", "-destination", "platform=iOS Simulator,id=" + device["udid"],
-                    "-configuration", "Debug", "-derivedDataPath", str(output / "derived"),
+                    "-configuration", "Debug", "-derivedDataPath", str(derived),
                     "-resultBundlePath", str(result_bundle), "-disableAutomaticPackageResolution",
                     "-parallel-testing-enabled", "NO", "CODE_SIGNING_ALLOWED=NO", "IPHONEOS_DEPLOYMENT_TARGET=15.0", "test"]
                 command += ["-only-testing:" + target for target in config["test_targets"]]
@@ -126,7 +131,6 @@ def execute(root, config, head, output, interruption=None):
                 if xcode_exit != 0:
                     raise RuntimeError("xcodebuild failed; native result and attachments retained")
                 one["counts"] = verify_summary(summary, config["expected_tests"])
-                bundle = output / "derived/Build/Products/Debug-iphonesimulator" / config["app_bundle"]
                 token = bundle / config["bundled_tokens"]["path"]
                 if sha256(token.read_bytes()).hexdigest() != config["bundled_tokens"]["sha256"]:
                     raise ValueError("built tokens differ from approved design")
