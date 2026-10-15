@@ -36,12 +36,19 @@ class History:
             require(selected["history_root"] == p["history_root"], "history.root", "history root differs from reviewed policy", str(selected))
             self.authorities[p["repository"]] = selected
             if scan: self.scan(selected)
+        self.releases = {}
         for ref, decision in self.decisions.values():
             self.reviewers(ref, decision)
             package = store.document("package", decision["package_ref"])
             require((package["unit"], package["release"]) == (decision["unit"], decision["release"]),
                     "approval.identity", "decision unit/release differs from package", str(ref))
             require(ref["path"].split("/")[2] == decision["unit"], "approval.identity", "decision is filed under another unit", str(ref))
+            if decision["kind"] == "approve":
+                logical = (package["unit"], package["release"])
+                content = store.package_content(decision["package_ref"])
+                require(logical not in self.releases or self.releases[logical] == content,
+                        "package.identity", "approved UI unit/release was reused for different content; create a new release", str(ref))
+                self.releases[logical] = content
             if decision["kind"] != "approve":
                 target = self.lookup(decision["approved_release_ref"])
                 require(target["kind"] == "approve" and target["package_ref"] == decision["package_ref"],

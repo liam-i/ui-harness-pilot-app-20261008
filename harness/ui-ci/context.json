@@ -6,7 +6,7 @@
     "action": "pre-merge",
     "authorities": [
       {
-        "commit": "aaf7b57f7fc4accc78384058ca78c88788f98a3c",
+        "commit": "c6f8cb0b1bb9db34cf894a383092dee4d5bdbc8d",
         "history_root": "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52",
         "ref": "refs/heads/main",
         "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority"
@@ -15,7 +15,7 @@
     "external_files": [],
     "mode": "current",
     "rules": {
-      "sha256": "86f8ede38d0ecc841e590bf08db6462a05916cda044284f0ac0b296dec529fe5",
+      "sha256": "7654e89e41e9cbde1439d4ee353d8f0cbccb17112e1cbf10ed7752aac2e32154",
       "version": "ui-check/1"
     },
     "schema_version": "ui-snapshot/1",

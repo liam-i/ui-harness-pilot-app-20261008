@@ -8,6 +8,8 @@
 
 在业务项目中同时安装 `harness/version-requirements/`、本目录全部文件及各自 `scripts/` 入口，按[离线安装](offline-check.md#安装与前提)核对 UI 依赖；需求检查使用项目的需求层 venv，也须能导入 UI 锁定依赖。项目配置明确 `ui_design: enabled`，固定 UI policy 的 `adoption.requirements` 为 `adopted`。完整实现身份包含实际调用脚本、库、Schema 和锁；缺件或未知能力停止，不能临时改成 `not-adopted` 放行。
 
+本地与 CI 的同一 venv 双锁命令、独立 UI 仓库／媒体恢复及宿主分流见[联合 CI 准备](ci/requirements.md)。仅安装需求层锁会缺少 Pillow 等 UI 必需依赖；另建 UI venv 不会修复原 Gate 环境。当前联合宿主限定 macOS arm64，保留完整托管资格未验证边界。
+
 职责沿原流程保留：Version PRD/R/AC/BL 定义业务承诺；delivery-map 分配真实贡献及 UI 适用性；设计包定义被确认的界面输入；工程 Review 选择本轮消费合同；OpenSpec 保留唯一 Feature Tasks；原任务／PR 保存 Tiny 工作；E 证明实际受检组合；原控制、请求和 Gate 决定相应工程动作。
 
 UI 与业务承诺矛盾先回共同 Q/R。已基线化的业务变化沿原 RC；纯视觉修订只重评实际消费者及相关工程审阅。G1 不要求整版高保真齐备。

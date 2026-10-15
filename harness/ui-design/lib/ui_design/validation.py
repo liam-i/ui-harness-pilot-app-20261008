@@ -95,9 +95,10 @@ class Validator:
         if k in self.packages: return self.packages[k]
         doc = self.store.document("package", ref)
         logical = (doc["unit"], doc["release"])
-        require(logical not in self.identities or self.identities[logical] == k,
+        content = self.store.package_content(ref)
+        require(logical not in self.identities or self.identities[logical] == content,
                 "package.identity", "same UI unit/release points to different fixed content", str(ref))
-        self.identities[logical] = k
+        self.identities[logical] = content
         directory = str(PurePosixPath(ref["path"]).parent)
         require(ref["path"] == f"design/units/{doc['unit']}/releases/{doc['release']}/manifest.yaml",
                 "package.identity", "manifest path must match its UI identity", str(ref))

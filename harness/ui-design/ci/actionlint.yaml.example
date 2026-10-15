@@ -1,3 +1,5 @@
 self-hosted-runner:
   labels:
     - harness-ui-trial
+    - harness-cocos-trial
+    - harness-android-trial

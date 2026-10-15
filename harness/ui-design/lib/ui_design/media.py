@@ -3,7 +3,6 @@ from hashlib import sha256
 from io import BytesIO
 from pathlib import Path
 import warnings
-import xml.etree.ElementTree as ET
 import zipfile
 
 from PIL import Image, ImageFile
@@ -37,19 +36,8 @@ def inspect(data, declaration, source):
         except (OSError, ValueError, SyntaxError, Image.DecompressionBombError, Image.DecompressionBombWarning) as error:
             raise CheckError("media.decode", str(error), source) from error
     elif mime == "image/svg+xml":
-        try:
-            text = data.decode("utf-8")
-            require("<!DOCTYPE" not in text.upper() and "<!ENTITY" not in text.upper(),
-                    "media.decode", "DTD and entity declarations are forbidden", source)
-            xml = ET.fromstring(text)
-            require(xml.tag.split("}")[-1] == "svg", "media.decode", "SVG root required", source)
-            for node in xml.iter():
-                for attribute, value in node.attrib.items():
-                    if attribute.split("}")[-1] in ("href", "src"):
-                        require(value.startswith(("#", "data:")), "media.external-reference",
-                                "SVG resources must be embedded; remote or filesystem links are incomplete", source)
-        except (UnicodeError, ET.ParseError) as error:
-            raise CheckError("media.decode", str(error), source) from error
+        from .svg import inspect_svg
+        inspect_svg(data, source)
     elif mime.startswith("image/"):
         raise CheckError("media.unsupported", "image decoder not supported for " + mime, source)
     elif mime in ("application/json", "application/yaml", "text/yaml"):

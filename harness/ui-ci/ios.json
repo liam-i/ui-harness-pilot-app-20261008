@@ -6,12 +6,12 @@
   },
   "devices": [
     {
-      "name": "UI-Goal01-SE-20260930",
-      "udid": "4F72CD21-F071-4835-87B2-1456D125374B"
+      "name": "Harness-Acceptance-SE-20261013",
+      "udid": "FD3B8CBB-E6CE-4DE5-B540-2C2200985460"
     },
     {
-      "name": "UI-Goal01-Pro-20260930",
-      "udid": "D14EBF55-3D41-419E-8F85-306D5D812CFD"
+      "name": "Harness-Acceptance-Pro-20261013",
+      "udid": "6D77A83B-4A44-4519-8643-06B81343A474"
     }
   ],
   "expected_basis": {

@@ -22,7 +22,7 @@
 
 | 入口 | 保存方式 | 必须保留的边界 |
 | --- | --- | --- |
-| 需求层候选 | 原engineering context／asset_uses固定完整文件；人工sidecar绑定实际贡献、A和覆盖 | 设计资料先独立受审进入target；重读目标再走原dispatch和规划，不扩严格Trace字段 |
+| 需求层候选 | [需求层接线](requirements.md)从原 map 推导贡献；ui-bindings、不可改写 ui-inputs 进入原工程 Review、摘要及 E | 重读业务及 UI 权威，按原 dispatch／planning／apply；只用当前 Schema 的正式字段 |
 | 需求层已有／外部scope | 原delivery-map的真实endpoint贡献＋Review/E固定引用 | 只核交付不暗中实现；确需改工程先Tiny／Standard分流，不造空C／Change |
 | 独立Tiny | 原task/PR及已有tiny_association／任务记录的固定引用＋Review/E | 不补Tasks或G2/apply，不绕未完成Standard义务；纯技术工作不造R/AC |
 | 无需求层Standard | 当前Proposal/Design保存同等固定绑定，原唯一Tasks做实现与验收 | 不安装需求层、不造BL；Propose、完整规划Review和Apply各核原授权 |
