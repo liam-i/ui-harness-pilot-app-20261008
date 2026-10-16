@@ -51,6 +51,8 @@ Python 调用方使用 `lib/` 下的 `ui_design.api.check(snapshot, root)`，返
 | --- | --- |
 | `schema.*`／`parse.*` | 修正未获批输入的目标格式。已获批包字节要改变时生成新 D/A；不放宽模型或忽略字段 |
 | `object.*`／`media.*` | 显式恢复原固定对象／媒体，核对摘要和完整性；不换 latest。图片损坏需要原 owner 处理 |
+| `media.external-reference` | 由制作方导出自包含的静态 SVG／固定栅格图；CSS 外链、外部字体和无法完整检查的嵌入内容不能靠本机缓存补齐，见[媒体子集](data-contract.md#包闭包与媒体) |
+| `package.identity` | 核对全部受信批准历史；已批准 unit/release 的内容变化必须建立新修订，撤回不释放旧编号。保留旧 D/A，不改历史起点消除冲突 |
 | `package.*`／`asset.*`／`binding.*` | 核对原清单、owner、实际消费者和工程分母；保留失败，不删 required 或减少覆盖 |
 | `approval.*` | 核对确切 D/A、角色、原审批证据和所选时点禁止范围；需要新设计决定时交真人 |
 | `history.*` | 恢复完整原历史；保留删除／覆写现场并交权威负责人。不能换历史根消除失败 |

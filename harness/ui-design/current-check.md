@@ -1,6 +1,6 @@
 # UI 当前观察与动作前复查
 
-先按[离线检查的安装步骤](offline-check.md#安装与前提)安装同一工具。`mode: current` 会查询固定 policy 的实际 UI remote/ref，再将所选内容与当前观察一起核对；不 fetch、下载媒体、push、写 Tasks 或生成批准。需求层的业务 target/control 仍是独立检查，本工具尚未接入其自动 Gate。
+先按[离线检查的安装步骤](offline-check.md#安装与前提)安装同一工具。`mode: current` 会查询固定 policy 的实际 UI remote/ref，再将所选内容与当前观察一起核对；不 fetch、下载媒体、push、写 Tasks 或生成批准。需求层的业务 target/control 仍是独立检查；已采用需求层时按[原 Gate 接线](requirements.md)复用本库及 observer。
 
 ## 准备一次动作的输入
 

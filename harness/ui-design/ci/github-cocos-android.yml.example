@@ -1,0 +1,88 @@
+# Copy only after reviewing the actual project, host paths, devices and upload manifest.
+# Require approval for ALL external fork contributors before registering a runner.
+# The temporary runner owns no service and accepts only reviewed owner-authored work.
+name: Cocos Native UI
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: cocos-native-ui-${{ github.repository }}
+  cancel-in-progress: false
+jobs:
+  cocos-native-tests:
+    name: cocos-native-tests
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.actor == github.repository_owner && github.event.pull_request.user.login == github.repository_owner
+    runs-on: [self-hosted, macOS, ARM64, harness-cocos-trial]
+    timeout-minutes: 60
+    env:
+      CHECKED_SHA: ${{ github.event.pull_request.head.sha }}
+      UI_AUTHORITY_URL: ${{ vars.UI_AUTHORITY_URL }}
+      # COCO_ANDROID_HOST_CONFIG is set by the reviewed runner launch wrapper.
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Prepare fixed checker and UI history
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir "$RUNNER_TEMP/cocos-evidence"
+          test "$(git rev-parse HEAD)" = "$CHECKED_SHA"
+          test -n "$UI_AUTHORITY_URL"
+          test -f "$COCO_ANDROID_HOST_CONFIG"
+          python3.13 -m venv "$RUNNER_TEMP/cocos-ui-tools"
+          "$RUNNER_TEMP/cocos-ui-tools/bin/python" -m pip install --require-hashes -r harness/ui-design/config/requirements.lock
+          echo "UI_DESIGN_PYTHON=$RUNNER_TEMP/cocos-ui-tools/bin/python" >> "$GITHUB_ENV"
+          git -c core.hooksPath=/dev/null clone --no-single-branch "$UI_AUTHORITY_URL" "$RUNNER_TEMP/cocos-ui-authority"
+      - name: Check current fixed UI inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$UI_DESIGN_PYTHON" -B harness/ui-design/ci/check_inputs.py \
+            --root "$PWD" --head "$CHECKED_SHA" --config harness/ui-ci/context.json \
+            --ui-repository "$RUNNER_TEMP/cocos-ui-authority" --output "$RUNNER_TEMP/cocos-evidence/ui-inputs.json"
+      - name: Verify platform result rejection
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$UI_DESIGN_PYTHON" -B -m unittest discover -s tests/cocos-menu -p test_ci_adapter.py -v
+      - name: Build and execute exact native matrix
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$UI_DESIGN_PYTHON" -B harness/ui-design/ci/cocos-android.py \
+            --root "$PWD" --head "$CHECKED_SHA" --config harness/ui-ci/cocos-android.json \
+            --host-config "$COCO_ANDROID_HOST_CONFIG" --output "$RUNNER_TEMP/cocos-evidence/native"
+      - name: Recheck current UI authority
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$UI_DESIGN_PYTHON" -B harness/ui-design/ci/check_inputs.py \
+            --root "$PWD" --head "$CHECKED_SHA" --config harness/ui-ci/context.json \
+            --ui-repository "$RUNNER_TEMP/cocos-ui-authority" --output "$RUNNER_TEMP/cocos-evidence/ui-inputs-after.json"
+      - name: Retain success or failure evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: cocos-native-ui-${{ github.event.pull_request.head.sha }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/cocos-evidence
+          if-no-files-found: error
+          retention-days: 14
+  cocos-native-ui:
+    name: cocos-native-ui
+    needs: cocos-native-tests
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 1
+    steps:
+      - name: Require an executed successful native job
+        env:
+          NATIVE_RESULT: ${{ needs.cocos-native-tests.result }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$NATIVE_RESULT" = success

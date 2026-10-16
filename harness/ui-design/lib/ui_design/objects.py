@@ -1,7 +1,7 @@
 """Only local, exact Git objects. Never fetch, checkout, filter or lazy-fetch."""
 from hashlib import sha256
 import os
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import re
 import subprocess
 
@@ -86,7 +86,7 @@ class Repository:
 class Store:
     def __init__(self, repositories, root):
         self.mapping = repositories; self.root = Path(root)
-        self.repositories = {}; self.inputs = {}; self.documents = {}; self.bytes = {}
+        self.repositories = {}; self.inputs = {}; self.documents = {}; self.bytes = {}; self.package_contents = {}
 
     def repo(self, identity):
         require(identity in self.mapping, "object.repository", "repository has no explicit local mapping", identity)
@@ -125,3 +125,20 @@ class Store:
 
     def same_commit_ref(self, base, path, digest):
         return dict(repository=base["repository"], commit=base["commit"], path=path, sha256=digest)
+
+    def package_content(self, ref):
+        """Immutable bytes/modes/relative paths, independent of repo alias or D."""
+        k = key(ref)
+        if k not in self.package_contents:
+            self.read(ref)
+            repo = self.repo(ref["repository"])
+            prefix = str(PurePosixPath(ref["path"]).parent) + "/"
+            entries = []
+            for path, (mode, kind, _) in sorted(repo.tree(ref["commit"]).items()):
+                if not path.startswith(prefix): continue
+                # Repository.read rejects links/submodules; LFS pointers are
+                # fixed bytes here, while selected packages still restore media.
+                raw = repo.read(ref["commit"], path)
+                entries.append((path[len(prefix):], mode, kind, sha256(raw).hexdigest()))
+            self.package_contents[k] = tuple(entries)
+        return self.package_contents[k]

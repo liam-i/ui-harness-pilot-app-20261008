@@ -1,0 +1,30 @@
+{
+  "app_bundle": "CalculatorSwiftUI.app",
+  "bundled_tokens": {
+    "path": "tokens.json",
+    "sha256": "08f7649f3fc24f1f5f9845162eaef7a95169e0833cc8e35da3fc8ef49aff743d"
+  },
+  "devices": [
+    {
+      "name": "Harness-Acceptance-SE-20261013",
+      "udid": "FD3B8CBB-E6CE-4DE5-B540-2C2200985460"
+    },
+    {
+      "name": "Harness-Acceptance-Pro-20261013",
+      "udid": "6D77A83B-4A44-4519-8643-06B81343A474"
+    }
+  ],
+  "expected_basis": {
+    "A": "db1d8d36482883a46f6624c02cde4241547f3d18",
+    "D": "c6f6cda8b823fa5a5fb9c2ec0f89e876c305bd60",
+    "note": "Same approved tests, selected targets and native scope; no expectation is generated from this new run.",
+    "unit": "UI-CALCULATOR"
+  },
+  "expected_tests": 11,
+  "project": "CalculatorSwiftUI.xcodeproj",
+  "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-27-0",
+  "scheme": "CalculatorSwiftUI",
+  "test_targets": [],
+  "test_timeout_seconds": 300,
+  "xcode_version": "Xcode 27.0\nBuild version 27A266a"
+}

@@ -1,6 +1,6 @@
 # UI 设计交付与当前观察
 
-本目录提供团队／AI共用的交付合同、严格Schema和只读检查器：固定包、批准、历史与消费绑定使用同一离线库；current另查独立UI权威，并提供无需求层的原Change／任务接线。需求层已有原G2/G3/G4的薄集成，完整采用资格仍在验证；人工语义审阅和原工程授权继续独立执行。
+本目录提供团队／AI共用的交付合同、严格Schema和只读检查器：固定包、批准、历史与消费绑定使用同一离线库；current另查独立UI权威，并提供无需求层的原Change／任务接线。需求层复用原G2/G3/G4的薄集成；人工语义审阅和原工程授权继续独立执行。机器能力、真实受限试点与目标项目自己的采用验收分别核对，不能由一个 PASS 推断全部平台或完整产品通过。
 
 将本目录完整复制到业务项目 `harness/ui-design/`。实际包保存在选定 UI 权威仓库的 `design/units/<unit>/releases/<release>/`；决定保存在该单元的 `decisions/`。模板中的占位符必须替换，不能直接当作批准或固定引用使用。
 
@@ -14,6 +14,11 @@
 | [bindings.yaml.example](bindings.yaml.example) | 已采用需求层时为本 Version 的 `ui-bindings.yaml`；否则把适用条目保存到当前 Design 或真实任务／PR |
 | [authority.md](authority.md) | 人工权威约定；固定policy必须有真实审阅依据 |
 | [manual-checklist.md](manual-checklist.md) | 制作、审定、取包、工程消费、验收与恢复操作 |
+| [文件适配器](adapters/files.md) | A 接收／B 本地制作；获批 Git 文件的只读取包与新目录导出 |
+| [Figma 浏览器](adapters/figma-browser.md)／[open-design](adapters/open-design.md) | 已声明通道的制作、源一致性、完整媒体与独立恢复；MCP／自动安装边界分别说明 |
+| [UI Skill](skills/ui-design-workflow/SKILL.md) | 按所选设计角色与工程角色接续；复制到业务 `.agents/skills/ui-design-workflow/`，同时保留本目录在 `harness/ui-design/` |
+| [平台 CI](ci/README.md) | iOS、原生 Android、Cocos Android 的限定 GitHub 试点、设备与入口；目标项目的门禁须另行实际验收 |
+| [需求 Gate 联合 CI 准备](ci/requirements.md) | 同一 venv 双锁、外国仓库／媒体恢复与原 Gate；不代替原生 Job 或完整托管资格验收 |
 | [离线检查](offline-check.md) | 隔离安装、薄入口、固定快照、输出和失败恢复 |
 | [当前观察](current-check.md)／[无需求层接线](no-requirements.md) | 独立权威查询、动作前复查、原Change／任务／PR与失败恢复 |
 | [需求层接线](requirements.md) | 原贡献／任务、工程Review、实际E、G2/G3/G4当前组合及恢复；完整采用仍受验证边界限制 |
@@ -21,6 +26,8 @@
 | [policy.yaml.example](policy.yaml.example)／[snapshot.yaml.example](snapshot.yaml.example) | 固定权威与当前／历史快照，填写实际身份后使用 |
 
 最短路径：固定 Brief → A 接收成品或 B 制作并迭代 → 导出完整内容提交 D → 真人确认最终字节 → 另存批准提交 A → 消费方固定 A 并恢复 D → 沿原工程流程实现、验收。
+
+需要 Codex 协助设计或取包时，将 `skills/ui-design-workflow/` 复制到业务项目的 `.agents/skills/`；已有同名 Skill 先审阅差异再更新。在业务对话中指定 `$ui-design-workflow` 及实际 Brief／固定快照／当前操作范围。Skill 正文使用业务根目录下的 `harness/ui-design/` 材料，不能只复制 Skill 后缺省合同，也不能把模板中的说明当作业务批准。
 
 UI 包只定义设计输入。业务义务仍在原需求／Spec，技术选择在当前 Change 的 Design，唯一实施任务在 Tasks；没有需求层时不补 R/AC、BL 或空候选。设计批准与工程实施授权分别保存。使用说明自包含，不依赖教程计划或测试答案。
 

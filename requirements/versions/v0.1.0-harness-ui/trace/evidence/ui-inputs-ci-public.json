@@ -1,0 +1,25 @@
+{
+  "authorities": [
+    {
+      "commit": "aaf7b57f7fc4accc78384058ca78c88788f98a3c",
+      "history_root": "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52",
+      "ref": "refs/heads/main",
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority"
+    }
+  ],
+  "bindings_ref": {
+    "commit": "aec1259af4e2c4150bdd5b9ffd2344b1640f9a06",
+    "path": "requirements/versions/v0.1.0-harness-ui/ui-bindings.yaml",
+    "sha256": "82150a075326d144d1d14f9dec754eac78f6cdfced7ad1e65eb16b002bab5950"
+  },
+  "policy_ref": {
+    "commit": "73dbc6bf350a573ae112f2a53db0d2fd8bbcf283",
+    "path": "harness/ui-design/config/project.yaml",
+    "sha256": "0b77eac1ce01f30dec00111dd5200d9b9f20a1581651af4631113b848bda5667"
+  },
+  "rules": {
+    "sha256": "86f8ede38d0ecc841e590bf08db6462a05916cda044284f0ac0b296dec529fe5",
+    "version": "ui-check/1"
+  },
+  "schema_version": "vr-ui-inputs/1"
+}
