@@ -24,11 +24,38 @@ iOS 的限定试点已有真实 CI 与运行人审。新增 [Cocos Android 入�
 
 原生 Runner 使用已选择的 Xcode，不全局切换工具，不创建或删除设备。对明示专用模拟器验证身份和初始关机状态后运行，恢复原外观／字号并关机。失败不自动重跑，不减少用例。每次保留精确 SHA、命令、源摘要、xcresult、测试数量、截图附件、构建资源和清理结果；结果来自真实 `xcodebuild`，不调用 Node 示例替代原生工程。
 
+iOS 按配置中从 0 开始的设备序号使用独立的 `device-N-derived/`，保留该次构建的整个 DerivedData，包括产品包与中间产物；后续设备不会覆盖前一设备的构建。`result.json` 的每个设备条目在启动前记录 `derived_data_path` 和 `app_bundle_path`，两者均相对于本次输出目录；`build_files` 中的文件名相对于该设备的 `app_bundle_path`，应逐设备复核摘要。原有 `device-N.xcresult`、`device-N-attachments/` 和命令日志继续分别保留。失败或取消时保留当时已产生的文件，路径记录不保证构建已启动或产物已齐全；不能把部分构建当成成功产物。各设备独立构建会增加磁盘占用与构建开销，仍须满足原配置的每设备 `test_timeout_seconds`，不得因此自动放宽时限。
+
 iOS 配置的 `expected_tests` 必须是独立审阅的正整数，xcresult 汇总中的 `totalTestCount`、`passedTests`、`failedTests`、`skippedTests`、`expectedFailures` 必须全部为非负整数；布尔值、浮点数、字符串、null 或缺字段均拒绝。仅 `result=Passed`、total／passed 等于预期分母且其余三项为 0 时通过；不得用实际返回数量改小原分母。
 
 iOS 入口将 SIGTERM／SIGINT 记为失败，终止本次命令的进程组并有限等待，再逐项恢复和关机；启动命令尚未返回时也执行收尾。某一恢复项失败后仍尝试其余项目，`result.json` 保留 `interrupted_signal`、命令结果与 `cleanup_errors`。清理及最终结果序列化／写入期间收到首个信号时先完成收尾，后续信号不会再次打断。若首次写入期间才观察到取消，最多补写一次完整失败结果，最终退出非零；完成结果写入后的新信号不回溯改变已完成运行。SIGKILL、宿主掉线、断电或存储写入失败无法保证落盘／恢复；运行方须核对专用设备和残留进程后再使用，不把清理未知记为成功。
 
-公开 Artifact 排除完整模拟器清单 `device-*-before.stdout`，避免发布同机器无关设备信息；`result.json` 仍保存实际选中设备及命令结果，运行方须在 Runner 清理临时目录前，将完整原始清单另存到受限本地诊断目录；本试点由启动包装脚本完成此留存。其余实际测试与构建证据继续留存。
+公开 Artifact 排除输出根下 `native/device-N-before.stdout` 的完整模拟器清单，其中 N 是设备序号，避免发布同机器无关设备信息；其他目录的同名文件仍保留。`result.json` 仍保存实际选中设备及命令结果，运行方须在 Runner 清理临时目录前，将完整原始清单另存到受限本地诊断目录；本试点由启动包装脚本完成此留存。
+
+将 [archive_evidence.py](archive_evidence.py) 随本目录复制到业务工程。workflow 在原生步骤结束后以 `always()` 打包整个 `ui-evidence/`，再上传 `ui-evidence.tar` 与 `ui-evidence.tar.manifest.json`。不要直接上传解包目录：固定版本 Action 的[文件选择逻辑](https://github.com/actions/upload-artifact/blob/ea165f8d65b6e75b540449e92b4886f43607fa02/src/shared/search.ts)默认排除隐藏项、忽略目录项并跟随符号链接；仅打开隐藏文件选项不能保留空目录和链接身份。归档保留普通文件字节、隐藏项、空目录、内部相对符号链接及 POSIX 权限，清单记录逐项内容摘要、链接目标与整个归档的 SHA-256；不跟随链接读取外部内容。绝对或越界链接、特殊文件、检测到的打包期间变化及已有目标均报错。此归档不是系统备份，不承诺所有者、ACL、扩展属性或硬链接身份的恢复。
+
+打包成功只表示传输材料已准备，不改变 `result.json` 的成功／失败。原生失败或取消仍打包已产生的部分证据；打包失败不发布残缺归档，上传步骤仅在打包成功后执行，整个 Job 继续保持失败。此时须从原 Runner 输出目录取回诊断材料，不能把没有 Artifact 当成原生成功。原每设备测试时限及 Job 时限不变。
+
+下载 Artifact 的外层 ZIP 并解压后，在 macOS 上含上述两文件的目录先核对摘要，再解包到一个新的目录（使用已审可信来源的归档）。系统 bsdtar 显式关闭 [libarchive 的 `mac-ext` 解释](https://github.com/libarchive/libarchive/blob/v3.7.4/libarchive/archive_read_support_format_tar.c)，将归档中已有的 `._*` 条目按普通文件恢复；仅使用 `--no-mac-metadata` 或 `COPYFILE_DISABLE` 不足以保留这类条目：
+
+```bash
+set -euo pipefail
+python3.13 - <<'PY'
+from hashlib import file_digest
+import json
+from pathlib import Path
+archive = Path("ui-evidence.tar")
+record = json.loads(Path("ui-evidence.tar.manifest.json").read_text())["archive"]
+with archive.open("rb") as stream:
+    digest = file_digest(stream, "sha256").hexdigest()
+if archive.name != record["name"] or archive.stat().st_size != record["bytes"] or digest != record["sha256"]:
+    raise SystemExit("artifact digest mismatch")
+PY
+mkdir restored-ui-evidence
+/usr/bin/tar --options 'tar:!mac-ext' -xpf ui-evidence.tar -C restored-ui-evidence
+```
+
+摘要不符时停止解包；已有恢复目录时换用新目录，不能覆盖旧证据。按清单逐项核对恢复后的类型、权限、文件字节和链接目标，再按 `native/result.json` 的相对路径分别检查两台设备的构建与原生结果；归档传输成功本身不能证明测试通过或构建完整。
 
 此 UI Job 只证明本次固定 UI 输入和原生范围；采用需求层的项目仍须保留原需求 Gate 义务及相应 CI Job，不能用 `native-ui` 替换；尚未接入需求 CI 时，本 Job 通过也不意味着 G3/G4 准入，接续原[需求阶段指引](../../version-requirements/guidance/README.md)。UI 变化需重评原 Review／E；已归档引用按真实归档路径核对。视觉人审单独绑定受检代码与产物，不因自动测试通过自动生成批准。
 
@@ -68,7 +95,7 @@ Job 只证明执行时的当前观察。独立 UI 权威在 Job 结束后前进�
 
 | 范围 | 已有依据与采用限制 |
 | --- | --- |
-| iOS | 原限定计算器／2048 试点在两尺寸模拟器取得真实 CI、故障阻断／恢复及人审。当前取消清理修订另用假平台命令和真实进程信号验证；没有据此宣称重新运行 Xcode、设备或托管取消场景 |
+| iOS | 原限定计算器／2048 试点在两尺寸模拟器取得真实 CI、故障阻断／恢复及人审。逐设备构建留存于 2026-10-15 在 Xcode 27.0／iOS 27.0 两台专用模拟器完成本地复验：计算器各 11/11、2048 各 56/56，均在原每设备 300 秒内，四份完整构建已核对。归档传输另验证隐藏项、空目录、符号链接、权限及失败证据的本地往返；本次 Runner／上传修订未重跑托管 CI。取消清理另用假平台命令与真实进程信号验证，不计为真实设备或托管取消验收 |
 | Cocos、原生 Android | 仅覆盖上述固定菜单试点、设备、用例与工具身份；完整游戏、其他引擎／字体和物理真机不在该验收内 |
 | 输入与流程 | 历史批准和旧绿色 CI 只证明其固定时点。工程动作前重新 current 检查，工具身份变化需重新审阅适用输入和验证，不能改旧回执的规则摘要取得准入 |
 | 需求层与交付 | 本材料不证明 UI 已采用的真实产品完整 S0–S7／G2/G3/G4 托管流水线，也不授权合并或发布。项目按实际采用范围保留原 Gate、独立人审与工程授权 |
